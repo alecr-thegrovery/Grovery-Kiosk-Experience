@@ -2,11 +2,15 @@
 
 ### Project-Specific Notes ###
 * Project-specific notes go here.
+* Drag and Drop library: https://interactjs.io/
+* Element shapes: https://augmented-ui.com/
 
 #### Server Links ####
 * Local: http://localhost:3000/
 * Staging: https://planet-caravan-simple-blog-template.netlify.app/
 * Live: 
+
+---
 
 ## Planet Caravan Simple Blog Template ##
 
