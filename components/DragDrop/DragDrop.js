@@ -23,8 +23,12 @@ export default function DragDrop({
         // keep the element within the area of it's parent
         modifiers: [
           interact.modifiers.restrictRect({
-            restriction: '.draggableBounds',
+            restriction: '.cardWrapper',
             endOnly: true
+          }), 
+          interact.modifiers.restrictRect({
+            restriction: document.querySelector('#DropZone'),
+            endOnly: true,
           })
         ],
         // enable autoScroll
@@ -102,6 +106,7 @@ export default function DragDrop({
     window.dragMoveListener = dragMoveListener
   });
 
+  /*===== Component Content =====*/
   return (
     <div className={'draggableBounds '+componentStyles.DragDrop}>
       
