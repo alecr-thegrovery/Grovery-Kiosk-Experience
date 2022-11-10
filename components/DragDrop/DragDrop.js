@@ -15,95 +15,119 @@ export default function DragDrop({
   //console.log(author);
   useEffect(() => {
 
-    // target elements with the "draggable" class
-    interact('.draggable')
-      .draggable({
-        // enable inertial throwing
-        inertia: true,
-        // keep the element within the area of it's parent
-        modifiers: [
-          interact.modifiers.restrictRect({
-            restriction: '.cardWrapper',
+    function init() {
+        var startPos = null;
+
+        interact('.draggable').draggable({
+          snap: {
+            targets: [startPos],
+            range: Infinity,
+            relativePoints: [ { x: 0.5, y: 0.5 } ],
             endOnly: true
-          }), 
-          interact.modifiers.restrictRect({
-            restriction: document.querySelector('#DropZone'),
-            endOnly: true,
-          })
-        ],
-        // enable autoScroll
-        autoScroll: true,
+          },
+          onstart: function (event) {
+              var rect = interact.getElementRect(event.target);
 
-        listeners: {
+              // record center point when starting the very first a drag
+              startPos = {
+                x: rect.left + rect.width  / 2,
+                y: rect.top  + rect.height / 2
+              }
+
+            event.interactable.draggable({
+              snap: {
+                targets: [startPos]
+              }
+            });
+          },
           // call this function on every dragmove event
-          move: dragMoveListener,
+          onmove: function (event) {
+            var target = event.target,
+                // keep the dragged position in the data-x/data-y attributes
+                x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
+                y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-          // call this function on every dragend event
-          end (event) {
-            /*var textEl = event.target.querySelector('p')
+            // translate the element
+            target.style.webkitTransform =
+            target.style.transform =
+              'translate(' + x + 'px, ' + y + 'px)';
 
-            textEl && (textEl.textContent =
-              'moved a distance of ' +
-              (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-                         Math.pow(event.pageY - event.y0, 2) | 0))
-                .toFixed(2) + 'px')*/
+            // update the posiion attributes
+            target.setAttribute('data-x', x);
+            target.setAttribute('data-y', y);
+            target.classList.add('getting--dragged');
+          },
+          onend: function (event) {
+            event.target.classList.remove('getting--dragged')
+          }
+        });
+
+        interact('.droppable:not(.caught--it)').dropzone({
+          accept: '.draggable',
+          overlap: .5,
+
+          ondropactivate: function (event) {
+            event.target.classList.add('can--drop');
+          },
+          ondragenter: function (event) {
+            var draggableElement = event.relatedTarget,
+                dropzoneElement  = event.target,
+                dropRect         = interact.getElementRect(dropzoneElement),
+                dropCenter       = {
+                  x: dropRect.left + dropRect.width  / 2,
+                  y: dropRect.top  + dropRect.height / 2
+                };
+
+            event.draggable.draggable({
+              snap: {
+                targets: [dropCenter]
+              }
+            });
+
+            // feedback the possibility of a drop
+            dropzoneElement.classList.add('can--catch');
+            draggableElement.classList.add('drop--me');
+          },
+          ondragleave: function (event) {
+            // remove the drop feedback style
+            event.target.classList.remove('can--catch', 'caught--it');
+            event.relatedTarget.classList.remove('drop--me');
+          },
+          ondrop: function (event) {
+            console.log("Index of dropped node: " + (event.target));
+            console.log("Index of dragged node: " + getNodeIndex(event.relatedTarget.parentNode));
+            //event.relatedTarget.textContent = 'Dropped';
+            console.log("Dropped!");
+            console.log("related target: " + event.relatedTarget.parentNode);
+            console.log(event.draggable);
+            event.target.classList.add('caught--it');
+          },
+          ondropdeactivate: function (event) {
+            // remove active dropzone feedback
+            event.target.classList.remove('can--drop');
+            event.target.classList.remove('can--catch');
+          }
+        });
+      }
+
+      function getNodeIndex(node) {
+        var index = 0;
+        while ( (node = node.previousSibling) ) {
+          if (node.nodeType != 3 || !/^\s*$/.test(node.data)) {
+            index++;
           }
         }
-      })
-
-    interact('#DropZone').dropzone({
-      // only accept elements matching this CSS selector
-      accept: '.draggable',
-      // Require a 75% element overlap for a drop to be possible
-      overlap: 0.75,
-
-      // listen for drop related events:
-
-      ondropactivate: function (event) {
-        // add active dropzone feedback
-        event.target.classList.add('drop-active')
-      },
-      ondragenter: function (event) {
-        var draggableElement = event.relatedTarget
-        var dropzoneElement = event.target
-
-        // feedback the possibility of a drop
-        dropzoneElement.classList.add('drop-target')
-        draggableElement.classList.add('can-drop')
-        draggableElement.textContent = 'Dragged in'
-      },
-      ondragleave: function (event) {
-        // remove the drop feedback style
-        event.target.classList.remove('drop-target')
-        event.relatedTarget.classList.remove('can-drop')
-        event.relatedTarget.textContent = 'Dragged out'
-      },
-      ondrop: function (event) {
-        event.relatedTarget.textContent = 'Dropped'
-      },
-      ondropdeactivate: function (event) {
-        // remove active dropzone feedback
-        event.target.classList.remove('drop-active')
-        event.target.classList.remove('drop-target')
+        return index;
       }
-    })
 
-    function dragMoveListener (event) {
-      var target = event.target
-      // keep the dragged position in the data-x/data-y attributes
-      var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-      var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+      function eleHasClass(el, cls) {
+        return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+      }
 
-      // translate the element
-      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+      window.onload = function() {
+        init();
+      }
 
-      // update the posiion attributes
-      target.setAttribute('data-x', x)
-      target.setAttribute('data-y', y)
-    }
-
-    // this function is used later in the resizing and gesture demos
-    window.dragMoveListener = dragMoveListener
   });
 
   /*===== Component Content =====*/
@@ -125,7 +149,7 @@ export default function DragDrop({
 
       {/*===== Dropzone =====*/}
       <div className={componentStyles.dropZoneWrapper}>
-        <div id="DropZone" className={componentStyles.dropZone}>
+        <div id="DropZone" className={componentStyles.dropZone + ' droppable'}>
           <span className={componentStyles.message}>Drag n' Drop Dropzone</span>
         </div>
       </div>
