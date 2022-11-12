@@ -19,6 +19,7 @@ export default function DragDrop({
         var startPos = null;
 
         interact('.draggable').draggable({
+          inertia: true,
           snap: {
             targets: [startPos],
             range: Infinity,
@@ -33,6 +34,20 @@ export default function DragDrop({
                 x: rect.left + rect.width  / 2,
                 y: rect.top  + rect.height / 2
               }
+              
+              var target = event.target,
+                // keep the dragged position in the data-x/data-y attributes
+                x = (parseFloat(target.getAttribute('data-origin-x')) || 0) + event.dx,
+                y = (parseFloat(target.getAttribute('data-origin-y')) || 0) + event.dy;
+
+            // translate the element
+            target.style.webkitTransform =
+            target.style.transform =
+              'translate(' + x + 'px, ' + y + 'px)';
+
+            // update the posiion attributes
+            target.setAttribute('data-x', x);
+            target.setAttribute('data-y', y);
 
             event.interactable.draggable({
               snap: {
@@ -57,6 +72,7 @@ export default function DragDrop({
             target.setAttribute('data-y', y);
             target.classList.add('getting--dragged');
           },
+
           onend: function (event) {
             event.target.classList.remove('getting--dragged')
           }
@@ -67,9 +83,12 @@ export default function DragDrop({
           overlap: .5,
 
           ondropactivate: function (event) {
+            console.log("ondropactivate");
             event.target.classList.add('can--drop');
           },
+
           ondragenter: function (event) {
+            console.log("onDragEnter");
             var draggableElement = event.relatedTarget,
                 dropzoneElement  = event.target,
                 dropRect         = interact.getElementRect(dropzoneElement),
@@ -88,11 +107,23 @@ export default function DragDrop({
             dropzoneElement.classList.add('can--catch');
             draggableElement.classList.add('drop--me');
           },
+
           ondragleave: function (event) {
             // remove the drop feedback style
+            console.log("onDragLeave");
+            console.log(startPos);
             event.target.classList.remove('can--catch', 'caught--it');
             event.relatedTarget.classList.remove('drop--me');
+            event.draggable.draggable({
+               snap: {
+                 targets: [startPos],
+                 range: Infinity,
+                 relativePoints: [ { x: 0.5, y: 0.5 } ],
+                 endOnly: true
+               }
+             });
           },
+
           ondrop: function (event) {
             console.log("Index of dropped node: " + (event.target));
             console.log("Index of dragged node: " + getNodeIndex(event.relatedTarget.parentNode));
@@ -100,13 +131,16 @@ export default function DragDrop({
             console.log("Dropped!");
             console.log("related target: " + event.relatedTarget.parentNode);
             console.log(event.draggable);
-            event.target.classList.add('caught--it');
+            //event.target.classList.add('caught--it');
           },
+
           ondropdeactivate: function (event) {
             // remove active dropzone feedback
+            console.log("ondropdeactivate");
             event.target.classList.remove('can--drop');
             event.target.classList.remove('can--catch');
           }
+
         });
       }
 
@@ -120,13 +154,13 @@ export default function DragDrop({
         return index;
       }
 
-      function eleHasClass(el, cls) {
-        return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
-      }
+    function eleHasClass(el, cls) {
+      return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
+    }
 
-      window.onload = function() {
-        init();
-      }
+    window.onload = function() {
+      init();
+    }
 
   });
 
