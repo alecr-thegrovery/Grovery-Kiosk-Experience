@@ -34,16 +34,6 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <Container>
-          <DragDrop/>
-        </Container>
-      </section>
-
-      <Container>
-        <br/><hr/><br/>
-      </Container>
-
-      <section>
         <DoorSection/>
       </section>
       

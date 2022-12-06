@@ -18,20 +18,28 @@ export default function DoorSection({
   //console.log(author);
   useEffect(() => {
     $(document).ready(function() {
-
+      let doorLink = "";
       //OPEN/CLOSE DOORS
       $(".Door").click(function(){
-        console.log("click");
-        $(".Door").attr("data-active", "inactive");
+        //console.log("click");
+        $(".Door").attr("data-active", "inactive"); //reset doors
+
         if( $(this).attr("data-active") == "active"){
+          //Don't do the thing
           $(this).attr("data-active", "inactive");
         }else{
+          //Do the thing
           $(this).attr("data-active", "active");
-          router.push("/posts/master-post")
+          doorLink = $(this).attr("data-link");
+          router.prefetch(doorLink); //prefetch next page
+          setTimeout(function() { 
+              $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+              router.push(doorLink); //move user to next page
+          }, 1000);
         }
-      });
 
-      
+      });
+      //END door function
 
     });
   });
@@ -43,23 +51,38 @@ export default function DoorSection({
         <div className={componentStyles.layout}>
           
           <div className={componentStyles.cell}>
-            <Door/>
+            <Door
+              title="Options to Enroll"
+              link="/posts/master-post"
+            />
           </div>
 
           <div className={componentStyles.cell}>
-            <Door/>
+            <Door
+              title="How to Complete the Enrollment Form"
+              link="/posts/master-post"
+            />
           </div>
 
           <div className={componentStyles.cell}>
-            <Door/>
+            <Door
+              title="Provider Portal (myBMScases.com)"
+              link="/posts/master-post"
+            />
           </div>
 
           <div className={componentStyles.cell}>
-            <Door/>
+            <Door
+              title="Annexus / AssistPoint Enrollment"
+              link="/posts/master-post"
+            />
           </div>
 
           <div className={componentStyles.cell}>
-            <Door/>
+            <Door
+              title="Options to Enroll"
+              link="/posts/master-post"
+            />
           </div>
         </div>
 

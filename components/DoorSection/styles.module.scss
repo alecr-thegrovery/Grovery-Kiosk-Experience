@@ -42,6 +42,11 @@
 		will-change: transform;
 		transition: $transitionSlow;
 		transform-origin: left;
+
+		.title{
+			color: $white;
+			font-size: $clampMedium;
+		}
 	}
 	&[data-active="active"]{
 		.doorPanel{
