@@ -5,25 +5,6 @@ import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import Container from '@components/Container'
 
-export default function Post({ postData }) {
-  return (
-    <Layout>
-      <Head>
-        <title>{postData.title} | {siteData.siteTitleBase}</title>
-      </Head>
-      <Container>
-        <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
-            <Date dateString={postData.date} />
-          </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </article>
-      </Container>
-    </Layout>
-  )
-}
-
 export async function getStaticPaths() {
   const paths = getAllPostIds()
   return {
@@ -40,3 +21,43 @@ export async function getStaticProps({ params }) {
     }
   }
 }
+
+export default function Post({ postData }) {
+  return (
+    <Layout>
+      <Head>
+        <title>{postData.title} | {siteData.siteTitleBase}</title>
+      </Head>
+      <Container>
+        <article>
+
+          {/*Header Section*/}
+          <div className="header">
+            <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+            <p>
+              {postData.subTitle}
+            </p>
+          </div>
+          
+          {/*Content Section*/}
+          <div className="postContent">
+            
+            <div className="cell" data-cell="text">
+              <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            </div>
+
+            <div className="cell" data-cell="assets">
+              [ASSETS]
+            </div>
+
+          </div>
+
+          
+
+        </article>
+      </Container>
+    </Layout>
+  )
+}
+
+

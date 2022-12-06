@@ -7,6 +7,7 @@ import DesktopNav from '@components/DesktopNav'
 import BlogPreview from '@components/BlogPreview'
 import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
+import ContentGrid from '@components/ContentGrid'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -37,6 +38,14 @@ export default function Home({ allPostsData }) {
         </Container>
       </section>
 
+      <Container>
+        <br/><hr/><br/>
+      </Container>
+
+      <section>
+        <ContentGrid/>
+      </section>
+      
     </Layout>
   )
 }
