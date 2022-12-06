@@ -8,12 +8,13 @@ import BlogPreview from '@components/BlogPreview'
 import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
 import ContentGrid from '@components/ContentGrid'
+import DoorSection from '@components/DoorSection'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
-import { getSortedPostsData } from '@lib/posts'
 
 /*===== Posts Data =====*/
+import { getSortedPostsData } from '@lib/posts'
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -36,6 +37,14 @@ export default function Home({ allPostsData }) {
         <Container>
           <DragDrop/>
         </Container>
+      </section>
+
+      <Container>
+        <br/><hr/><br/>
+      </Container>
+
+      <section>
+        <DoorSection/>
       </section>
 
       <Container>
