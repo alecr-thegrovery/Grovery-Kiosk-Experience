@@ -1,6 +1,9 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
+import { router } from 'next/router'
+import $ from 'jquery'
 import interact from 'interactjs'
+import Card from './Card.js'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -132,6 +135,14 @@ export default function DragDrop({
             console.log("related target: " + event.relatedTarget.parentNode);
             console.log(event.draggable);
             //event.target.classList.add('caught--it');
+
+            let cardLink = $(".drop--me").attr("data-link");
+            console.log(cardLink);
+            router.prefetch(cardLink); //prefetch next page
+            setTimeout(function() { 
+                $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+                router.push(cardLink); //move user to next page
+            }, 1000);
           },
 
           ondropdeactivate: function (event) {
@@ -170,15 +181,22 @@ export default function DragDrop({
       
       {/*===== Draggable Cards =====*/}
       <div className={componentStyles.cardWrapper}>
-        <div id="DnD-1" className={'draggable '+componentStyles.dragDropCard} data-draggable>
-          Drag n' Drop Card
-        </div>
-        <div id="DnD-2" className={'draggable '+componentStyles.dragDropCard} data-draggable>
-          Drag n' Drop Card
-        </div>
-        <div id="DnD-3" className={'draggable '+componentStyles.dragDropCard} data-draggable>
-          Drag n' Drop Card
-        </div>
+        
+        <Card 
+          text="Enrollment Lorum Ipsum"
+          link="/enrollment-1/"
+        />
+
+        <Card 
+          text="Access and Reimbursement Report"
+          link="/enrollment-1/"
+        />
+
+        <Card 
+          text="Co-Pay &amp; Finacial Assistance Services"
+          link="/enrollment-1/"
+        />
+        
       </div>
 
       {/*===== Dropzone =====*/}
