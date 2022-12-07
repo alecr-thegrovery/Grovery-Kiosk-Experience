@@ -11,6 +11,7 @@ import DesktopNav from '@components/DesktopNav'
 import NavMenu from '@components/NavMenu'
 import Footer from '@components/Footer'
 import Container from '@components/Container'
+import BackToHome from '@components/BackToHome'
 
 export const siteTitle = 'Next.js Sample Website'
 export const siteData = data
@@ -70,13 +71,12 @@ export default function Layout({ children, home }) {
           <div>
             {children}
           </div>
-          
-        
+  
       </main>
 
+      <BackToHome/>
       <Footer/>
       
-
     </div>
   )
 }
