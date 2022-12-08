@@ -33,7 +33,9 @@ export default function DoorSection({
           router.prefetch(doorLink); //prefetch next page
           setTimeout(function() { 
               $("#LayoutOuter").attr("data-hidden", "true"); //page transition
-              router.push(doorLink); //move user to next page
+              setTimeout(function() { 
+                  router.push(doorLink); //move user to next page
+              }, 250);
           }, 1000);
         }
 
