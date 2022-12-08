@@ -34,9 +34,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <Container>
-          <DragDrop/>
-        </Container>
+        <DoorSection/>
       </section>
       
     </Layout>

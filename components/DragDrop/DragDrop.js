@@ -189,12 +189,17 @@ export default function DragDrop({
 
         <Card 
           text="Access and Reimbursement Report"
-          link="/enrollment-1/"
+          link="/access-1/"
         />
 
         <Card 
           text="Co-Pay &amp; Finacial Assistance Services"
-          link="/enrollment-1/"
+          link="/financial-1/"
+        />
+
+        <Card 
+          text="Patient Resources"
+          link="/resources-1/"
         />
         
       </div>

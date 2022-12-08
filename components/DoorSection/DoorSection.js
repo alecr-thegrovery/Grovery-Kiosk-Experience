@@ -11,8 +11,7 @@ import utilStyles from '@styles/utils.module.css'
 
 export default function DoorSection({ 
   //Props
-  id, image, title, 
-  previewText, author, date
+  access, enrollment, financial, resources
 }) {
 
   //console.log(author);
@@ -53,35 +52,35 @@ export default function DoorSection({
           <div className={componentStyles.cell}>
             <Door
               title="Options to Enroll"
-              link="/posts/master-post"
+              link="/enrollment-2"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="How to Complete the Enrollment Form"
-              link="/posts/master-post"
+              link="/enrollment-2"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Provider Portal (myBMScases.com)"
-              link="/posts/master-post"
+              link="/enrollment-2"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Annexus / AssistPoint Enrollment"
-              link="/posts/master-post"
+              link="/enrollment-2"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Options to Enroll"
-              link="/posts/master-post"
+              link="/enrollment-2"
             />
           </div>
         </div>
