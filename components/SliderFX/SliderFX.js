@@ -81,7 +81,7 @@ export default function SliderFX({
           <div className={componentStyles.SlideInner}>
             
             <Slide
-              image="/images/planet-caravan-studios-logo.png"
+              image="/images/groverylogo_color.svg"
               imageAlt="Planet Caravan"
               titleCopy="BasicSlide Component"
               bodyCopy="This slide is its own component, with 
@@ -95,7 +95,7 @@ export default function SliderFX({
           <div className={componentStyles.SlideInner}>
             
             <Slide
-              image="/images/planet-caravan-studios-logo.png"
+              image="/images/groverylogo_color.svg"
               imageAlt="Planet Caravan"
               titleCopy="BasicSlide Component"
               bodyCopy="This slide is its own component, with 
@@ -109,7 +109,7 @@ export default function SliderFX({
           <div className={componentStyles.SlideInner}>
             
             <Slide
-              image="/images/planet-caravan-studios-logo.png"
+              image="/images/groverylogo_color.svg"
               imageAlt="Planet Caravan"
               titleCopy="BasicSlide Component"
               bodyCopy="This slide is its own component, with 
@@ -123,7 +123,7 @@ export default function SliderFX({
           <div className={componentStyles.SlideInner}>
             
             <Slide
-              image="/images/planet-caravan-studios-logo.png"
+              image="/images/groverylogo_color.svg"
               imageAlt="Planet Caravan"
               titleCopy="BasicSlide Component"
               bodyCopy="This slide is its own component, with 
@@ -137,7 +137,7 @@ export default function SliderFX({
           <div className={componentStyles.SlideInner}>
             
             <Slide
-              image="/images/planet-caravan-studios-logo.png"
+              image="/images/groverylogo_color.svg"
               imageAlt="Planet Caravan"
               titleCopy="BasicSlide Component"
               bodyCopy="This slide is its own component, with 

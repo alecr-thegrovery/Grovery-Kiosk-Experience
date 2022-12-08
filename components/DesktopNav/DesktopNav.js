@@ -50,7 +50,7 @@ export default function DesktopNav({ children, home }) {
           <div className={componentStyles.logo}>
             <Link href="/">
               <a>
-                <img src="/images/planet-caravan-studios-logo.png" alt=""/>
+                <img src="/images/groverylogo_color.svg" alt=""/>
               </a>
             </Link>
             <Link href="/">
