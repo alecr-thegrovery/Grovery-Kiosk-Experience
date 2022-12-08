@@ -7,8 +7,7 @@ import varStyles from '@styles/vars.module.scss'
 import { BsList } from "react-icons/bs";
 import $ from 'jquery'
 
-const name = 'Planet Caravan Studios'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'BMS CONGRESS ACCESS'
 
 export default function DesktopNav({ children, home }) {
 
