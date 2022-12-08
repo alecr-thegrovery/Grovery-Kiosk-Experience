@@ -75,9 +75,7 @@ export default function Layout({ children, home }) {
       </main>
 
       
-      {!home && (
-        <BackToHome/>
-      )}
+      {!home && <BackToHome/>}
       {/*<Footer/>*/}
       
     </div>
