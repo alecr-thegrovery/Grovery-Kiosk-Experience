@@ -5,7 +5,8 @@
 	justify-content: center;
 	overflow-y: hidden;
 	width: 100%;
-	height: 150px;
+	max-height: 150px;
+	height: 100%;
 
 	.area{
 		background-color: $grey_1;

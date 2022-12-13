@@ -37,11 +37,11 @@ Description:	Store SCSS vars here
 	$fontSizeDetail:		12px;
 
 /***** Dynamic Font Sizes *****/
-	$clampExtraSmall:		clamp(8px, 1vw, 12px);
-	$clampSmall: 				clamp(12px, 1.5vw, 16px);
-	$clampMedium: 			clamp(14px, 2vw, 20px);
-	$clampLarge: 			clamp(24px, 4vw, 36px);
-	$clampExtraLarge: 	clamp(36px, 5.5vw, 52px);
+	$clampExtraSmall:		clamp(8px, 1vw, 16px);
+	$clampSmall: 				clamp(12px, 1.5vw, 20px);
+	$clampMedium: 			clamp(14px, 2vw, 28px);
+	$clampLarge: 			clamp(24px, 4vw, 45px);
+	$clampExtraLarge: 	clamp(36px, 5.5vw, 60px);
 
 /***** Letter Spacing *****/
 	$letterSpacingWide:		0.05em;

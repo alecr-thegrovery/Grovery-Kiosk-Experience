@@ -50,8 +50,11 @@ export default function Layout({ children, home }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
       </Head>
 
-      <DesktopNav/>
-      <NavMenu/>
+      
+      <section className={styles.header}>
+        <DesktopNav/>
+        <NavMenu/>
+      </section>
       
 
       {/* MAIN SECTION */}
@@ -74,9 +77,11 @@ export default function Layout({ children, home }) {
   
       </main>
 
+      <section className={styles.footer}>
+        {!home && <BackToHome/>}
+        {/*<Footer/>*/}  
+      </section>
       
-      {!home && <BackToHome/>}
-      {/*<Footer/>*/}
       
     </div>
   )
