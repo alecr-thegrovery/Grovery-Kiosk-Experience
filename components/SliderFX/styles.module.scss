@@ -2,7 +2,7 @@
 
 /* Top level slider  */
 .Slider{
-	padding: 75px 75px;
+	padding: 50px 75px;
 	//border: 5px solid $red;
 	overflow: visible;
 
@@ -21,7 +21,7 @@
 
 	.SlideInner{
 		width: 100%;
-		max-width: 550px;
+		max-width:66vw;
 		//padding: 35px;
 		display: flex;
 		flex-direction: column;
@@ -36,18 +36,32 @@
 /* Individual slides */
 .SwiperSlide{
 	width: 100%;
-	max-width: 550px;
+	aspect-ratio: 16/8;
+	overflow: hidden;
+	//max-width: 550px;
 	background: $grey_1;
 	//padding: 35px;
 	//box-shadow: $niceShadowShort;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	//border: 5px solid $red;
+	border: solid $borderWidth $black;
+	padding: $clampMedium;
+
+	.content{
+		height: 100%;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: $clampMedium;
+		border-right:solid $borderWidth $black; 
+	}
 
 	.image{
-		width: 300px;
+		width: 75%;
 		padding: 15px;
 	}
 
@@ -73,6 +87,42 @@
 			font-family: $fontBody;
 			font-size: $fontSizeBody;
 			margin-bottom: 15px;
+			width: 100%;
+			aspect-ratio: 2/1;
+			overflow-y: auto;
+			border:dashed $borderWidth $black;
 		}
 	}
+
+	.assets{
+		width: 50%;
+		padding: $clampSmall;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		max-height: 20vw;
+		overflow-y: auto;
+		border:dashed $borderWidth $black;
+	}
+}
+
+.AssetOuter{
+	width: 33.3%;
+	padding: $clampSmall;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.Asset{
+	font-size: $clampExtraSmall;
+	border: solid $borderWidth $black;
+	aspect-ratio: 1/1;
+	width: 100%;
+	//max-width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }

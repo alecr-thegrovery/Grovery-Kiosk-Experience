@@ -1,11 +1,13 @@
 # README #
 
-### Project-Specific Notes ###
+## Project-Specific Notes ##
 * Project-specific notes go here.
+
+### Code Libraries ###
 * Drag and Drop library: https://interactjs.io/
 * Element shapes: https://augmented-ui.com/
 
-#### Server Links ####
+### Server Links ###
 * Local: http://localhost:3000/
 * Staging: https://planet-caravan-simple-blog-template.netlify.app/
 * Live: 
@@ -65,7 +67,7 @@ When you start the project, check in with the projects's Analyst for the followi
 * [Category and tag filtering on blog pages](https://retool.com/blog/filtering-data-in-react-filter-map-and-for-loops/)
 * lodash - js utility library
 * browsersync - sync multiple browser windows
-* Form integration - netilfy forms
+* Form integration - netlify forms
 
 ### Article Links ###
 * [Set up Google Analytics with react-ga](https://medium.com/@cooperwfloyd/the-most-simple-way-to-track-next-js-page-views-in-google-analytics-8a5c6d981f43)

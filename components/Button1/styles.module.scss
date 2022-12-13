@@ -3,13 +3,13 @@
 .Button1{
 	font-size: $clampMedium;
 	color: $black;
-	border: solid 1px $black;
+	border: solid $borderWidth $black;
 	background-color: $white;
 	padding: 0.25em 1em 0.35em;
 	transition: $transitionMedium;
 	&:hover{
 		color: $white;
-		border: solid 1px $black;
+		border: solid $borderWidth $black;
 		background-color: $black;
 	}
 }

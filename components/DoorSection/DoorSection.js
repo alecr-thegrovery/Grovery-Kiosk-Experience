@@ -54,35 +54,35 @@ export default function DoorSection({
           <div className={componentStyles.cell}>
             <Door
               title="Options to Enroll"
-              link="/enrollment-2"
+              link="/enrollment-2?slide=1"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="How to Complete the Enrollment Form"
-              link="/enrollment-2"
+              link="/enrollment-2?slide=2"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Provider Portal (myBMScases.com)"
-              link="/enrollment-2"
+              link="/enrollment-2?slide=3"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Annexus / AssistPoint Enrollment"
-              link="/enrollment-2"
+              link="/enrollment-2?slide=4"
             />
           </div>
 
           <div className={componentStyles.cell}>
             <Door
               title="Options to Enroll"
-              link="/enrollment-2"
+              link="/enrollment-2?slide=5"
             />
           </div>
         </div>

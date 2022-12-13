@@ -84,10 +84,12 @@ code{
     .swiper-button-next:after{
        background-color: $white;
        padding: 10px;
+       border:solid $borderWidth $black;
      }
      .swiper-button-prev:after{
          background-color: $white;
          padding: 10px;
+         border:solid $borderWidth $black;
        }
        .swiper-slide {
         opacity: 0.55;

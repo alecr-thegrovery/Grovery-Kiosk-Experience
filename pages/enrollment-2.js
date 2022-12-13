@@ -19,21 +19,24 @@ export default function Slider({}) {
 
   useEffect(() => {
     $(document).ready(function() {
+      //vars
       let popUpCard = "";
-      $(".swiper-slide [data-popupcard]").click(function(e){
-        console.log("[data-popupcard] click");
-        e.preventDefault();
-        //OpenCard();
-        popUpCard = $(this).attr("data-popupcard");
-        console.log(popUpCard);
-        $(".popUpCard[data-popupcard="+popUpCard+"]").attr("data-active", "true");
-      });
 
-      $("[data-close]").click(function(e){
-        e.preventDefault();
-        //CloseCard();
-        $(".popUpCard[data-popupcard]").attr("data-active", "false");
-      });
+      //Asset modal functions
+        $(".swiper-slide [data-popupcard]").click(function(e){
+          console.log("[data-popupcard] click");
+          e.preventDefault();
+          //OpenCard();
+          popUpCard = $(this).attr("data-popupcard");
+          console.log(popUpCard);
+          $(".popUpCard[data-popupcard="+popUpCard+"]").attr("data-active", "true");
+        });
+
+        $("[data-close]").click(function(e){
+          e.preventDefault();
+          //CloseCard();
+          $(".popUpCard[data-popupcard]").attr("data-active", "false");
+        });
 
       /*function OpenCard(){
         console.log("OpenCard()");
@@ -53,17 +56,11 @@ export default function Slider({}) {
     <Layout>
       
       <Head>
-        <title>Slider | {siteData.siteTitleBase}</title>
+        <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
 
       <section className={utilStyles.textSection}> 
-        <Container> 
-          <h1>Popup Slider</h1>
-        </Container>
-      </section>
-
-      <section className={utilStyles.textSection}> 
-        <Container> 
+        <Container width="contentWidthXl"> 
           <SliderFX/>
           <PopupCard/>
         </Container>
