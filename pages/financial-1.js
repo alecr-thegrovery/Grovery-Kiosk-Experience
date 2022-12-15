@@ -32,9 +32,9 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
-
+      <h1>Financial</h1>
       <section>
-        <DoorSection/>
+        <DoorSection financial/>
       </section>
       
     </Layout>
