@@ -64,7 +64,7 @@ export default function Slider({}) {
 
       <section className={utilStyles.textSection}> 
         <Container> 
-          <SliderFX/>
+          <SliderFX access/>
           <PopupCard/>
         </Container>
       </section>
