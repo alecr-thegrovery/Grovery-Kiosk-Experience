@@ -5,6 +5,8 @@ import $ from 'jquery'
 import Door from "./Door"
 import ContentAccess from "./ContentAccess"
 import ContentEnrollment from "./ContentEnrollment"
+import ContentFinancial from "./ContentFinancial"
+import ContentResources from "./ContentResources"
 import Container from '@components/Container'
 
 /*===== Styles =====*/
