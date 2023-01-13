@@ -181,26 +181,34 @@ export default function DragDrop({
       
       {/*===== Draggable Cards =====*/}
       <div className={componentStyles.cardWrapper}>
-        
-        <Card 
-          text="Enrollment Lorum Ipsum"
-          link="/enrollment-1/"
-        />
 
-        <Card 
-          text="Access and Reimbursement Report"
-          link="/access-1/"
-        />
+        <div className={componentStyles.cell}>
+          <Card 
+            text="Enrollment"
+            link="/enrollment-1/"
+          />
+        </div>
 
-        <Card 
-          text="Co-Pay &amp; Finacial Assistance Services"
-          link="/financial-1/"
-        />
+        <div className={componentStyles.cell}>
+          <Card 
+            text="Access and Reimbursement Report"
+            link="/access-1/"
+          />
+        </div>
 
-        <Card 
-          text="Patient Resources"
-          link="/resources-1/"
-        />
+        <div className={componentStyles.cell}>
+          <Card 
+            text="Co-Pay &amp; Finacial Assistance Services"
+            link="/financial-1/"
+          />
+        </div>
+
+        <div className={componentStyles.cell}>
+          <Card 
+            text="Patient Resources"
+            link="/resources-1/"
+          />
+        </div>
         
       </div>
 
