@@ -19,8 +19,11 @@ export default function Card({
       data-draggable
       data-link={link}
     >
-      {text}
+      <div className={componentStyles.inner + " inner"}>
+        {text}
+      </div>
     </div>
+    
   </div>
   )
 }

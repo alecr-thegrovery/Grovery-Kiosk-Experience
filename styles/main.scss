@@ -99,4 +99,15 @@ code{
         }
        }
   }
+
+
+.draggable{
+  .inner{
+    transition: $transitionMedium;
+  }
+  
+  &.getting--dragged .inner{
+    transform: rotate(15deg);
+  }
+}
   
