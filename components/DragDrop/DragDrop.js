@@ -32,7 +32,7 @@ export default function DragDrop({
           onstart: function (event) {
               var rect = interact.getElementRect(event.target);
 
-              // record center point when starting the very first a drag
+              // record center point when starting the very first drag
               startPos = {
                 x: rect.left + rect.width  / 2,
                 y: rect.top  + rect.height / 2
