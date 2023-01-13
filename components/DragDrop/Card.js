@@ -8,19 +8,24 @@ import utilStyles from '@styles/utils.module.css'
 
 export default function Card({ 
   //Props
-  text, link
+  text, link, cardID, color
 }) {
 
   return (
   <div className={componentStyles.cardWrapper}>
     <div 
-      id="DnD-1" 
+      id={cardID} 
       className={'draggable ' + componentStyles.dragDropCard} 
       data-draggable
       data-link={link}
     >
       <div className={componentStyles.inner + " inner"}>
-        {text}
+
+        <div className={componentStyles.content}>
+          {text}
+        </div>
+        <div className={componentStyles.accent} data-color={color}></div>
+
       </div>
     </div>
     

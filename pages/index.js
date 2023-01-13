@@ -34,7 +34,7 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section>
-        <Container>
+        <Container width="contentWidthXl">
           <DragDrop/>
         </Container>
       </section>

@@ -49,12 +49,12 @@ export default function ContentAccess({
         />
       </div>
 
-      <div className={componentStyles.cell}>
+      {/*<div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
           link="/access-2?slide=5"
         />
-      </div>
+      </div>*/}
     </>
   )
 }

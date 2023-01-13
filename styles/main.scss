@@ -107,7 +107,8 @@ code{
   }
   
   &.getting--dragged .inner{
-    transform: rotate(15deg);
+    transform: rotate(15deg) translateY(-1em);
+    box-shadow: $niceShadowShort;
   }
 }
   

@@ -184,29 +184,37 @@ export default function DragDrop({
 
         <div className={componentStyles.cell}>
           <Card 
+            cardID="Enrollment"
             text="Enrollment"
             link="/enrollment-1/"
+            color="brown"
           />
         </div>
 
         <div className={componentStyles.cell}>
           <Card 
+            cardID="Access"
             text="Access and Reimbursement Report"
             link="/access-1/"
+            color="orange"
           />
         </div>
 
         <div className={componentStyles.cell}>
           <Card 
+            cardID="Copay"
             text="Co-Pay &amp; Finacial Assistance Services"
             link="/financial-1/"
+            color="teal"
           />
         </div>
 
         <div className={componentStyles.cell}>
           <Card 
+            cardID="Resources"
             text="Patient Resources"
             link="/resources-1/"
+            color="purple"
           />
         </div>
         
