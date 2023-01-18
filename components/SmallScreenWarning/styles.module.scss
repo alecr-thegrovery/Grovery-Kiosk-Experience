@@ -1,0 +1,26 @@
+@import "@styles/vars.module.scss";
+
+.SmallScreenWarning{
+	background-color: $grey_1;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba($grey_2,.5) 35px, rgba($grey_2,.5) 70px);
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: $zIndexMax;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	display: none;
+
+	@media screen and (max-width: 768px) {
+		display: flex;
+	}
+
+	.content{
+		background-color: $white;
+		padding: 1em;
+	}
+}

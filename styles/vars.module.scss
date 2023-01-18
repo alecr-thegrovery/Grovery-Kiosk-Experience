@@ -11,13 +11,14 @@ Description:	Store SCSS vars here
 	$black: 				#212121;
 	$white: 				#fafafa;
 	$grey_1:			#ececec;
-	$grey_2:			#3e3e3e;
+	$grey_2:			#595555;
 	$red: 				#fb0000;
 	$orange: 			#E0603A;
 	$darkOrange:		#BA4103;
 	$brown:				#8B423E;
 	$teal:				#129FBA;
 	$purple:			#A84499;
+	$green:				#7DC242;
 
 /***** Named Colors *****/
 	//only use other vars
@@ -69,6 +70,7 @@ Description:	Store SCSS vars here
 	$zIndexBase: 		0;
 	$zIndexMedium: 	100;
 	$zIndexHigh: 		1000;
+	$zIndexMax: 		10000;
 
 
 /***** Border Settings *****/
