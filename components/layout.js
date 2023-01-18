@@ -74,6 +74,33 @@ export default function Layout({ children, home }) {
           <div>
             {children}
           </div>
+
+          <div className={styles.rightSidebar}>
+            <div className={styles.inner}>
+              
+              <div className={styles.questionsButton}>
+                <a href="#">QUESTIONS</a>
+              </div>
+
+              <div className={styles.scanner}>
+                <div className={styles.scannerBorder}>
+                  <div className={styles.light}></div>
+                  <div className={styles.icon}>icon</div>
+                  <div className={styles.text}>
+                    <p>
+                      Place your access card here
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.controls}>
+                <div>Back</div>
+                <div>Home</div>
+              </div>
+
+            </div>
+          </div>
   
       </main>
 
