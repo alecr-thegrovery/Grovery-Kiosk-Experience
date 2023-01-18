@@ -12,6 +12,7 @@ import NavMenu from '@components/NavMenu'
 import Footer from '@components/Footer'
 import Container from '@components/Container'
 import BackToHome from '@components/BackToHome'
+import SmallScreenWarning from '@components/SmallScreenWarning'
 
 export const siteTitle = 'Next.js Sample Website'
 export const siteData = data
@@ -50,6 +51,7 @@ export default function Layout({ children, home }) {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
       </Head>
 
+      <SmallScreenWarning/>
       
       <section className={styles.header}>
         <DesktopNav/>
