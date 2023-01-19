@@ -221,11 +221,12 @@ export default function DragDrop({
       </div>
 
       {/*===== Dropzone =====*/}
-      <div className={componentStyles.dropZoneWrapper}>
+      {/*<div className={componentStyles.dropZoneWrapper}>
         <div id="DropZone" className={componentStyles.dropZone + ' droppable'}>
           <span className={componentStyles.message}>Drag n' Drop Dropzone</span>
         </div>
-      </div>
+      </div>*/}
+      
     </div>
   )
 }

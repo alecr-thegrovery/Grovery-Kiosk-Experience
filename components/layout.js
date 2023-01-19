@@ -73,7 +73,7 @@ export default function Layout({ children, home }) {
             </Container>
           )}*/}
           
-          <div>
+          <div className={styles.mainContent}>
             {children}
           </div>
 
@@ -84,7 +84,7 @@ export default function Layout({ children, home }) {
                 <a href="#">QUESTIONS</a>
               </div>
 
-              <div className={styles.scanner}>
+              <div id="DropZone" className={styles.scanner + ' droppable'}>
                 <div className={styles.scannerBorder}>
                   <div className={styles.light}></div>
                   <div className={styles.icon}>icon</div>
@@ -109,6 +109,7 @@ export default function Layout({ children, home }) {
       <section className={styles.footer}>
         {!home && <BackToHome/>}
         {/*<Footer/>*/}  
+        <span>BMS CONGRESS ACCESS</span>
       </section>
       
       

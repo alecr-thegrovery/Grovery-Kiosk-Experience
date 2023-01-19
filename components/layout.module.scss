@@ -19,13 +19,17 @@
 }
 
 .main{
-  height: 80vh;
+  height: 85vh;
   border: solid $borderWidth $black;
   border-top: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  .mainContent{
+    width: 85%;
+  }
 }
 
 .rightSidebar{
@@ -34,6 +38,10 @@
   width: 15%;
   height: 100%;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
   .scanner{
     background-color: $grey_2;
     border-radius: 0.5em;
@@ -78,8 +86,12 @@
 
 .footer{
   width:  100%;
-  height: 10vh;
+  height: 5vh;
   position: relative;
   border: solid $borderWidth $black;
   border-top: 0;
+  font-size: $fontSizeDetail;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
