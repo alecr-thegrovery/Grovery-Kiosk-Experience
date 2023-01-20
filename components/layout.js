@@ -9,6 +9,7 @@ import $ from 'jquery'
 
 import DesktopNav from '@components/DesktopNav'
 import NavMenu from '@components/NavMenu'
+import Sidebar from '@components/Sidebar'
 import Footer from '@components/Footer'
 import Container from '@components/Container'
 import BackToHome from '@components/BackToHome'
@@ -17,7 +18,10 @@ import SmallScreenWarning from '@components/SmallScreenWarning'
 export const siteTitle = 'Next.js Sample Website'
 export const siteData = data
 
-export default function Layout({ children, home }) {
+export default function Layout({ 
+  //PROPS
+  children, home, card 
+}) {
   
   useEffect(() => {
     $(document).ready(function() {
@@ -78,38 +82,15 @@ export default function Layout({ children, home }) {
           </div>
 
           <div className={styles.rightSidebar}>
-            <div className={styles.inner}>
-              
-              <div className={styles.questionsButton}>
-                <a href="#">QUESTIONS</a>
-              </div>
-
-              <div id="DropZone" className={styles.scanner + ' droppable'}>
-                <div className={styles.scannerBorder}>
-                  <div className={styles.light}></div>
-                  <div className={styles.icon}>icon</div>
-                  <div className={styles.text}>
-                    <p>
-                      Place your access card here
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.controls}>
-                <div>Back</div>
-                <div>Home</div>
-              </div>
-
-            </div>
+            <Sidebar card={card}/>
           </div>
   
       </main>
 
       <section className={styles.footer}>
+        <span>BMS CONGRESS ACCESS</span>
         {!home && <BackToHome/>}
         {/*<Footer/>*/}  
-        <span>BMS CONGRESS ACCESS</span>
       </section>
       
       

@@ -53,7 +53,7 @@ export default function Slider({}) {
   });
 
   return (
-    <Layout>
+    <Layout card>
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
