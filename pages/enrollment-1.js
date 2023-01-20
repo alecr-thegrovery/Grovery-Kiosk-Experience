@@ -27,7 +27,7 @@ export async function getStaticProps() {
 /*===== Page Content =====*/
 export default function Home({ allPostsData }) {
   return (
-    <Layout card>
+    <Layout enrollment>
       
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
