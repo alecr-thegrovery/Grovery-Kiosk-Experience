@@ -20,7 +20,8 @@ export const siteData = data
 
 export default function Layout({ 
   //PROPS
-  children, home, card 
+  children, home, card,
+  access, enrollment, financial, resources
 }) {
   
   useEffect(() => {
@@ -82,7 +83,13 @@ export default function Layout({
           </div>
 
           <div className={styles.rightSidebar}>
-            <Sidebar card={card}/>
+            <Sidebar 
+              card={card}
+              access={access}
+              enrollment={enrollment}
+              financial={financial}
+              resources={resources}
+            />
           </div>
   
       </main>

@@ -9,7 +9,7 @@ import utilStyles from '@styles/utils.module.css'
 
 export default function Sidebar({ 
   //Props
-  scanner, card
+  scanner, card, access, enrollment, financial, resources
 }) {
 
   //console.log(author);
@@ -24,13 +24,53 @@ export default function Sidebar({
 
         <div id="DropZone" className={componentStyles.scanner + ' droppable'}>
 
-          {card &&
+          {/*{card &&
             <div className={componentStyles.cardOutter}>
               <Card
                 cardID="Enrollment"
                 text="Enrollment"
                 link="/enrollment-1/"
                 color="brown"
+              />
+            </div>
+          }*/}
+          {access && 
+            <div className={componentStyles.cardOutter}>
+              <Card
+                cardID="Access"
+                text="Access and Reimbursement Report"
+                link="/access-1/"
+                color="orange"
+              />
+            </div>
+          }
+          {enrollment && 
+            <div className={componentStyles.cardOutter}>
+              <Card
+                cardID="Enrollment"
+                text="Enrollment"
+                link="/enrollment-1/"
+                color="brown"
+              />
+            </div>
+          }
+          {financial && 
+            <div className={componentStyles.cardOutter}>
+              <Card
+                cardID="Copay"
+                text="Co-Pay &amp; Finacial Assistance Services"
+                link="/financial-1/"
+                color="teal"
+              />
+            </div>
+          }
+          {resources && 
+            <div className={componentStyles.cardOutter}>
+              <Card
+                cardID="Resources"
+                text="Patient Resources"
+                link="/resources-1/"
+                color="purple"
               />
             </div>
           }

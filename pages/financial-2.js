@@ -50,7 +50,7 @@ export default function Slider({}) {
   });
 
   return (
-    <Layout>
+    <Layout financial>
       
       <Head>
         <title>Slider | {siteData.siteTitleBase}</title>
