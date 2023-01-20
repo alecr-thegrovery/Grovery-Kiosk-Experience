@@ -62,12 +62,12 @@ export default function DesktopNav({ children, home }) {
             </Link>
           </div>
           
-          <div className={componentStyles.buttonWrapper}>
+          {/*<div className={componentStyles.buttonWrapper}>
             <div id="headerNavButton" className={componentStyles.navButton}>
               <BsList className={componentStyles.icon} color="#212121" size={45} />
               <BsList className={componentStyles.iconHover} color="#fafafa" size={45} />
             </div>
-          </div>
+          </div>*/}
           
           
         </div>
