@@ -45,11 +45,11 @@
 
 		.title{
 			color: $white;
-			font-size: $clampMedium;
+			font-size: $clampSmall;
 			text-align: center;
-			position: relative;
-			top: -50px;
-			padding: 0px 15px;
+			padding: 1em 1em;
+			position: absolute;
+			top: 0;
 		}
 	}
 	&[data-active="active"]{
@@ -67,7 +67,11 @@
 		justify-content: center;
 		flex-direction: column;
 		animation: pulse 2s infinite ease-in-out;
-		font-size: $clampMedium;
+		font-size: $clampSmall;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
 	}
 	.content{
 		position: relative;
@@ -78,6 +82,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		padding: 1em 1em;
 		&:before{
 			/*background*/
 			content:'';

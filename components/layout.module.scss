@@ -26,9 +26,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  //z-index:  $zIndexMedium;
 
   .mainContent{
     width: 85%;
+   // z-index:  101;
+    //overflow: hidden;
   }
 }
 
@@ -42,6 +45,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  //z-index:  $zIndexMedium;
   .scanner{
     background-color: $grey_2;
     border-radius: 0.5em;
