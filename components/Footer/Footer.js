@@ -11,27 +11,12 @@ export const siteTitle = 'Next.js Sample Website'
 export default function Footer({ children, home }) {
   return (
     <>
-    <footer className={componentStyles.footer}>
+    <footer className={componentStyles.Footer}>
         
         <Link href="/">
-          <Image
-            priority
-            src="/images/planet-caravan-studios-logo.png"
-            className={componentStyles.logo}
-            height={100}
-            width={100}
-            alt={name}
-          />
+          <a>BMS CONGRESS ACCESS</a>
         </Link>
-        <div className={componentStyles.social}>
-          <SocialIcons
-            instagram="#"
-            facebook="#"
-            twitter="#"
-            tumblr="#"
-            pinterest="#"
-          />
-        </div>
+        
         
       </footer>      
     </>

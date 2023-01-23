@@ -96,9 +96,7 @@ export default function Layout({
       </main>
 
       <section className={styles.footer}>
-        <span>BMS CONGRESS ACCESS</span>
-        {/*{!home && <BackToHome/>}*/}
-        {/*<Footer/>*/}  
+        <Footer/>
       </section>
       
       
