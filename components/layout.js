@@ -89,6 +89,7 @@ export default function Layout({
               enrollment={enrollment}
               financial={financial}
               resources={resources}
+              home={home}
             />
           </div>
   
@@ -96,7 +97,7 @@ export default function Layout({
 
       <section className={styles.footer}>
         <span>BMS CONGRESS ACCESS</span>
-        {!home && <BackToHome/>}
+        {/*{!home && <BackToHome/>}*/}
         {/*<Footer/>*/}  
       </section>
       

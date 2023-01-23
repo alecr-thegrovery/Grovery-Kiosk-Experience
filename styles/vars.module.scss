@@ -41,7 +41,7 @@ Description:	Store SCSS vars here
 	$fontSizeDetail:		12px;
 
 /***** Dynamic Font Sizes *****/
-	$clampExtraSmall:		clamp(8px, 1vw, 16px);
+	$clampExtraSmall:		clamp(8px, 1vw, 12px);
 	$clampSmall: 				clamp(12px, 1.5vw, 20px);
 	$clampMedium: 			clamp(14px, 2vw, 28px);
 	$clampLarge: 			clamp(24px, 4vw, 45px);
