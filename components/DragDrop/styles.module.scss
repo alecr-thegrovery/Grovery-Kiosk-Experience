@@ -4,18 +4,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*===== DnD Cards =====*/
-	.cardWrapper{
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		flex-wrap: wrap;
-		z-index: 10;
-		.cell{
-			width: 25%;
-			padding: 25px;
-		}
-	}
+	
 	
 	/*===== DropZone =====*/
 	.dropZoneWrapper{
@@ -59,6 +48,20 @@
 	}
 }
 
+
+/*===== DnD Cards =====*/
+.cardWrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 10;
+	.cell{
+		width: 25%;
+		padding: 25px;
+	}
+}
 
 .dragDropCard{
 	width: clamp(100px,100%,250px);
