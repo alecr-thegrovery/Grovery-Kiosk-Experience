@@ -56,9 +56,9 @@ export default function Slider({}) {
         <title>Slider | {siteData.siteTitleBase}</title>
       </Head>
 
-      <section className={utilStyles.textSection}> 
-        <Container> 
-          <h1>Popup Slider</h1>
+      <section>
+        <Container width="contentWidthXl">
+          <h1>Financial</h1>
         </Container>
       </section>
 

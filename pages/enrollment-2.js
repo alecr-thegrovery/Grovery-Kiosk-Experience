@@ -59,6 +59,12 @@ export default function Slider({}) {
         <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
 
+       <section>
+        <Container width="contentWidthXl">
+          <h1>Enrollment</h1>
+        </Container>
+      </section>
+
       <section className={utilStyles.textSection}> 
         <Container width="contentWidthXl"> 
           <SliderFX enrollment/>
