@@ -106,9 +106,12 @@ code{
     transition: $transitionMedium;
   }
   
-  &.getting--dragged .inner{
-    transform: rotate(15deg) translateY(-1em);
-    box-shadow: $niceShadowShort;
-  }
+  &.getting--dragged{
+     z-index: 30 !important;
+    .inner{
+        transform: rotate(15deg) translateY(-1em);
+        box-shadow: $niceShadowShort;
+      }
+    } 
 }
   

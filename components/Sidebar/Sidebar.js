@@ -21,9 +21,12 @@ export default function Sidebar({
     <div className={componentStyles.Sidebar}>
       <div className={componentStyles.inner}>
         
-        <div className={componentStyles.controls}>
-          <a href="#">QUESTIONS</a>
+        <div className={componentStyles.controlsOuter}>
+          <div className={componentStyles.controls}>
+            <a href="#">QUESTIONS</a>
+          </div>
         </div>
+        
 
         <div className={componentStyles.scannerWrapper}>
           <div id="DropZone" className={componentStyles.scanner + ' droppable'}>
@@ -103,17 +106,19 @@ export default function Sidebar({
           </div>
         </div>
 
-        {!home && 
-          <div className={componentStyles.controls}>
-            <a className={componentStyles.alt} data-page-back>
-              <MdArrowBackIosNew/> Back
-            </a>
-            <a data-page-transition="/" data-delay="0">
-              Home
-            </a>
-          </div>
-        }
-
+        <div className={componentStyles.controlsOuter}>
+          {!home && 
+            <div className={componentStyles.controls}>
+              <a className={componentStyles.alt} data-page-back>
+                <MdArrowBackIosNew/> Back
+              </a>
+              <a data-page-transition="/" data-delay="0">
+                Home
+              </a>
+            </div>
+          }
+        </div>
+        
       </div>
     </div>
   )

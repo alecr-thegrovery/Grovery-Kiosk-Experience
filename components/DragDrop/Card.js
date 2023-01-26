@@ -12,7 +12,7 @@ export default function Card({
 }) {
 
   return (
-  <div className={componentStyles.cardWrapper}>
+  
     <div 
       id={cardID} 
       className={'draggable ' + componentStyles.dragDropCard} 
@@ -29,6 +29,6 @@ export default function Card({
       </div>
     </div>
     
-  </div>
+  
   )
 }
