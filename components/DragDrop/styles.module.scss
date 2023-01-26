@@ -50,11 +50,12 @@
 
 
 /*===== DnD Cards =====*/
-.cardWrapper{
+.cardsOuter{
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
+	flex-direction: row;
 	flex-wrap: wrap;
 	z-index: 10;
 	.cell{
@@ -109,10 +110,10 @@
 	}
 
 	/*===== Drag n Drop states =====*/
-	&.getting--dragged{
-		z-index: 25;
+	/*&.getting--dragged{
+		z-index: 30 !important;
 		.inner{
 			transform: rotate(45deg);
 		}
-	}
+	}*/
 }
