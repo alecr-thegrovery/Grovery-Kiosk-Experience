@@ -32,9 +32,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
-      <Container>
-        <h1>Enrollment</h1>
-      </Container>
+      
+      <section>
+        <Container width="contentWidthXl">
+          <h1>Enrollment</h1>
+        </Container>
+      </section>
       
       <section>
         <DoorSection enrollment/>

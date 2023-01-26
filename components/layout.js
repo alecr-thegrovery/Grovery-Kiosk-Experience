@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
+import { router } from 'next/router'
 import styles from './layout.module.scss'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
@@ -34,7 +35,39 @@ export default function Layout({
             $("#LayoutOuter").attr("data-hidden", "false");
         }, bufferTime);
       }
+
+      function pageTransition(url, delay){
+        console.log("page-transition: " + url + " | "+ delay);
+        router.prefetch(url); //prefetch next page
+        setTimeout(function() { 
+          $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+          setTimeout(function() { 
+            router.push(url); //move user to next page
+          }, 250); //allow time for page transition
+        }, delay); //allow time for element animations
+      } //END pageTransition function
+
+      let url = "";
+      let delay = 1000;
+
+      $("[data-page-transition]").click(function(){
+        console.log("data-page-transition click");
+        url = $(this).attr("data-page-transition");
+        delay = $(this).attr("data-delay");
+        pageTransition(url, delay);
+      }); 
+
+      $("[data-page-back]").click(function(){
+        console.log("data-page-back click");
+        window.history.back()
+        /*url = window.history.back();
+        delay = 0;
+        console.log(url);
+        pageTransition(url, delay);*/
+      }); 
+
     });
+
   });
 
   return (
@@ -96,9 +129,7 @@ export default function Layout({
       </main>
 
       <section className={styles.footer}>
-        <span>BMS CONGRESS ACCESS</span>
-        {/*{!home && <BackToHome/>}*/}
-        {/*<Footer/>*/}  
+        <Footer/>
       </section>
       
       

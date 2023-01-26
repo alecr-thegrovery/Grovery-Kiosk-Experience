@@ -1,6 +1,9 @@
 /*===== Components =====*/
 import Head from 'next/head'
 import Link from 'next/link'
+import React, { useState, useEffect } from 'react';
+import { router } from 'next/router'
+import $ from 'jquery'
 import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
 import DesktopNav from '@components/DesktopNav'
@@ -26,6 +29,9 @@ export async function getStaticProps() {
 
 /*===== Page Content =====*/
 export default function Home({ allPostsData }) {
+
+  
+
   return (
     <Layout home>
       
@@ -42,5 +48,3 @@ export default function Home({ allPostsData }) {
     </Layout>
   )
 }
-
-
