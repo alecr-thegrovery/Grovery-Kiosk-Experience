@@ -5,6 +5,7 @@
   opacity: 1;
   pointer-events: auto;
   transition: $transitionMedium;
+  height: 100vh;
 
   &[data-hidden="true"]{
     opacity: 0;
@@ -19,7 +20,7 @@
 }
 
 .main{
-  height: 85vh;
+  height: 85%;
   border: solid $borderWidth $black;
   border-top: 0;
   display: flex;
@@ -52,7 +53,7 @@
 
 .header {
   width:  100%;
-  height: 10vh;
+  height: 10%;
   border: solid $borderWidth $black;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,7 @@
 
 .footer{
   width:  100%;
-  height: 5vh;
+  height: 5%;
   padding: 2em;
   position: relative;
   border: solid $borderWidth $black;

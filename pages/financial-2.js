@@ -10,6 +10,7 @@ import $ from 'jquery'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
+import pageStyles from '@styles/pages.module.scss'
 
 /*===== JSON Page Content =====*/
 import pageData from "@data/pageAbout.json"
@@ -56,18 +57,20 @@ export default function Slider({}) {
         <title>Slider | {siteData.siteTitleBase}</title>
       </Head>
 
-      <section>
-        <Container width="contentWidthXl">
-          <h1>Financial</h1>
-        </Container>
-      </section>
+      <div className={pageStyles.pageLevel2}>
+        <section className={pageStyles.headingSection}>
+          <Container width="contentWidthXl">
+            <h1>Financial</h1>
+          </Container>
+        </section>
 
-      <section className={utilStyles.textSection}> 
-        <Container width="contentWidthXl"> 
-          <SliderFX financial/>
-          <PopupCard/>
-        </Container>
-      </section>
+        <section className={pageStyles.mainSection}> 
+          <Container width="contentWidthXl"> 
+            <SliderFX financial/>
+            <PopupCard/>
+          </Container>
+        </section>
+      </div>
 
     </Layout>
   )
