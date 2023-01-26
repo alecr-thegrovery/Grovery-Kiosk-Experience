@@ -105,10 +105,10 @@ export default function Sidebar({
 
         {!home && 
           <div className={componentStyles.controls}>
-            <a className={componentStyles.alt}>
+            <a className={componentStyles.alt} data-page-back>
               <MdArrowBackIosNew/> Back
             </a>
-            <a href="/">
+            <a data-page-transition="/" data-delay="0">
               Home
             </a>
           </div>

@@ -63,7 +63,7 @@ export default function Slider({}) {
       </section>
 
       <section className={utilStyles.textSection}> 
-        <Container> 
+        <Container width="contentWidthXl"> 
           <SliderFX financial/>
           <PopupCard/>
         </Container>

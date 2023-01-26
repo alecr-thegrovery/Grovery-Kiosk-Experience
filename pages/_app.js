@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
+import { router } from 'next/router'
 import 'normalize.css';
 //Swiper.JS
 import 'swiper/swiper.scss';
