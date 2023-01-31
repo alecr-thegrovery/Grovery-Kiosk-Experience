@@ -33,15 +33,17 @@ export default function Home({ allPostsData }) {
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
       
-      <section>
-        <Container width="contentWidthXl">
-          <h1>Enrollment</h1>
-        </Container>
-      </section>
-      
-      <section>
-        <DoorSection enrollment/>
-      </section>
+      <div className={pageStyles.pageLevel1}>
+        <section className={pageStyles.headingSection}>
+          <Container width="contentWidthXl">
+            <h1>Enrollment</h1>
+          </Container>
+        </section>
+        
+        <section className={pageStyles.mainSection}>
+          <DoorSection enrollment/>
+        </section>
+      </div>
       
     </Layout>
   )
