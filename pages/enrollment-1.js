@@ -12,6 +12,7 @@ import DoorSection from '@components/DoorSection'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
+import pageStyles from '@styles/pages.module.scss'
 
 /*===== Posts Data =====*/
 import { getSortedPostsData } from '@lib/posts'
