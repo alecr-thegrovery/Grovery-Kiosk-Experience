@@ -12,6 +12,7 @@ import DoorSection from '@components/DoorSection'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
+import pageStyles from '@styles/pages.module.scss'
 
 /*===== Posts Data =====*/
 import { getSortedPostsData } from '@lib/posts'
@@ -33,15 +34,17 @@ export default function Home({ allPostsData }) {
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
       
-      <section>
-        <Container width="contentWidthXl">
-          <h1>Enrollment</h1>
-        </Container>
-      </section>
-      
-      <section>
-        <DoorSection enrollment/>
-      </section>
+      <div className={pageStyles.pageLevel1}>
+        <section className={pageStyles.headingSection}>
+          <Container width="contentWidthXl">
+            <h1>Enrollment</h1>
+          </Container>
+        </section>
+        
+        <section className={pageStyles.mainSection}>
+          <DoorSection enrollment/>
+        </section>
+      </div>
       
     </Layout>
   )

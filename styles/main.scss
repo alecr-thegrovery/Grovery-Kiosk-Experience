@@ -13,7 +13,13 @@ body {
   font-size: $clampMedium;
   color: $textColor;
   background-color: $backgroundColor;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+
+[data-reactroot]{
+  //height: 100%;
+  overflow: hidden;
 }
 
 *,

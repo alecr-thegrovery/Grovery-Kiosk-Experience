@@ -1,10 +1,34 @@
-.pageLevel2{
+.pageLevel1{
 	height: 100%;
 	.headingSection{
 		height: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1{
+			text-align: center;
+		}
 	}
 
 	.mainSection{
 		height: 80%;
+	}
+}
+
+
+.pageLevel2{
+	height: 100%;
+	.headingSection{
+		height: 12%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		h1{
+			text-align: center;
+		}
+	}
+
+	.mainSection{
+		height: 88%;
 	}
 }

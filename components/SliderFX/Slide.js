@@ -41,7 +41,9 @@ export default function Slide({
       </div>
 
       <div className={componentStyles.assets}>
-        {children}
+        <div className={componentStyles.inner}>
+          {children}
+        </div>
       </div>
 
     </div>

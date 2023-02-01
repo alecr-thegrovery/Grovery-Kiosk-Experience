@@ -1,6 +1,7 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import Button1 from '@components/Button1'
+import PlaceholderContent from '@components/PlaceholderContent'
 import Slide from './Slide'
 import Asset from './Asset'
 import $ from 'jquery'
@@ -106,18 +107,7 @@ export default function ContentAccess({
               titleCopy="Options to Enroll"
               bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius. "
             >
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
+              <PlaceholderContent/>
             </Slide>
 
           </div>
@@ -133,12 +123,7 @@ export default function ContentAccess({
               titleCopy="How to Complete the Enrollment Form"
               bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius."
             >
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
+              <PlaceholderContent/>
             </Slide>
 
           </div>
@@ -154,12 +139,7 @@ export default function ContentAccess({
               titleCopy="Provider Portal (myBMScases.com)"
               bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius."
             >
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
-              <Asset/>
+              <PlaceholderContent/>
             </Slide>
 
           </div>
@@ -174,7 +154,9 @@ export default function ContentAccess({
               imageAlt="The Grovery"
               titleCopy="Annexus / AssistPoint Enrollment"
               bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius."
-            />
+            >
+              <PlaceholderContent/>
+            </Slide>
 
           </div>
         </SwiperSlide>
@@ -188,7 +170,9 @@ export default function ContentAccess({
               imageAlt="The Grovery"
               titleCopy="Options to Enroll"
               bodyCopy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Integer vitae justo eget magna fermentum iaculis eu non diam. Mauris pharetra et ultrices neque ornare aenean. Faucibus in ornare quam viverra orci sagittis. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Amet massa vitae tortor condimentum lacinia. Risus sed vulputate odio ut enim blandit volutpat. Et netus et malesuada fames ac turpis. Lectus magna fringilla urna porttitor rhoncus dolor. Ultrices vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius."
-            />
+            >
+              <PlaceholderContent/>
+            </Slide>
 
           </div>
         </SwiperSlide>
