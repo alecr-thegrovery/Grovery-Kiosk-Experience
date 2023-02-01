@@ -2,7 +2,7 @@
 
 /* Top level slider  */
 .Slider{
-	padding: 50px 75px;
+	padding: 0px 75px 50px;
 	//border: 5px solid $red;
 	overflow: hidden;
 	//z-index: -1;
@@ -97,14 +97,25 @@
 
 	.assets{
 		width: 50%;
-		padding: $clampSmall;
+		padding: $clampMedium;
+		padding-right: 0;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		flex-wrap: wrap;
-		max-height: 20vw;
+		height: 100%;
 		overflow-y: auto;
-		border:dashed $borderWidth $black;
+		
+
+		.inner{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			border:dashed $borderWidth $black;
+		}
 	}
 }
 
