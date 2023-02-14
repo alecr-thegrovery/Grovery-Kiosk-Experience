@@ -24,6 +24,8 @@ export default function Asset({
           <QRCode 
             value={qrCodeValue}
             size={256}
+            bgColor="#fafafa"
+            fgColor="#212121"
             style={{ height: "auto", maxWidth: "100%", width: "100%" }}
           />
         </div>
