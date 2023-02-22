@@ -20,10 +20,17 @@ export default function Sidebar({
   //console.log(author);
   useEffect(() => {
     $(document).ready(function() {
-      $("#supportButton").click(function(e){
+      
+      $("[data-modal-open='support']").click(function(e){
         e.preventDefault();
-        $("#SupportModal").attr("data-active", "active");
+        $("#SupportModal").attr("data-modal-status", "active");
       });
+
+      $("[data-modal-close='support']").click(function(e){
+        e.preventDefault();
+        $("#SupportModal").attr("data-modal-status", "inactive");
+      });
+
     });
   });
 
@@ -33,7 +40,7 @@ export default function Sidebar({
         
         <div className={componentStyles.controlsOuter}>
           <div className={componentStyles.controls}>
-            <a id="supportButton" href="#">SUPPORT</a>
+            <a data-modal-open='support' href="#">SUPPORT</a>
           </div>
         </div>
         

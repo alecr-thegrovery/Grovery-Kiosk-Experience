@@ -18,9 +18,12 @@ export default function SupportModal({
   //console.log(author);
 
   return (
-    <div id="SupportModal" className={componentStyles.outer}>
+    <div id="SupportModal" data-modal="support" data-modal-status="inactive"className={componentStyles.outer}>
+      <div className={componentStyles.backDrop} data-modal-close="support"></div>
       <div className={componentStyles.SupportModal}>
         
+        <div className={componentStyles.modalClose} data-modal-close="support">&#10005;</div>        
+
         <div className={componentStyles.heading}>
           <h2>3 Ways to Get Support</h2>
           <p>In-person, phone, and online assistance are available for your Access &amp; Reimbursement Support needs.</p>
@@ -131,8 +134,8 @@ export default function SupportModal({
         </div>
 
         <div className={componentStyles.modalFooter}>
-          <h5></h5>
-          <p></p>
+          <h5>Have questions or want to learn more about how BMS Access Support® can help assist your patients?</h5>
+          <p>Touch base with the BMS Access &amp; Reimbursement Manager at this booth. We’re happy to help you.</p>
         </div>
 
       </div>
