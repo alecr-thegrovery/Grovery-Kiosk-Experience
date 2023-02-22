@@ -1,9 +1,11 @@
 /*===== Components =====*/
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Card from '@components/DragDrop/Card.js'
 import { BsUpcScan } from "react-icons/bs";
 import { MdArrowBackIosNew } from "react-icons/md";
+import $ from 'jquery'
+
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -16,6 +18,14 @@ export default function Sidebar({
 }) {
 
   //console.log(author);
+  useEffect(() => {
+    $(document).ready(function() {
+      $("#supportButton").click(function(e){
+        e.preventDefault();
+        $("#SupportModal").attr("data-active", "active");
+      });
+    });
+  });
 
   return (
     <div className={componentStyles.Sidebar}>
@@ -23,7 +33,7 @@ export default function Sidebar({
         
         <div className={componentStyles.controlsOuter}>
           <div className={componentStyles.controls}>
-            <a href="#">QUESTIONS</a>
+            <a id="supportButton" href="#">SUPPORT</a>
           </div>
         </div>
         
