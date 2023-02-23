@@ -6,7 +6,7 @@ import { router } from 'next/router'
 import $ from 'jquery'
 import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
-import DesktopNav from '@components/DesktopNav'
+import DynamicHeader from '@components/DynamicHeader'
 import BlogPreview from '@components/BlogPreview'
 import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
@@ -15,6 +15,7 @@ import DoorSection from '@components/DoorSection'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
+import pageStyles from '@styles/pages.module.scss'
 
 /*===== Posts Data =====*/
 import { getSortedPostsData } from '@lib/posts'
@@ -38,12 +39,19 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
+      <div className={pageStyles.pageLayout}>
+        <DynamicHeader
+          heading="Bristol Myers Squibb Access Support"
+          subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
+        />
 
-      <section>
-        <Container width="contentWidthXl">
-          <DragDrop/>
-        </Container>
-      </section>
+        <section>
+          <Container width="contentWidthXl">
+            <DragDrop/>
+          </Container>
+        </section>
+      </div>
+      
       
     </Layout>
   )
