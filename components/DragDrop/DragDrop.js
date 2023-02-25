@@ -187,7 +187,7 @@ export default function DragDrop({
             cardID="Enrollment"
             text="Enrollment"
             link="/enrollment-1/"
-            color="brown"
+            color="mutedRed"
           />
 
 
@@ -196,7 +196,7 @@ export default function DragDrop({
             cardID="Access"
             text="Access and Reimbursement Report"
             link="/access-1/"
-            color="orange"
+            color="mutedYellow"
           />
       
 
@@ -205,7 +205,7 @@ export default function DragDrop({
             cardID="Copay"
             text="Co-Pay &amp; Finacial Assistance Services"
             link="/financial-1/"
-            color="teal"
+            color="mutedBlue"
           />
         
 
@@ -214,7 +214,7 @@ export default function DragDrop({
             cardID="Resources"
             text="Patient Resources"
             link="/resources-1/"
-            color="purple"
+            color="mutedGreen"
           />
         
         

@@ -24,7 +24,12 @@ export default function Card({
         <div className={componentStyles.content}>
           {text}
         </div>
-        <div className={componentStyles.accent} data-color={color}></div>
+        <div 
+          className={componentStyles.accent} 
+          data-color={color}>
+          <img src="/images/icons/wirelessRed.svg" alt=""/>   
+          <img src="/images/BMSLogoSmall.svg" alt=""/>    
+        </div>
 
       </div>
     </div>

@@ -70,7 +70,7 @@
 	aspect-ratio: 1/1.25;
 	z-index: 10;
 	touch-action: none;
-	$accentHeight: 2em;
+	$accentHeight: 3em;
 	.inner{
 		position: relative;
 		border: solid $borderWidth $black;
@@ -90,20 +90,26 @@
 			bottom: 0px;
 			width: 100%;
 			height: $accentHeight;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 1em;
 			//border-radius: 0.5em 0 0.5em 0.5em;
-			background-color: $red;
+			background-color: $mutedRed;
 			z-index: 0;
-			&[data-color="brown"]{
-				background-color: $brown;
+			&[data-color="mutedRed"]{
+				background-color: $mutedRed;
 			}
-			&[data-color="orange"]{
-				background-color: $orange;
+			&[data-color="mutedYellow"]{
+				background-color: $mutedYellow;
 			}
-			&[data-color="teal"]{
-				background-color: $teal;
+			&[data-color="mutedBlue"]{
+				background-color: $mutedBlue;
 			}
-			&[data-color="purple"]{
-				background-color: $purple;
+			&[data-color="mutedGreen"]{
+				background-color: $mutedGreen;
 			}
 		}
 		
