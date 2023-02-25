@@ -7,6 +7,7 @@ import $ from 'jquery'
 import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
+import DynamicFooter from '@components/DynamicFooter'
 import BlogPreview from '@components/BlogPreview'
 import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
@@ -50,6 +51,10 @@ export default function Home({ allPostsData }) {
             <DragDrop/>
           </Container>
         </section>
+        
+        <DynamicFooter
+          dynamicText=""
+        />
       </div>
       
       
