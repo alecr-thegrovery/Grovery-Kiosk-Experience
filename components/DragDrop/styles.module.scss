@@ -67,10 +67,10 @@
 .dragDropCard{
 	width: clamp(100px,100%,250px);
 	max-width: 100%;
-	aspect-ratio: 1/1.25;
+	aspect-ratio: 1/1.5;
 	z-index: 10;
 	touch-action: none;
-	$accentHeight: 3em;
+	$accentHeight: 80px;
 	.inner{
 		position: relative;
 		border: solid $borderWidth $black;
@@ -82,7 +82,13 @@
 		padding-bottom: $accentHeight;
 		overflow: hidden;
 		.content{
+			height: calc(100% - #{$accentHeight});
 			padding: 0.5em;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
 		}
 		.accent{
 			position: absolute;
