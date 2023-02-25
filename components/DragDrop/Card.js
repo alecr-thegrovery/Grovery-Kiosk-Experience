@@ -27,7 +27,20 @@ export default function Card({
         <div 
           className={componentStyles.accent} 
           data-color={color}>
-          <img src="/images/icons/wirelessRed.svg" alt=""/>   
+
+          {color == "mutedRed" &&
+            <img src="/images/icons/wirelessRed.svg" alt=""/>
+          }
+          {color == "mutedYellow" &&
+            <img src="/images/icons/wirelessYellow.svg" alt=""/>
+          }
+          {color == "mutedBlue" &&
+            <img src="/images/icons/wirelessBlue.svg" alt=""/>
+          }
+          {color == "mutedGreen" &&
+            <img src="/images/icons/wirelessGreen.svg" alt=""/>
+          }
+   
           <img src="/images/BMSLogoSmall.svg" alt=""/>    
         </div>
 
