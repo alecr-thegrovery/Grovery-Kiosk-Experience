@@ -1,6 +1,6 @@
 @import "@styles/vars.module.scss";
 
-$fixedWidth: 200px;
+$fixedWidth: 310px;
 
 .DynamicHeader{
 	border: solid 2px $black;
@@ -14,7 +14,7 @@ $fixedWidth: 200px;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		padding: 15px 35px;
 	}
@@ -26,15 +26,21 @@ $fixedWidth: 200px;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		
+		a{
+
+		}
 		img{
 			width: 100%;
-			max-width: 150px;
+			//max-width: 150px;
 			display: block;;
 		}
 	}
 
 	.text{
 		width:calc(100% - #{$fixedWidth});
+		padding-right: 50px;
+		padding-left: 100px;
 		.heading{
 			font-size: $clampMedium;
 		}

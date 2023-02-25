@@ -1,5 +1,7 @@
 @import "@styles/vars.module.scss";
 
+$fixedWidth: 250px;
+
 .outer{
   display: block;
   opacity: 1;
@@ -31,7 +33,7 @@
   //z-index:  $zIndexMedium;
   overflow: hidden;
   .mainContent{
-    width: 100%;
+    width:calc(100% - #{$fixedWidth});
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -45,7 +47,7 @@
 .rightSidebar{
   //border: solid $borderWidth $black;
   background-color: $grey_1;
-  width: 15%;
+  width: $fixedWidth;
   height: 100%;
   //padding: 1em;
   display: flex;
@@ -57,7 +59,7 @@
   
 }
 
-.header {
+/*.header {
   width:  100%;
   //height: 10%;
   //border: solid $borderWidth $black;
@@ -71,7 +73,7 @@
 .logo{
   padding:  5px;
   margin-right: 35px;
-}
+}*/
 
 .backToHome {
   margin: 3rem 0 0;
