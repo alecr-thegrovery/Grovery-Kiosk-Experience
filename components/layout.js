@@ -8,7 +8,7 @@ import Link from 'next/link'
 import data from "@data/data.json"
 import $ from 'jquery'
 
-import DesktopNav from '@components/DesktopNav'
+//import DesktopNav from '@components/DesktopNav'
 import NavMenu from '@components/NavMenu'
 import Sidebar from '@components/Sidebar'
 import Footer from '@components/Footer'
@@ -91,10 +91,11 @@ export default function Layout({
 
       <SmallScreenWarning/>
       
-      <section className={styles.header}>
+      {/*<section className={styles.header}>
         <DesktopNav/>
         <NavMenu/>
-      </section>
+      </section>*/}
+
       
 
       {/* MAIN SECTION */}
@@ -128,9 +129,9 @@ export default function Layout({
   
       </main>
 
-      <section className={styles.footer}>
+      {/*<section className={styles.footer}>
         <Footer/>
-      </section>
+      </section>*/}
       
       
     </div>
