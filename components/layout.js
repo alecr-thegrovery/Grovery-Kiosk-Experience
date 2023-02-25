@@ -11,6 +11,7 @@ import $ from 'jquery'
 //import DesktopNav from '@components/DesktopNav'
 import NavMenu from '@components/NavMenu'
 import Sidebar from '@components/Sidebar'
+import SupportModal from '@components/SupportModal'
 import Footer from '@components/Footer'
 import Container from '@components/Container'
 import BackToHome from '@components/BackToHome'
@@ -90,14 +91,8 @@ export default function Layout({
       </Head>
 
       <SmallScreenWarning/>
+      <SupportModal/>
       
-      {/*<section className={styles.header}>
-        <DesktopNav/>
-        <NavMenu/>
-      </section>*/}
-
-      
-
       {/* MAIN SECTION */}
       <main className={styles.main}>
         
