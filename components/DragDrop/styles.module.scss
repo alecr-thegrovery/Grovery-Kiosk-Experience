@@ -65,12 +65,12 @@
 }
 
 .dragDropCard{
-	width: clamp(100px,100%,250px);
+	width: clamp(100px,15vw,500px);
 	max-width: 100%;
 	aspect-ratio: 1/1.5;
 	z-index: 10;
 	touch-action: none;
-	$accentHeight: 80px;
+	$accentHeight:  clamp(80px, 5vw, 120px);
 	.inner{
 		position: relative;
 		border: solid $borderWidth $black;
@@ -86,9 +86,14 @@
 			padding: 0.5em;
 			display: flex;
 			flex-direction: column;
-			flex-wrap: wrap;
-			justify-content: center;
+			//flex-wrap: wrap;
+			justify-content: flex-start;
 			align-items: center;
+
+			.icon{
+				max-width: clamp(80px, 5vw, 200px);
+				width: 100%;
+			}
 		}
 		.accent{
 			position: absolute;

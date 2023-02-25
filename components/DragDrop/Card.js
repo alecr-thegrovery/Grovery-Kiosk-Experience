@@ -23,16 +23,16 @@ export default function Card({
 
         <div className={componentStyles.content}>
           {color == "mutedRed" &&
-            <img src="/images/icons/cardIconEnrollment.svg" alt=""/>
+            <img className={componentStyles.icon} src="/images/icons/cardIconEnrollment.svg" alt=""/>
           }
           {color == "mutedYellow" &&
-            <img src="/images/icons/cardIconSupport.svg" alt=""/>
+            <img className={componentStyles.icon} src="/images/icons/cardIconSupport.svg" alt=""/>
           }
           {color == "mutedBlue" &&
-            <img src="/images/icons/cardIconFinancial.svg" alt=""/>
+            <img className={componentStyles.icon} src="/images/icons/cardIconFinancial.svg" alt=""/>
           }
           {color == "mutedGreen" &&
-            <img src="/images/icons/cardIconResources.svg" alt=""/>
+            <img className={componentStyles.icon} src="/images/icons/cardIconResources.svg" alt=""/>
           }
 
           {text}

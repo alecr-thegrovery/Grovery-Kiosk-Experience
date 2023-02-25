@@ -46,12 +46,12 @@ export default function Home({ allPostsData }) {
           subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
         />
 
-        <section>
-          <Container width="contentWidthXl">
+        
+          <Container width="contentWidthMax">
             <DragDrop/>
           </Container>
-        </section>
         
+
         <DynamicFooter
           dynamicText=""
         />
