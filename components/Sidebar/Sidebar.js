@@ -5,7 +5,10 @@ import Card from '@components/DragDrop/Card.js'
 import { BsUpcScan } from "react-icons/bs";
 import { MdArrowBackIosNew } from "react-icons/md";
 import $ from 'jquery'
-
+import SupportIcon from '@components/SVGComponents/SupportIcon'
+import BackIcon from '@components/SVGComponents/BackIcon'
+import HomeIcon from '@components/SVGComponents/HomeIcon'
+import ScannerIcon from '@components/SVGComponents/ScannerIcon'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -40,7 +43,10 @@ export default function Sidebar({
         
         <div className={componentStyles.controlsOuter}>
           <div className={componentStyles.controls}>
-            <a data-modal-open='support' href="#">SUPPORT</a>
+            <a data-modal-open='support' href="#">
+              <SupportIcon/>
+              SUPPORT
+            </a>
           </div>
         </div>
         
@@ -64,7 +70,7 @@ export default function Sidebar({
                   cardID="Access"
                   text="Access and Reimbursement Report"
                   link="/access-1/"
-                  color="orange"
+                  color="mutedRed"
                 />
               </div>
             }
@@ -74,7 +80,7 @@ export default function Sidebar({
                   cardID="Enrollment"
                   text="Enrollment"
                   link="/enrollment-1/"
-                  color="brown"
+                  color="mutedYellow"
                 />
               </div>
             }
@@ -84,7 +90,7 @@ export default function Sidebar({
                   cardID="Copay"
                   text="Co-Pay &amp; Finacial Assistance Services"
                   link="/financial-1/"
-                  color="teal"
+                  color="mutedBlue"
                 />
               </div>
             }
@@ -94,7 +100,7 @@ export default function Sidebar({
                   cardID="Resources"
                   text="Patient Resources"
                   link="/resources-1/"
-                  color="purple"
+                  color="mutedGreen"
                 />
               </div>
             }
@@ -106,10 +112,7 @@ export default function Sidebar({
                 <div className={componentStyles.lightInner}></div>
               </div>
               <div className={componentStyles.icon}>
-                <BsUpcScan
-                  color="#fafafa" 
-                  size={65}
-                />
+                <ScannerIcon/>
               </div>
               <div className={componentStyles.text}>
                 <p>
@@ -127,10 +130,10 @@ export default function Sidebar({
           {!home && 
             <div className={componentStyles.controls}>
               <a className={componentStyles.alt} data-page-back>
-                <MdArrowBackIosNew/> Back
+                <BackIcon/> Back
               </a>
               <a data-page-transition="/" data-delay="0">
-                Home
+                <HomeIcon/> Home
               </a>
             </div>
           }

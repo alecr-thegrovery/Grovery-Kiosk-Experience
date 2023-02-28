@@ -59,15 +59,19 @@
 	  	.lightInner{
 	  		width: 1em;
 	  		height: 1em;
-	  		background-color: $green;
+	  		background-color:#9F9089;
 	  		border-radius: 100%;
-	  		border: solid $borderWidth $white;
-	  		box-shadow:
-				0 0 0.15em rgba($white, 1.0),
-				0 0 0.25em rgba($white, 1.0),
-				0 0 0.5em rgba($green, 1.0),
-				0 0 1em rgba($green, 1.0),
-				0 0 1.25em rgba($green, 1.0);
+	  		border: solid $borderWidth #707070;
+			&[data-active]{
+				background-color: $green;
+		  		border: solid $borderWidth $white;
+		  		box-shadow:
+					0 0 0.15em rgba($white, 1.0),
+					0 0 0.25em rgba($white, 1.0),
+					0 0 0.5em rgba($green, 1.0),
+					0 0 1em rgba($green, 1.0),
+					0 0 1.25em rgba($green, 1.0);
+			}
 	  	}
 	  }
 	  .icon{
@@ -105,8 +109,10 @@
 		display: flex;
 		justify-content:center;
 		align-items: center;
+		width: 100%;
 	}
 	.controls{
+		width: 100%;
 		display: flex;
 		justify-content:center;
 		align-items: center;
@@ -114,12 +120,17 @@
 		border-radius: 0.5em;
 		overflow: hidden;
 		//margin-top: 1em;
+
 		a{
+			height: 95px;
+			width: 100%;
 			position: relative;
 			background-color: $grey_2;
 			color: $white;
+			font-size: $clampMedium;
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
+			justify-content: flex-end;
 			align-items: center;
 			padding: 0.25em 0.5em;
 			cursor: pointer;
@@ -136,6 +147,10 @@
 				right: 0px;
 				top: 50%;
 				transform: translate(0%, -50%);
+			}
+			svg{
+				position: relative;
+				top: 20%;
 			}
 		}
 	}
