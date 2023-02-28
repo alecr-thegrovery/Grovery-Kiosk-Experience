@@ -9,6 +9,8 @@ import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
 import ContentGrid from '@components/ContentGrid'
 import DoorSection from '@components/DoorSection'
+import DynamicHeader from '@components/DynamicHeader'
+import DynamicFooter from '@components/DynamicFooter'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -33,19 +35,29 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
-      
-      <div className={pageStyles.pageLevel1}>
-        <section className={pageStyles.headingSection}>
-          <Container width="contentWidthXl">
-            <h1>Enrollment</h1>
-          </Container>
-        </section>
-        
-        <section className={pageStyles.mainSection}>
-          <DoorSection enrollment/>
-        </section>
+      <div className={pageStyles.pageLayout}>
+        <DynamicHeader
+          heading="Bristol Myers Squibb Access Support"
+          subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
+        />
+
+        <div className={pageStyles.pageLevel1}>
+          <section className={pageStyles.headingSection}>
+            <Container width="contentWidthXl">
+              <h1>Enrollment</h1>
+            </Container>
+          </section>
+          
+          <section className={pageStyles.mainSection}>
+            <DoorSection enrollment/>
+          </section>
+        </div>
+
+        <DynamicFooter
+          dynamicText=""
+        />
       </div>
-      
+            
     </Layout>
   )
 }

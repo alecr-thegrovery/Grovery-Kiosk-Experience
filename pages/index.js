@@ -31,8 +31,8 @@ export async function getStaticProps() {
 
 /*===== Page Content =====*/
 export default function Home({ allPostsData }) {
-
   
+  //JS GOES HERE
 
   return (
     <Layout home>
