@@ -24,28 +24,28 @@ export default function ContentAccess({
       <div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
-          link="/access-2?slide=1"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="How to Complete the Enrollment Form"
-          link="/access-2?slide=2"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Provider Portal (myBMScases.com)"
-          link="/access-2?slide=3"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Annexus / AssistPoint Enrollment"
-          link="/access-2?slide=4"
+          link="/posts/master-post"
         />
       </div>
 

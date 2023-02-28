@@ -24,35 +24,35 @@ export default function ContentResources({
       <div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
-          link="/resources-2?slide=1"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="How to Complete the Enrollment Form"
-          link="/resources-2?slide=2"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Provider Portal (myBMScases.com)"
-          link="/resources-2?slide=3"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Annexus / AssistPoint Enrollment"
-          link="/resources-2?slide=4"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
-          link="/resources-2?slide=5"
+          link="/posts/master-post"
         />
       </div>
     </>

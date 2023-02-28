@@ -2,8 +2,14 @@ import Layout, { siteData } from '@components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
 import Container from '@components/Container'
+import DynamicHeader from '@components/DynamicHeader'
+import DynamicFooter from '@components/DynamicFooter'
+import ComputerFrame from '@components/SVGComponents/ComputerFrame'
+
+/*===== Styles =====*/
+import utilStyles from '@styles/utils.module.css'
+import pageStyles from '@styles/pages.module.scss'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -25,37 +31,32 @@ export async function getStaticProps({ params }) {
 export default function Post({ postData }) {
   return (
     <Layout>
+      
       <Head>
         <title>{postData.title} | {siteData.siteTitleBase}</title>
       </Head>
-      <Container>
-        <article>
+      <div className={pageStyles.pageLayout}>
+        {/*Header*/}
+        <DynamicHeader
+          heading={postData.title}
+        />
 
-          {/*Header Section*/}
-          <div className="header">
-            <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-            <p>
-              {postData.subTitle}
-            </p>
-          </div>
-          
-          {/*Content Section*/}
-          <div className="postContent">
-            
-            <div className="cell" data-cell="text">
+        {/*Content*/}
+        <div className={pageStyles.pageLevel3}>          
+          <section className={pageStyles.mainSection}>
+            <ComputerFrame>
               <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            </div>
+            </ComputerFrame>            
+          </section>
+        </div>        
 
-            <div className="cell" data-cell="assets">
-              [ASSETS]
-            </div>
-
-          </div>
-
-          
-
-        </article>
-      </Container>
+        {/*Footer*/}
+        <DynamicFooter
+          dynamicText={postData.footerText}
+        />
+      </div>
+      
+      
     </Layout>
   )
 }

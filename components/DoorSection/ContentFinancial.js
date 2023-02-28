@@ -24,35 +24,35 @@ export default function ContentFinancial({
       <div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
-          link="/financial-2?slide=1"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="How to Complete the Enrollment Form"
-          link="/financial-2?slide=2"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Provider Portal (myBMScases.com)"
-          link="/financial-2?slide=3"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Annexus / AssistPoint Enrollment"
-          link="/financial-2?slide=4"
+          link="/posts/master-post"
         />
       </div>
 
       <div className={componentStyles.cell}>
         <Door
           title="Options to Enroll"
-          link="/financial-2?slide=5"
+          link="/posts/master-post"
         />
       </div>
     </>
