@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
     <Layout enrollment>
       
       <Head>
-        <title>Home | {siteData.siteTitleBase}</title>
+        <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader

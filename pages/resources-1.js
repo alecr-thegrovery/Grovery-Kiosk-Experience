@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
     <Layout resources>
       
       <Head>
-        <title>Home | {siteData.siteTitleBase}</title>
+        <title>Patient Resources | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
