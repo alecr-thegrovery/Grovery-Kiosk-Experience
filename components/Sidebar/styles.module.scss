@@ -40,8 +40,8 @@
 	.scanner{
 	  background-color: $grey_2;
 	  border-radius: 0.5em;
-	  width: 100%;
-	  aspect-ratio:1/2;
+	  width: clamp(180px, 10vw, 200px);
+	  aspect-ratio:1/2.75;
 	  padding: 0.5em;
 
 	  .scannerBorder{
@@ -127,7 +127,7 @@
 			position: relative;
 			background-color: $grey_2;
 			color: $white;
-			font-size: $clampMedium;
+			font-size: $clampSmall;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
