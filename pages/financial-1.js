@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
     <Layout financial>
       
       <Head>
-        <title>Home | {siteData.siteTitleBase}</title>
+        <title>Co-Pay &amp; Financial Assistance Services | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader

@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
     <Layout access>
       
       <Head>
-        <title>Home | {siteData.siteTitleBase}</title>
+        <title>Access and Reimbursment Report | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader

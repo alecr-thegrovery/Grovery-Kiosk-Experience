@@ -77,10 +77,10 @@ export default function Layout({
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content="Simple blog-style template for Planet Caravan Studios"
+          content="Bristol Myers Squibb Access Support - Learn more about how we can help you."
         />
         <meta property="og:image"
-          content={`/images/planet-caravan-studios-logo.png`}
+          content={`/images/BMSLogo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
