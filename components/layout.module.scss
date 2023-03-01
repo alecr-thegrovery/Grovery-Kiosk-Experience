@@ -1,6 +1,6 @@
 @import "@styles/vars.module.scss";
 
-$fixedWidth: 250px;
+$fixedWidth: clamp(250px, 20vw,360px);
 
 .outer{
   display: block;
