@@ -7,14 +7,14 @@
 		width: auto;
 	}
 	.contentWrapper{
-		//overflow: auto;
+		overflow: auto;
 		background-color: $white;
 	}
 	.content{
 		z-index: 500;
 		width: 100%;
 		height: 100%;
-		padding: 4vw;
+		//padding: 4vw;
 		overflow: auto;
 	}
 
