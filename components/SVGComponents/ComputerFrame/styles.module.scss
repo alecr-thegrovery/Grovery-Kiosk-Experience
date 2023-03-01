@@ -6,6 +6,10 @@
 		height: 100%;
 		width: auto;
 	}
+	.contentWrapper{
+		//overflow: auto;
+		background-color: $white;
+	}
 	.content{
 		z-index: 500;
 		width: 100%;
