@@ -33,7 +33,7 @@
 
 
 ### Update Test/Staging Server ###
-This site uses Netlify's auto-deploy functions.  Every time you push to 
+This site uses Netlify's auto-deploy functions.  Every time you push to your main branch, Netlify will do a new deploy.
 
 ### Form Configuration ###
 
@@ -59,6 +59,7 @@ When you start the project, check in with the projects's Analyst for the followi
 * [swiper](https://swiperjs.com/)
 * [normalize.css](https://necolas.github.io/normalize.css/)
 * [react-headroom](https://kyleamathews.github.io/react-headroom/)
+* [tippy.js](https://atomiks.github.io/tippyjs/)
 
 ### Coming Features ###
 * Contact page
