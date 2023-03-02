@@ -32,8 +32,12 @@ export default function Layout({
 
       function smoothLoad(){
         let bufferTime = 250;
+        let bufferTime2 = 3500;
         setTimeout(function() { 
             $("#LayoutOuter").attr("data-hidden", "false");
+            setTimeout(function() { 
+                $("#LayoutOuter").attr("data-hidden", "animationEnded");
+            }, bufferTime2);
         }, bufferTime);
       }
 

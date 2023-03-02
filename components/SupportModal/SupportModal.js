@@ -55,7 +55,7 @@ export default function SupportModal({
               <h4>Schedule a visit from an ARM:</h4>
               <div className={componentStyles.qrCode}>
                 <QRCode 
-                  value="https://www.youtube.com/watch?v=hNfDNORPU4Y"
+                  value="https://www.youtube.com/watch?v=nM4okRvCg2g"
                   size={150}
                   bgColor="#fafafa"
                   fgColor="#212121"
@@ -88,7 +88,7 @@ export default function SupportModal({
               <h4>Schedule a call with PAS:</h4>
               <div className={componentStyles.qrCode}>
                 <QRCode 
-                  value="https://www.youtube.com/watch?v=hNfDNORPU4Y"
+                  value="https://www.youtube.com/watch?v=nM4okRvCg2g"
                   size={150}
                   bgColor="#fafafa"
                   fgColor="#212121"
@@ -122,7 +122,7 @@ export default function SupportModal({
               <h4>Visit us online:</h4>
               <div className={componentStyles.qrCode}>
                 <QRCode 
-                  value="https://www.youtube.com/watch?v=hNfDNORPU4Y"
+                  value="https://www.youtube.com/watch?v=nM4okRvCg2g"
                   size={150}
                   bgColor="#fafafa"
                   fgColor="#212121"

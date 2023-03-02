@@ -4,7 +4,7 @@ import React from "react"
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
-import utilStyles from '@styles/utils.module.css'
+//import animationStyles from '@styles/animations.module.scss'
 
 export default function Card({ 
   //Props
@@ -18,6 +18,7 @@ export default function Card({
       className={'draggable ' + componentStyles.dragDropCard} 
       data-draggable
       data-link={link}
+      data-animation="fadeInUp"
     >
       <div className={componentStyles.inner + " inner"}>
 
