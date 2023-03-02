@@ -4,7 +4,7 @@
 	//border: solid $borderWidth $black;
 	background-color: $grey_1;
 	height: 100%;
-	padding: 1em;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,8 +12,23 @@
 	position: relative;
 	//z-index:  $zIndexMedium;
 
+	.cardsFilter{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba($black, 0.5);
+		opacity: 0;
+		transition: $transitionMedium;
+		z-index: 9;
+		pointer-events: none;
+	}
+
 	.inner{
 		height: 100%;
+		width: 100%;
+		padding: 1em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,6 +50,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: 1em 0em;
+		z-index: 10;
 	}
 
 	.scanner{

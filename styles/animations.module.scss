@@ -1,6 +1,29 @@
 /*========================================*/
-//	Big SCSS Comment
+//	ANIMATIONS.MODULE.SCSS
 //	
 //	Put your notes here.
 //	
 /*========================================*/
+#LayoutOuter[data-hidden="true"]{
+	[data-animation="fadeInUp"]{
+		transform: translate3d(0em, 3vh, 0em);
+		opacity: 0;
+		pointer-events: none;
+		transition: 1s ease-in-out;
+	}
+}
+#LayoutOuter[data-hidden="false"]{
+	[data-animation="fadeInUp"]{
+		transform: translate3d(0em, 0vh, 0em);
+		opacity: 1;
+		pointer-events: auto;
+		transition: 1s ease-in-out;
+	}
+}
+#LayoutOuter[data-hidden="animationEnded"]{
+	[data-animation="fadeInUp"]{
+		transition:0s;
+	}
+}
+
+

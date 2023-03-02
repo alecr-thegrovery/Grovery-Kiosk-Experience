@@ -18,6 +18,10 @@ export default function DragDrop({
   //console.log(author);
   useEffect(() => {
 
+    
+    const actionState = document.querySelector("#LayoutOuter")
+    actionState.setAttribute("data-action-state","none");
+
     function init() {
         var startPos = null;
 
@@ -74,10 +78,12 @@ export default function DragDrop({
             target.setAttribute('data-x', x);
             target.setAttribute('data-y', y);
             target.classList.add('getting--dragged');
+            actionState.setAttribute("data-action-state","card-picked-up");
           },
 
           onend: function (event) {
-            event.target.classList.remove('getting--dragged')
+            event.target.classList.remove('getting--dragged');
+            actionState.setAttribute("data-action-state","none");
           }
         });
 
@@ -182,41 +188,35 @@ export default function DragDrop({
       {/*===== Draggable Cards =====*/}
       <div className={componentStyles.cardsOuter}>
 
+        <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
 
-          <Card 
-            cardID="Enrollment"
-            text="Enrollment"
-            link="/enrollment-1/"
-            color="mutedRed"
-          />
-
-
-        
-          <Card 
-            cardID="Access"
-            text="Access and Reimbursement Report"
-            link="/access-1/"
-            color="mutedYellow"
-          />
+        <Card 
+          cardID="Enrollment"
+          text="Enrollment"
+          link="/enrollment-1/"
+          color="mutedRed"
+        />
       
+        <Card 
+          cardID="Access"
+          text="Access and Reimbursement Report"
+          link="/access-1/"
+          color="mutedYellow"
+        />
 
-        
-          <Card 
-            cardID="Copay"
-            text="Co-Pay &amp; Finacial Assistance Services"
-            link="/financial-1/"
-            color="mutedBlue"
-          />
-        
-
-        
-          <Card 
-            cardID="Resources"
-            text="Patient Resources"
-            link="/resources-1/"
-            color="mutedGreen"
-          />
-        
+        <Card 
+          cardID="Copay"
+          text="Co-Pay &amp; Finacial Assistance Services"
+          link="/financial-1/"
+          color="mutedBlue"
+        />
+      
+        <Card 
+          cardID="Resources"
+          text="Patient Resources"
+          link="/resources-1/"
+          color="mutedGreen"
+        />
         
       </div>
 

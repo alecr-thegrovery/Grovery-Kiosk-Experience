@@ -32,8 +32,12 @@ export default function Layout({
 
       function smoothLoad(){
         let bufferTime = 250;
+        let bufferTime2 = 1500;
         setTimeout(function() { 
             $("#LayoutOuter").attr("data-hidden", "false");
+            setTimeout(function() { 
+                $("#LayoutOuter").attr("data-hidden", "animationEnded");
+            }, bufferTime2);
         }, bufferTime);
       }
 
@@ -72,7 +76,7 @@ export default function Layout({
   });
 
   return (
-    <div id="LayoutOuter" className={styles.outer} data-hidden="true">
+    <div id="LayoutOuter" className={styles.outer} data-hidden="true" data-action-state="">
       <Head>
         <link rel="icon" href="/favicon.png" />
         <meta
