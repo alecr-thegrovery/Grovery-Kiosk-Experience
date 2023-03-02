@@ -124,7 +124,9 @@ code{
        }
   }
 
-
+/* ================================ */
+/* ===== Draggable Card States ===== */
+/* ================================ */
 .draggable{
   .inner{
     transition: $transitionMedium;
@@ -133,8 +135,12 @@ code{
   &.getting--dragged{
      z-index: 30 !important;
     .inner{
-        transform: rotate(15deg) translateY(-1em);
+        transform: rotate(15deg) translateY(-6vh);
         box-shadow: $niceShadowShort;
       }
     } 
+}
+
+#LayoutOuter[data-action-state="card-picked-up"]{
+  .cardsFilter{opacity:1;}
 }

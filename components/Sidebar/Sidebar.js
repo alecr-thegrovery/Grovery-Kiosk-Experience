@@ -40,6 +40,8 @@ export default function Sidebar({
   return (
     <div className={componentStyles.Sidebar}>
       <div className={componentStyles.inner}>
+
+      <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
         
         <div className={componentStyles.controlsOuter}>
           <div className={componentStyles.controls}>

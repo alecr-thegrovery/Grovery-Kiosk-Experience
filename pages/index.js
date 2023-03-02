@@ -47,9 +47,9 @@ export default function Home({ allPostsData }) {
         />
 
         
-          <Container width="contentWidthMax">
+          
             <DragDrop/>
-          </Container>
+          
         
 
         <DynamicFooter
