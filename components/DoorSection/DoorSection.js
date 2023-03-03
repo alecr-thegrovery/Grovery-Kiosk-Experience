@@ -51,7 +51,7 @@ export default function DoorSection({
 
   return (
     <div className={componentStyles.DoorSection}>
-      <Container width="contentWidthMax">
+      
         
         <div className={componentStyles.layout}>
           
@@ -70,7 +70,7 @@ export default function DoorSection({
                     
         </div>
 
-      </Container>
+      
     </div>
   )
 }

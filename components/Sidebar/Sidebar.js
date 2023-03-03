@@ -56,16 +56,6 @@ export default function Sidebar({
         <div className={componentStyles.scannerWrapper}>
           <div id="DropZone" className={componentStyles.scanner + ' droppable'}>
 
-            {/*{card &&
-              <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Enrollment"
-                  text="Enrollment"
-                  link="/enrollment-1/"
-                  color="brown"
-                />
-              </div>
-            }*/}
             {access && 
               <div className={componentStyles.cardOutter}>
                 <Card

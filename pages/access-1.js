@@ -42,15 +42,11 @@ export default function Home({ allPostsData }) {
         />
 
         <div className={pageStyles.pageLevel1}>
-          <section  className={pageStyles.headingSection}>
-            <Container width="contentWidthXl">
-              <h1>Access</h1>
-            </Container>
-          </section>
           
           <section  className={pageStyles.mainSection}>
             <DoorSection access/>
           </section>
+
         </div>
 
         <DynamicFooter
