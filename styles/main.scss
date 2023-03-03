@@ -144,7 +144,7 @@ code{
 #LayoutOuter[data-action-state="card-picked-up"]{
   .cardsFilter{opacity:1;}
   #ScannerIcon{
-    $duration: 0.35s;
+    $duration: 0.15s;
     $iteration: 1;
     [dataname="hand"] path{
       animation-name: fillPurple;
