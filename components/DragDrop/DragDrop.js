@@ -12,7 +12,8 @@ import utilStyles from '@styles/utils.module.css'
 export default function DragDrop({ 
   //Props
   id, image, title, 
-  previewText, author, date
+  previewText, author, date,
+  animation
 }) {
 
   //console.log(author);
@@ -195,6 +196,8 @@ export default function DragDrop({
           text="Enrollment"
           link="/enrollment-1/"
           color="mutedRed"
+          animation="fadeInUp"
+          animationDelay="1"
         />
       
         <Card 
@@ -202,6 +205,8 @@ export default function DragDrop({
           text="Access and Reimbursement Report"
           link="/access-1/"
           color="mutedYellow"
+          animation="fadeInUp"
+          animationDelay="2"
         />
 
         <Card 
@@ -209,6 +214,8 @@ export default function DragDrop({
           text="Co-Pay &amp; Finacial Assistance Services"
           link="/financial-1/"
           color="mutedBlue"
+          animation="fadeInUp"
+          animationDelay="3"
         />
       
         <Card 
@@ -216,6 +223,8 @@ export default function DragDrop({
           text="Patient Resources"
           link="/resources-1/"
           color="mutedGreen"
+          animation="fadeInUp"
+          animationDelay="4"
         />
         
       </div>

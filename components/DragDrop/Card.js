@@ -8,7 +8,7 @@ import componentStyles from './styles.module.scss'
 
 export default function Card({ 
   //Props
-  text, link, cardID, color
+  text, link, cardID, color, animation, animationDelay
 }) {
 
   return (
@@ -18,7 +18,8 @@ export default function Card({
       className={'draggable ' + componentStyles.dragDropCard} 
       data-draggable
       data-link={link}
-      data-animation="fadeInUp"
+      data-animation={animation}
+      data-animation-delay={animationDelay}
     >
       <div className={componentStyles.inner + " inner"}>
 
