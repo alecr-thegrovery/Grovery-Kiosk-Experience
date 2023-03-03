@@ -59,6 +59,7 @@
 	  width: clamp(180px, 10vw, 200px);
 	  aspect-ratio:1/2.75;
 	  padding: 0.5em;
+	  text-align: center;
 
 	  .scannerBorder{
 	    border: dashed $borderWidth $grey_1;
