@@ -9,7 +9,7 @@ import Button1 from '@components/Button1'
 import componentStyles from './styles.module.scss'
 import utilStyles from '@styles/utils.module.css'
 
-export default function ComputerFrame({ 
+export default function DoorBG({ 
   //Props
   id, children
 }) {
@@ -17,8 +17,8 @@ export default function ComputerFrame({
   //console.log(author);
 
   return (
-    <div className={componentStyles.ComputerFrame}>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1943.064" height="1113.685" viewBox="0 0 1943.064 1113.685">
+    <div className={componentStyles.DoorBG}>
+      <svg width="1943.064" height="1113.685" viewBox="0 0 1943.064 1113.685">
         <defs>
           <clipPath id="clip-path">
             <rect id="Rectangle_623" data-name="Rectangle 623" width="560.44" height="110.402" fill="none"/>

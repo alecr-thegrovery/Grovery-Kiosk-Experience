@@ -1,5 +1,9 @@
 @import "@styles/vars.module.scss";
 
 .DoorBG{
-	
+	height: 100%;
+	svg{
+		height: 100%;
+		width: auto;
+	}
 }
