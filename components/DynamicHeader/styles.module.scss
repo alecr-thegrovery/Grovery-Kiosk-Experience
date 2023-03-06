@@ -3,12 +3,14 @@
 $fixedWidth: 310px;
 
 .DynamicHeader{
-	border: solid 2px $black;
+	//border: solid 2px $black;
 	background-color: $white;;
 	position: absolute;
 	left: 0px;
 	top: 25px;
 	width: 75%;
+	$shadowSize: 0.25em;
+	box-shadow: $shadowSize $shadowSize $shadowSize rgba($black, 0.25);
 	
 	.inner{
 		width: 100%;
