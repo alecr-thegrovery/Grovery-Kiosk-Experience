@@ -3,21 +3,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { router } from 'next/router'
 import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import data from "@data/data.json"
 import $ from 'jquery'
 
-//import DesktopNav from '@components/DesktopNav'
-import NavMenu from '@components/NavMenu'
 import Sidebar from '@components/Sidebar'
 import SupportModal from '@components/SupportModal'
-import Footer from '@components/Footer'
-import Container from '@components/Container'
 import BackToHome from '@components/BackToHome'
 import SmallScreenWarning from '@components/SmallScreenWarning'
 
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'BMS Congress Access Support'
 export const siteData = data
 
 export default function Layout({ 

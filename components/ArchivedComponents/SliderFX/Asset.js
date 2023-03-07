@@ -5,7 +5,7 @@ import QRCode from "react-qr-code";
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
-import utilStyles from '@styles/utils.module.css'
+
 
 export default function Asset({ 
   //Props
