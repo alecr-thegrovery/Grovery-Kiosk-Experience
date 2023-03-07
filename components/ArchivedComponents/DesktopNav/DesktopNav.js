@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
-import Link from 'next/link'
-import { BsList } from "react-icons/bs";
-//import BMSLogo from '@components/SVGComponents/BMSLogo'
-import $ from 'jquery'
-
 import componentStyles from './styles.module.scss'
+import Link from 'next/link'
 
 import varStyles from '@styles/vars.module.scss'
+import { BsList } from "react-icons/bs";
+import $ from 'jquery'
 
 const name = 'BMS CONGRESS ACCESS'
 
-export default function DynamicHeader({ 
-  children, home, heading, subhead
-}) {
+export default function DesktopNav({ children, home }) {
 
   useEffect(() => {
     $(document).ready(function() {
@@ -48,24 +44,31 @@ export default function DynamicHeader({
     <>
 
       {/* HEADER */}
-      <header className={componentStyles.DynamicHeader}>
+      <header className={componentStyles.header}>
         <div className={componentStyles.inner}>
           
-          {/*Logo/Home Link*/}
           <div className={componentStyles.logo}>
             <Link href="/">
               <a>
-                <img src="/images/BMSLogo.svg" alt="Bristol Myers Squibb - Access Support"/>
+                <img src="/images/groverylogo_color.svg" alt=""/>
               </a>
             </Link>
-
+            <Link href="/">
+              <a className={componentStyles.siteName}>
+                <span >
+                  {name}
+                </span>
+              </a>
+            </Link>
           </div>
-
-          {/*Dynamic Text Section*/}
-          <div className={componentStyles.text}>
-            <h1 className={componentStyles.heading}>{heading}</h1>
-            <p className={componentStyles.subhead}>{subhead}</p>
-          </div>
+          
+          {/*<div className={componentStyles.buttonWrapper}>
+            <div id="headerNavButton" className={componentStyles.navButton}>
+              <BsList className={componentStyles.icon} color="#212121" size={45} />
+              <BsList className={componentStyles.iconHover} color="#fafafa" size={45} />
+            </div>
+          </div>*/}
+          
           
         </div>
         

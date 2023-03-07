@@ -4,19 +4,13 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react';
 import { router } from 'next/router'
 import $ from 'jquery'
-import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
-import BlogPreview from '@components/BlogPreview'
-import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
-import ContentGrid from '@components/ContentGrid'
-import DoorSection from '@components/DoorSection'
 import HomeBG from '@components/SVGComponents/HomeBG'
 
 /*===== Styles =====*/
-import utilStyles from '@styles/utils.module.css'
 import pageStyles from '@styles/pages.module.scss'
 
 /*===== Posts Data =====*/
@@ -56,6 +50,7 @@ export default function Home({ allPostsData }) {
           <section className={pageStyles.mainSection}>
             <DragDrop/>
           </section>
+          
         </div>
 
         <DynamicFooter

@@ -8,7 +8,7 @@ import Card from './Card.js'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
-import utilStyles from '@styles/utils.module.css'
+
 
 export default function DragDrop({ 
   //Props

@@ -6,7 +6,7 @@ import { BsList } from "react-icons/bs";
 import $ from 'jquery'
 
 import componentStyles from './styles.module.scss'
-import utilStyles from '@styles/utils.module.css'
+
 import varStyles from '@styles/vars.module.scss'
 
 const name = 'BMS CONGRESS ACCESS'
