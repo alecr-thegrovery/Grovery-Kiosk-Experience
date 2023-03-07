@@ -11,18 +11,11 @@
 
 .pageLevel1{
 	height: 100%;
-	.headingSection{
-		height: 20%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		h1{
-			text-align: center;
-		}
-	}
+	width: 100%;
 
 	.mainSection{
-		height: 80%;
+		height: 100%;
+		width: 100%;
 	}
 }
 

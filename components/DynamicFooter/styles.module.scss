@@ -3,12 +3,13 @@
 $fixedWidth: clamp(250px, 20vw,360px);
 
 .DynamicFooter{
-	border: solid 2px $black;
+	//border: solid 2px $black;
 	position: absolute;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
 	width:calc(100% - #{$fixedWidth});
+	background-color: $white;
 	
 	.inner{
 		width: 100%;

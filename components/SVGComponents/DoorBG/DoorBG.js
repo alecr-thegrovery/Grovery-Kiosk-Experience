@@ -2,20 +2,17 @@
 import React, { useState, useEffect } from 'react';
 import { router } from 'next/router'
 import $ from 'jquery'
-import Door from "./Door"
-import ContentAccess from "./ContentAccess"
-import ContentEnrollment from "./ContentEnrollment"
-import ContentFinancial from "./ContentFinancial"
-import ContentResources from "./ContentResources"
-import Container from '@components/Container'
+import Link from 'next/link'
+import EnrollmentDoors from "./EnrollmentDoors"
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 import utilStyles from '@styles/utils.module.css'
 
-export default function DoorSection({ 
+export default function DoorBG({ 
   //Props
-  access, enrollment, financial, resources
+  id, children, 
+  access, enrollment, financial, resources,
 }) {
 
   //console.log(author);
@@ -23,9 +20,9 @@ export default function DoorSection({
     $(document).ready(function() {
       let doorLink = "";
       //OPEN/CLOSE DOORS
-      $(".Door").click(function(){
+      $("[data-door]").click(function(){
         //console.log("click");
-        $(".Door").attr("data-active", "inactive"); //reset doors
+        $("[data-door]").attr("data-active", "inactive"); //reset doors
 
         if( $(this).attr("data-active") == "active"){
           //Don't do the thing
@@ -50,27 +47,19 @@ export default function DoorSection({
   });
 
   return (
-    <div className={componentStyles.DoorSection}>
-      
-        
-        <div className={componentStyles.layout}>
-          
-          {access && 
-            <ContentAccess/>
-          }
-          {enrollment && 
-            <ContentEnrollment/>
-          }
-          {financial && 
-            <ContentFinancial/>
-          }
-          {resources && 
-            <ContentResources/>
-          }
-                    
-        </div>
-
-      
-    </div>
+   <div className={componentStyles.DoorBG}>
+     {access && 
+       <EnrollmentDoors/>
+     }
+     {enrollment && 
+       <EnrollmentDoors/>
+     }
+     {financial && 
+       <EnrollmentDoors/>
+     }
+     {resources && 
+       <EnrollmentDoors/>
+     }
+   </div>
   )
 }

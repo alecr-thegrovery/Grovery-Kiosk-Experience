@@ -1,16 +1,13 @@
 /*===== Components =====*/
 import Head from 'next/head'
 import Link from 'next/link'
-import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
-import DesktopNav from '@components/DesktopNav'
-import BlogPreview from '@components/BlogPreview'
-import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
-import ContentGrid from '@components/ContentGrid'
 import DoorSection from '@components/DoorSection'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
+import DoorBG from '@components/SVGComponents/DoorBG'
+
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -42,14 +39,9 @@ export default function Home({ allPostsData }) {
         />
 
         <div className={pageStyles.pageLevel1}>
-          <section  className={pageStyles.headingSection}>
-            <Container width="contentWidthXl">
-              <h1>Access</h1>
-            </Container>
-          </section>
-          
-          <section  className={pageStyles.mainSection}>
-            <DoorSection access/>
+                    
+          <section className={pageStyles.mainSection}>
+            <DoorBG access/>
           </section>
         </div>
 

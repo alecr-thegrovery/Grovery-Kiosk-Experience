@@ -1,19 +1,14 @@
 /*===== Components =====*/
 import Head from 'next/head'
 import Link from 'next/link'
-import Date from '@components/date'
 import Layout, { siteData } from '@components/layout'
-import DesktopNav from '@components/DesktopNav'
-import BlogPreview from '@components/BlogPreview'
-import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
-import ContentGrid from '@components/ContentGrid'
 import DoorSection from '@components/DoorSection'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
+import DoorBG from '@components/SVGComponents/DoorBG'
 
 /*===== Styles =====*/
-import utilStyles from '@styles/utils.module.css'
 import pageStyles from '@styles/pages.module.scss'
 
 /*===== Posts Data =====*/
@@ -37,19 +32,14 @@ export default function Home({ allPostsData }) {
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading="Bristol Myers Squibb Access Support"
-          subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
+          heading="Enrolling in Bristol Myers Squibb (BMS) Access Support"
+          subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications. "
         />
 
         <div className={pageStyles.pageLevel1}>
-          <section className={pageStyles.headingSection}>
-            <Container width="contentWidthXl">
-              <h1>Enrollment</h1>
-            </Container>
-          </section>
-          
+                    
           <section className={pageStyles.mainSection}>
-            <DoorSection enrollment/>
+            <DoorBG enrollment/>
           </section>
         </div>
 
