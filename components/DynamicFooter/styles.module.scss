@@ -10,6 +10,7 @@ $fixedWidth: clamp(250px, 20vw,360px);
 	width: 100%;
 	width:calc(100% - #{$fixedWidth});
 	background-color: $white;
+	box-shadow: $simpleShadow;
 	
 	.inner{
 		width: 100%;

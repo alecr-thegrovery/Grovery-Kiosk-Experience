@@ -10,8 +10,7 @@ $fixedWidth: 310px;
 	left: 0px;
 	top: 25px;
 	width: 75%;
-	$shadowSize: 0.25em;
-	box-shadow: $shadowSize $shadowSize $shadowSize rgba($black, 0.25);
+	box-shadow: $simpleShadow;
 	
 	.inner{
 		width: 100%;

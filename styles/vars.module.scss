@@ -85,8 +85,13 @@ Description:	Store SCSS vars here
 	$borderRadius:	0;
 
 /***** Shadows *****/
-	$simpleShadow: 0.25em 0.25em 0.25em rgba($black, 0.25);
-	$simpleShadowLarge: 1em 1em 1em rgba($black, 0.25);
+	$simpleShadow: 
+		0.1em -0.1em 0.25em rgba($black, 0.15),
+		0.25em 0.25em 0.25em rgba($black, 0.25);
+	
+	$simpleShadowLarge: 
+		-0.25em -0.25em 1em rgba($black, 0.1),
+		1em 1em 1em rgba($black, 0.25);
 
 	/* source: https://brumm.af/shadows */
 	$niceShadow:

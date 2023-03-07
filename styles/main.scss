@@ -146,6 +146,14 @@ code{
     opacity:1;
     pointer-events: auto;
   }
+  #scannerBorder{
+    border-color: $purple;
+  }
+  #scannerLight{
+    &>div{
+      background-color: $purple;
+    }
+  }
   #ScannerIcon{
     $duration: 0.15s;
     $iteration: 1;

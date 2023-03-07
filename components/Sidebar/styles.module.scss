@@ -62,10 +62,11 @@
 	  text-align: center;
 
 	  .scannerBorder{
-	    border: dashed $borderWidth $grey_1;
-	    width: 100%;
-	    height: 100%;
-	    padding: 0.5em 0.5em;
+	  	$dynamicBorder: clamp(2px, 0.25vw, 3px);
+		border: dashed $dynamicBorder $grey_1;
+		width: 100%;
+		height: 100%;
+		padding: 0.5em 0.5em;
 	  }
 	  .light{
 	  	height: 20%;

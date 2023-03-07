@@ -98,9 +98,9 @@ export default function Sidebar({
             }
             
 
-            <div className={componentStyles.scannerBorder}>
+            <div id="scannerBorder" className={componentStyles.scannerBorder}>
               
-              <div className={componentStyles.light}>
+              <div id="scannerLight" className={componentStyles.light}>
                 <div className={componentStyles.lightInner}></div>
               </div>
               <div className={componentStyles.icon}>
@@ -111,8 +111,6 @@ export default function Sidebar({
                   Place your access card here
                 </p>
               </div>
-
-
 
             </div>
           </div>
