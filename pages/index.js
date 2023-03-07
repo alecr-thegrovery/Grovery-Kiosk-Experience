@@ -13,6 +13,7 @@ import Container from '@components/Container'
 import DragDrop from '@components/DragDrop'
 import ContentGrid from '@components/ContentGrid'
 import DoorSection from '@components/DoorSection'
+import HomeBG from '@components/SVGComponents/HomeBG'
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -46,7 +47,16 @@ export default function Home({ allPostsData }) {
           subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
         />
 
-        <DragDrop/>
+        <div className={pageStyles.pageLevel1}>
+
+          <div className={pageStyles.background}>
+            <HomeBG/>
+          </div>
+
+          <section className={pageStyles.mainSection}>
+            <DragDrop/>
+          </section>
+        </div>
 
         <DynamicFooter
           dynamicText=""
