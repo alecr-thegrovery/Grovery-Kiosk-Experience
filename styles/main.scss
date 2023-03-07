@@ -142,7 +142,10 @@ code{
 }
 
 #LayoutOuter[data-action-state="card-picked-up"]{
-  .cardsFilter{opacity:1;}
+  .cardsFilter{
+    opacity:1;
+    pointer-events: auto;
+  }
   #ScannerIcon{
     $duration: 0.15s;
     $iteration: 1;
