@@ -4,6 +4,7 @@ import { router } from 'next/router'
 import $ from 'jquery'
 import interact from 'interactjs'
 import Card from './Card.js'
+//import IDCard from '@components/SVGComponents/IDCard'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
