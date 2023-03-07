@@ -23,6 +23,10 @@ export default function Card({
     >
       <div className={componentStyles.inner + " inner"}>
 
+        <div className={componentStyles.hole}>
+          <div className={componentStyles.holePlaceholder}></div>
+        </div>
+
         <div className={componentStyles.content}>
           {color == "mutedRed" &&
             <img className={componentStyles.icon} src="/images/icons/cardIconEnrollment.svg" alt=""/>
@@ -41,7 +45,8 @@ export default function Card({
         </div>
         <div 
           className={componentStyles.accent} 
-          data-color={color}>
+          data-color={color}
+        >
 
           {color == "mutedRed" &&
             <img src="/images/icons/wirelessRed.svg" alt=""/>
