@@ -4,8 +4,9 @@ $fixedWidth: 310px;
 
 .DynamicHeader{
 	//border: solid 2px $black;
-	background-color: $white;;
+	background-color: $white;
 	position: absolute;
+	z-index: 100;;
 	left: 0px;
 	top: 25px;
 	width: 75%;

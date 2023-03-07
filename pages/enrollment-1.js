@@ -39,7 +39,7 @@ export default function Home({ allPostsData }) {
         <div className={pageStyles.pageLevel1}>
                     
           <section className={pageStyles.mainSection}>
-            <DoorBG/>
+            <DoorBG enrollment/>
           </section>
         </div>
 

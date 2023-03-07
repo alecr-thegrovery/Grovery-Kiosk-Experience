@@ -5,7 +5,7 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-export default function EnrollmentDoors({ 
+export default function ResourceDoors({ 
   //Props
   id, children
 }) {
@@ -13,7 +13,7 @@ export default function EnrollmentDoors({
   //console.log(author);
 
   return (
-    <div className={componentStyles.EnrollmentDoors}>
+    <div className={componentStyles.ResourceDoors}>
       <svg width="1943.064" height="1113.685" viewBox="0 0 1943.064 1113.685">
         <defs>
           <clipPath id="clip-path">
