@@ -146,35 +146,35 @@ code{
   #ScannerIcon{
     $duration: 0.15s;
     $iteration: 1;
-    [dataname="hand"] path{
+    [data-name="hand"] path{
       animation-name: fillPurple;
        animation-duration: $duration;
        animation-iteration-count: $iteration;
        animation-fill-mode: forwards;
        animation-delay: 0.25s;
     }
-    [dataname="wave-1"]{
+    [data-name="wave-1"]{
       animation-name: fillPurple;
        animation-duration: $duration;
        animation-iteration-count: $iteration;
        animation-fill-mode: forwards;
        animation-delay: 0.5s;
     }
-    [dataname="wave-2"]{
+    [data-name="wave-2"]{
       animation-name: fillPurple;
        animation-duration: $duration;
        animation-iteration-count: $iteration;
        animation-fill-mode: forwards;
        animation-delay: 0.75s;
     }
-    [dataname="wave-3"]{
+    [data-name="wave-3"]{
       animation-name: fillPurple;
        animation-duration: $duration;
        animation-iteration-count: $iteration;
        animation-fill-mode: forwards;
        animation-delay: 1s;
     }
-    [dataname="wave-4"]{
+    [data-name="wave-4"]{
       animation-name: fillPurple;
        animation-duration: $duration;
        animation-iteration-count: $iteration;

@@ -5,11 +5,11 @@
 
 ### Code Libraries ###
 * Drag and Drop library: https://interactjs.io/
-* Element shapes: https://augmented-ui.com/
+
 
 ### Server Links ###
 * Local: http://localhost:3000/
-* Staging: https://planet-caravan-simple-blog-template.netlify.app/
+* Staging: https://bms-kiosk-staging.netlify.app/
 * Live: 
 
 ---
