@@ -6,8 +6,16 @@ Description:	Store SCSS vars here
 
 **************************************************/
 
+/* ================== */
+/* ===== Imports ===== */
+/* ================== */
 
-/***** Color Variables *****/
+@import "@styles/fonts.module.scss";
+
+
+/* ========================== */
+/* ===== Color Variables ===== */
+/* ========================== */
 	$black: 				#212121;
 	$white: 				#FFFFFF;
 	$grey_1:			#EEE7E7;
@@ -21,10 +29,30 @@ Description:	Store SCSS vars here
 	$purple:			#C136BE;
 	$green:				#7DC242;
 
+	//Card colors
 	$mutedRed: 		#FDD7C2;
 	$mutedYellow: 	#FEEEC4;
 	$mutedBlue: 		#C8EAEC;
 	$mutedGreen: 		#CEECCE;
+
+	//Primar y Palette
+	$primaryGray: 			#A69F9F;
+	$primaryLightGray: 	#EEE7E7;
+	$primaryPurple: 		#BE2BBB;
+	$primaryDarkGray: 	#595454;
+	$primaryWhite:			#FFFFFF;
+
+	//Dark Palette
+	$darkPeach: 	#671112;
+	$darkAmber: 	#C06005;
+	$darkAqua: 	#225C6E;
+	$darkMint: 	#267148;
+
+	//Door Colors
+	$doorPeach: 	#FDD7C2;
+	$doorAmber: 	#FFD186;
+	$doorAqua: 	#C0F2FB;
+	$doorMint: 	#C5FFE6;
 
 /***** Named Colors *****/
 	//only use other vars
@@ -32,13 +60,49 @@ Description:	Store SCSS vars here
 	$secondaryColor:		$white;
 	$backgroundColor:		$white;
 	$textColor:				$black;
-	$accentColor:			$darkOrange;
+	$accentColor:			$purple;
 
 
-/***** Fonts *****/
-	$fontBody:			"Roboto Mono";
-	$fontDisplay:	"Roboto Mono";
-	$fontAlt:			"Roboto Mono";
+/* ================ */
+/* ===== Fonts ===== */
+/* ================ */
+	//BMS Humanity
+	$fontBMS: 					"bms_humanityregular";
+		//Variants
+		$fontBMSBoldItalic: 	"bms_humanitybold_italic";
+		$fontBMSExtraBold: 	"bms_humanityextrabold";
+		$fontBMSItalic: 			"bms_humanityitalic";
+		$fontBMSLight: 			"bms_humanitylight";
+		$fontBMSLightItalic:	"bms_humanitylight_italic";
+		$fontBMSThin: 			"bms_humanitythin";
+		$fontBMSThinItalic: 	"bms_humanitythin_italic";
+
+	//BMS Humanity NW
+	$fontBMSNW: 					"bms_humanity_nwregular";
+		//Variants
+		$fontBMSNWBold: 			"bms_humanity_nwbold";
+		$fontBMSNWBoldItalic: 	"bms_humanity_nwbold_italic";
+		$fontBMSNWExtraBold: 	"bms_humanity_nwextrabold";
+		$fontBMSNWItalic: 			"bms_humanity_nwitalic";
+		$fontBMSNWLight:			"bms_humanity_nwlight";
+		$fontBMSNWLightItalic: 	"bms_humanity_nwlight_italic";
+		$fontBMSNWThin: 			"bms_humanity_nwthin";
+		$fontBMSNWThinItalic: 	"bms_humanity_nwthin_italic";
+
+	//BMS Humanity AR
+	$fontBMSAR: 					"bms_humanity_arregular";
+		//Variants
+		$fontBMSARBold: 			"bms_humanity_arbold";
+		$fontBMSARExtraBold:	"bms_humanity_arextrabold";
+		$fontBMSARLight: 			"bms_humanity_arlight";
+		$fontBMSARThin:				"bms_humanity_arthin";
+		
+	
+
+	//Named Vars
+	$fontBody:			$fontBMS;
+	$fontDisplay:	$fontBMSNW;
+	$fontAlt:			$fontBMSAR;
 
 /***** Static Font Sizes *****/
 	$fontSizeHeading:		36px;
