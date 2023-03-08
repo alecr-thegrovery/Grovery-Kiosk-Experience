@@ -18,7 +18,7 @@ export default function ComputerFrame({
 
   return (
     <div className={componentStyles.ComputerFrame}>
-      {/*<svg xmlns="http://www.w3.org/2000/svg" width="1397.008" height="793.629" viewBox="0 0 1397.008 793.629">
+      <svg xmlns="http://www.w3.org/2000/svg" width="1397.008" height="793.629" viewBox="0 0 1397.008 793.629">
         <defs>
           
         </defs>
@@ -34,12 +34,14 @@ export default function ComputerFrame({
             <ellipse id="Ellipse_4" data-name="Ellipse 4" className={componentStyles.cls6} cx="12.86" cy="13.149" rx="12.86" ry="13.149" transform="translate(5246.067 1412.125)"/>
           </g>
         </g>
-
+        
         <foreignObject className={componentStyles.content} x="0" y="0" width="500" height="500">
-          {children}
+          <div className={componentStyles.contentInner}>
+            {children}
+          </div>
         </foreignObject>
 
-      </svg>*/}
+      </svg>
 
       {/*<svg id="computerOne" xmlns="http://www.w3.org/2000/svg" width="1400" height="793.83" viewBox="0 0 1400 793.83">
        
@@ -64,7 +66,7 @@ export default function ComputerFrame({
         
       </svg>*/}
 
-    <svg id="computerOne" width="1400" height="793.83" viewBox="0 0 1400 793.83">
+   {/* <svg id="computerOne" width="1400" height="793.83" viewBox="0 0 1400 793.83">
       <defs>
         
 
@@ -89,7 +91,7 @@ export default function ComputerFrame({
           </foreignObject>
 
       </clipPath>
-    </svg>
+    </svg>*/}
 
     </div>
       
