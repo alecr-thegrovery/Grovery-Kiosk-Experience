@@ -32,6 +32,11 @@
     overflow: hidden;
   }
 
+  ::selection{
+    background-color: $accentColor;
+    color: $white;
+  }
+
   [data-reactroot]{
     //height: 100%;
     overflow: hidden;
@@ -75,7 +80,7 @@
       //border-width: 2px;
       border: none;
       height: 2px;
-      background-color: $black
+      background-color: $black;
     }
 
     h1, h2, h3, h4, h5, h6{
