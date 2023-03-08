@@ -60,15 +60,49 @@ Description:	Store SCSS vars here
 	$secondaryColor:		$white;
 	$backgroundColor:		$white;
 	$textColor:				$black;
-	$accentColor:			$mutedRed;
+	$accentColor:			$purple;
 
 
 /* ================ */
 /* ===== Fonts ===== */
 /* ================ */
-	$fontBody:			"bms_humanityregular";
-	$fontDisplay:	"bms_humanityregular-nw";
-	$fontAlt:			"bms_humanityregular-ar";
+	//BMS Humanity
+	$fontBMS: 					"bms_humanityregular";
+		//Variants
+		$fontBMSBoldItalic: 	"bms_humanitybold_italic";
+		$fontBMSExtraBold: 	"bms_humanityextrabold";
+		$fontBMSItalic: 			"bms_humanityitalic";
+		$fontBMSLight: 			"bms_humanitylight";
+		$fontBMSLightItalic:	"bms_humanitylight_italic";
+		$fontBMSThin: 			"bms_humanitythin";
+		$fontBMSThinItalic: 	"bms_humanitythin_italic";
+
+	//BMS Humanity NW
+	$fontBMSNW: 					"bms_humanity_nwregular";
+		//Variants
+		$fontBMSNWBold: 			"bms_humanity_nwbold";
+		$fontBMSNWBoldItalic: 	"bms_humanity_nwbold_italic";
+		$fontBMSNWExtraBold: 	"bms_humanity_nwextrabold";
+		$fontBMSNWItalic: 			"bms_humanity_nwitalic";
+		$fontBMSNWLight:			"bms_humanity_nwlight";
+		$fontBMSNWLightItalic: 	"bms_humanity_nwlight_italic";
+		$fontBMSNWThin: 			"bms_humanity_nwthin";
+		$fontBMSNWThinItalic: 	"bms_humanity_nwthin_italic";
+
+	//BMS Humanity AR
+	$fontBMSAR: 					"bms_humanity_arregular";
+		//Variants
+		$fontBMSARBold: 			"bms_humanity_arbold";
+		$fontBMSARExtraBold:	"bms_humanity_arextrabold";
+		$fontBMSARLight: 			"bms_humanity_arlight";
+		$fontBMSARThin:				"bms_humanity_arthin";
+		
+	
+
+	//Named Vars
+	$fontBody:			$fontBMS;
+	$fontDisplay:	$fontBMSNW;
+	$fontAlt:			$fontBMSAR;
 
 /***** Static Font Sizes *****/
 	$fontSizeHeading:		36px;
