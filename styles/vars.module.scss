@@ -6,8 +6,16 @@ Description:	Store SCSS vars here
 
 **************************************************/
 
+/* ================== */
+/* ===== Imports ===== */
+/* ================== */
 
-/***** Color Variables *****/
+@import "@styles/fonts.module.scss";
+
+
+/* ========================== */
+/* ===== Color Variables ===== */
+/* ========================== */
 	$black: 				#212121;
 	$white: 				#FFFFFF;
 	$grey_1:			#EEE7E7;
@@ -55,10 +63,12 @@ Description:	Store SCSS vars here
 	$accentColor:			$mutedRed;
 
 
-/***** Fonts *****/
-	$fontBody:			"Roboto Mono";
-	$fontDisplay:	"Roboto Mono";
-	$fontAlt:			"Roboto Mono";
+/* ================ */
+/* ===== Fonts ===== */
+/* ================ */
+	$fontBody:			"bms_humanityregular";
+	$fontDisplay:	"bms_humanityregular-nw";
+	$fontAlt:			"bms_humanityregular-ar";
 
 /***** Static Font Sizes *****/
 	$fontSizeHeading:		36px;
