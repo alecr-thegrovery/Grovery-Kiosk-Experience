@@ -98,7 +98,7 @@ export default function EnrollmentDoors({
             <rect id="Rectangle_187" data-name="Rectangle 187" width="279.31" height="86.697" transform="translate(3582.998 307.359)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <g id="Group_876" data-name="Group 876" transform="translate(-16.557 0.607)">
 
-              <g data-door="1" data-door-name="options" data-link="/posts/master-post" data-active="inactive" id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
+              <g className="droppable" data-door="1" data-door-name="options" data-link="/posts/master-post" data-active="inactive" id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
                 <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
                 <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
@@ -127,7 +127,7 @@ export default function EnrollmentDoors({
                 </g>
               </g>
             </g>
-            <g id="Group_877" data-name="Group 877" transform="translate(320.439 0.607)">
+            <g className="droppable" data-door="2" data-door-name="enrollmentForm" data-link="/posts/master-post" data-active="inactive" id="Group_877" data-name="Group 877" transform="translate(320.439 0.607)">
               <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
                 <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -157,7 +157,7 @@ export default function EnrollmentDoors({
                 </g>
               </g>
             </g>
-            <g id="Group_879" data-name="Group 879" transform="translate(986.089 0.607)">
+            <g className="droppable" data-door="3" data-door-name="providerPortal" data-link="/posts/master-post" data-active="inactive" id="Group_879" data-name="Group 879" transform="translate(986.089 0.607)">
               <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">
                 <path id="Path_3483-3" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-3" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -187,7 +187,7 @@ export default function EnrollmentDoors({
                 </g>
               </g>
             </g>
-            <g id="Group_878" data-name="Group 878" transform="translate(649.093 0.607)">
+            <g className="droppable" data-door="4" data-door-name="annexus" data-link="/posts/master-post" data-active="inactive" id="Group_878" data-name="Group 878" transform="translate(649.093 0.607)">
               <g id="Group_193-4" data-name="Group 193" transform="translate(2589.634 442.31)">
                 <path id="Path_3483-4" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-4" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
