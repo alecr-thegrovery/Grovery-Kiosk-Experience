@@ -5,6 +5,9 @@ import $ from 'jquery'
 import Link from 'next/link'
 import interact from 'interactjs'
 import EnrollmentDoors from "./EnrollmentDoors"
+import AccessDoors from "./AccessDoors"
+import FinancialDoors from "./FinancialDoors"
+import ResourceDoors from "./ResourceDoors"
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -184,16 +187,16 @@ export default function DoorBG({
   return (
    <div className={componentStyles.DoorBG}>
      {access && 
-       <EnrollmentDoors/>
+       <AccessDoors/>
      }
      {enrollment && 
        <EnrollmentDoors/>
      }
      {financial && 
-       <EnrollmentDoors/>
+       <FinancialDoors/>
      }
      {resources && 
-       <EnrollmentDoors/>
+       <ResourceDoors/>
      }
    </div>
   )
