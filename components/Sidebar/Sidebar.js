@@ -61,7 +61,6 @@ export default function Sidebar({
                 <Card
                   cardID="Access"
                   text="Access and Reimbursement Report"
-                  link="/access-1/"
                   color="mutedRed"
                 />
               </div>
@@ -71,7 +70,6 @@ export default function Sidebar({
                 <Card
                   cardID="Enrollment"
                   text="Enrollment"
-                  link="/enrollment-1/"
                   color="mutedYellow"
                 />
               </div>
@@ -81,7 +79,6 @@ export default function Sidebar({
                 <Card
                   cardID="Copay"
                   text="Co-Pay &amp; Finacial Assistance Services"
-                  link="/financial-1/"
                   color="mutedBlue"
                 />
               </div>
@@ -91,7 +88,6 @@ export default function Sidebar({
                 <Card
                   cardID="Resources"
                   text="Patient Resources"
-                  link="/resources-1/"
                   color="mutedGreen"
                 />
               </div>
