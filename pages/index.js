@@ -1,8 +1,8 @@
 /*===== Components =====*/
-import Head from 'next/head'
-import Link from 'next/link'
 import React, { useState, useEffect } from 'react';
 import { router } from 'next/router'
+import Head from 'next/head'
+import Link from 'next/link'
 import $ from 'jquery'
 import interact from 'interactjs'
 import Layout, { siteData } from '@components/layout'

@@ -1,4 +1,13 @@
+/*========================================*/
+//	Big SCSS Comment
+//	
+//	Put your notes here.
+//	
+/*========================================*/
 
+/* ==================== */
+/* ===== All Pages ===== */
+/* ==================== */
 .pageLayout{
 	display: flex;
 	flex-direction: column;
@@ -9,6 +18,9 @@
 	height: 100%;
 }
 
+/* ========================================= */
+/* ===== Level 1 Page - index/cards page ===== */
+/* ========================================= */
 .pageLevel1{
 	height: 100%;
 	width: 100%;
@@ -23,7 +35,9 @@
 	}
 }
 
-
+/* ==================================== */
+/* ===== Level 2 Pages - doors pages ===== */
+/* ==================================== */
 .pageLevel2{
 	height: 100%;
 	.headingSection{
@@ -41,33 +55,39 @@
 	}
 }
 
-
+/* ===================================== */
+/* ===== Level 3 Pages - final screen ===== */
+/* ===================================== */
 .pageLevel3{
 	height: 100%;
 	display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
 	.mainSection{
 		height: 80%;
-
 	}
-	.contentWrapper{
-		height: 100%;
-		width: 100%;
-		max-width: 1450px;
+	.oneColumn{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.twoColumn{
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		background-image: url("/images/computerFrames/frame-1.svg");
-		background-size: contain;
-		background-position: center center;
-		background-repeat: no-repeat;
-		&[data-frame="/images/computerFrames/frame-1.svg"]{
-			background-image: url("/images/computerFrames/frame-1.svg");
+		justify-content: flex-start;
+		align-items: flex-start;
+		.cell{
+			width: 50%;
+			&[data-centered]{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 	}
 }
