@@ -215,3 +215,11 @@
       fill: $purple;
     }
   }
+
+/* ============================= */
+/* ===== CSS Comment Header ===== */
+/* ============================= */
+.tippy-box[data-theme~='light'] {
+  background-color: $purple;
+  color: $white;
+}
