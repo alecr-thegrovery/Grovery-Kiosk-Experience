@@ -145,7 +145,7 @@ Description:	Store SCSS vars here
 
 
 /***** Border Settings *****/
-	$borderWidth:	2px;
+	$borderWidth:	clamp(2px, 0.1vw,3px);
 	$borderRadius:	20px;
 
 /***** Shadows *****/

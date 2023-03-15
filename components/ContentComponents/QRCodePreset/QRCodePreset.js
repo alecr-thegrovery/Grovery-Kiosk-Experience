@@ -1,8 +1,9 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import ZoomIcon from '@components/SVGComponents/ZoomIcon'
+import Tooltip from './Tooltip.js'
 import QRCode from "react-qr-code";
-import tippy from 'tippy.js';
+//import tippy, {inlinePositioning} from 'tippy.js';
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -10,28 +11,26 @@ import componentStyles from './styles.module.scss'
 
 export default function QRCodePreset({ 
   //Props
-  link, toolTipText, color
+  link, toolTipText, toolTipPlacement, color, 
 }) {
-
   //console.log(author);
   useEffect(() => {
     //JS GOES HERE
-    tippy('[data-tippy-content]', {
-      placement: 'right',
+    /*tippy('[data-qr-code-tooltip]', {
+      //placement: 'right',
       arrow: true,
-      theme: 'light',
+      theme: 'purple',
       animation: 'fade',
-      show: true,
-    });
-  /*  let tippyVal = 
-    tippy('[data-tippy]', {
-      content: tippyVal,
-      //trigger: 'manual',
-      placement: 'right',
+      //interactive: true,
+      showOnCreate: true,
+      showOnInit: true,
+      hideOnClick: false,
+      trigger: "manual",
+      zIndex: 1,
+      appendTo: 'parent',
+      inlinePositioning: true,
+      plugins: [inlinePositioning],
     });*/
-
-    /*const instance = tippy(document.querySelector('[data-tippy-content]'));
-    instance.show();*/
   });
 
   return (
@@ -42,8 +41,13 @@ export default function QRCodePreset({
           bgColor="#ffffff"
           fgColor="#212121"
           style={{ height: "auto", width: "8vw" }}
+         /* data-qr-code-tooltip
           data-tippy-content={toolTipText}
-          
+          data-tippy-placement={toolTipPlacement ? toolTipPlacement : "right"}*/
+        />
+        <Tooltip 
+          text={toolTipText}
+          placement={toolTipPlacement}
         />
     </div>
   )

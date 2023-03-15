@@ -55,9 +55,11 @@ export default function Post({ postData }) {
                     <li>Use e-signature for simplified processing </li>
                     <li>Securely message your regional Patient Access Specialist</li>
                   </ul>
+                  <br/>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
                     toolTipText="Scan to visit Provider Portal"
+                    toolTipPlacement="right"
                   />
                   
                 </div>               
