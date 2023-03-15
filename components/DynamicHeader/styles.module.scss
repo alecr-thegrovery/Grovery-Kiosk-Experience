@@ -46,6 +46,9 @@ $fixedWidth: 310px;
 		padding-left: 100px;
 		.heading{
 			font-size: $clampMedium;
+			strong{
+				color: $purple;
+			}
 		}
 		.subhead{
 			font-size: $clampExtraSmall;

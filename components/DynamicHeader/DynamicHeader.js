@@ -63,7 +63,9 @@ export default function DynamicHeader({
 
           {/*Dynamic Text Section*/}
           <div className={componentStyles.text}>
-            <h1 className={componentStyles.heading}>{heading}</h1>
+            <h1 className={componentStyles.heading}>
+              {heading}
+            </h1>
             <p className={componentStyles.subhead}>{subhead}</p>
           </div>
           

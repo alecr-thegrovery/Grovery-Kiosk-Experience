@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
 import 'normalize.css';
+import 'tippy.js/dist/tippy.css';
 //Swiper.JS
 import 'swiper/swiper.scss';
 import 'swiper/components/a11y/a11y.scss';

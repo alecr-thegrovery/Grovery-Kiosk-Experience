@@ -113,7 +113,7 @@ Description:	Store SCSS vars here
 /***** Dynamic Font Sizes *****/
 	$clampExtraExtraSmall:		clamp(6px, 1vw, 10px);
 	$clampExtraSmall:		clamp(10px, 1.2vw, 16px);
-	$clampSmall: 				clamp(12px, 1.5vw, 20px);
+	$clampSmall: 				clamp(12px, 1.5vw, 21px);
 	$clampMedium: 			clamp(14px, 2vw, 28px);
 	$clampLarge: 			clamp(24px, 4vw, 45px);
 	$clampExtraLarge: 	clamp(36px, 5.5vw, 60px);
@@ -145,8 +145,8 @@ Description:	Store SCSS vars here
 
 
 /***** Border Settings *****/
-	$borderWidth:	2px;
-	$borderRadius:	0;
+	$borderWidth:	clamp(2px, 0.1vw,3px);
+	$borderRadius:	20px;
 
 /***** Shadows *****/
 	$simpleShadow: 

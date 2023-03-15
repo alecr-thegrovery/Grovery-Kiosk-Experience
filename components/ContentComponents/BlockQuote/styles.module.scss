@@ -1,0 +1,43 @@
+@import "@styles/vars.module.scss";
+
+.BlockQuote{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: $primaryLightGray;
+	
+	border-radius: $borderRadius;
+	margin-bottom: $clampLarge;
+
+	$fixedWidth: 25%;
+	.icon{
+		width: $fixedWidth;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: $clampMedium $clampSmall;
+	}
+	.text{
+		width:calc(100% - #{$fixedWidth});
+		font-size: $clampSmall;
+		padding: $clampMedium $clampSmall;
+		//font-family: $fontBMSLight;
+		padding-left: 0px;
+		line-height: 1.2;
+		h2{
+			font-size: inherit;
+			line-height: 1.2;
+			margin-bottom: 0.25em;;
+		}
+		a{
+			color: $purple;
+			text-decoration: underline;
+			&:after{
+				content:">"
+			}
+		}
+	}
+}

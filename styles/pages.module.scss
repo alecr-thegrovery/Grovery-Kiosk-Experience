@@ -1,4 +1,14 @@
+/*========================================*/
+//	Big SCSS Comment
+//	
+//	Put your notes here.
+//	
+/*========================================*/
+@import "@styles/vars.module.scss";
 
+/* ==================== */
+/* ===== All Pages ===== */
+/* ==================== */
 .pageLayout{
 	display: flex;
 	flex-direction: column;
@@ -9,6 +19,9 @@
 	height: 100%;
 }
 
+/* ========================================= */
+/* ===== Level 1 Page - index/cards page ===== */
+/* ========================================= */
 .pageLevel1{
 	height: 100%;
 	width: 100%;
@@ -23,7 +36,9 @@
 	}
 }
 
-
+/* ==================================== */
+/* ===== Level 2 Pages - doors pages ===== */
+/* ==================================== */
 .pageLevel2{
 	height: 100%;
 	.headingSection{
@@ -41,33 +56,65 @@
 	}
 }
 
-
+/* ===================================== */
+/* ===== Level 3 Pages - final screen ===== */
+/* ===================================== */
 .pageLevel3{
 	height: 100%;
 	display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: flex-end;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
 	.mainSection{
 		height: 80%;
+		font-size: $clampMedium;
+		line-height: 1.35;
 
+		img{
+			width: 100%;
+			max-width: 850px;
+			margin: auto;
+		}
+		p{
+			margin-bottom: 1em;
+		}
+		.italics{
+			font-style: $fontBMSLightItalic;
+			font-style: italics;
+			font-weight: 100;
+		}
+
+		.QRCode{
+			$clampWidth: clamp(150px, 7vw, 350px);
+			width: 100%;
+			max-width: $clampWidth;
+			//margin: auto;
+			svg{
+				//max-width: 100%;
+			}
+		}
 	}
-	.contentWrapper{
-		height: 100%;
-		width: 100%;
-		max-width: 1450px;
+	.oneColumn{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.twoColumn{
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		background-image: url("/images/computerFrames/frame-1.svg");
-		background-size: contain;
-		background-position: center center;
-		background-repeat: no-repeat;
-		&[data-frame="/images/computerFrames/frame-1.svg"]{
-			background-image: url("/images/computerFrames/frame-1.svg");
+		justify-content: flex-start;
+		align-items: flex-start;
+		.cell{
+			width: 50%;
+			&[data-centered]{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 	}
 }
