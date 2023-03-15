@@ -67,6 +67,22 @@
 	align-items: flex-end;
 	.mainSection{
 		height: 80%;
+
+		img{
+			width: 100%;
+			max-width: 850px;
+			margin: auto;
+		}
+
+		.QRCode{
+			$clampWidth: clamp(150px, 7vw, 350px);
+			width: 100%;
+			max-width: $clampWidth;
+			//margin: auto;
+			svg{
+				//max-width: 100%;
+			}
+		}
 	}
 	.oneColumn{
 		display: flex;

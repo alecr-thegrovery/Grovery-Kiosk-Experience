@@ -11,6 +11,7 @@ import DynamicFooter from '@components/DynamicFooter'
 import ComputerFrame from '@components/SVGComponents/ComputerFrame'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
+import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -43,18 +44,22 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
                   
                   <BlockQuote icon="/images/icons/contentFormIcon.svg">
-                    <h2>Option 1: Enroll via Fax</h2>
                     <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. Tap for information on how to complete the enrollment form >.</p>
                   </BlockQuote>
 
-                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
-                    <h2>Option 2: Enroll via the Provider Portal</h2>
-                    <p>Visit MyBMSCases.com to submit completed forms with physician and patient signatures through the provider portal. </p>
-                  </BlockQuote>
-
-                  <p>Once the enrollment form has been submitted and a Benefits Review has been conducted, you will receive your patient’s summary of healthcare benefits.</p>
-
-                  <p className={pageStyles.italics}>Please Note: While enrollment in the BMS Access Support program is required to receive certain support offerings, such as benefits reviews and appeals assistance, patients can also access select support offerings through the online resources found at BMSAccessSupport.com.</p>
+                  <h2>The provider portal allows you to: </h2>
+                  <ul>
+                    <li>Access case status updates </li>
+                    <li>Enroll in co-pay program and view details, including eligibility dates, annual benefit cap, and available balance</li>
+                    <li>Submit and track reverification status </li>
+                    <li>Use e-signature for simplified processing </li>
+                    <li>Securely message your regional Patient Access Specialist</li>
+                  </ul>
+                  <QRCodePreset 
+                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    toolTipText="Scan to visit Provider Portal"
+                  />
+                  
                 </div>               
 
                 {/*RIGHT CELL*/}
