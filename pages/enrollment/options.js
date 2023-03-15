@@ -29,7 +29,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={title}
+          heading={["Options to Enroll in BMS ", <strong>Access Support</strong>]}
         />
 
         {/*Content*/}
@@ -42,19 +42,19 @@ export default function Post({ postData }) {
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
                   
-                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
+                  <BlockQuote icon="/images/icons/contentPrinterIcon.svg">
                     <h2>Option 1: Enroll via Fax</h2>
                     <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. Tap for information on how to complete the enrollment form >.</p>
                   </BlockQuote>
 
-                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
+                  <BlockQuote icon="/images/icons/contentComputerScreen.svg">
                     <h2>Option 2: Enroll via the Provider Portal</h2>
                     <p>Visit MyBMSCases.com to submit completed forms with physician and patient signatures through the provider portal. </p>
                   </BlockQuote>
 
                   <p>Once the enrollment form has been submitted and a Benefits Review has been conducted, you will receive your patient’s summary of healthcare benefits.</p>
 
-                  <p className={pageStyles.italics}>Please Note: While enrollment in the BMS Access Support program is required to receive certain support offerings, such as benefits reviews and appeals assistance, patients can also access select support offerings through the online resources found at BMSAccessSupport.com.</p>
+                  <em className={pageStyles.italics}>Please Note: While enrollment in the BMS Access Support program is required to receive certain support offerings, such as benefits reviews and appeals assistance, patients can also access select support offerings through the online resources found at BMSAccessSupport.com.</em>
                 </div>               
 
                 {/*RIGHT CELL*/}

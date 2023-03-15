@@ -45,10 +45,13 @@ export default function QRCodePreset({
           data-tippy-content={toolTipText}
           data-tippy-placement={toolTipPlacement ? toolTipPlacement : "right"}*/
         />
-        <Tooltip 
+        {toolTipText &&
+      <Tooltip 
           text={toolTipText}
           placement={toolTipPlacement}
         />
+        }
+        
     </div>
   )
 }

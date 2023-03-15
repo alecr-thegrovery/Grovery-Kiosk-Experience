@@ -4,6 +4,7 @@
 //	Put your notes here.
 //	
 /*========================================*/
+@import "@styles/vars.module.scss";
 
 /* ==================== */
 /* ===== All Pages ===== */
@@ -67,11 +68,21 @@
 	align-items: flex-end;
 	.mainSection{
 		height: 80%;
+		font-size: $clampMedium;
+		line-height: 1.35;
 
 		img{
 			width: 100%;
 			max-width: 850px;
 			margin: auto;
+		}
+		p{
+			margin-bottom: 1em;
+		}
+		.italics{
+			font-style: $fontBMSLightItalic;
+			font-style: italics;
+			font-weight: 100;
 		}
 
 		.QRCode{

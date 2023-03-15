@@ -17,7 +17,8 @@ import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 import utilStyles from '@styles/utils.module.css'
 import pageStyles from '@styles/pages.module.scss'
 
-let title = "Options To Enroll";
+let title = "Using the My BMS Cases Provider Portal";
+//{["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
 let footerText = "";
 
 export default function Post({ postData }) {
@@ -30,7 +31,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={title}
+          heading={["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
         />
 
         {/*Content*/}
@@ -43,8 +44,8 @@ export default function Post({ postData }) {
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
                   
-                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
-                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. Tap for information on how to complete the enrollment form >.</p>
+                  <BlockQuote icon="/images/icons/contentComputerScreen.svg">
+                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
                   </BlockQuote>
 
                   <h2>The provider portal allows you to: </h2>
@@ -66,7 +67,7 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <PdfThumbnail/>
+                  <img src="/images/content/provider-portal-img.png" alt="" />
                 </div>
 
               </div>
