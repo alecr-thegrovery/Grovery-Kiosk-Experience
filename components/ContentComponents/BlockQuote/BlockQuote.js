@@ -4,7 +4,6 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-
 export default function BlockQuote({ 
   //Props
   children, icon, headline
@@ -17,9 +16,9 @@ export default function BlockQuote({
 
       <div className={componentStyles.icon}>
         {icon ? 
-          <img src={icon} alt="" />
+          <img className={componentStyles.iconImg} src={icon} alt="" />
           :
-          <img src="/images/icons/contentFormIcon.svg" alt="" />
+          <img className={componentStyles.iconImg} src="/images/icons/contentFormIcon.svg" alt="" />
         }
       </div>
 

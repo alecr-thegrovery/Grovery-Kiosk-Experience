@@ -17,12 +17,13 @@ import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 import utilStyles from '@styles/utils.module.css'
 import pageStyles from '@styles/pages.module.scss'
 
-let title = "NEW AssistPoint Integration";
+let title = "Using the My BMS Cases Provider Portal";
+//{["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
 let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout enrollment>
+    <Layout>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -30,7 +31,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading={["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
         />
 
         {/*Content*/}
@@ -42,16 +43,23 @@ export default function Post({ postData }) {
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
+                  
+                  <BlockQuote icon="/images/icons/contentComputerScreen.svg">
+                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
+                  </BlockQuote>
 
-                  <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
-                  </p>
-                  <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
-                  </p>
+                  <h2>The provider portal allows you to: </h2>
+                  <ul>
+                    <li>Access case status updates </li>
+                    <li>Enroll in co-pay program and view details, including eligibility dates, annual benefit cap, and available balance</li>
+                    <li>Submit and track reverification status </li>
+                    <li>Use e-signature for simplified processing </li>
+                    <li>Securely message your regional Patient Access Specialist</li>
+                  </ul>
+                  <br/>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
+                    toolTipText="Scan to visit Provider Portal"
                     toolTipPlacement="right"
                   />
                   
@@ -59,7 +67,7 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <img src="/images/content/provider-portal-img.png" alt="" />
                 </div>
 
               </div>

@@ -71,13 +71,34 @@
 		font-size: $clampMedium;
 		line-height: 1.35;
 
+		h2{
+			margin-bottom: 0.5em;
+		}
 		img{
 			width: 100%;
 			max-width: 850px;
 			margin: auto;
+			margin-bottom: 1em;
 		}
 		p{
 			margin-bottom: 1em;
+		}
+		ul{
+			//margin-bottom: 1em;
+			li{
+				margin-bottom: 1em;	
+			}
+			
+		}
+		a{
+			color: $purple;
+			text-decoration: underline;
+			border-bottom: solid 1px inherit;
+			&:after{
+				content:">";
+				text-decoration: none;
+				font-weight: 600;
+			}
 		}
 		.italics{
 			font-style: $fontBMSLightItalic;
@@ -116,6 +137,9 @@
 				justify-content: center;
 				align-items: center;
 			}
+		}
+		h2{
+			font-size: $clampMedium;
 		}
 	}
 }
