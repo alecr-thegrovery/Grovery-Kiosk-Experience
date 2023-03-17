@@ -23,7 +23,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout access>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -43,23 +43,17 @@ export default function Post({ postData }) {
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
-                  
-                  <BlockQuote icon="/images/icons/contentComputerScreen.svg">
-                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
-                  </BlockQuote>
 
-                  <h2>The provider portal allows you to: </h2>
+                  <h2>We offer product-specific Billing &amp; Coding resources for your healthcare office.</h2>
                   <ul>
-                    <li>Access case status updates </li>
-                    <li>Enroll in co-pay program and view details, including eligibility dates, annual benefit cap, and available balance</li>
-                    <li>Submit and track reverification status </li>
-                    <li>Use e-signature for simplified processing </li>
-                    <li>Securely message your regional Patient Access Specialist</li>
+                    <li><strong>Billing &amp; Coding Guides</strong> provide an overview of relevant product and diagnosis codes, dosing and administration, and general reimbursement information</li>
+                    <li><strong>Online Code Search Tool</strong> allows providers to type in a keyword to find specific HCPCS, CPT, NDC, 5010, or ICD-10 code</li>
+                    <li><strong>Sample Claim Forms</strong> call out where to enter important information on health insurance claim forms (e.g., drug name, dosing NDC information, diagnosis code, and HCPCS code)</li>
                   </ul>
                   <br/>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Scan to visit Provider Portal"
+                    toolTipText="Scan the QR code to access Reimbursement Guides available for all relevant products at BMSAccessSupport.com. "
                     toolTipPlacement="right"
                   />
                   
@@ -67,7 +61,7 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/provider-portal-img.png" alt="" />
+                  <img src="/images/content/billing-coding-medselector-img.png" alt="" />
                 </div>
 
               </div>
