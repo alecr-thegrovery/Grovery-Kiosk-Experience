@@ -90,6 +90,16 @@
 			}
 			
 		}
+		a{
+			color: $purple;
+			text-decoration: underline;
+			border-bottom: solid 1px inherit;
+			&:after{
+				content:">";
+				text-decoration: none;
+				font-weight: 600;
+			}
+		}
 		.italics{
 			font-style: $fontBMSLightItalic;
 			font-style: italics;
@@ -127,6 +137,9 @@
 				justify-content: center;
 				align-items: center;
 			}
+		}
+		h2{
+			font-size: $clampMedium;
 		}
 	}
 }
