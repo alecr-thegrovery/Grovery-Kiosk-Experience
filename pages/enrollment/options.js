@@ -21,7 +21,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout enrollment>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>

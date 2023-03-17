@@ -71,13 +71,24 @@
 		font-size: $clampMedium;
 		line-height: 1.35;
 
+		h2{
+			margin-bottom: 0.5em;
+		}
 		img{
 			width: 100%;
 			max-width: 850px;
 			margin: auto;
+			margin-bottom: 1em;
 		}
 		p{
 			margin-bottom: 1em;
+		}
+		ul{
+			//margin-bottom: 1em;
+			li{
+				margin-bottom: 1em;	
+			}
+			
 		}
 		.italics{
 			font-style: $fontBMSLightItalic;

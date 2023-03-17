@@ -23,7 +23,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout access>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -31,7 +31,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
+          heading={["What to Expect from a Benefits Review"]}
         />
 
         {/*Content*/}
@@ -40,37 +40,48 @@ export default function Post({ postData }) {
             <ComputerFrame frame="1">
               {/*Inner Page Content*/}
 
+              <div className={pageStyles.oneColumn}>                  
+                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
+                      <h2>Initiate a Benefits Review (BR) by accurately completing and submitting enrollment and PAA forms. </h2>
+                      <ul>  
+                        <li>Your BMS Access Support Patient Access Specialist will review the patient’s insurance coverage for the prescribed BMS medication</li>
+                        <li>You will receive a summary of benefits within approximately 24 hours</li>
+                      </ul> 
+                  </BlockQuote>
+
+                  <h2>The Summary of Benefits will determine:</h2>
+                  <ul>  
+                    <li>If a medication is covered by a patient’s insurance plan</li>
+                    <li>If a prior authorization is required</li>
+                    <li>The estimated patient out-of-pocket costs, the out-of-pocket maximum, and if there is a deductible</li>
+                    <li>If there is a preferred specialty pharmacy, optional specialty pharmacy, or open specialty pharmacy network (applies to orals or HCP-administered medications when buy & bill is not an option)</li>
+                  </ul> 
+
+                  <img src="/images/content/EnrollmentFormContentImage.png" alt="" />
+              </div>
+              <br/>
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
-                  
-                  <BlockQuote icon="/images/icons/contentComputerScreen.svg">
-                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
-                  </BlockQuote>
-
-                  <h2>The provider portal allows you to: </h2>
-                  <ul>
-                    <li>Access case status updates </li>
-                    <li>Enroll in co-pay program and view details, including eligibility dates, annual benefit cap, and available balance</li>
-                    <li>Submit and track reverification status </li>
-                    <li>Use e-signature for simplified processing </li>
-                    <li>Securely message your regional Patient Access Specialist</li>
-                  </ul>
-                  <br/>
-                  <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Scan to visit Provider Portal"
-                    toolTipPlacement="right"
-                  />
-                  
+                    <h2>For HCP-Administered products, the following additional information will be provided:</h2>
+                    <ul>
+                      <li>The office and administration co-pay/co-insurance amounts</li>
+                      <li>If the administering physician is in network</li>
+                      <li>The preferred/required procurement process (e.g., buy &amp; bill or specialty pharmacy)</li>
+                      <li>Timely filing guidelines for claims/appeals </li>
+                    </ul>        
+                    <BlockQuote icon="/images/icons/contentCalendarIcon.svg">
+                      <p><strong>For patients who are enrolled in BMS Access Support</strong>, reverification of benefits (eBRV) is available for each new calendar year upon HCP request to confirm a patient’s continued access to therapy and minimize disruption in therapy.</p>
+                    </BlockQuote>          
                 </div>               
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/provider-portal-img.png" alt="" />
+                  <PdfThumbnail name="Sample forms"/>
                 </div>
 
               </div>
+
             </ComputerFrame>            
           </section>
         </div>        

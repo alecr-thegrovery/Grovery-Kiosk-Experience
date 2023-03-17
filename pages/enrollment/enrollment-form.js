@@ -21,7 +21,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <Layout enrollment>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -45,6 +45,7 @@ export default function Post({ postData }) {
 
                   <img src="/images/content/EnrollmentFormContentImage.png" alt="" />
               </div>
+
             </ComputerFrame>            
           </section>
         </div>        
