@@ -32,7 +32,6 @@ export default function Home({ allPostsData }) {
   //console.log(author);
     useEffect(() => {
 
-      
       const actionState = document.querySelector("#LayoutOuter")
       actionState.setAttribute("data-action-state","none");
 
@@ -46,8 +45,8 @@ export default function Home({ allPostsData }) {
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading="Enrolling in Bristol Myers Squibb (BMS) Access Support"
-          subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications. "
+          heading={["Enrolling in Bristol Myers Squibb ", <strong>Access Support</strong>]}
+          subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications."
         />
 
         <div className={pageStyles.pageLevel1}>

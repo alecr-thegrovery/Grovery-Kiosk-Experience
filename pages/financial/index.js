@@ -1,6 +1,10 @@
 /*===== Components =====*/
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
+import { router } from 'next/router'
+import $ from 'jquery'
 import Link from 'next/link'
+import interact from 'interactjs'
 import Layout, { siteData } from '@components/layout'
 import DragDrop from '@components/DragDrop'
 import DoorSection from '@components/DoorSection'
@@ -24,22 +28,32 @@ export async function getStaticProps() {
 
 /*===== Page Content =====*/
 export default function Home({ allPostsData }) {
+
+  //console.log(author);
+    useEffect(() => {
+
+      
+      const actionState = document.querySelector("#LayoutOuter")
+      actionState.setAttribute("data-action-state","none");
+
+    });
+
   return (
-    <Layout enrollment>
+    <Layout financial>
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading="Enrolling in Bristol Myers Squibb (BMS) Access Support"
-          subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications. "
+          heading={["Co-Pay & Financial ", <strong>Assistance</strong>]}
+          subhead="BMS Access Support may be able to help identify financial assistance programs for eligible patients who have been prescribed select BMS medications and need help managing the cost of treatment. The appropriate program will depend on the patient’s coverage."
         />
 
-        <div className={pageStyles.pageLevel1}>
+        <div className={pageStyles.pageLevel2}>
                     
           <section className={pageStyles.mainSection}>
-            <DoorBG enrollment/>
+            <DoorBG financial/>
           </section>
         </div>
 

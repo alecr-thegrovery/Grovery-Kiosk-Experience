@@ -39,21 +39,21 @@ export default function Home({ allPostsData }) {
     });
 
   return (
-    <Layout enrollment>
+    <Layout access>
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading="Enrolling in Bristol Myers Squibb (BMS) Access Support"
-          subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications. "
+          heading={["Access & Reimbursement ", <strong>Support</strong>]}
+          subhead="BMS Access Support offers real-time support to help initiate and maintain access to prescribed BMS medications."
         />
 
-        <div className={pageStyles.pageLevel1}>
+        <div className={pageStyles.pageLevel2}>
                     
           <section className={pageStyles.mainSection}>
-            <DoorBG enrollment/>
+            <DoorBG access/>
           </section>
         </div>
 
