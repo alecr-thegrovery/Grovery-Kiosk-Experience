@@ -40,7 +40,7 @@ export default function DragDrop({
         <Card 
           cardID="Access"
           text="Access and Reimbursement Report"
-          link="/access-1/"
+          link="/access/"
           color="mutedYellow"
           animation="fadeInUp"
           animationDelay="2"
@@ -49,7 +49,7 @@ export default function DragDrop({
         <Card 
           cardID="Copay"
           text="Co-Pay &amp; Finacial Assistance Services"
-          link="/financial-1/"
+          link="/financial/"
           color="mutedBlue"
           animation="fadeInUp"
           animationDelay="3"
@@ -58,7 +58,7 @@ export default function DragDrop({
         <Card 
           cardID="Resources"
           text="Patient Resources"
-          link="/resources-1/"
+          link="/resources/"
           color="mutedGreen"
           animation="fadeInUp"
           animationDelay="4"

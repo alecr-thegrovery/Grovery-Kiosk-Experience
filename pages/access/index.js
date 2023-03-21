@@ -39,7 +39,7 @@ export default function Home({ allPostsData }) {
     });
 
   return (
-    <Layout enrollment>
+    <Layout access>
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
@@ -50,10 +50,10 @@ export default function Home({ allPostsData }) {
           subhead="Enrollment in BMS Access Support is required to get support for select, prescribed BMS medications. "
         />
 
-        <div className={pageStyles.pageLevel1}>
+        <div className={pageStyles.pageLevel2}>
                     
           <section className={pageStyles.mainSection}>
-            <DoorBG enrollment/>
+            <DoorBG access/>
           </section>
         </div>
 

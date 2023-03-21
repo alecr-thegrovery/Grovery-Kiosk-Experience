@@ -1,9 +1,15 @@
 /*===== Components =====*/
 import React from "react"
 
-
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
+
+/*===== Notes =====*/
+// Add and edit the following to the 
+// elements you want to make interactive:
+/*
+  className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive"
+*/
 
 export default function EnrollmentDoors({ 
   //Props
