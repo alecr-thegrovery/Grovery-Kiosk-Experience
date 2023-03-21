@@ -39,21 +39,21 @@ export default function Home({ allPostsData }) {
     });
 
   return (
-    <Layout access>
+    <Layout resources>
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading={["Access & Reimbursement ", <strong>Support</strong>]}
-          subhead="BMS Access Support offers real-time support to help initiate and maintain access to prescribed BMS medications."
+          heading={["", <strong>Patient Resources </strong>]}
+          subhead="BMS Access Support offers resources for patients who have been prescribed select BMS medications, including insurance information, online tools, and answers to common coverage questions."
         />
 
         <div className={pageStyles.pageLevel2}>
                     
           <section className={pageStyles.mainSection}>
-            <DoorBG access/>
+            <DoorBG resources/>
           </section>
         </div>
 
