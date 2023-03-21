@@ -170,7 +170,7 @@ export default function ResourceDoors({
             <rect id="Rectangle_186" data-name="Rectangle 186" width="279.31" height="86.697" transform="translate(3242.813 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <text id="Videos" transform="translate(3261.688 336.5)" fill="#595454" font-size="24" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="26">VIDEOS</tspan></text>
             <g id="Group_879" data-name="Group 879" transform="translate(652.899 0.607)">
-              <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
+              <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="2" data-door-name="Videos" data-link="/resources/videos/" data-active="inactive">
                 <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
                 <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
@@ -199,7 +199,7 @@ export default function ResourceDoors({
             <rect id="Rectangle_1408" data-name="Rectangle 1408" width="278" height="12" transform="translate(3244.383 382)" fill="#c5ffe6"/>
             <text id="BROCHURES" transform="translate(2917.585 336.5)" fill="#595454" font-size="24" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="26">BROCHURES</tspan></text>
             <g id="Group_1228" data-name="Group 1228" transform="translate(312.097 0.607)">
-              <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
+              <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="1" data-door-name="Brochures" data-link="/resources/brochures/" data-active="inactive">
                 <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-2" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
                 <rect id="Rectangle_183-2" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
