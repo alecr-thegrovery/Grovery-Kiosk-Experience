@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Card from '@components/DragDrop/Card.js'
+import IDCard from '@components/IDCard'
 import { BsUpcScan } from "react-icons/bs";
 import { MdArrowBackIosNew } from "react-icons/md";
 import $ from 'jquery'
@@ -58,8 +59,8 @@ export default function Sidebar({
 
             {access && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Access"
+                <IDCard
+                  cardID="access"
                   text="Access and Reimbursement Report"
                   color="mutedRed"
                 />
@@ -67,8 +68,8 @@ export default function Sidebar({
             }
             {enrollment && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Enrollment"
+                <IDCard
+                  cardID="enrollment"
                   text="Enrollment"
                   color="mutedYellow"
                 />
@@ -76,8 +77,8 @@ export default function Sidebar({
             }
             {financial && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Copay"
+                <IDCard
+                  cardID="financial"
                   text="Co-Pay &amp; Finacial Assistance Services"
                   color="mutedBlue"
                 />
@@ -85,8 +86,8 @@ export default function Sidebar({
             }
             {resources && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Resources"
+                <IDCard
+                  cardID="resources"
                   text="Patient Resources"
                   color="mutedGreen"
                 />
