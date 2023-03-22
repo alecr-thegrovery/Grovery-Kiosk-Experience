@@ -5,12 +5,13 @@ $fixedWidth: clamp(250px, 20vw,360px);
 .DynamicFooter{
 	//border: solid 2px $black;
 	position: absolute;
+	z-index: 30;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
 	width:calc(100% - #{$fixedWidth});
 	background-color: $white;
-	box-shadow: $simpleShadow;
+	box-shadow: 0.1em -0.1em 0.25em rgba($black, 0.15);
 	
 	.inner{
 		width: 100%;

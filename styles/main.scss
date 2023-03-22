@@ -10,6 +10,7 @@
 /* ================== */
   @import "@styles/fonts.module.scss";
   @import "@styles/animations.module.scss";
+  @import "@styles/actions.module.scss";
   @import "@styles/vars.module.scss";
 
 /* ========================== */
@@ -142,94 +143,7 @@
        }
   }
 
-/* ================================ */
-/* ===== Draggable Card States ===== */
-/* ================================ */
-  .draggable{
-    z-index: 21 ;
-    .inner{
-      transition: $transitionMedium;
-    }
-    
-    &.getting--dragged{
-       z-index: 30 !important;
-      .inner{
-          transform: rotate(15deg) translateY(-6vh);
-          box-shadow: $niceShadowShort;
-        }
-      } 
-  }
-  #LayoutOuter{
-    .cardsFilter{
-      opacity:0.25;
-    }
-  }
-  #LayoutOuter[data-action-state="card-picked-up"]{
-    .draggable{
-      z-index: 19;
-    }
-    .cardsFilter{
-      opacity:1;
-      //z-index: 21;
-      pointer-events: auto;
-    }
-    #scannerBorder{
-      border-color: $purple;
-    }
-    #scannerLight{
-      &>div{
-        background-color: $purple;
-      }
-    }
-    #ScannerIcon{
-      $duration: 0.15s;
-      $iteration: 1;
-      [data-name="hand"] path{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.25s;
-      }
-      [data-name="wave-1"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.5s;
-      }
-      [data-name="wave-2"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.75s;
-      }
-      [data-name="wave-3"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 1s;
-      }
-      [data-name="wave-4"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 1.25s;
-      }
-    }
-  }
 
-  @keyframes fillPurple {
-    from {
-      fill: $white;
-    }
-    to {
-      fill: $purple;
-    }
-  }
 
 /* ============================= */
 /* ===== CSS Comment Header ===== */

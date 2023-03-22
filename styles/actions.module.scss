@@ -1,0 +1,163 @@
+/*========================================*/
+//	Action State Styles
+//	
+//	Use this file to set the styles for when 
+//	actions are being performed.  
+//	
+//	Use the base selector:
+//		#LayoutOuter[data-action-state=""]
+//	and use the data-attr to reference the action
+//	
+/*========================================*/
+
+/* ================== */
+/* ===== Imports ===== */
+/* ================== */
+  @import "@styles/vars.module.scss";
+
+  /* ============================ */
+  /* ===== Initial Page Load  ===== */
+  /* ============================ */
+
+  	/* ===== Home ===== */
+  		// bg filter lightly fades in,
+  		// IDCards fade in one-by-one
+  		#LayoutOuter[data-hidden="true"]{
+  			[data-animation="fadeInUp"]{
+  				transform: translate3d(0em, 8vh, 0em);
+  				opacity: 0;
+  				pointer-events: none;
+  				transition: 1s ease-in-out;
+  			}
+  			$delay: 0.15s;
+  			[data-animation-delay="1"]{
+  				transition-delay: calc(1 * #{$delay}) ;
+  			}
+  			[data-animation-delay="2"]{
+  				transition-delay: calc(2 * #{$delay}) ;
+  			}
+  			[data-animation-delay="3"]{
+  				transition-delay: calc(3 * #{$delay}) ;
+  			}
+  			[data-animation-delay="4"]{
+  				transition-delay: calc(4 * #{$delay}) ;
+  			}
+  		}
+  		#LayoutOuter[data-hidden="false"]{
+  			[data-animation="fadeInUp"]{
+  				transform: translate3d(0em, 0vh, 0em);
+  				opacity: 1;
+  				pointer-events: none;
+  				transition: 1s ease-in-out;
+  			}
+  			$delay: 0.25s;
+  			[data-animation-delay="1"]{
+  				transition-delay: calc(1 * #{$delay}) ;
+  			}
+  			[data-animation-delay="2"]{
+  				transition-delay: calc(2 * #{$delay}) ;
+  			}
+  			[data-animation-delay="3"]{
+  				transition-delay: calc(3 * #{$delay}) ;
+  			}
+  			[data-animation-delay="4"]{
+  				transition-delay: calc(4 * #{$delay}) ;
+  			}
+  		}
+  		#LayoutOuter[data-hidden="animationEnded"]{
+  			[data-animation="fadeInUp"]{
+  				transition:0s;
+  				transition-delay: 0s;
+  				pointer-events: auto;
+  			}
+  		}
+
+/* ================================ */
+/* ===== Draggable Card States ===== */
+/* ================================ */
+  .draggable{
+    z-index: 21 ;
+    .inner{
+      transition: $transitionMedium;
+    }
+    
+    &.getting--dragged{
+       z-index: 30 !important;
+      .inner{
+          transform: rotate(15deg) translateY(-6vh);
+          box-shadow: $niceShadowShort;
+        }
+      } 
+  }
+  #LayoutOuter{
+    .cardsFilter{
+      opacity:0.25;
+    }
+  }
+  #LayoutOuter[data-action-state="card-picked-up"]{
+    .draggable{
+      z-index: 19;
+    }
+    .cardsFilter{
+      opacity:1;
+      //z-index: 21;
+      pointer-events: auto;
+    }
+    #scannerBorder{
+      border-color: $purple;
+    }
+    #scannerLight{
+      &>div{
+        background-color: $purple;
+      }
+    }
+    #ScannerIcon{
+      $duration: 0.15s;
+      $iteration: 1;
+      [data-name="hand"] path{
+        animation-name: fillPurple;
+         animation-duration: $duration;
+         animation-iteration-count: $iteration;
+         animation-fill-mode: forwards;
+         animation-delay: 0.25s;
+      }
+      [data-name="wave-1"]{
+        animation-name: fillPurple;
+         animation-duration: $duration;
+         animation-iteration-count: $iteration;
+         animation-fill-mode: forwards;
+         animation-delay: 0.5s;
+      }
+      [data-name="wave-2"]{
+        animation-name: fillPurple;
+         animation-duration: $duration;
+         animation-iteration-count: $iteration;
+         animation-fill-mode: forwards;
+         animation-delay: 0.75s;
+      }
+      [data-name="wave-3"]{
+        animation-name: fillPurple;
+         animation-duration: $duration;
+         animation-iteration-count: $iteration;
+         animation-fill-mode: forwards;
+         animation-delay: 1s;
+      }
+      [data-name="wave-4"]{
+        animation-name: fillPurple;
+         animation-duration: $duration;
+         animation-iteration-count: $iteration;
+         animation-fill-mode: forwards;
+         animation-delay: 1.25s;
+      }
+    }
+  }
+
+  @keyframes fillPurple {
+    from {
+      fill: $white;
+    }
+    to {
+      fill: $purple;
+    }
+  }
+
