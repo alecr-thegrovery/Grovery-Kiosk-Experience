@@ -123,7 +123,7 @@ export default function FinancialDoors({
               <text id="Government_uninsured_patients" data-name="Government &amp; uninsured patients" transform="translate(3251.968 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-86.445" y="24">GOVERNMENT &amp; </tspan><tspan x="-112.542" y="46">UNINSURED PATIENTS</tspan></text>
               <rect id="Rectangle_187" data-name="Rectangle 187" width="279.31" height="86.697" transform="translate(3582.998 307.359)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
               <text id="Patient_resource_connections" data-name="Patient resource connections" transform="translate(3588.766 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="-0.01em"><tspan x="36.831" y="24">PATIENT RESOURCE </tspan><tspan x="60.099" y="46">CONNECTIONS</tspan></text>
-              <g id="Door_1" data-name="Door 1" transform="translate(320.439 0.607)">
+              <g id="Door_1" data-name="Door 1" transform="translate(320.439 0.607)" className="droppable" data-door="1" data-door-name="Commercial Patients" data-link="/financial/commercial-patients/" data-active="inactive">
                 <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
                   <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                   <rect id="Rectangle_181" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -149,7 +149,7 @@ export default function FinancialDoors({
                   </g>
                 </g>
               </g>
-              <g id="Door_3" data-name="Door 3" transform="translate(986.089 0.607)">
+              <g id="Door_3" data-name="Door 3" transform="translate(986.089 0.607)" className="droppable" data-door="3" data-door-name="Pateint Resoure Connections" data-link="/financial/resource-connections/" data-active="inactive">
                 <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
                   <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                   <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -175,7 +175,7 @@ export default function FinancialDoors({
                   </g>
                 </g>
               </g>
-              <g id="Door_2" data-name="Door 2" transform="translate(649.093 0.607)">
+              <g id="Door_2" data-name="Door 2" transform="translate(649.093 0.607)" className="droppable" data-door="2" data-door-name="Government &amp; Uninsured Patients" data-link="/financial/government-uninsured-patients/" data-active="inactive">
                 <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">
                   <path id="Path_3483-3" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
                   <rect id="Rectangle_181-3" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>

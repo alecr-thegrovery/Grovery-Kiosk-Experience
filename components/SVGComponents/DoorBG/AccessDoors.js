@@ -92,7 +92,7 @@ export default function AccessDoors({
             <line id="Line_276" data-name="Line 276" x2="113.53" transform="translate(9626.25 7514.657)" fill="none" stroke="#474343" stroke-linejoin="round" stroke-width="1"/>
           </g>
           <g id="Doors">
-            <g id="Door_1" data-name="Door 1" transform="translate(321.409 468.78)">
+            <g id="Door_1" data-name="Door 1" transform="translate(321.409 468.78)" className="droppable" data-door="1" data-door-name="Benefits Rreview" data-link="/access/benefits/" data-active="inactive">
               <g id="Group_193" data-name="Group 193" transform="translate(0 0)">
                 <path id="Path_3483" data-name="Path 3483" d="M0,0H278.452V524.689H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181" data-name="Rectangle 181" width="231.573" height="484.621" transform="translate(24.064 23.719)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -128,7 +128,7 @@ export default function AccessDoors({
               <text id="PA_Appeals_Support" data-name="PA &amp; Appeals Support" transform="translate(-1.153 32.215)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="-119.308" y="24">PA &amp; APPEALS SUPPORT</tspan></text>
               <rect id="Rectangle_617-2" data-name="Rectangle 617" width="276.761" height="11.58" transform="translate(3.474 74.855)" fill="#ffd186"/>
             </g>
-            <g id="Door_2" data-name="Door 2" transform="translate(659.544 468.613)">
+            <g id="Door_2" data-name="Door 2" transform="translate(659.544 468.613)" className="droppable" data-door="2" data-door-name="PA &amp; Appeals Support" data-link="/access/appeals/" data-active="inactive">
               <g id="Group_193-2" data-name="Group 193" transform="translate(0 0)">
                 <path id="Path_3483-2" data-name="Path 3483" d="M0,0H278.451V524.688H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.789" height="230.345" transform="translate(24.064 23.719)" fill="#fff" stroke="#595454" stroke-width="1"/>
@@ -154,7 +154,7 @@ export default function AccessDoors({
                 </g>
               </g>
             </g>
-            <g id="Door_3" data-name="Door 3" transform="translate(997.678 468.611)">
+            <g id="Door_3" data-name="Door 3" transform="translate(997.678 468.611)" className="droppable" data-door="3" data-door-name="Billing &amp; Coding" data-link="/access/billing/" data-active="inactive">
               <g id="Group_193-3" data-name="Group 193" transform="translate(0 0)">
                 <path id="Path_3483-3" data-name="Path 3483" d="M0,0H278.452V524.689H0Z" fill="#a69f9f"/>
                 <rect id="Rectangle_181-3" data-name="Rectangle 181" width="231.573" height="484.621" transform="translate(24.064 23.719)" fill="#fff" stroke="#595454" stroke-width="1"/>
