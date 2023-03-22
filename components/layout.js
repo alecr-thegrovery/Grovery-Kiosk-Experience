@@ -18,7 +18,8 @@ export const siteData = data
 export default function Layout({ 
   //PROPS
   children, home, card,
-  access, enrollment, financial, resources
+  access, enrollment, financial, resources,
+  pageActionState
 }) {
   
   useEffect(() => {
@@ -71,7 +72,7 @@ export default function Layout({
   });
 
   return (
-    <div id="LayoutOuter" className={styles.outer} data-hidden="true" data-action-state="">
+    <div id="LayoutOuter" className={styles.outer} data-hidden="true" data-action-state="initial"  data-action-page={pageActionState}>
       <Head>
         <link rel="icon" href="/favicon.png" />
         <meta

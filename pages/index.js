@@ -210,7 +210,8 @@ export default function Home({ allPostsData }) {
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
-          heading="Bristol Myers Squibb Access Support"
+          
+          heading={["Bristol Myers Squibb ", <strong>Access Support</strong>]}
           subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
         />
 
