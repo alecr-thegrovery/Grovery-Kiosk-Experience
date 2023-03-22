@@ -71,6 +71,12 @@
       max-width: 100%;
       display: block;
     }
+    svg{
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
 
     p{
       margin:  0;
@@ -140,6 +146,7 @@
 /* ===== Draggable Card States ===== */
 /* ================================ */
   .draggable{
+    z-index: 29 !important;
     .inner{
       transition: $transitionMedium;
     }
@@ -152,7 +159,11 @@
         }
       } 
   }
-
+  #LayoutOuter{
+    .cardsFilter{
+      opacity:0.5;
+    }
+  }
   #LayoutOuter[data-action-state="card-picked-up"]{
     .cardsFilter{
       opacity:1;
