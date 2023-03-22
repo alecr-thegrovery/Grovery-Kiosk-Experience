@@ -29,15 +29,6 @@ export default function DragDrop({
 
         <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
 
-        {/*<Card 
-          cardID="Enrollment"
-          text="Enrollment"
-          link="/enrollment/"
-          color="mutedRed"
-          animation="fadeInUp"
-          animationDelay="1"
-        />*/}
-
         <IDCard
           cardID="enrollment"
           text="Enrollment"
@@ -46,15 +37,6 @@ export default function DragDrop({
           animation="fadeInUp"
           animationDelay="1"
         />
-      
-        {/*<Card 
-          cardID="Access"
-          text="Access and Reimbursement Report"
-          link="/access/"
-          color="mutedYellow"
-          animation="fadeInUp"
-          animationDelay="2"
-        />*/}
 
         <IDCard
           cardID="access"
