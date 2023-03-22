@@ -146,7 +146,7 @@
 /* ===== Draggable Card States ===== */
 /* ================================ */
   .draggable{
-    z-index: 29 !important;
+    z-index: 21 ;
     .inner{
       transition: $transitionMedium;
     }
@@ -161,12 +161,16 @@
   }
   #LayoutOuter{
     .cardsFilter{
-      opacity:0.5;
+      opacity:0.25;
     }
   }
   #LayoutOuter[data-action-state="card-picked-up"]{
+    .draggable{
+      z-index: 19;
+    }
     .cardsFilter{
       opacity:1;
+      //z-index: 21;
       pointer-events: auto;
     }
     #scannerBorder{
