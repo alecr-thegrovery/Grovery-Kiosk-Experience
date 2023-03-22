@@ -4,6 +4,7 @@ import { router } from 'next/router'
 import $ from 'jquery'
 import interact from 'interactjs'
 import Card from './Card.js'
+import IDCard from '@components/IDCard'
 //import IDCard from '@components/SVGComponents/IDCard'
 
 /*===== Styles =====*/
@@ -28,8 +29,17 @@ export default function DragDrop({
 
         <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
 
-        <Card 
+        {/*<Card 
           cardID="Enrollment"
+          text="Enrollment"
+          link="/enrollment/"
+          color="mutedRed"
+          animation="fadeInUp"
+          animationDelay="1"
+        />*/}
+
+        <IDCard
+          cardID="enrollment"
           text="Enrollment"
           link="/enrollment/"
           color="mutedRed"
@@ -37,8 +47,17 @@ export default function DragDrop({
           animationDelay="1"
         />
       
-        <Card 
+        {/*<Card 
           cardID="Access"
+          text="Access and Reimbursement Report"
+          link="/access/"
+          color="mutedYellow"
+          animation="fadeInUp"
+          animationDelay="2"
+        />*/}
+
+        <IDCard
+          cardID="access"
           text="Access and Reimbursement Report"
           link="/access/"
           color="mutedYellow"
@@ -46,8 +65,8 @@ export default function DragDrop({
           animationDelay="2"
         />
 
-        <Card 
-          cardID="Copay"
+        <IDCard 
+          cardID="financial"
           text="Co-Pay &amp; Finacial Assistance Services"
           link="/financial/"
           color="mutedBlue"
@@ -55,8 +74,8 @@ export default function DragDrop({
           animationDelay="3"
         />
       
-        <Card 
-          cardID="Resources"
+        <IDCard 
+          cardID="resources"
           text="Patient Resources"
           link="/resources/"
           color="mutedGreen"

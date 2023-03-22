@@ -9,6 +9,7 @@ import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
 import DragDrop from '@components/DragDrop'
+import IDCard from '@components/IDCard'
 import HomeBG from '@components/SVGComponents/HomeBG'
 
 /*===== Styles =====*/
