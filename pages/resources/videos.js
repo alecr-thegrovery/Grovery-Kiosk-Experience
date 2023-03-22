@@ -22,7 +22,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout enrollment>
+    <Layout resources>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -44,14 +44,14 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
 
                   <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
+                    Our video library contains useful information that may help answer common questions related to accessing a patient’s prescribed BMS medication.
                   </p>
-                  <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
+                  <p className={pageStyles.italics}>
+                    Our resources help provide a better understanding of the health insurance landscape. They are located on the Forms &amp; Resources page of the BMS Access Support website.
                   </p>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
+                    toolTipText="Scan to view Forms &amp; Resources"
                     toolTipPlacement="right"
                   />
                   
@@ -59,7 +59,8 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <PdfThumbnail name="What is health insurance?" />
+                  <PdfThumbnail name="What is explanation of benefits (EOB)" />
                 </div>
 
               </div>

@@ -22,7 +22,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout enrollment>
+    <Layout resources>
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -30,7 +30,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading="Patient Brochures"
         />
 
         {/*Content*/}
@@ -42,16 +42,39 @@ export default function Post({ postData }) {
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
+                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
+                    <p>Patients can download brochures and coverage-related resources to understand their health insurance benefits. </p>
+                  </BlockQuote>
 
                   <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
+                    <strong>Understanding Your Healthcare Benefits</strong>
+                    <br/>
+                    In-depth information on how health insurance works and ways BMS Access Support can help
                   </p>
                   <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
+                    <strong>Patient Reimbursement Process Journey Map</strong>
+                    <br/>
+                    A high-level flow map showing potential patient insurance coverage scenarios and claims processing information
                   </p>
+
+                  <p>
+                    <strong>A Guide to 2023 Medicare Part D Coverage for Specialty Drugs</strong>
+                    <br/>
+                    A step-by-step guide through each phase of Medicare Part D with patient cost journey examples and additional resources and contact information
+                  </p>
+                  <p>
+                    <strong>BMS Access Support Patient Brochure</strong>
+                    <br/>
+                    An overview of the coverage journey and how to gain access to your prescribed BMS medications
+                  </p>
+
+                  <p className={pageStyles.italics}>
+                    Our resources help provide a better understanding of the health insurance landscape and expectations along the treatment journey. They are located on the Forms &amp; Resources page of the BMS Access Support website.   
+                  </p>
+
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
+                    toolTipText="Scan to view Forms &amp; Resources"
                     toolTipPlacement="right"
                   />
                   
@@ -59,7 +82,11 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <PdfThumbnail name="Understanding Healthcare Benefits" />
+                  <PdfThumbnail name="Patient Reimbursement Process Map" />
+
+                  <PdfThumbnail name="AS Sample SOB Form Pending Determination" />
+                  <PdfThumbnail name="BMS Access Support Patient Brochure" />
                 </div>
 
               </div>

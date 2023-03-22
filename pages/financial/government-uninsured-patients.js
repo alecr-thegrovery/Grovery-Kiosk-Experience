@@ -44,16 +44,19 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
 
                   <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
+                    Patients who are not covered by prescription drug insurance or are insured through Federal Healthcare Programs are not eligible for co-pay assistance programs sponsored by Bristol Myers Squibb. BMS Access Support may be able to refer patients to independent charitable foundations. 
                   </p>
                   <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
+                    Scan the QR code below, or call 1-800-861-0048 for details. 
                   </p>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
+                    toolTipText="Visit the charitable foundations page at BMSAccessSupport.com"
                     toolTipPlacement="right"
                   />
+                  <p className={pageStyles.italics}>
+                    Please Note: Each charitable foundation is independent from Bristol Myers Squibb and will have its own eligibility criteria and evaluation process. Bristol Myers Squibb cannot guarantee that a patient will receive assistance.
+                  </p>
                   
                 </div>               
 

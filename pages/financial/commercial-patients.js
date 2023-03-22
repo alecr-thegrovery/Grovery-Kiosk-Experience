@@ -42,24 +42,24 @@ export default function Post({ postData }) {
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
+                  <p>The BMS Access Support Co-Pay Assistance Program offers financial assistance to eligible, commercially insured patients. </p>
+                  <p className={pageStyles.italics}>
+                   Please Note:  The program will cover the out-of-pocket expenses of the BMS product only. It does not cover the costs of any other healthcare provider charges or any other treatment costs. Patients may be responsible for non-drug-related, out-of-pocket costs, depending on their specific healthcare benefits.
+                  </p>
+                  <p className={pageStyles.italics}>
+                    Restrictions apply. Please see full Terms and Conditions, including complete eligibility requirements. 
+                  </p>
+                  <p>
+                    <a href="#">Terms and Conditions for Empliciti, Opdivo, Opdivo + Yervoy, Opdualag, &amp; Yervoy</a>
+                    <br/><br/>
+                    <a href="#">Terms and Conditions for Abraxane &amp; Reblozyl</a>
+                  </p>
 
-                  <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
-                  </p>
-                  <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
-                  </p>
-                  <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
-                    toolTipPlacement="right"
-                  />
-                  
                 </div>               
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <PdfThumbnail name="A Guide to Electronic Benefits Reverification (eBRV) 2023"/>
                 </div>
 
               </div>

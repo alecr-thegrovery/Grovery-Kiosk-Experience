@@ -42,16 +42,21 @@ export default function Post({ postData }) {
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
-
+                  <h2>
+                    This free resource links patients directly to a variety of social, personal, and healthcare-related support in their local area.
+                  </h2>
                   <p>
-                    The BMS Access Support program is digitally integrated with AssistPoint&trade; to manage the patient access journey with online enrollment and e-signatures.
+                    Any individual can search this database of resources in their community, such as:  
                   </p>
-                  <p>
-                    To access AssistPoint&trade;, scan the QR code below to contact an Annexus Health National Sales Manager.
-                  </p>
+                  <ul>
+                    <li>Transportation to and from doctors’ appointments </li>
+                    <li>Help paying for healthcare</li>
+                    <li>Health education (medical and mental healthcare)</li>
+                    <li>Help with treatment-related appointments for general care (childcare and adult care)</li>
+                  </ul>
                   <QRCodePreset 
                     link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Contact an Annexus Health National Sales Manager by scanning the QR code."
+                    toolTipText="Scan to learn more about Patient Resource Connections"
                     toolTipPlacement="right"
                   />
                   
