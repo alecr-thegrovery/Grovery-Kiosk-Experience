@@ -7,7 +7,7 @@ import EnrollmentCard from './EnrollmentCard'
 import AccessCard from './AccessCard'
 import FinancialCard from './FinancialCard'
 import ResourcesCard from './ResourcesCard'
-import Tooltip from '@components/Tooltip'
+//import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -30,12 +30,12 @@ export default function IDCard({
       data-animation={animation}
       data-animation-delay={animationDelay}
     >
-      {tooltipText &&
+      {/*{tooltipText &&
         <Tooltip
           placement="up"
           text={tooltipText}
         />
-      }
+      }*/}
       <div className={componentStyles.inner+ " inner"}>
           {cardID == "enrollment" &&
             <EnrollmentCard/>
