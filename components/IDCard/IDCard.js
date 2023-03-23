@@ -1,10 +1,10 @@
 /*===== Components =====*/
 import React from "react"
-import Tooltip from '@components/Tooltip'
 import EnrollmentCard from './EnrollmentCard'
 import AccessCard from './AccessCard'
 import FinancialCard from './FinancialCard'
 import ResourcesCard from './ResourcesCard'
+import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
