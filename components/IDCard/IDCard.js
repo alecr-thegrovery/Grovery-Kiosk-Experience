@@ -1,5 +1,8 @@
 /*===== Components =====*/
-import React from "react"
+import React, { useState, useEffect } from 'react';
+import { router } from 'next/router'
+import Head from 'next/head'
+import Link from 'next/link'
 import EnrollmentCard from './EnrollmentCard'
 import AccessCard from './AccessCard'
 import FinancialCard from './FinancialCard'
