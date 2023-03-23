@@ -22,3 +22,4 @@ function fullPageLoad () {
     $(".swiper-button-prev").click();
   });
 });*/
+
