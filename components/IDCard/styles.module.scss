@@ -3,13 +3,10 @@
 .IDCard{
 	width: clamp(150px, 15vw, 400px);
 	height: auto;
-	filter: 
-		drop-shadow(10px 10px 5px rgba($black, 0.5))
-		//drop-shadow(-5px -5px 5px rgba($black, 0.5))
-	;
+	position: relative;
 	svg{
 		width: 100%;
 		height: auto;
-
+		filter: drop-shadow(10px 10px 5px rgba($black, 0.5));
 	}
 }
