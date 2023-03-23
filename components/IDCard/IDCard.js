@@ -16,7 +16,8 @@ import componentStyles from './styles.module.scss'
 export default function IDCard({ 
   //Props
   text, link, cardID, 
-  color, animation, animationDelay, tooltipText
+  color, animation, animationDelay, 
+  tooltipText, tooltipPlacement
 }) {
 
   //console.log(author);
@@ -32,7 +33,7 @@ export default function IDCard({
     >
       {tooltipText &&
         <Tooltip
-          placement="up"
+          placement={tooltipPlacement}
           text={tooltipText}
         />
       }
