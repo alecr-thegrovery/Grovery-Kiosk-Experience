@@ -18,7 +18,8 @@ import componentStyles from './styles.module.scss'
 export default function Sidebar({ 
   //Props
   scanner, card, home, 
-  access, enrollment, financial, resources
+  access, enrollment, financial, resources,
+  cardTooltipText
 }) {
 
   //console.log(author);
@@ -63,6 +64,8 @@ export default function Sidebar({
                   cardID="access"
                   text="Access and Reimbursement Report"
                   color="mutedRed"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }

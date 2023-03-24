@@ -19,7 +19,7 @@ export default function Layout({
   //PROPS
   children, home, card,
   access, enrollment, financial, resources,
-  pageActionState
+  pageActionState, cardTooltipText
 }) {
   
   useEffect(() => {
@@ -119,6 +119,7 @@ export default function Layout({
               financial={financial}
               resources={resources}
               home={home}
+              cardTooltipText={cardTooltipText}
             />
           </div>
   
