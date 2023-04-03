@@ -107,11 +107,11 @@ export default function Layout({
             </Container>
           )}*/}
           
-          <div className={styles.mainContent}>
+          <div id="mainContent" className={styles.mainContent}>
             {children}
           </div>
 
-          <div className={styles.rightSidebar}>
+          <div id="rightSidebar" className={styles.rightSidebar}>
             <Sidebar 
               card={card}
               access={access}

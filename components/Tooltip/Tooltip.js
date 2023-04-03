@@ -7,7 +7,7 @@ import componentStyles from './styles.module.scss'
 
 export default function Tooltip({ 
   //Props
-  children, text, bgColor, placement
+  children, tooltipID, text, bgColor, placement
 }) {
 
   //console.log(author);
@@ -18,7 +18,7 @@ export default function Tooltip({
   return (
     <div 
       className={componentStyles.Tooltip}
-      data-tooltip=""
+      data-tooltip={tooltipID ? tooltipID : ""}
       data-bg-color={bgColor ? bgColor : "purple"}
       data-placement={placement ? placement : "right"}
     >

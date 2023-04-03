@@ -10,6 +10,7 @@ import SupportIcon from '@components/SVGComponents/SupportIcon'
 import BackIcon from '@components/SVGComponents/BackIcon'
 import HomeIcon from '@components/SVGComponents/HomeIcon'
 import ScannerIcon from '@components/SVGComponents/ScannerIcon'
+import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -64,6 +65,7 @@ export default function Sidebar({
                   cardID="access"
                   text="Access and Reimbursement Report"
                   color="mutedRed"
+                  tooltipID="lvl-2-card-initial"
                   tooltipText={cardTooltipText ? cardTooltipText : ""}
                   tooltipPlacement="left"
                 />
@@ -75,6 +77,8 @@ export default function Sidebar({
                   cardID="enrollment"
                   text="Enrollment"
                   color="mutedYellow"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
@@ -84,6 +88,8 @@ export default function Sidebar({
                   cardID="financial"
                   text="Co-Pay &amp; Finacial Assistance Services"
                   color="mutedBlue"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
@@ -93,13 +99,14 @@ export default function Sidebar({
                   cardID="resources"
                   text="Patient Resources"
                   color="mutedGreen"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
             
 
             <div id="scannerBorder" className={componentStyles.scannerBorder}>
-              
               <div id="scannerLight" className={componentStyles.light}>
                 <div className={componentStyles.lightInner}></div>
               </div>
@@ -111,7 +118,11 @@ export default function Sidebar({
                   Place your access card here
                 </p>
               </div>
-
+              <Tooltip
+                tooltipID="lvl-1-place-card-here"
+                placement="left"
+                text={[<h2>Place Access Card Here</h2>]}
+              />
             </div>
           </div>
         </div>

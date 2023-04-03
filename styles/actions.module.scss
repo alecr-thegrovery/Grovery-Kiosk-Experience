@@ -82,27 +82,50 @@
     }
     
     &.getting--dragged{
-       z-index: 30 !important;
+       z-index: 100 !important;
+       //position: fixed;
       .inner{
           transform: rotate(15deg) translateY(-6vh);
           box-shadow: $niceShadowShort;
         }
       } 
   }
+
   #LayoutOuter{
     .cardsFilter{
       opacity:0.25;
     }
+    [data-tooltip="lvl-1-place-card-here"]{
+      opacity: 0;
+      pointer-events: none;
+    }
   }
+
   #LayoutOuter[data-action-state="card-picked-up"]{
     .draggable{
       z-index: 19;
+      [data-tooltip]{
+        opacity: 0;
+        pointer-events: none;
+      }
     }
     .cardsFilter{
       opacity:1;
       //z-index: 21;
       pointer-events: auto;
     }
+
+    [data-tooltip="lvl-1-place-card-here"]{
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /*#mainContent{
+      z-index: 21;
+    }
+    #rightSidebar{
+      z-index: 20;
+    }*/
     #scannerBorder{
       border-color: $purple;
     }
