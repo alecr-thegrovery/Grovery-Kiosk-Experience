@@ -19,7 +19,7 @@ export default function Layout({
   //PROPS
   children, home, card,
   access, enrollment, financial, resources,
-  pageActionState
+  pageActionState, cardTooltipText
 }) {
   
   useEffect(() => {
@@ -107,11 +107,11 @@ export default function Layout({
             </Container>
           )}*/}
           
-          <div className={styles.mainContent}>
+          <div id="mainContent" className={styles.mainContent}>
             {children}
           </div>
 
-          <div className={styles.rightSidebar}>
+          <div id="rightSidebar" className={styles.rightSidebar}>
             <Sidebar 
               card={card}
               access={access}
@@ -119,6 +119,7 @@ export default function Layout({
               financial={financial}
               resources={resources}
               home={home}
+              cardTooltipText={cardTooltipText}
             />
           </div>
   

@@ -60,6 +60,7 @@
 	  aspect-ratio:1/2.75;
 	  padding: 0.5em;
 	  text-align: center;
+	  position: relative;
 
 	  .scannerBorder{
 	  	$dynamicBorder: clamp(2px, 0.25vw, 3px);

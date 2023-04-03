@@ -43,13 +43,15 @@ export default function Home({ allPostsData }) {
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
-        <DynamicHeader
-          
-          heading={["Bristol Myers Squibb ", <strong>Access Support</strong>]}
-          subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
-        />
+        
 
         <div className={pageStyles.pageLevel1}>
+
+          <DynamicHeader
+            
+            heading={["Bristol Myers Squibb ", <strong>Access Support</strong>]}
+            subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
+          />
 
           <div className={pageStyles.background}>
             <HomeBG/>

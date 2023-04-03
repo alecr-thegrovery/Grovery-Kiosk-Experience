@@ -36,6 +36,8 @@ export default function DragDrop({
           color="mutedRed"
           animation="fadeInUp"
           animationDelay="1"
+          tooltipText={[<h2>Begin Getting Access!</h2> , <p>Tap to drag an access card to the scanner on the right to learn more about each topic.</p>]}
+          tooltipPlacement="up"
         />
 
         <IDCard

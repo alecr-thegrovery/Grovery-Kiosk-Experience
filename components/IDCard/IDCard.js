@@ -1,13 +1,13 @@
 /*===== Components =====*/
-import React from "react"
+import React, { useState, useEffect } from 'react';
+import { router } from 'next/router'
+import Head from 'next/head'
 import Link from 'next/link'
-import Date from '@components/date'
-import SocialIcons from '@components/SocialIcons'
-import Button1 from '@components/Button1'
 import EnrollmentCard from './EnrollmentCard'
 import AccessCard from './AccessCard'
 import FinancialCard from './FinancialCard'
 import ResourcesCard from './ResourcesCard'
+import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -16,7 +16,8 @@ import componentStyles from './styles.module.scss'
 export default function IDCard({ 
   //Props
   text, link, cardID, 
-  color, animation, animationDelay
+  color, animation, animationDelay, 
+  tooltipText, tooltipPlacement
 }) {
 
   //console.log(author);
@@ -30,6 +31,12 @@ export default function IDCard({
       data-animation={animation}
       data-animation-delay={animationDelay}
     >
+      {tooltipText &&
+        <Tooltip
+          placement={tooltipPlacement}
+          text={tooltipText}
+        />
+      }
       <div className={componentStyles.inner+ " inner"}>
           {cardID == "enrollment" &&
             <EnrollmentCard/>

@@ -38,7 +38,10 @@ export default function Home({ allPostsData }) {
     });
 
   return (
-    <Layout enrollment>
+    <Layout 
+      enrollment
+      cardTooltipText={[<h2>Explore the Building!</h2> , <p>Drag the access card to a door on the left and release it to enter that room.</p>]}
+    >
       
       <Head>
         <title>Enrollment | {siteData.siteTitleBase}</title>
