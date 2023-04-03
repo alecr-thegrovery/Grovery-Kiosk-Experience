@@ -155,11 +155,16 @@ export default function App({ Component, pageProps }) {
             }
 
             console.log(link);
-            router.prefetch(link); //prefetch next page
-            setTimeout(function() { 
-                $("#LayoutOuter").attr("data-hidden", "true"); //page transition
-                router.push(link); //move user to next page
-            }, 1000);
+            if(link  == null){
+             //do nothing
+            } else{
+              router.prefetch(link); //prefetch next page
+              setTimeout(function() { 
+                  $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+                  router.push(link); //move user to next page
+              }, 1000);
+            }
+
           },
 
           ondropdeactivate: function (event) {
