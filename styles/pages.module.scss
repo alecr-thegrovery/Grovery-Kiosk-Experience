@@ -17,6 +17,11 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
+
+	.mainSection{
+		height: 100%;
+		width: 100%;
+	}
 }
 
 /* ========================================= */
@@ -41,6 +46,7 @@
 /* ==================================== */
 .pageLevel2{
 	height: 100%;
+	width: 100%;
 	.headingSection{
 		height: 12%;
 		display: flex;
@@ -52,7 +58,7 @@
 	}
 
 	.mainSection{
-		height: 88%;
+		//height: 88%;
 	}
 }
 
@@ -68,6 +74,7 @@
 	align-items: flex-end;
 	.mainSection{
 		height: 80%;
+		width: 100%;
 		font-size: $clampMedium;
 		line-height: 1.35;
 
