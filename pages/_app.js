@@ -26,9 +26,12 @@ export default function App({ Component, pageProps }) {
     let actionState = document.querySelector("#LayoutOuter");
     actionState.setAttribute("data-action-state","none");
 
+    //Destroy drag & drop instance so dragging is not compounded
+    interact('.draggable').unset();
+
     function DragDropInit() {
         var startPos = null;
-
+        interact
         interact('.draggable').draggable({
           inertia: true,
           snap: {
@@ -165,7 +168,6 @@ export default function App({ Component, pageProps }) {
                   $("#LayoutOuter").attr("data-hidden", "true"); //page transition
                   router.push(link); //move user to next page
               }, 1000);
-              return;
             }
 
           },
@@ -194,10 +196,8 @@ export default function App({ Component, pageProps }) {
       return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
     }
 
-    
     DragDropInit();
     
-
   });
 
   return <Component {...pageProps} />
