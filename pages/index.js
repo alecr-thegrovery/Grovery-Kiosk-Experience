@@ -37,12 +37,14 @@ export default function Home({ allPostsData }) {
    });
 
   return (
-    <Layout home pageActionState="home">
+    <Layout home pageActionState="lvl-1" >
       
       <Head>
         <title>Home | {siteData.siteTitleBase}</title>
       </Head>
-      <div className={pageStyles.pageLayout}>
+      <div 
+        className={pageStyles.pageLayout} 
+      >
         
         <DynamicHeader
           

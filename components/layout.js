@@ -72,7 +72,13 @@ export default function Layout({
   });
 
   return (
-    <div id="LayoutOuter" className={styles.outer} data-hidden="true" data-action-state="initial"  data-action-page={pageActionState}>
+    <div 
+      id="LayoutOuter" 
+      className={styles.outer} 
+      data-hidden="true" 
+      data-action-state="initial"  
+      data-action-page={pageActionState}
+    >
       <Head>
         <link rel="icon" href="/favicon.png" />
         <meta

@@ -93,7 +93,7 @@
       } 
   }
 
-  #LayoutOuter{
+  #LayoutOuter[data-action-page="lvl-1"]{
     .cardsFilter,
     .colorFilter{
       opacity:0.15;
@@ -112,7 +112,7 @@
   }
 
   /* ===== Card is Picked Up ===== */
-    #LayoutOuter[data-action-state="card-picked-up"]{
+    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-1"]{
       .draggable{
         z-index: -1;
         [data-tooltip]{
@@ -135,6 +135,10 @@
       [data-tooltip="lvl-1-place-card-here"]{
         opacity: 1;
         pointer-events: auto;
+      }
+      [data-tooltip="lvl-2-card-initial"]{
+        opacity: 0;
+        pointer-events: none;
       }
 
       /*#mainContent{
@@ -200,4 +204,13 @@
         fill: $purple;
       }
     }
+
+
+    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-2"]{
+      [data-tooltip]{
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+
 
