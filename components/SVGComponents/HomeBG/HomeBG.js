@@ -21,6 +21,7 @@ export default function HomeBG({
 
   return (
    <div className={componentStyles.HomeBG}>
+    <div className="colorFilter"></div>
      <svg id="home_background" width="2418.805" height="1008.426" viewBox="0 0 2418.805 1008.426">
        <defs>
          <clipPath id="clip-path">

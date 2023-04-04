@@ -75,6 +75,8 @@
 /* ================================ */
 /* ===== Draggable Card States ===== */
 /* ================================ */
+  
+  /* ===== Initial Page State ===== */
   .draggable{
     z-index: 21 ;
     .inner{
@@ -85,102 +87,130 @@
        z-index: 100 !important;
        //position: fixed;
       .inner{
-          transform: rotate(15deg) translateY(-6vh);
+          transform: rotate(15deg) translate(0, -6vh) !important;
           box-shadow: $niceShadowShort;
         }
       } 
   }
 
-  #LayoutOuter{
-    .cardsFilter{
-      opacity:0.25;
+  #LayoutOuter[data-action-page="lvl-1"]{
+    .cardsFilter,
+    .colorFilter{
+      opacity:0.15;
     }
     [data-tooltip="lvl-1-place-card-here"]{
       opacity: 0;
       pointer-events: none;
     }
+    #enrollment{
+      .inner, [data-tooltip]{
+        $cardOffset: clamp(-65px, -2vw, -25px);
+        transform: translate(0, $cardOffset);
+      }
+    }
+
   }
 
-  #LayoutOuter[data-action-state="card-picked-up"]{
-    .draggable{
-      z-index: 19;
+  /* ===== Card is Picked Up ===== */
+    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-1"]{
+      .draggable{
+        z-index: -1;
+        [data-tooltip]{
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+      #enrollment{
+        .inner, [data-tooltip]{
+          transform: translate(0, 0);
+        }
+      }
+      .cardsFilter,
+      .colorFilter{
+        opacity:1;
+        //z-index: 21;
+        pointer-events: auto;
+      }
+
+      [data-tooltip="lvl-1-place-card-here"]{
+        opacity: 1;
+        pointer-events: auto;
+      }
+      [data-tooltip="lvl-2-card-initial"]{
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      /*#mainContent{
+        z-index: 21;
+      }
+      #rightSidebar{
+        z-index: 20;
+      }*/
+      #scannerBorder{
+        border-color: $purple;
+      }
+      #scannerLight{
+        &>div{
+          background-color: $purple;
+        }
+      }
+      #ScannerIcon{
+        $duration: 0.15s;
+        $iteration: 1;
+        [data-name="hand"] path{
+          animation-name: fillPurple;
+           animation-duration: $duration;
+           animation-iteration-count: $iteration;
+           animation-fill-mode: forwards;
+           animation-delay: 0.25s;
+        }
+        [data-name="wave-1"]{
+          animation-name: fillPurple;
+           animation-duration: $duration;
+           animation-iteration-count: $iteration;
+           animation-fill-mode: forwards;
+           animation-delay: 0.5s;
+        }
+        [data-name="wave-2"]{
+          animation-name: fillPurple;
+           animation-duration: $duration;
+           animation-iteration-count: $iteration;
+           animation-fill-mode: forwards;
+           animation-delay: 0.75s;
+        }
+        [data-name="wave-3"]{
+          animation-name: fillPurple;
+           animation-duration: $duration;
+           animation-iteration-count: $iteration;
+           animation-fill-mode: forwards;
+           animation-delay: 1s;
+        }
+        [data-name="wave-4"]{
+          animation-name: fillPurple;
+           animation-duration: $duration;
+           animation-iteration-count: $iteration;
+           animation-fill-mode: forwards;
+           animation-delay: 1.25s;
+        }
+      }
+    }
+
+    @keyframes fillPurple {
+      from {
+        fill: $white;
+      }
+      to {
+        fill: $purple;
+      }
+    }
+
+
+    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-2"]{
       [data-tooltip]{
         opacity: 0;
         pointer-events: none;
       }
     }
-    .cardsFilter{
-      opacity:1;
-      //z-index: 21;
-      pointer-events: auto;
-    }
 
-    [data-tooltip="lvl-1-place-card-here"]{
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /*#mainContent{
-      z-index: 21;
-    }
-    #rightSidebar{
-      z-index: 20;
-    }*/
-    #scannerBorder{
-      border-color: $purple;
-    }
-    #scannerLight{
-      &>div{
-        background-color: $purple;
-      }
-    }
-    #ScannerIcon{
-      $duration: 0.15s;
-      $iteration: 1;
-      [data-name="hand"] path{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.25s;
-      }
-      [data-name="wave-1"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.5s;
-      }
-      [data-name="wave-2"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 0.75s;
-      }
-      [data-name="wave-3"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 1s;
-      }
-      [data-name="wave-4"]{
-        animation-name: fillPurple;
-         animation-duration: $duration;
-         animation-iteration-count: $iteration;
-         animation-fill-mode: forwards;
-         animation-delay: 1.25s;
-      }
-    }
-  }
-
-  @keyframes fillPurple {
-    from {
-      fill: $white;
-    }
-    to {
-      fill: $purple;
-    }
-  }
 

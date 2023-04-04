@@ -23,12 +23,15 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
 
     
-    const actionState = document.querySelector("#LayoutOuter")
+    let actionState = document.querySelector("#LayoutOuter");
     actionState.setAttribute("data-action-state","none");
+
+    //Destroy drag & drop instance so dragging is not compounded
+    interact('.draggable').unset();
 
     function DragDropInit() {
         var startPos = null;
-
+        interact
         interact('.draggable').draggable({
           inertia: true,
           snap: {
@@ -60,6 +63,9 @@ export default function App({ Component, pageProps }) {
             target.setAttribute('data-x', x);
             target.setAttribute('data-y', y);
 
+            //update global event state
+            actionState.setAttribute("data-action-state","card-picked-up");
+
             event.interactable.draggable({
               snap: {
                 targets: [startPos]
@@ -82,18 +88,17 @@ export default function App({ Component, pageProps }) {
             target.setAttribute('data-x', x);
             target.setAttribute('data-y', y);
             target.classList.add('getting--dragged');
-            actionState.setAttribute("data-action-state","card-picked-up");
           },
 
           onend: function (event) {
             event.target.classList.remove('getting--dragged');
-            actionState.setAttribute("data-action-state","none");
+            actionState.setAttribute("data-action-state","card-dropped");
           }
         });
 
         interact('.droppable:not(.caught--it)').dropzone({
           accept: '.draggable',
-          overlap: .5,
+          overlap: .15,
 
           ondropactivate: function (event) {
             console.log("ondropactivate");
@@ -191,10 +196,8 @@ export default function App({ Component, pageProps }) {
       return el.className && new RegExp("(\\s|^)" + cls + "(\\s|$)").test(el.className);
     }
 
-    window.onload = function() {
-      DragDropInit();
-    }
-
+    DragDropInit();
+    
   });
 
   return <Component {...pageProps} />

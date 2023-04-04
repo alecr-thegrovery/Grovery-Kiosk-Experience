@@ -41,6 +41,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout 
       financial
+      pageActionState="lvl-2"
       cardTooltipText={[<h2>Explore the Building!</h2> , <p>Drag the access card to a door on the left and release it to enter that room.</p>]}
     >
       

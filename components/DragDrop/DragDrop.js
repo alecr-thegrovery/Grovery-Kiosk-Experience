@@ -27,7 +27,7 @@ export default function DragDrop({
       {/*===== Draggable Cards =====*/}
       <div className={componentStyles.cardsOuter}>
 
-        <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
+        {/*<div className={"cardsFilter "+ componentStyles.cardsFilter}></div>*/}
 
         <IDCard
           cardID="enrollment"
