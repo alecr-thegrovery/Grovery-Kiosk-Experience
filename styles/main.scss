@@ -120,3 +120,20 @@
 
 
 
+.colorFilter{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($black, 0.5);
+  opacity: 0;
+  transition: $transitionMedium;
+  pointer-events: none;
+  z-index:21;
+
+  &[data-active="active"]{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
