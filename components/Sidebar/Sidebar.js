@@ -118,11 +118,14 @@ export default function Sidebar({
                   Place your access card here
                 </p>
               </div>
-              <Tooltip
-                tooltipID="lvl-1-place-card-here"
-                placement="left"
-                text={[<h2>Place Access Card Here</h2>]}
-              />
+              {home &&
+                <Tooltip
+                  tooltipID="lvl-1-place-card-here"
+                  placement="left"
+                  text={[<h2>Place Access Card Here</h2>]}
+                />
+              }
+              
             </div>
           </div>
         </div>
