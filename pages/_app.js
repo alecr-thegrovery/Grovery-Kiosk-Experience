@@ -39,6 +39,9 @@ export default function App({ Component, pageProps }) {
 
       updateActionState('none', 0);
 
+      //wait a beat after page load
+      updateActionState('none', 2);
+
 
     /* =========================== */
     /* ===== Drag & Drop code =====  */
