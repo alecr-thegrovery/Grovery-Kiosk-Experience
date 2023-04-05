@@ -121,7 +121,7 @@ export default function Sidebar({
               {home &&
                 <Tooltip
                   tooltipID="lvl-1-place-card-here"
-                  placement="left"
+                  placement="up"
                   text={[<h2>Place Access Card Here</h2>]}
                 />
               }

@@ -22,7 +22,7 @@
   	/* ===== Home ===== */
   		// bg filter lightly fades in,
   		// IDCards fade in one-by-one
-  		#LayoutOuter[data-hidden="true"]{
+  		#LayoutOuter[data-action-state="none"]{
   			[data-animation="fadeInUp"]{
   				transform: translate3d(0em, 8vh, 0em);
   				opacity: 0;
@@ -43,8 +43,8 @@
   				transition-delay: calc(4 * #{$delay}) ;
   			}
   		}
-  		#LayoutOuter[data-hidden="false"]{
-  			[data-animation="fadeInUp"]{
+  		#LayoutOuter[data-action-state="just-after-load"]{
+  			[data-animation="fadeInUp"],{
   				transform: translate3d(0em, 0vh, 0em);
   				opacity: 1;
   				pointer-events: none;
@@ -64,7 +64,7 @@
   				transition-delay: calc(4 * #{$delay}) ;
   			}
   		}
-  		#LayoutOuter[data-hidden="animationEnded"]{
+  		#LayoutOuter[data-action-state="just-after-load-2"]{
   			[data-animation="fadeInUp"]{
   				transition:0s;
   				transition-delay: 0s;
@@ -94,19 +94,33 @@
   }
 
   #LayoutOuter[data-action-page="lvl-1"]{
-    .cardsFilter,
-    .colorFilter{
-      opacity:0.15;
-    }
     [data-tooltip="lvl-1-place-card-here"]{
       opacity: 0;
       pointer-events: none;
     }
+    [data-tooltip="lvl-1-card-instructions"]{
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  #LayoutOuter[data-action-page="lvl-1"][data-action-state="just-after-load-2"]{
+    .cardsFilter,
+    .colorFilter{
+      opacity:0.15;
+    }
     #enrollment{
-      .inner, [data-tooltip]{
+      .inner{
         $cardOffset: clamp(-65px, -2vw, -25px);
         transform: translate(0, $cardOffset);
       }
+      [data-tooltip]{
+        $cardOffset: clamp(-65px, -2vw, -25px);
+        transform: translate(-50%, $cardOffset);
+      }
+    }
+    [data-tooltip="lvl-1-card-instructions"]{
+      opacity: 1;
+      pointer-events: auto;
     }
 
   }

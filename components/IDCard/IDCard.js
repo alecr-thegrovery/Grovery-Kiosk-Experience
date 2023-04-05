@@ -17,7 +17,7 @@ export default function IDCard({
   //Props
   text, link, cardID, 
   color, animation, animationDelay, 
-  tooltipText, tooltipPlacement
+  tooltipText, tooltipPlacement, tooltipID
 }) {
 
   //console.log(author);
@@ -35,6 +35,7 @@ export default function IDCard({
         <Tooltip
           placement={tooltipPlacement}
           text={tooltipText}
+          tooltipID={tooltipID}
         />
       }
       <div className={componentStyles.inner+ " inner"}>
