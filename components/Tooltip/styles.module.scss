@@ -67,6 +67,8 @@
 		position:absolute;
 		//top: calc(-1 * #{$arrowSize});
 		bottom: calc(100% + #{$arrowSize});
+		left: 50%;
+		transform: translate(-50%, 0%);
 		&::before{
 			content: "";
 			position: absolute;
@@ -84,8 +86,8 @@
 		content: "";
 		position: absolute;
 		left: calc(-1 * #{$arrowSize});
-		top: 50%;
-		transform: translate(0%, -50%);
+		bottom: calc(-1 * #{$arrowSize});
+		transform: translate(-50%, 0%);
 		width: 0px;
 		height: 0px;
 		border-top: $arrowSize solid transparent;

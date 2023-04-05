@@ -32,12 +32,18 @@ export default function App({ Component, pageProps }) {
       function updateActionState(stateValue, delay) {
         setTimeout(function() {
           let element = document.querySelector("#LayoutOuter");
-          delay = delay*1000;
+          //delay = delay*1000;
+          console.log(delay);
           element.setAttribute("data-action-state", stateValue);
         }, delay);
       }
 
       updateActionState('none', 0);
+
+      //wait a beat after page load
+      updateActionState('just-after-load', 2500);
+      //and another
+      updateActionState('just-after-load-2', 5000);
 
 
     /* =========================== */
