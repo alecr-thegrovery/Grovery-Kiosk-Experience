@@ -231,10 +231,12 @@ export default function App({ Component, pageProps }) {
 
       // Loop through each element and check if it has overflow content
       elements.forEach(element => {
+        console.log("overflow element present");
         // Check if the element's scrollHeight is greater than its clientHeight
         if (element.scrollHeight > element.clientHeight) {
+          console.log("overflow detected");
           // If overflow content is detected, add a class to the element
-          element.classList.add('overflowing');
+          element.setAttribute('data-overflow-detect', 'overflow');
         }
       });
 

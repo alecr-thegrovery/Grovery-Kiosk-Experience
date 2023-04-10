@@ -40,6 +40,10 @@
 			  background: $purple;
 			}
 
+			&[data-overflow-detect="overflow"]+.scrollNotice{
+				display: flex;
+			}
+
 		}
 	}
 
@@ -101,4 +105,17 @@
 		padding-left: $clampLarge;
 		padding-right: $clampLarge;
 	}
+}
+
+.scrollNotice{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 18%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	display: none;
 }
