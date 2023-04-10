@@ -20,236 +20,84 @@ export default function EnrollmentDoors({
 
   return (
     <div className={componentStyles.EnrollmentDoors}>
-      <svg width="1943.064" height="1113.685" viewBox="0 0 1943.064 1113.685">
+      <svg width="1976" height="1481" viewBox="0 0 1976 1481">
         <defs>
-          <clipPath id="clip-path">
-            <rect id="Rectangle_623" data-name="Rectangle 623" width="560.44" height="110.402" fill="none"/>
-          </clipPath>
-          <linearGradient id="linear-gradient" x1="0.263" y1="-0.1" x2="0.918" y2="1" gradientUnits="objectBoundingBox">
-            <stop offset="0" stop-color="#373231"/>
-            <stop offset="1" stop-color="#453838"/>
-          </linearGradient>
-          <filter id="Rectangle_638" x="249.313" y="558.144" width="118" height="74" filterUnits="userSpaceOnUse">
-            <feOffset dy="3" input="SourceAlpha"/>
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feFlood flood-color="#595454" flood-opacity="0.2"/>
-            <feComposite operator="in" in2="blur"/>
-            <feComposite in="SourceGraphic"/>
-          </filter>
-          <filter id="Rectangle_638-2" x="587.312" y="558.144" width="118" height="74" filterUnits="userSpaceOnUse">
-            <feOffset dy="3" input="SourceAlpha"/>
-            <feGaussianBlur stdDeviation="3" result="blur-2"/>
-            <feFlood flood-color="#595454" flood-opacity="0.2"/>
-            <feComposite operator="in" in2="blur-2"/>
-            <feComposite in="SourceGraphic"/>
-          </filter>
-          <filter id="Rectangle_638-3" x="1253.312" y="558.144" width="118" height="74" filterUnits="userSpaceOnUse">
-            <feOffset dy="3" input="SourceAlpha"/>
-            <feGaussianBlur stdDeviation="3" result="blur-3"/>
-            <feFlood flood-color="#595454" flood-opacity="0.2"/>
-            <feComposite operator="in" in2="blur-3"/>
-            <feComposite in="SourceGraphic"/>
-          </filter>
-          <filter id="Rectangle_638-4" x="916.312" y="558.144" width="118" height="74" filterUnits="userSpaceOnUse">
-            <feOffset dy="3" input="SourceAlpha"/>
-            <feGaussianBlur stdDeviation="3" result="blur-4"/>
-            <feFlood flood-color="#595454" flood-opacity="0.2"/>
-            <feComposite operator="in" in2="blur-4"/>
-            <feComposite in="SourceGraphic"/>
-          </filter>
-          <clipPath id="clip-path-2">
-            <rect id="Rectangle_628" data-name="Rectangle 628" width="132.195" height="243.734" fill="none"/>
+          <clipPath id="clip-iPad_Pro_12.9in_Enrollment_Hallway">
+            <rect width="1976" height="1481"/>
           </clipPath>
         </defs>
-        <g id="Group_1439" data-name="Group 1439" transform="translate(15.312 17.144)">
-          <g id="Layer_1" data-name="Layer 1" transform="translate(-2418.383)">
-            <g id="Layer_2" data-name="Layer 2">
-              <path id="Path_3490" data-name="Path 3490" d="M0,0H1932.2V987.8H0Z" transform="translate(2403.591 -16.624)" fill="#fdd7c2" stroke="#fff" stroke-width="1.04" opacity="0.196"/>
-              <rect id="Rectangle_151" data-name="Rectangle 151" width="1941.038" height="126.788" transform="translate(2404.597 969.253)" fill="#fff" stroke="#453838" stroke-miterlimit="10" stroke-width="1"/>
-              <g id="Group_185" data-name="Group 185">
-                <rect id="Rectangle_152" data-name="Rectangle 152" width="92.904" height="123.68" transform="translate(3890.97 507.821) rotate(-0.279)" fill="#fdd7c2" stroke="#453838" stroke-miterlimit="10" stroke-width="1.332"/>
-                <rect id="Rectangle_153" data-name="Rectangle 153" width="74.924" height="105.699" transform="translate(3900.003 516.767) rotate(-0.279)" fill="#fff"/>
-                <rect id="Rectangle_154" data-name="Rectangle 154" width="38.509" height="6.181" transform="translate(3918.244 523.224) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_155" data-name="Rectangle 155" width="56.491" height="5.048" transform="translate(3909.328 538.843) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_156" data-name="Rectangle 156" width="56.491" height="5.048" transform="translate(3909.376 548.77) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_157" data-name="Rectangle 157" width="56.491" height="5.048" transform="translate(3909.425 558.698) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_158" data-name="Rectangle 158" width="56.491" height="5.048" transform="translate(3909.473 568.625) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_159" data-name="Rectangle 159" width="56.491" height="5.048" transform="translate(3909.521 578.553) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_160" data-name="Rectangle 160" width="56.491" height="5.047" transform="translate(3909.57 588.48) rotate(-0.279)" fill="#f0e8e5"/>
-                <rect id="Rectangle_161" data-name="Rectangle 161" width="28.247" height="5.048" transform="translate(3937.923 610.686) rotate(-0.279)" fill="#f0e8e5"/>
-              </g>
+        <g id="iPad_Pro_12.9in_Enrollment_Hallway" data-name="iPad Pro 12.9in – Enrollment Hallway" clip-path="url(#clip-iPad_Pro_12.9in_Enrollment_Hallway)">
+          <rect width="1976" height="1481" fill="#fff"/>
+          <path id="Path_5190" data-name="Path 5190" d="M0,0H1976V1481H0Z" fill="#fdd7c2" stroke="#fff" stroke-width="1.04" opacity="0.196"/>
+          <rect id="Rectangle_1904" data-name="Rectangle 1904" width="1989.786" height="327.747" transform="translate(-13.786 1153.253)" fill="#fff" stroke="#453838" stroke-miterlimit="10" stroke-width="1"/>
+          <g id="Layer_2" data-name="Layer 2" transform="translate(-2418.383 184)">
+            <g id="Group_185" data-name="Group 185">
+              <rect id="Rectangle_152" data-name="Rectangle 152" width="92.904" height="123.68" transform="translate(3890.97 507.821) rotate(-0.279)" fill="#fdd7c2" stroke="#453838" stroke-miterlimit="10" stroke-width="1.332"/>
+              <rect id="Rectangle_153" data-name="Rectangle 153" width="74.924" height="105.699" transform="translate(3900.003 516.767) rotate(-0.279)" fill="#fff"/>
+              <rect id="Rectangle_154" data-name="Rectangle 154" width="38.509" height="6.181" transform="translate(3918.244 523.224) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_155" data-name="Rectangle 155" width="56.491" height="5.048" transform="translate(3909.328 538.843) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_156" data-name="Rectangle 156" width="56.491" height="5.048" transform="translate(3909.376 548.77) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_157" data-name="Rectangle 157" width="56.491" height="5.048" transform="translate(3909.425 558.698) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_158" data-name="Rectangle 158" width="56.491" height="5.048" transform="translate(3909.473 568.625) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_159" data-name="Rectangle 159" width="56.491" height="5.048" transform="translate(3909.521 578.553) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_160" data-name="Rectangle 160" width="56.491" height="5.047" transform="translate(3909.57 588.48) rotate(-0.279)" fill="#f0e8e5"/>
+              <rect id="Rectangle_161" data-name="Rectangle 161" width="28.247" height="5.048" transform="translate(3937.923 610.686) rotate(-0.279)" fill="#f0e8e5"/>
             </g>
-            <g id="Group_1440" data-name="Group 1440" transform="translate(2418.383)">
-              <g id="Group_881" data-name="Group 881" transform="translate(822.58 112.985)">
-                <path id="Path_3491" data-name="Path 3491" d="M554.736,143.767H5.958a5.458,5.458,0,1,1,0-10.916H554.736a5.458,5.458,0,1,1,0,10.916Z" transform="translate(-0.127 2.843)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                <line id="Line_162" data-name="Line 162" y1="130.158" transform="translate(108.106 5.536)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                <line id="Line_163" data-name="Line 163" y1="135.694" transform="translate(452.334 0)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                <rect id="Rectangle_624" data-name="Rectangle 624" width="190.443" height="10.916" transform="translate(184.999 135.694)" fill="#a69f9f"/>
-                <rect id="Rectangle_625" data-name="Rectangle 625" width="560.44" height="110.402" transform="translate(0 36.582)" fill="none"/>
-              </g>
-              <g id="Group_880" data-name="Group 880" transform="translate(204.433 149.566)">
-                <g id="Group_880-2" data-name="Group 880" transform="translate(0 0)" clip-path="url(#clip-path)">
-                  <path id="Path_3489" data-name="Path 3489" d="M554.736,143.767H5.958a5.458,5.458,0,1,1,0-10.916H554.736a5.458,5.458,0,1,1,0,10.916Z" transform="translate(-0.127 -33.738)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <line id="Line_160" data-name="Line 160" y1="98.74" transform="translate(108.106 0.373)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <line id="Line_161" data-name="Line 161" y1="98.74" transform="translate(452.334 0.373)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <rect id="Rectangle_622" data-name="Rectangle 622" width="190.443" height="10.916" transform="translate(184.999 99.113)" fill="#a69f9f"/>
-                </g>
-              </g>
-            </g>
-            <path id="Path_3485" data-name="Path 3485" d="M0,0H279.31V86.7H0Z" transform="translate(2573.078 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-width="1.264"/>
-            <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(2593.929 324)" fill="#595454" font-size="24" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="26">OPTIONS TO </tspan><tspan x="0" y="51">ENROLL</tspan></text>
-            <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(2910.074 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
-            <text id="HOW_TO_COMPLETE_THE_ENROLLMENT_FORM" data-name="HOW TO COMPLETE THE ENROLLMENT FORM" transform="translate(2925.929 324)" fill="#595454" font-size="19.9" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="21">HOW TO COMPLETE THE </tspan><tspan x="0" y="46" font-size="24">ENROLLMENT FORM</tspan></text>
-            <rect id="Rectangle_186" data-name="Rectangle 186" width="279.31" height="86.697" transform="translate(3242.813 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
-            <rect id="Rectangle_187" data-name="Rectangle 187" width="279.31" height="86.697" transform="translate(3582.998 307.359)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
-            <g id="Group_876" data-name="Group 876" transform="translate(-16.557 0.607)">
-
-              <g className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive" id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
-                <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
-                <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
-                <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
-                <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
-              </g>
-              <g id="Component_3_1" data-name="Component 3 – 1" transform="translate(2677.94 546.393)">
-                <g transform="matrix(1, 0, 0, 1, -258.31, -564.14)" filter="url(#Rectangle_638)">
-                  <rect id="Rectangle_638-5" data-name="Rectangle 638" width="100" height="56" rx="3" transform="translate(258.31 564.14)" fill="url(#linear-gradient)"/>
-                </g>
-                <text id="Scan_Here" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                <g id="Group_875" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                  <path id="Path_160" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                  <path id="Path_161" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                  <path id="Path_162" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                  <path id="Path_163" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                </g>
-                <g id="Rectangle_639" data-name="Rectangle 639" transform="translate(1 1)" fill="none" stroke="#707070" stroke-width="1.5">
-                  <rect width="98.5" height="54" rx="3" stroke="none"/>
-                  <rect x="0.75" y="0.75" width="97" height="52.5" rx="2.25" fill="none"/>
-                </g>
-                <g id="Rectangle_640" data-name="Rectangle 640" transform="translate(5.5 5.5)" fill="none" stroke="#fff" stroke-width="0.5" stroke-dasharray="2 2">
-                  <rect width="89" height="45" rx="3" stroke="none"/>
-                  <rect x="0.25" y="0.25" width="88.5" height="44.5" rx="2.75" fill="none"/>
-                </g>
-              </g>
-            </g>
-            <g className="droppable" data-door="2" data-door-name="enrollmentForm" data-link="/enrollment/enrollment-form/" data-active="inactive" id="Group_877" data-name="Group 877" transform="translate(320.439 0.607)">
-              <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
-                <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
-                <rect id="Rectangle_183-2" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
-                <path id="Path_3487-2" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" stroke-width="1"/>
-                <path id="Path_3488" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" stroke-width="1"/>
-              </g>
-              <g id="Component_3_2" data-name="Component 3 – 2" transform="translate(2678.943 546.393)">
-                <g transform="matrix(1, 0, 0, 1, -596.31, -564.14)" filter="url(#Rectangle_638-2)">
-                  <rect id="Rectangle_638-6" data-name="Rectangle 638" width="100" height="56" rx="3" transform="translate(596.31 564.14)" fill="url(#linear-gradient)"/>
-                </g>
-                <text id="Scan_Here-2" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                <g id="Group_875-2" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                  <path id="Path_160-2" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                  <path id="Path_161-2" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                  <path id="Path_162-2" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                  <path id="Path_163-2" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                </g>
-                <g id="Rectangle_639-2" data-name="Rectangle 639" transform="translate(1 1)" fill="none" stroke="#707070" stroke-width="1.5">
-                  <rect width="98.5" height="54" rx="3" stroke="none"/>
-                  <rect x="0.75" y="0.75" width="97" height="52.5" rx="2.25" fill="none"/>
-                </g>
-                <g id="Rectangle_640-2" data-name="Rectangle 640" transform="translate(5.5 5.5)" fill="none" stroke="#fff" stroke-width="0.5" stroke-dasharray="2 2">
-                  <rect width="89" height="45" rx="3" stroke="none"/>
-                  <rect x="0.25" y="0.25" width="88.5" height="44.5" rx="2.75" fill="none"/>
-                </g>
-              </g>
-            </g>
-            <g className="droppable" data-door="3" data-door-name="providerPortal" data-link="/enrollment/provider-portal/" data-active="inactive" id="Group_879" data-name="Group 879" transform="translate(986.089 0.607)">
-              <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">
-                <path id="Path_3483-3" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                <rect id="Rectangle_181-3" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
-                <rect id="Rectangle_183-3" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
-                <path id="Path_3487-3" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" stroke-width="1"/>
-                <path id="Path_3488-2" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" stroke-width="1"/>
-              </g>
-              <g id="Component_3_3" data-name="Component 3 – 3" transform="translate(2679.294 546.393)">
-                <g transform="matrix(1, 0, 0, 1, -1262.31, -564.14)" filter="url(#Rectangle_638-3)">
-                  <rect id="Rectangle_638-7" data-name="Rectangle 638" width="100" height="56" rx="3" transform="translate(1262.31 564.14)" fill="url(#linear-gradient)"/>
-                </g>
-                <text id="Scan_Here-3" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                <g id="Group_875-3" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                  <path id="Path_160-3" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                  <path id="Path_161-3" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                  <path id="Path_162-3" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                  <path id="Path_163-3" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                </g>
-                <g id="Rectangle_639-3" data-name="Rectangle 639" transform="translate(1 1)" fill="none" stroke="#707070" stroke-width="1.5">
-                  <rect width="98.5" height="54" rx="3" stroke="none"/>
-                  <rect x="0.75" y="0.75" width="97" height="52.5" rx="2.25" fill="none"/>
-                </g>
-                <g id="Rectangle_640-3" data-name="Rectangle 640" transform="translate(5.5 5.5)" fill="none" stroke="#fff" stroke-width="0.5" stroke-dasharray="2 2">
-                  <rect width="89" height="45" rx="3" stroke="none"/>
-                  <rect x="0.25" y="0.25" width="88.5" height="44.5" rx="2.75" fill="none"/>
-                </g>
-              </g>
-            </g>
-            <g className="droppable" data-door="4" data-door-name="annexus" data-link="/enrollment/assistpoint/" data-active="inactive" id="Group_878" data-name="Group 878" transform="translate(649.093 0.607)">
-              <g id="Group_193-4" data-name="Group 193" transform="translate(2589.634 442.31)">
-                <path id="Path_3483-4" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                <rect id="Rectangle_181-4" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
-                <rect id="Rectangle_183-4" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
-                <path id="Path_3486-2" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
-                <path id="Path_3487-4" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
-              </g>
-              <g id="Component_3_4" data-name="Component 3 – 4" transform="translate(2679.29 546.393)">
-                <g transform="matrix(1, 0, 0, 1, -925.31, -564.14)" filter="url(#Rectangle_638-4)">
-                  <rect id="Rectangle_638-8" data-name="Rectangle 638" width="100" height="56" rx="3" transform="translate(925.31 564.14)" fill="url(#linear-gradient)"/>
-                </g>
-                <text id="Scan_Here-4" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" font-size="16" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                <g id="Group_875-4" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                  <path id="Path_160-4" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                  <path id="Path_161-4" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                  <path id="Path_162-4" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                  <path id="Path_163-4" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                </g>
-                <g id="Rectangle_639-4" data-name="Rectangle 639" transform="translate(1 1)" fill="none" stroke="#707070" stroke-width="1.5">
-                  <rect width="98.5" height="54" rx="3" stroke="none"/>
-                  <rect x="0.75" y="0.75" width="97" height="52.5" rx="2.25" fill="none"/>
-                </g>
-                <g id="Rectangle_640-4" data-name="Rectangle 640" transform="translate(5.5 5.5)" fill="none" stroke="#fff" stroke-width="0.5" stroke-dasharray="2 2">
-                  <rect width="89" height="45" rx="3" stroke="none"/>
-                  <rect x="0.25" y="0.25" width="88.5" height="44.5" rx="2.75" fill="none"/>
-                </g>
-              </g>
-            </g>
-            <g id="Group_884" data-name="Group 884" transform="translate(2428.883 758.023)">
-              <rect id="Rectangle_626" data-name="Rectangle 626" width="89.908" height="19.576" transform="translate(21.171 110.543)" fill="#fff"/>
-              <rect id="Rectangle_627" data-name="Rectangle 627" width="89.908" height="19.576" transform="translate(21.171 110.543)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-              <g id="Group_883" data-name="Group 883">
-                <g id="Group_882" data-name="Group 882" clip-path="url(#clip-path-2)">
-                  <path id="Path_3492" data-name="Path 3492" d="M17.082,236.56,7.344,361.781a3.54,3.54,0,0,0,7.034.775L32.244,237.367Z" transform="translate(-3.785 -122.105)" fill="#fff"/>
-                  <path id="Path_3493" data-name="Path 3493" d="M17.082,236.56,7.344,361.781a3.54,3.54,0,0,0,7.034.775L32.244,237.367Z" transform="translate(-3.785 -122.105)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <path id="Path_3494" data-name="Path 3494" d="M229.6,236.56l9.738,125.221a3.54,3.54,0,0,1-7.034.775L214.44,237.367Z" transform="translate(-110.687 -122.105)" fill="#fff"/>
-                  <path id="Path_3495" data-name="Path 3495" d="M229.6,236.56l9.738,125.221a3.54,3.54,0,0,1-7.034.775L214.44,237.367Z" transform="translate(-110.687 -122.105)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <path id="Path_3496" data-name="Path 3496" d="M132.727,99.455c-2.123-5.46-3.342-15.244-4.418-22.393l-7.447-63.829A14.4,14.4,0,0,0,106.555.5H42.111A14.4,14.4,0,0,0,27.8,13.234L20.357,77.062C19.281,84.212,18.062,94,15.939,99.455c0,0,43.575,5.869,58.394,5.869s58.394-5.869,58.394-5.869" transform="translate(-8.227 -0.258)" fill="#eee7e7"/>
-                  <path id="Path_3497" data-name="Path 3497" d="M132.727,99.455c-2.123-5.46-3.342-15.244-4.418-22.393l-7.447-63.829A14.4,14.4,0,0,0,106.555.5H42.111A14.4,14.4,0,0,0,27.8,13.234L20.357,77.062C19.281,84.212,18.062,94,15.939,99.455c0,0,43.575,5.869,58.394,5.869S132.727,99.455,132.727,99.455Z" transform="translate(-8.227 -0.258)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <path id="Path_3498" data-name="Path 3498" d="M71.635,194.24a449.214,449.214,0,0,0,62.893,0" transform="translate(-36.976 -100.261)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                  <path id="Path_3499" data-name="Path 3499" d="M132.2,213.308c0-4.853-2.511-9.451-8.681-9.254l-5.481.466c-17.578,1.582-34.822,2.468-51.678,2.546-16.856-.079-34.1-.965-51.678-2.546L9.2,204.054c-6.17-.2-8.681,4.4-8.681,9.254-.209,4.422,1.605,7.57,7.1,8.624,11.3,2.169,30.366,3.132,45.177,3.488v0c4.606.109,13.323.173,13.558.173h.016c.236,0,8.953-.063,13.558-.173v0c14.811-.356,33.876-1.319,45.177-3.488,5.491-1.054,7.306-4.2,7.1-8.624" transform="translate(-0.258 -105.323)" fill="#eee7e7"/>
-                  <path id="Path_3500" data-name="Path 3500" d="M132.2,213.308c0-4.853-2.511-9.451-8.681-9.254l-5.481.466c-17.578,1.582-34.822,2.468-51.678,2.546-16.856-.079-34.1-.965-51.678-2.546L9.2,204.054c-6.17-.2-8.681,4.4-8.681,9.254-.209,4.422,1.605,7.57,7.1,8.624,11.3,2.169,30.366,3.132,45.177,3.488v0c4.606.109,13.323.173,13.558.173h.016c.236,0,8.953-.063,13.558-.173v0c14.811-.356,33.876-1.319,45.177-3.488C130.59,220.877,132.405,217.73,132.2,213.308Z" transform="translate(-0.258 -105.323)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-                </g>
-              </g>
-            </g>
-            <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(3261.688 354)" fill="#595454" font-size="25.205" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="0" y="0">PROVIDER PORTAL</tspan></text>
-            <text id="ANNEXUS_HEALTH_ASSISTPOINT_DIGITAL_ENROLLMENT" data-name="ANNEXUS HEALTH/ASSISTPOINT DIGITAL ENROLLMENT" transform="translate(3594.918 324)" fill="#595454" font-size="16.9" font-family="SegoeUI, Segoe UI"><tspan x="0" y="21">ANNEXUS HEALTH/ASSISTPOINT</tspan><tspan y="21" font-size="19.898"> </tspan><tspan x="0" y="46" font-size="24">DIGITAL ENROLLMENT</tspan></text>
           </g>
-          <g id="Group_1438" data-name="Group 1438">
-            <rect id="Rectangle_617" data-name="Rectangle 617" width="278" height="12" transform="translate(155 382)" fill="#fdd7c2"/>
-            <rect id="Rectangle_618" data-name="Rectangle 618" width="278" height="12" transform="translate(492 382)" fill="#fdd7c2"/>
-            <rect id="Rectangle_619" data-name="Rectangle 619" width="278" height="12" transform="translate(825 382)" fill="#fdd7c2"/>
-            <rect id="Rectangle_620" data-name="Rectangle 620" width="278" height="12" transform="translate(1165 382)" fill="#fdd7c2"/>
+          <g id="door1" transform="translate(-2434.939 184.607)">
+            <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive">
+              <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+              <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
+              <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
+              <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
+              <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
+            </g>
           </g>
-          <g id="Layer_3" data-name="Layer 3" transform="translate(-2418.383)">
+          <g id="door2" transform="translate(-2097.943 184.607)">
+            <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="2" data-door-name="enrollmentForm" data-link="/enrollment/enrollment-form/" data-active="inactive">
+              <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+              <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
+              <rect id="Rectangle_183-2" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
+              <path id="Path_3487-2" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" stroke-width="1"/>
+              <path id="Path_3488" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" stroke-width="1"/>
+            </g>
+          </g>
+          <g id="door4" className="droppable" data-door="4" data-door-name="annexus" data-link="/enrollment/assistpoint/" data-active="inactive" transform="translate(-1432.294 184.607)">
+            <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">
+              <path id="Path_3483-3" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+              <rect id="Rectangle_181-3" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
+              <rect id="Rectangle_183-3" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
+              <path id="Path_3487-3" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" stroke-width="1"/>
+              <path id="Path_3488-2" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" stroke-width="1"/>
+            </g>
+          </g>
+          <g id="door3" transform="translate(-1769.29 184.607)">
+            <g id="Group_193-4" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="3" data-door-name="providerPortal" data-link="/enrollment/provider-portal/" data-active="inactive">
+              <path id="Path_3483-4" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+              <rect id="Rectangle_181-4" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
+              <rect id="Rectangle_183-4" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
+              <path id="Path_3486-2" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
+              <path id="Path_3487-4" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
+            </g>
+          </g>
+          <g id="chair" transform="translate(10.5 942.023)">
+            <rect id="Rectangle_626" data-name="Rectangle 626" width="89.908" height="19.576" transform="translate(21.171 110.543)" fill="#fff"/>
+            <rect id="Rectangle_627" data-name="Rectangle 627" width="89.908" height="19.576" transform="translate(21.171 110.543)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+            <g id="Group_883" data-name="Group 883">
+              <g id="Group_1444" data-name="Group 1444">
+                <path id="Path_3492" data-name="Path 3492" d="M17.082,236.56,7.344,361.781a3.54,3.54,0,0,0,7.034.775L32.244,237.367Z" transform="translate(-3.785 -122.105)" fill="#fff"/>
+                <path id="Path_3493" data-name="Path 3493" d="M17.082,236.56,7.344,361.781a3.54,3.54,0,0,0,7.034.775L32.244,237.367Z" transform="translate(-3.785 -122.105)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path id="Path_3494" data-name="Path 3494" d="M229.6,236.56l9.738,125.221a3.54,3.54,0,0,1-7.034.775L214.44,237.367Z" transform="translate(-110.687 -122.105)" fill="#fff"/>
+                <path id="Path_3495" data-name="Path 3495" d="M229.6,236.56l9.738,125.221a3.54,3.54,0,0,1-7.034.775L214.44,237.367Z" transform="translate(-110.687 -122.105)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path id="Path_3496" data-name="Path 3496" d="M132.727,99.455c-2.123-5.46-3.342-15.244-4.418-22.393l-7.447-63.829A14.4,14.4,0,0,0,106.555.5H42.111A14.4,14.4,0,0,0,27.8,13.234L20.357,77.062C19.281,84.212,18.062,94,15.939,99.455c0,0,43.575,5.869,58.394,5.869s58.394-5.869,58.394-5.869" transform="translate(-8.227 -0.258)" fill="#eee7e7"/>
+                <path id="Path_3497" data-name="Path 3497" d="M132.727,99.455c-2.123-5.46-3.342-15.244-4.418-22.393l-7.447-63.829A14.4,14.4,0,0,0,106.555.5H42.111A14.4,14.4,0,0,0,27.8,13.234L20.357,77.062C19.281,84.212,18.062,94,15.939,99.455c0,0,43.575,5.869,58.394,5.869S132.727,99.455,132.727,99.455Z" transform="translate(-8.227 -0.258)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path id="Path_3498" data-name="Path 3498" d="M71.635,194.24a449.214,449.214,0,0,0,62.893,0" transform="translate(-36.976 -100.261)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                <path id="Path_3499" data-name="Path 3499" d="M132.2,213.308c0-4.853-2.511-9.451-8.681-9.254l-5.481.466c-17.578,1.582-34.822,2.468-51.678,2.546-16.856-.079-34.1-.965-51.678-2.546L9.2,204.054c-6.17-.2-8.681,4.4-8.681,9.254-.209,4.422,1.605,7.57,7.1,8.624,11.3,2.169,30.366,3.132,45.177,3.488v0c4.606.109,13.323.173,13.558.173h.016c.236,0,8.953-.063,13.558-.173v0c14.811-.356,33.876-1.319,45.177-3.488,5.491-1.054,7.306-4.2,7.1-8.624" transform="translate(-0.258 -105.323)" fill="#eee7e7"/>
+                <path id="Path_3500" data-name="Path 3500" d="M132.2,213.308c0-4.853-2.511-9.451-8.681-9.254l-5.481.466c-17.578,1.582-34.822,2.468-51.678,2.546-16.856-.079-34.1-.965-51.678-2.546L9.2,204.054c-6.17-.2-8.681,4.4-8.681,9.254-.209,4.422,1.605,7.57,7.1,8.624,11.3,2.169,30.366,3.132,45.177,3.488v0c4.606.109,13.323.173,13.558.173h.016c.236,0,8.953-.063,13.558-.173v0c14.811-.356,33.876-1.319,45.177-3.488C130.59,220.877,132.405,217.73,132.2,213.308Z" transform="translate(-0.258 -105.323)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              </g>
+            </g>
+          </g>
+          <g id="plant" transform="translate(-2418.383 184)">
             <g id="Group_187" data-name="Group 187">
               <g id="Group_186" data-name="Group 186">
                 <path id="Path_271" data-name="Path 271" d="M3901.465,813.759c-4.351-5.35-7.147-13.57-7.147-22.806,0-16.124,8.5-29.2,18.977-29.2s18.977,13.071,18.977,29.2c0,9.236-2.8,17.456-7.148,22.806,4.352,5.349,7.148,13.569,7.148,22.805a38.681,38.681,0,0,1-5.192,20.023,38.681,38.681,0,0,1,5.192,20.023,39.4,39.4,0,0,1-4.542,18.923,39.4,39.4,0,0,1,4.542,18.923c0,16.123-8.5,29.194-18.977,29.194s-18.977-13.071-18.977-29.194a39.4,39.4,0,0,1,4.541-18.923,39.4,39.4,0,0,1-4.541-18.923,38.681,38.681,0,0,1,5.191-20.023,38.681,38.681,0,0,1-5.191-20.023C3894.318,827.328,3897.114,819.108,3901.465,813.759Z" fill="#f0e8e5" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.362"/>
@@ -264,8 +112,43 @@ export default function EnrollmentDoors({
               <path id="Rectangle_163" data-name="Rectangle 163" d="M8.176,0H104.32A8.176,8.176,0,0,1,112.5,8.176V11.25a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8.176A8.176,8.176,0,0,1,8.176,0Z" transform="translate(3980.659 992.567) rotate(-180)" fill="#f0e8e5" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.362"/>
             </g>
           </g>
+          <g id="Group_1442" data-name="Group 1442" transform="translate(6 61)">
+            <g id="Group_881" data-name="Group 881" transform="translate(822.58 112.985)">
+              <path id="Path_3491" data-name="Path 3491" d="M554.736,143.767H5.958a5.458,5.458,0,1,1,0-10.916H554.736a5.458,5.458,0,1,1,0,10.916Z" transform="translate(-0.127 2.843)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <line id="Line_162" data-name="Line 162" y1="130.158" transform="translate(108.106 5.536)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <line id="Line_163" data-name="Line 163" y1="135.694" transform="translate(452.334 0)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <rect id="Rectangle_624" data-name="Rectangle 624" width="190.443" height="10.916" transform="translate(184.999 135.694)" fill="#a69f9f"/>
+            </g>
+            <g id="Group_1443" data-name="Group 1443" transform="translate(178.58 112.985)">
+              <path id="Path_3491-2" data-name="Path 3491" d="M554.736,143.767H5.958a5.458,5.458,0,1,1,0-10.916H554.736a5.458,5.458,0,1,1,0,10.916Z" transform="translate(-0.127 2.843)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <line id="Line_162-2" data-name="Line 162" y1="130.158" transform="translate(108.106 5.536)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <line id="Line_163-2" data-name="Line 163" y1="135.694" transform="translate(452.334 0)" fill="none" stroke="#a69f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+              <rect id="Rectangle_624-2" data-name="Rectangle 624" width="190.443" height="10.916" transform="translate(184.999 135.694)" fill="#a69f9f"/>
+            </g>
+          </g>
+          <g id="sign2" transform="translate(0 20)">
+            <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
+            <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
+            <text id="HOW_TO_COMPLETE_THE_ENROLLMENT_FORM" data-name="HOW TO COMPLETE THE ENROLLMENT FORM" transform="translate(628 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-124.708" y="24">HOW TO COMPLETE THE </tspan><tspan x="-104.561" y="46">ENROLLMENT FORM</tspan></text>
+          </g>
+          <g id="sign4" transform="translate(665.649 20)">
+            <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.851 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
+            <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
+            <text id="AssistPoint_Digital_Enrollment" data-name="AssistPoint Digital Enrollment" transform="translate(630 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="-106.101" y="24">ASSISTPOINT DIGITAL </tspan><tspan x="-68.347" y="46">ENROLLMENT</tspan></text>
+          </g>
+          <g id="sign1" transform="translate(-336.996 20)">
+            <rect id="Rectangle_185-3" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
+            <rect id="Rectangle_1905-3" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
+            <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(630 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-107.515" y="24">OPTIONS TO ENROLL</tspan></text>
+          </g>
+          <g id="sign3" transform="translate(328.653 20)">
+            <rect id="Rectangle_185-4" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.847 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
+            <rect id="Rectangle_1905-4" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
+            <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(632 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-94.19" y="24">PROVIDER PORTAL</tspan></text>
+          </g>
         </g>
       </svg>
+
 
     </div>
       

@@ -120,12 +120,12 @@ export default function AccessDoors({
             </g>
             <g id="Group_1060" data-name="Group 1060" transform="translate(321.409 352.709)">
               <path id="Path_3791" data-name="Path 3791" d="M0,0H278.451V86.431H0Z" transform="translate(0 0)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-width="1.264"/>
-              <text id="BENEFITS_REVIEW" data-name="BENEFITS REVIEW" transform="translate(16.565 30.477)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-89.189" y="24">BENEFITS REVIEW</tspan></text>
+              <text id="BENEFITS_REVIEW" data-name="BENEFITS REVIEW" transform="translate(16.565 30.477)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="32" y="24">BENEFITS REVIEW</tspan></text>
               <rect id="Rectangle_617" data-name="Rectangle 617" width="276.761" height="11.58" transform="translate(0.353 74.855)" fill="#ffd186"/>
             </g>
             <g id="Group_1060-2" data-name="Group 1060" transform="translate(656.423 352.709)">
               <path id="Path_3791-2" data-name="Path 3791" d="M0,0H278.451V86.431H0Z" transform="translate(3.121 0)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-width="1.264"/>
-              <text id="PA_Appeals_Support" data-name="PA &amp; Appeals Support" transform="translate(-1.153 32.215)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="-119.308" y="24">PA &amp; APPEALS SUPPORT</tspan></text>
+              <text id="PA_Appeals_Support" data-name="PA &amp; Appeals Support" transform="translate(-1.153 32.215)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="25" y="24">PA &amp; APPEALS SUPPORT</tspan></text>
               <rect id="Rectangle_617-2" data-name="Rectangle 617" width="276.761" height="11.58" transform="translate(3.474 74.855)" fill="#ffd186"/>
             </g>
             <g id="Door_2" data-name="Door 2" transform="translate(659.544 468.613)" className="droppable" data-door="2" data-door-name="PA &amp; Appeals Support" data-link="/access/appeals/" data-active="inactive">
@@ -183,7 +183,7 @@ export default function AccessDoors({
             <g id="Group_1060-3" data-name="Group 1060" transform="translate(997.327 352.709)">
               <path id="Path_3791-3" data-name="Path 3791" d="M0,0H278.451V86.431H0Z" transform="translate(0 0)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-width="1.264"/>
               <rect id="Rectangle_617-3" data-name="Rectangle 617" width="276.761" height="11.58" transform="translate(0.353 74.855)" fill="#ffd186"/>
-              <text id="Billing_Coding" data-name="Billing &amp; Coding" transform="translate(21.234 32.216)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-97.643" y="24">BILLING &amp; CODING</tspan></text>
+              <text id="Billing_Coding" data-name="Billing &amp; Coding" transform="translate(21.234 32.216)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="22" y="24">BILLING &amp; CODING</tspan></text>
             </g>
           </g>
           <g id="Painting" transform="translate(1360.903 -92.532)">

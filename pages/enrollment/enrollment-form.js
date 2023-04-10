@@ -35,7 +35,7 @@ export default function Post({ postData }) {
         {/*Content*/}
         <div className={pageStyles.pageLevel3}>          
           <section className={pageStyles.mainSection}>
-            <ComputerFrame frame="1">
+            <ComputerFrame frame="2">
               {/*Inner Page Content*/}
 
               <div className={pageStyles.oneColumn}>                  
