@@ -1,7 +1,7 @@
 @import "@styles/vars.module.scss";
 
 .ComputerFrame{
-	height: 100%;
+	height: calc(100% - 1.5rem);
 	svg{
 		height: 100%;
 		width: auto;
@@ -67,4 +67,29 @@
 	.cls6 {
 	  fill: #be2bbb;
 	}
+}
+
+
+.Frame1{
+	position: relative;
+	height: 100%;
+	//bottom: 1.5rem;
+}
+
+.Frame2{
+	position: relative;
+	height: 100%;
+	//bottom: 1.5rem;
+}
+
+.Frame3{
+	position: relative;
+	height: 100%;
+	//bottom: 1.5rem;
+}
+
+.Frame4{
+	position: relative;
+	height: 100%;
+	//bottom: 1.5rem;
 }
