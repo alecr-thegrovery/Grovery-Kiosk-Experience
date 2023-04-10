@@ -129,22 +129,22 @@ export default function EnrollmentDoors({
           <g id="sign2" transform="translate(0 20)">
             <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
-            <text id="HOW_TO_COMPLETE_THE_ENROLLMENT_FORM" data-name="HOW TO COMPLETE THE ENROLLMENT FORM" transform="translate(492.847 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-124.708" y="24">HOW TO COMPLETE THE </tspan><tspan x="-104.561" y="46">ENROLLMENT FORM</tspan></text>
+            <text id="HOW_TO_COMPLETE_THE_ENROLLMENT_FORM" data-name="HOW TO COMPLETE THE ENROLLMENT FORM" transform="translate(628 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-124.708" y="24">HOW TO COMPLETE THE </tspan><tspan x="-104.561" y="46">ENROLLMENT FORM</tspan></text>
           </g>
           <g id="sign4" transform="translate(665.649 20)">
             <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.851 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
-            <text id="AssistPoint_Digital_Enrollment" data-name="AssistPoint Digital Enrollment" transform="translate(491.351 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="-106.101" y="24">ASSISTPOINT DIGITAL </tspan><tspan x="-68.347" y="46">ENROLLMENT</tspan></text>
+            <text id="AssistPoint_Digital_Enrollment" data-name="AssistPoint Digital Enrollment" transform="translate(630 511)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI"><tspan x="-106.101" y="24">ASSISTPOINT DIGITAL </tspan><tspan x="-68.347" y="46">ENROLLMENT</tspan></text>
           </g>
           <g id="sign1" transform="translate(-336.996 20)">
             <rect id="Rectangle_185-3" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <rect id="Rectangle_1905-3" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
-            <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(491.691 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-107.515" y="24">OPTIONS TO ENROLL</tspan></text>
+            <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(630 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-107.515" y="24">OPTIONS TO ENROLL</tspan></text>
           </g>
           <g id="sign3" transform="translate(328.653 20)">
             <rect id="Rectangle_185-4" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.847 491.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
             <rect id="Rectangle_1905-4" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" stroke-linecap="round" stroke-width="1.264"/>
-            <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(491.347 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-94.19" y="24">PROVIDER PORTAL</tspan></text>
+            <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(632 522)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-94.19" y="24">PROVIDER PORTAL</tspan></text>
           </g>
         </g>
       </svg>

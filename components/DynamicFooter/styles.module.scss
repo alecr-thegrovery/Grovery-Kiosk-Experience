@@ -1,6 +1,7 @@
 @import "@styles/vars.module.scss";
 
 $fixedWidth: clamp(250px, 20vw,360px);
+$footerHeight: 1.5rem;
 
 .DynamicFooter{
 	//border: solid 2px $black;
@@ -10,6 +11,7 @@ $fixedWidth: clamp(250px, 20vw,360px);
 	bottom: 0px;
 	width: 100%;
 	width:calc(100% - #{$fixedWidth});
+	height: $footerHeight;
 	background-color: $white;
 	box-shadow: 0.1em -0.1em 0.25em rgba($black, 0.15);
 	
