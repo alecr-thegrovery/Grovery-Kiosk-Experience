@@ -222,6 +222,24 @@ export default function App({ Component, pageProps }) {
 
       DragDropInit();
     
+
+    /* ==================================== */
+    /* ===== Content Overflow Detection ===== */
+    /* ==================================== */
+      // Select all elements with the data-attribute "data-target"
+      const elements = document.querySelectorAll('[data-overflow-detect]');
+
+      // Loop through each element and check if it has overflow content
+      elements.forEach(element => {
+        console.log("overflow element present");
+        // Check if the element's scrollHeight is greater than its clientHeight
+        if (element.scrollHeight > element.clientHeight) {
+          console.log("overflow detected");
+          // If overflow content is detected, add a class to the element
+          element.setAttribute('data-overflow-detect', 'overflow');
+        }
+      });
+
   });
 
   return <Component {...pageProps} />
