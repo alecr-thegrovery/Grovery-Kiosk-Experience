@@ -240,6 +240,27 @@ export default function App({ Component, pageProps }) {
         }
       });
 
+      /* ===== Hide When Scrolled To Bottom ===== */
+
+        // loop through each element
+        elements.forEach(element => {
+          // add a scroll event listener to each element
+          element.addEventListener('scroll', () => {
+            // check if the element's content is scrolled to the bottom
+            const atBottom = element.scrollHeight - element.scrollTop === element.clientHeight;
+            // update the data-attribute value to true if scrolled to bottom, false otherwise
+            
+            if (atBottom) {
+              console.log("overflow detected");
+              // If overflow content is detected, add a class to the element
+              element.setAttribute('data-overflow-detect', 'atBottom');
+            }else{
+              element.setAttribute('data-overflow-detect', 'overflow');
+            }
+          });
+        });
+
+
   });
 
   return <Component {...pageProps} />
