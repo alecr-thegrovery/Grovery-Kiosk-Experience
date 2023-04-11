@@ -41,7 +41,9 @@
 			}
 
 			&[data-overflow-detect="overflow"]+.scrollNotice{
-				display: flex;
+				opacity: 1;
+				transform: translate3d(-50%, 0em, 0);
+				transition: $transitionMedium;
 			}
 
 		}
@@ -115,7 +117,9 @@
 	position: absolute;
 	bottom: 18%;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	transform: translate3d(-50%, 1em, 0);
 
-	display: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: $transitionMedium;
 }
