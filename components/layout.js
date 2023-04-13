@@ -11,6 +11,7 @@ import Sidebar from '@components/Sidebar'
 import SupportModal from '@components/SupportModal'
 import BackToHome from '@components/BackToHome'
 import SmallScreenWarning from '@components/SmallScreenWarning'
+import FullScreenWidget from '@components/FullScreenWidget'
 
 export const siteTitle = 'BMS Congress Access Support'
 export const siteData = data
@@ -97,6 +98,7 @@ export default function Layout({
       </Head>
 
       <SmallScreenWarning/>
+      <FullScreenWidget/>
       <SupportModal/>
       
       {/* MAIN SECTION */}
