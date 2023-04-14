@@ -60,6 +60,7 @@ export default function Post({ postData }) {
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail name="What is health insurance?" />
+                  <br/><br/>
                   <PdfThumbnail name="What is explanation of benefits (EOB)" />
                 </div>
 
