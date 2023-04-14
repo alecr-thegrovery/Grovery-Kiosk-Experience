@@ -99,7 +99,7 @@ export default function Layout({
       </Head>
 
       <SmallScreenWarning/>
-      <FullScreenWidget/>
+      {/*<FullScreenWidget/>*/}
       <SupportModal/>
       <Modal/>
       

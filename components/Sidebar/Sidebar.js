@@ -23,6 +23,14 @@ export default function Sidebar({
   cardTooltipText
 }) {
 
+  const handleFullScreenClick = () => {
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
+  };
+
   //console.log(author);
   useEffect(() => {
     $(document).ready(function() {
@@ -131,16 +139,25 @@ export default function Sidebar({
         </div>
 
         <div className={componentStyles.controlsOuter}>
-          {!home && 
+          
+          {home ?
+            <div className={componentStyles.controls}>
+              <a  onClick={handleFullScreenClick}>
+                <p>&#9746;</p>
+                 FULLSCREEN
+              </a>
+            </div>
+          :
             <div className={componentStyles.controls}>
               <a className={componentStyles.alt} data-page-back>
-                <BackIcon/> Back
+                <BackIcon/> BACK
               </a>
               <a data-page-transition="/" data-delay="0">
-                <HomeIcon/> Home
+                <HomeIcon/> HOME
               </a>
             </div>
           }
+
         </div>
         
       </div>
