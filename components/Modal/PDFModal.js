@@ -14,12 +14,24 @@ export default function PDFModal({
 
   //console.log(author);
 
+  //NOTES:
+  //Open functions are in /ContentComponents/PdfThumbnail
+
+  const modalClose = () => {
+    const element = document.getElementById("PdfModal");
+    element.setAttribute('data-modal-status', 'inactive');
+  }
+
+  const closeClick = () => {
+    modalClose();
+  };
+
   return (
     <div className={componentStyles.PDFModal}>
 
       <div 
         className={componentStyles.closeButton}
-        data-modal-close
+        onClick={modalClose}
       >
         <CloseIcon/>
       </div>

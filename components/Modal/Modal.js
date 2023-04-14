@@ -12,13 +12,28 @@ export default function Modal({
 }) {
 
   //console.log(author);
+  const modalClose = () => {
+    const element = document.getElementById("PdfModal");
+    element.setAttribute('data-modal-status', 'inactive');
+  }
+
+  const closeClick = () => {
+    modalClose();
+  };
 
   return (
 
-    <div className={componentStyles.ModalWrapper}>
+    <div 
+      id="PdfModal"
+      className={componentStyles.ModalWrapper}
+      data-modal-status="inactive"
+    >
       
       {/*Backdrop filter, click to close*/}
-      <div className={componentStyles.backdrop} />
+      <div 
+        className={componentStyles.backdrop} 
+        onClick={modalClose}
+      />
       
       <div className={componentStyles.modalInner}>
 

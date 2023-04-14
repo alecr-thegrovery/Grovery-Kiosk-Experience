@@ -8,7 +8,7 @@ import componentStyles from './styles.module.scss'
 
 export default function PdfThumbnail({ 
   //Props
-  thumbnail, icon, name
+  thumbnail, icon, name, url
 }) {
 
   //console.log(author);
@@ -16,14 +16,14 @@ export default function PdfThumbnail({
   const modalOpenDetect = () => {
     const element = document.getElementById("PdfModal");
     console.log("modal test success - start");
-    if (element.getAttribute('data-active') == "active") {
+    if (element.getAttribute('data-modal-status') == "active") {
       //Modal is open, close it
       console.log("modal test success - close");
-      element.setAttribute('data-active', 'inactive');
+      element.setAttribute('data-modal-status', 'inactive');
     } else {
       //Modal is closed, open it
       console.log("modal test success - open");
-      element.setAttribute('data-active', 'active');
+      element.setAttribute('data-modal-status', 'active');
     }
   }
 
@@ -33,7 +33,11 @@ export default function PdfThumbnail({
 
 
   return (
-    <div className={componentStyles.PdfThumbnail}>
+    <div 
+      className={componentStyles.PdfThumbnail}
+      onClick={handleClick}
+      data-pdf-url={url}
+    >
 
       <div className={componentStyles.thumbnail}>
         {thumbnail ? 
@@ -41,7 +45,7 @@ export default function PdfThumbnail({
           :
           <img src="/images/thumbnails/oncologyEnrollmentForm.png" alt="" />
         }
-        <div className={"PdfModalButton "+componentStyles.thumbnailIcon} onClick={handleClick}>
+        <div className={componentStyles.thumbnailIcon}>
           <ZoomIcon/>
         </div>
       </div>
