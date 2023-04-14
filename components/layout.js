@@ -9,6 +9,7 @@ import $ from 'jquery'
 
 import Sidebar from '@components/Sidebar'
 import SupportModal from '@components/SupportModal'
+import Modal from '@components/Modal'
 import BackToHome from '@components/BackToHome'
 import SmallScreenWarning from '@components/SmallScreenWarning'
 import FullScreenWidget from '@components/FullScreenWidget'
@@ -100,6 +101,7 @@ export default function Layout({
       <SmallScreenWarning/>
       <FullScreenWidget/>
       <SupportModal/>
+      <Modal/>
       
       {/* MAIN SECTION */}
       <main className={styles.main}>

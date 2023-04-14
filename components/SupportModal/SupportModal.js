@@ -18,7 +18,12 @@ export default function SupportModal({
   //console.log(author);
 
   return (
-    <div id="SupportModal" data-modal="support" data-modal-status="inactive"className={componentStyles.outer}>
+    <div 
+      id="SupportModal" 
+      data-modal="support" 
+      data-modal-status="inactive"
+      className={componentStyles.outer}
+    >
       <div className={componentStyles.backDrop} data-modal-close="support"></div>
       <div className={componentStyles.SupportModal}>
         

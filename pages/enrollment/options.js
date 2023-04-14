@@ -59,7 +59,9 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <PdfThumbnail/>
+                  <PdfThumbnail
+                    name="Sample forms"
+                  />
                 </div>
 
               </div>

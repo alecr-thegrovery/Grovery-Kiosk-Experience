@@ -8,13 +8,36 @@ import componentStyles from './styles.module.scss'
 
 export default function PdfThumbnail({ 
   //Props
-  thumbnail, icon, name
+  thumbnail, icon, name, url
 }) {
 
   //console.log(author);
 
+  const modalOpenDetect = () => {
+    const element = document.getElementById("PdfModal");
+    console.log("modal test success - start");
+    if (element.getAttribute('data-modal-status') == "active") {
+      //Modal is open, close it
+      console.log("modal test success - close");
+      element.setAttribute('data-modal-status', 'inactive');
+    } else {
+      //Modal is closed, open it
+      console.log("modal test success - open");
+      element.setAttribute('data-modal-status', 'active');
+    }
+  }
+
+  const handleClick = () => {
+    modalOpenDetect();
+  };
+
+
   return (
-    <div className={componentStyles.PdfThumbnail}>
+    <div 
+      className={componentStyles.PdfThumbnail}
+      onClick={handleClick}
+      data-pdf-url={url}
+    >
 
       <div className={componentStyles.thumbnail}>
         {thumbnail ? 
