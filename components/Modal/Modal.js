@@ -6,66 +6,30 @@ import PDFModal from './PDFModal'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-
 export default function Modal({ 
   //Props
-  id, image, title, 
-  previewText, author, date
+  children, pdf, support, 
 }) {
 
   //console.log(author);
 
   return (
-    <div className={componentStyles.Modal}>
-      {image ? 
-         <div className={componentStyles.image}>
-          <Link href={`/posts/${id}`}>
-            <a>
-              <img 
-                src={image} 
-                alt="" 
-              />
-            </a>
-          </Link>
-        </div>
-        :
-        <>
-          NO IMAGE
-        </>
-      }
-       
-        <Link href={`/posts/${id}`}>
-          <a className={componentStyles.title}>{title}</a>
-        </Link>
-        {previewText && 
-          <p className={componentStyles.previewText}>
-            {previewText}
-          </p>
-        }
-        <div className={componentStyles.readMore}>
-          <Button1
-             href={`/posts/${id}`}
-             text="READ MORE"
-          />
-        </div>
-        <div className={componentStyles.postMetas}>
-          {author &&
-            <span className={componentStyles.author}>{author} | </span>
-          }
-          {date &&
-            <span className={componentStyles.date}>
-              <Date dateString={date}  />
-            </span>
-          }          
-        </div>
-        <SocialIcons
-          instagram="#"
-          facebook="#"
-          twitter="#"
-          tumblr="#"
-          pinterest="#"
-        />
+
+    <div className={componentStyles.ModalWrapper}>
       
+      {/*Backdrop filter, click to close*/}
+      <div className={componentStyles.backdrop} />
+      
+      <div className={componentStyles.modalInner}>
+
+      <PDFModal url="/pdf/test.pdf" />
+        
+        {pdf && 
+          <PDFModal url={pdf ? pdf : "/pdf/test.pdf"} />
+        }  
+
+      </div>
+
     </div>
   )
 }
