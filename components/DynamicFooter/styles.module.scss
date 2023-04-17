@@ -1,7 +1,7 @@
 @import "@styles/vars.module.scss";
 
 $fixedWidth: clamp(250px, 20vw,360px);
-$footerHeight: 1.5rem;
+$footerHeight: 3rem;
 
 .DynamicFooter{
 	//border: solid 2px $black;
@@ -11,7 +11,7 @@ $footerHeight: 1.5rem;
 	bottom: 0px;
 	width: 100%;
 	width:calc(100% - #{$fixedWidth});
-	height: $footerHeight;
+	//height: $footerHeight;
 	background-color: $white;
 	box-shadow: 0.1em -0.1em 0.25em rgba($black, 0.15);
 	
@@ -30,7 +30,10 @@ $footerHeight: 1.5rem;
 		font-size: $clampExtraExtraSmall;
 		text-align: center;
 		.dynamicText{
-
+			font-size: $clampExtraSmall;
+			width: 100%;
+			max-width: 1000px;
+			margin: auto;
 		}
 	}
 	
