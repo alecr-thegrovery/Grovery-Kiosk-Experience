@@ -31,7 +31,7 @@ export default function Layout({
         console.log("page-transition: " + url + " | "+ delay);
         router.prefetch(url); //prefetch next page
         setTimeout(function() { 
-          $("#LayoutOuter").attr("data-action-state", "true"); //page transition
+          $("#LayoutOuter").attr("data-action-state", "page-transition-started"); //page transition
           setTimeout(function() { 
             router.push(url); //move user to next page
           }, 250); //allow time for page transition

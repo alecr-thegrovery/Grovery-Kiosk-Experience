@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
 import 'normalize.css';
-import 'tippy.js/dist/tippy.css';
 //Swiper.JS
 import 'swiper/swiper.scss';
 import 'swiper/components/a11y/a11y.scss';
@@ -38,14 +37,15 @@ export default function App({ Component, pageProps }) {
         }, delay);
       }
 
-      updateActionState('none', 0);
+      /* ===== Global ===== */
+        updateActionState('none', 0);
 
-      //global page transition
-      updateActionState('load-finished', 2000);
-      //wait a beat after page load
-      updateActionState('just-after-load', 2500);
-      //and another
-      updateActionState('just-after-load-2', 5000);
+        //global page transition
+        updateActionState('load-finished', 2000);
+        //wait a beat after page load
+        updateActionState('just-after-load', 2500);
+        //and another
+        updateActionState('just-after-load-2', 5000);
 
     /* ============================= */
     /* ===== CSS Comment Header ===== */
@@ -195,7 +195,7 @@ export default function App({ Component, pageProps }) {
                 updateActionState('card-drop-success', 0);
                 router.prefetch(link); //prefetch next page
                 setTimeout(function() { 
-                    $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+                    updateActionState('page-transition-started', 0);//page transition
                     router.push(link); //move user to next page
                 }, 1000);
               }
