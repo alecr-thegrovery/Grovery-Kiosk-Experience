@@ -26,24 +26,12 @@ export default function Layout({
   
   useEffect(() => {
     $(document).ready(function() {
-      smoothLoad();
-
-      function smoothLoad(){
-        let bufferTime = 250;
-        let bufferTime2 = 2000;
-        setTimeout(function() { 
-            $("#LayoutOuter").attr("data-hidden", "false");
-            setTimeout(function() { 
-                $("#LayoutOuter").attr("data-hidden", "animationEnded");
-            }, bufferTime2);
-        }, bufferTime);
-      }
-
+      
       function pageTransition(url, delay){
         console.log("page-transition: " + url + " | "+ delay);
         router.prefetch(url); //prefetch next page
         setTimeout(function() { 
-          $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+          $("#LayoutOuter").attr("data-action-state", "true"); //page transition
           setTimeout(function() { 
             router.push(url); //move user to next page
           }, 250); //allow time for page transition

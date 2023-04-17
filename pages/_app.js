@@ -40,10 +40,16 @@ export default function App({ Component, pageProps }) {
 
       updateActionState('none', 0);
 
+      //global page transition
+      updateActionState('load-finished', 2000);
       //wait a beat after page load
       updateActionState('just-after-load', 2500);
       //and another
       updateActionState('just-after-load-2', 5000);
+
+    /* ============================= */
+    /* ===== CSS Comment Header ===== */
+    /* ============================= */
 
 
     /* =========================== */
