@@ -27,7 +27,7 @@ export default function Layout({
   useEffect(() => {
     $(document).ready(function() {
       
-      function pageTransition(url, delay){
+     /* function pageTransition(url, delay){
         console.log("page-transition: " + url + " | "+ delay);
         router.prefetch(url); //prefetch next page
         setTimeout(function() { 
@@ -36,17 +36,17 @@ export default function Layout({
             router.push(url); //move user to next page
           }, 250); //allow time for page transition
         }, delay); //allow time for element animations
-      } //END pageTransition function
+      } //END pageTransition function*/
 
       let url = "";
       let delay = 1000;
 
-      $("[data-page-transition]").click(function(){
+      /*$("[data-page-transition]").click(function(){
         console.log("data-page-transition click");
         url = $(this).attr("data-page-transition");
         delay = $(this).attr("data-delay");
         pageTransition(url, delay);
-      }); 
+      }); */
 
       $("[data-page-back]").click(function(){
         console.log("data-page-back click");

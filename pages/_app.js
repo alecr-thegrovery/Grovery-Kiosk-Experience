@@ -41,16 +41,52 @@ export default function App({ Component, pageProps }) {
         updateActionState('none', 0);
 
         //global page transition
-        updateActionState('load-finished', 2000);
+        updateActionState('load-finished', 1000);
         //wait a beat after page load
         updateActionState('just-after-load', 2500);
         //and another
         updateActionState('just-after-load-2', 5000);
 
-    /* ============================= */
-    /* ===== CSS Comment Header ===== */
-    /* ============================= */
+    /* ========================== */
+    /* ===== Page Transition ===== */
+    /* ========================== */
+        function pageTransition(url, delay){
 
+          console.log("page-transition: " + url + " | "+ delay);
+          router.prefetch(url); //prefetch next page
+          updateActionState('page-transition-started', delay);
+          router.push(url);
+         /* setTimeout(function() { 
+            //page transition
+            setTimeout(function() { 
+               //move user to next page
+            }, 1000); //allow time for page transition
+          }, delay); //allow time for element animations*/
+
+        } //END pageTransition function
+
+    /* ================================= */
+    /* ===== Page Transition Clicks ===== */
+    /* ================================= */
+        let url = "";
+        let delay = 1000;
+
+        const pageTransitionLinks = document.querySelectorAll('[data-page-transition]');
+
+        pageTransitionLinks.forEach(element => {
+          element.addEventListener('click', () => {
+            console.log("data-page-transition click");
+            url = element.getAttribute("data-page-transition");
+            delay = element.getAttribute("data-delay");
+            pageTransition(url, delay);
+          });
+        });
+        
+
+        /*$("[data-page-back]").click(function(){
+          console.log("data-page-back click");
+          window.history.back()
+        }); */
 
     /* =========================== */
     /* ===== Drag & Drop code =====  */
