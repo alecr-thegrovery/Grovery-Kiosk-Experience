@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
 import 'normalize.css';
-import 'tippy.js/dist/tippy.css';
 //Swiper.JS
 import 'swiper/swiper.scss';
 import 'swiper/components/a11y/a11y.scss';
@@ -25,9 +24,6 @@ export default function App({ Component, pageProps }) {
     /* ============================= */
     /* ===== Global Action State ===== */
     /* ============================= */
-      let actionState = document.querySelector("#LayoutOuter");
-      actionState.setAttribute("data-action-state","none");
-
       //define function
       function updateActionState(stateValue, delay) {
         setTimeout(function() {
@@ -38,13 +34,53 @@ export default function App({ Component, pageProps }) {
         }, delay);
       }
 
-      updateActionState('none', 0);
+      /* ===== Global ===== */
+        updateActionState('none', 0);
 
-      //wait a beat after page load
-      updateActionState('just-after-load', 2500);
-      //and another
-      updateActionState('just-after-load-2', 5000);
+        //global page transition
+        updateActionState('load-finished', 1000);
+        //wait a beat after page load
+        updateActionState('just-after-load', 2500);
+        //and another
+        updateActionState('just-after-load-2', 5000);
 
+    /* ========================== */
+    /* ===== Page Transition ===== */
+    /* ========================== */
+        function pageTransition(url, delay){
+          console.log("page-transition: " + url + " | "+ delay);
+          router.prefetch(url); //prefetch next page
+          updateActionState('page-transition-started', delay);
+          router.push(url);
+        } //END pageTransition function
+
+    /* ================================= */
+    /* ===== Page Transition Clicks ===== */
+    /* ================================= */
+      /* ===== Link Clicks ===== */
+        let url = "";
+        let delay = 1000;
+
+        const pageTransitionLinks = document.querySelectorAll('[data-page-transition]');
+
+        pageTransitionLinks.forEach(element => {
+          element.addEventListener('click', () => {
+            console.log("data-page-transition click");
+            url = element.getAttribute("data-page-transition");
+            delay = element.getAttribute("data-delay");
+            pageTransition(url, delay);
+          });
+        });
+          
+      /* ===== Back Button Click ===== */
+        const backButton = document.querySelectorAll('[data-page-back]');
+        backButton.forEach(element => {
+          element.addEventListener('click', () => {
+            console.log("data-page-back click");
+            updateActionState('page-transition-started', 0);
+            window.history.back();
+          });
+        });
 
     /* =========================== */
     /* ===== Drag & Drop code =====  */
@@ -189,7 +225,7 @@ export default function App({ Component, pageProps }) {
                 updateActionState('card-drop-success', 0);
                 router.prefetch(link); //prefetch next page
                 setTimeout(function() { 
-                    $("#LayoutOuter").attr("data-hidden", "true"); //page transition
+                    updateActionState('page-transition-started', 0);//page transition
                     router.push(link); //move user to next page
                 }, 1000);
               }

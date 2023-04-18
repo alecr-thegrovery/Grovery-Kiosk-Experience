@@ -19,6 +19,33 @@
   /* ===== Initial Page Load  ===== */
   /* ============================ */
 
+    /* ===== Global Page Transition ===== */
+      #LayoutOuter{
+        //initial page load
+        &[data-action-state="none"]{
+          opacity: 0;
+          pointer-events: none;
+          //transform: translate3d(0px, 25px, 0px);
+        }
+        &[data-action-state="load-finished"]{
+          opacity: 1;
+          pointer-events: auto;
+          //transform: translate3d(0px, 0px, 0px);
+        }
+
+        &[data-action-state="page-transition-started"]{
+          opacity: 0;
+          pointer-events: none;
+          //transform: translate3d(0px, 25px, 0px);
+
+          [data-tooltip]{
+            opacity: 0;
+            pointer-events: none;
+          }
+        }
+
+      }
+      
   	/* ===== Home ===== */
   		// bg filter lightly fades in,
   		// IDCards fade in one-by-one
@@ -43,6 +70,7 @@
   				transition-delay: calc(4 * #{$delay}) ;
   			}
   		}
+
   		#LayoutOuter[data-action-state="just-after-load"]{
   			[data-animation="fadeInUp"],{
   				transform: translate3d(0em, 0vh, 0em);
@@ -67,7 +95,7 @@
   		#LayoutOuter[data-action-state="just-after-load-2"]{
   			[data-animation="fadeInUp"]{
   				transition:0s;
-  				transition-delay: 0s;
+  				//transition-delay: 0s;
   				pointer-events: auto;
   			}
   		}
