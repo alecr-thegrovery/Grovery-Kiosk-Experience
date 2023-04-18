@@ -22,7 +22,7 @@
     /* ===== Global Page Transition ===== */
       #LayoutOuter{
         //initial page load
-        &[data-action-state="none"]{
+        &[data-action-state="initial"]{
           opacity: 0;
           pointer-events: none;
           //transform: translate3d(0px, 25px, 0px);
@@ -131,7 +131,8 @@
       pointer-events: none;
     }
   }
-  #LayoutOuter[data-action-page="lvl-1"][data-action-state="just-after-load-2"]{
+  #LayoutOuter[data-action-page="lvl-1"][data-action-state="just-after-load-2"],
+  #LayoutOuter[data-action-page="lvl-1"][data-action-state="load-sequence-complete"]{
     .cardsFilter,
     .colorFilter{
       opacity:0.15;
@@ -277,3 +278,42 @@
       }
 
 
+
+
+
+/* ================================== */
+/* ===== Level 3 Page Transitions ===== */
+/* ================================== */
+
+  #LayoutOuter{
+    &[data-action-state="load-finished"]{
+      [data-transition-screen]{
+        transform-origin: 50% 83%;
+      }
+    }
+    &[data-action-state="just-after-load"]{
+      [data-transition-screen]{
+        //zoom in
+        transform: scale(2.5);
+        transform-origin: 50% 83%;
+      }
+    }
+    &[data-action-state="just-after-load-2"]{
+      [data-transition-screen]{
+        //keep zoom in, fade out
+        transform: scale(2.5);
+        transform-origin: 50% 83%;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    &[data-action-state="load-sequence-complete"]{
+      [data-transition-screen]{
+        //keep zoom in, fade out
+        transform: none;
+        transform-origin: auto;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }

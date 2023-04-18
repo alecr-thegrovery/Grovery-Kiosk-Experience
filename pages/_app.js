@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
       }
 
       /* ===== Global ===== */
-        updateActionState('none', 0);
+        updateActionState('initial', 0);
 
         //global page transition
         updateActionState('load-finished', 1000);
@@ -43,6 +43,8 @@ export default function App({ Component, pageProps }) {
         updateActionState('just-after-load', 2500);
         //and another
         updateActionState('just-after-load-2', 5000);
+        //final load-based animations
+        updateActionState('load-sequence-complete', 6000);
 
     /* ========================== */
     /* ===== Page Transition ===== */
