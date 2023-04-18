@@ -25,15 +25,7 @@ export default function Layout({
 }) {
   
   useEffect(() => {
-    $(document).ready(function() {
-
-      $("[data-page-back]").click(function(){
-        console.log("data-page-back click");
-        window.history.back()
-      }); 
-
-    });
-
+    
   });
 
   return (

@@ -24,9 +24,6 @@ export default function App({ Component, pageProps }) {
     /* ============================= */
     /* ===== Global Action State ===== */
     /* ============================= */
-      let actionState = document.querySelector("#LayoutOuter");
-      actionState.setAttribute("data-action-state","none");
-
       //define function
       function updateActionState(stateValue, delay) {
         setTimeout(function() {
@@ -51,23 +48,16 @@ export default function App({ Component, pageProps }) {
     /* ===== Page Transition ===== */
     /* ========================== */
         function pageTransition(url, delay){
-
           console.log("page-transition: " + url + " | "+ delay);
           router.prefetch(url); //prefetch next page
           updateActionState('page-transition-started', delay);
           router.push(url);
-         /* setTimeout(function() { 
-            //page transition
-            setTimeout(function() { 
-               //move user to next page
-            }, 1000); //allow time for page transition
-          }, delay); //allow time for element animations*/
-
         } //END pageTransition function
 
     /* ================================= */
     /* ===== Page Transition Clicks ===== */
     /* ================================= */
+      /* ===== Link Clicks ===== */
         let url = "";
         let delay = 1000;
 
@@ -81,12 +71,16 @@ export default function App({ Component, pageProps }) {
             pageTransition(url, delay);
           });
         });
-        
-
-        /*$("[data-page-back]").click(function(){
-          console.log("data-page-back click");
-          window.history.back()
-        }); */
+          
+      /* ===== Back Button Click ===== */
+        const backButton = document.querySelectorAll('[data-page-back]');
+        backButton.forEach(element => {
+          element.addEventListener('click', () => {
+            console.log("data-page-back click");
+            updateActionState('page-transition-started', 0);
+            window.history.back();
+          });
+        });
 
     /* =========================== */
     /* ===== Drag & Drop code =====  */
