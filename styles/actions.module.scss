@@ -41,6 +41,7 @@
 
   /* ===== Global Page Transition ===== */
     #LayoutOuter{
+      transition: 0s;
       //initial page load
       &[data-action-state="initial"]{
         opacity: 0;
@@ -48,7 +49,7 @@
         //transform: translate3d(0px, 25px, 0px);
       }
       &[data-action-state="load-finished"]{
-        
+        transition: $transitionMedium;
       }
 
       &[data-action-state="page-transition-started"]{
