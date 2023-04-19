@@ -25,12 +25,14 @@ export default function App({ Component, pageProps }) {
     /* ===== Global Action State ===== */
     /* ============================= */
       //define function
-      function updateActionState(stateValue, delay) {
+      function updateActionState(stateValue, delay, thread) {
         setTimeout(function() {
           let element = document.querySelector("#LayoutOuter");
-          //delay = delay*1000;
-          console.log(delay);
-          element.setAttribute("data-action-state", stateValue);
+          if(thread == 2){
+            element.setAttribute("data-action-state-2", stateValue);
+          } else{
+            element.setAttribute("data-action-state", stateValue);
+          }
         }, delay);
       }
 
@@ -39,12 +41,16 @@ export default function App({ Component, pageProps }) {
 
         //global page transition
         updateActionState('load-finished', 1000);
+        updateActionState('load-finished', 1000, 2);
         //wait a beat after page load
         updateActionState('just-after-load', 2500);
+        updateActionState('just-after-load', 2500, 2);
         //and another
         updateActionState('just-after-load-2', 5000);
+        updateActionState('just-after-load-2', 5000, 2);
         //final load-based animations
         updateActionState('load-sequence-complete', 6000);
+        updateActionState('load-sequence-complete', 6000, 2);
 
     /* ========================== */
     /* ===== Page Transition ===== */

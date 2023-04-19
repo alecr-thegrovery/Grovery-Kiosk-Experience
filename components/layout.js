@@ -34,6 +34,7 @@ export default function Layout({
       className={styles.outer} 
       data-hidden="true" 
       data-action-state="initial"  
+      data-action-state-2="initial"  
       data-action-page={pageActionState}
     >
       <Head>
