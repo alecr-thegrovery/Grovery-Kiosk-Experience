@@ -313,6 +313,7 @@
     //Indidivual Screens
       [data-transition-screen="1"]{$zoomFocus: 50% 83%;$zoomAmount: 2.5;}
       [data-transition-screen="2"]{$zoomFocus: 48% 25%;$zoomAmount: 3.5;}
+      [data-transition-screen="2"]{$zoomFocus: 73% 68%;$zoomAmount: 2.15;}
     /* ===== Initial State ===== */
       &[data-action-state-2="initial"],
       &[data-action-state-2="load-finished"]{
