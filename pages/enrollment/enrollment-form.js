@@ -9,6 +9,7 @@ import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
 import ComputerFrame from '@components/SVGComponents/ComputerFrame'
+import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
 
@@ -34,6 +35,7 @@ export default function Post({ postData }) {
 
         {/*Content*/}
         <div className={pageStyles.pageLevel3}>          
+          <TransitionScreen screen="2"/>     
           <section className={pageStyles.mainSection}>
             <ComputerFrame frame="2">
               {/*Inner Page Content*/}
