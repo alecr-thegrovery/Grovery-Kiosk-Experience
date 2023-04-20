@@ -307,49 +307,87 @@
 /* ================================== */
 
   #LayoutOuter{
-    //Default animation vars
+    //Default animation vars, override below
       $zoomFocus: 50% 83%;
       $zoomAmount: 2.5;
-    //Indidivual Screens
-      [data-transition-screen="1"]{$zoomFocus: 50% 83%;$zoomAmount: 2.5;}
-      [data-transition-screen="2"]{$zoomFocus: 48% 25%;$zoomAmount: 3.5;}
-      [data-transition-screen="2"]{$zoomFocus: 73% 68%;$zoomAmount: 2.15;}
+      transform-origin: $zoomFocus;
+    //Individual Screens
+      [data-transition-screen="1"]{
+        $zoomFocus: 55% 83%;
+        $zoomAmount: 2.5; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="2"]{
+        $zoomFocus: 48% 25%;
+        $zoomAmount: 3.5; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="3"]{
+        $zoomFocus: 73% 68%;
+        $zoomAmount: 2.15; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="4"]{
+        $zoomFocus: 65% 55%;
+        $zoomAmount: 2; 
+        transform-origin: $zoomFocus;
+      }
     /* ===== Initial State ===== */
-      &[data-action-state-2="initial"],
-      &[data-action-state-2="load-finished"]{
+      &[data-action-state="initial"],
+      &[data-action-state="load-finished"]{
         
-        [data-transition-screen]{
+      /* [data-transition-screen]{
           transform-origin: $zoomFocus;
-        }
+        }*/
         
       }
 
     /* ===== Animation Begin ===== */
-      &[data-action-state-2="just-after-load"]{
+      &[data-action-state="just-after-load"]{
         [data-transition-screen]{
           //zoom in
           transform: scale($zoomAmount);
+          //transform-origin: $zoomFocus;
+        }
+        [data-transition-screen="1"]{
+          $zoomFocus: 50% 83%;
+          $zoomAmount: 2.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="2"]{
+          $zoomFocus: 48% 25%;
+          $zoomAmount: 3.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="3"]{
+          $zoomFocus: 73% 68%;
+          $zoomAmount: 2.15; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="4"]{
+          $zoomFocus: 65% 55%;
+          $zoomAmount: 2; 
           transform-origin: $zoomFocus;
         }
       }
     
     /* ===== Animation Point 1 ===== */
-      &[data-action-state-2="just-after-load-2"]{
+      &[data-action-state="just-after-load-2"]{
         [data-transition-screen]{
           //keep zoom in, fade out & reveal content
-          transform: scale($zoomAmount);
-          transform-origin: $zoomFocus;
+          transform: scale(4);
+          //transform-origin: $zoomFocus;
           opacity: 0;
           pointer-events: none;
         }
       }
 
     /* ===== Complete, Clear Animations ===== */
-      &[data-action-state-2="load-sequence-complete"]{
+      &[data-action-state="load-sequence-complete"]{
         [data-transition-screen]{
           //clear everything after animations are complete
-          transform: none;
-          transform-origin: auto;
+          //transform: none;
+          //transform-origin: none;
           opacity: 0;
           pointer-events: none;
         }
