@@ -333,8 +333,8 @@
         transform-origin: $zoomFocus;
       }
     /* ===== Initial State ===== */
-      &[data-action-state="initial"],
-      &[data-action-state="load-finished"]{
+      &[data-action-state-2="initial"],
+      &[data-action-state-2="load-finished"]{
         
       /* [data-transition-screen]{
           transform-origin: $zoomFocus;
@@ -343,11 +343,10 @@
       }
 
     /* ===== Animation Begin ===== */
-      &[data-action-state="just-after-load"]{
+      &[data-action-state-2="just-after-load"]{
         [data-transition-screen]{
           //zoom in
           transform: scale($zoomAmount);
-          //transform-origin: $zoomFocus;
         }
         [data-transition-screen="1"]{
           $zoomFocus: 50% 83%;
@@ -372,18 +371,17 @@
       }
     
     /* ===== Animation Point 1 ===== */
-      &[data-action-state="just-after-load-2"]{
+      &[data-action-state-2="just-after-load-2"]{
         [data-transition-screen]{
           //keep zoom in, fade out & reveal content
           transform: scale(4);
-          //transform-origin: $zoomFocus;
           opacity: 0;
           pointer-events: none;
         }
       }
 
     /* ===== Complete, Clear Animations ===== */
-      &[data-action-state="load-sequence-complete"]{
+      &[data-action-state-2="load-sequence-complete"]{
         [data-transition-screen]{
           //clear everything after animations are complete
           //transform: none;
