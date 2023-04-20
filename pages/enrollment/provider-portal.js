@@ -24,7 +24,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout enrollment>
+    <Layout enrollment pageActionState="lvl-3">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
