@@ -34,8 +34,10 @@ export default function Layout({
       className={styles.outer} 
       data-hidden="true" 
       data-action-state="initial"  
-      data-action-state-2="initial"  
-      data-action-page={pageActionState}
+      data-action-state-load="initial"  
+      data-action-state-tooltips="initial"
+      data-action-state-cards="initial"
+      data-action-state-page={pageActionState}
     >
       <Head>
         <link rel="icon" href="/favicon.png" />

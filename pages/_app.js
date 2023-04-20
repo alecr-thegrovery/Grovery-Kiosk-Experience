@@ -28,8 +28,14 @@ export default function App({ Component, pageProps }) {
       function updateActionState(stateValue, delay, thread) {
         setTimeout(function() {
           let element = document.querySelector("#LayoutOuter");
-          if(thread == 2){
-            element.setAttribute("data-action-state-2", stateValue);
+          if(thread == "load"){
+            element.setAttribute("data-action-state-load", stateValue);
+          } else if(thread == "tooltips"){
+            element.setAttribute("data-action-state-tooltips", stateValue);
+          } else if(thread == "cards"){
+            element.setAttribute("data-action-state-cards", stateValue);
+          } else if(thread == "page"){
+            element.setAttribute("data-action-state-page", stateValue);
           } else{
             element.setAttribute("data-action-state", stateValue);
           }
@@ -41,16 +47,17 @@ export default function App({ Component, pageProps }) {
 
         //global page transition
         updateActionState('load-finished', 1000);
-        updateActionState('load-finished', 1000, 2);
+        updateActionState('load-finished', 1000, 'load');
         //wait a beat after page load
         updateActionState('just-after-load', 2500);
-        updateActionState('just-after-load', 2500, 2);
+        updateActionState('just-after-load', 2500, 'load');
         //and another
         updateActionState('just-after-load-2', 5000);
-        updateActionState('just-after-load-2', 5000, 2);
-        //final load-based animations
+        updateActionState('just-after-load-2', 5000, 'load');
+        updateActionState('show-after-load', 5000, 'tooltips');
+        //final load-based animations 
         updateActionState('load-sequence-complete', 6000);
-        updateActionState('load-sequence-complete', 6000, 2);
+        updateActionState('load-sequence-complete', 6000, 'load');
 
     /* ========================== */
     /* ===== Page Transition ===== */
@@ -86,6 +93,7 @@ export default function App({ Component, pageProps }) {
           element.addEventListener('click', () => {
             console.log("data-page-back click");
             updateActionState('page-transition-started', 0);
+            updateActionState('initial', 1000);
             window.history.back();
           });
         });
@@ -131,7 +139,8 @@ export default function App({ Component, pageProps }) {
               target.setAttribute('data-y', y);
 
               //update global event state
-              updateActionState('card-picked-up', 0);
+              updateActionState('card-interaction', 0, 'tooltips');
+              updateActionState('card-interaction', 0, 'cards');
 
               event.interactable.draggable({
                 snap: {
@@ -159,7 +168,8 @@ export default function App({ Component, pageProps }) {
 
             onend: function (event) {
               event.target.classList.remove('getting--dragged');
-              updateActionState('card-dropped', 0);
+              updateActionState('card-post-interaction', 0, 'tooltips');
+              updateActionState('card-post-interaction', 0, 'cards');
             }
           });
 

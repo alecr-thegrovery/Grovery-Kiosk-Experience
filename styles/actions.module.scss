@@ -15,21 +15,50 @@
 /* ================== */
   @import "@styles/vars.module.scss";
 
-/* ============================= */
-/* ===== Page Load Template ===== */
-/* ============================= */
+
+/* =================================== */
+/* ===== Vars & Mixins & Keyframes ===== */
+/* =================================== */
+  //SYNTAX:
+  //var:        width: $varName;
+  //mixin:   @include mixinName;
+
+  @mixin hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  @mixin visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  @keyframes fillPurple {
+    from {
+      fill: $white;
+    }
+    to {
+      fill: $purple;
+    }
+  }
+
+/* =========================== */
+/* ===== General Template ===== */
+/* =========================== */
 
   #LayoutOuter{
-    &[data-action-state-2="load-finished"]{
+    &[data-action-state-load="load-finished"]{
       
     }
-    &[data-action-state-2="just-after-load"]{
+    &[data-action-state-load="just-after-load"]{
       
     }
-    &[data-action-state-2="just-after-load-2"]{
+    &[data-action-state-load="just-after-load-2"]{
       
     }
-    &[data-action-state-2="load-sequence-complete"]{
+    &[data-action-state-load="load-sequence-complete"]{
       
     }
     //end of block
@@ -121,186 +150,101 @@
 			}
 		}
 
-/* ================================ */
+/* ================================= */
 /* ===== Draggable Card States ===== */
 /* ================================ */
+
+  /* ===== Global ===== */
+    .draggable{
+      z-index: 21;
+      .inner{
+        transition: $transitionMedium;
+      }
+      
+      &.getting--dragged{
+         z-index: 100 !important;
+        .inner{
+            transform: rotate(15deg) translate(0, -6vh) !important;
+            box-shadow: $niceShadowShort;
+          }
+        } 
+    }
   
-  /* ===== Initial Page State ===== */
-  .draggable{
-    z-index: 21 ;
-    .inner{
-      transition: $transitionMedium;
-    }
-    
-    &.getting--dragged{
-       z-index: 100 !important;
-       //position: fixed;
-      .inner{
-          transform: rotate(15deg) translate(0, -6vh) !important;
-          box-shadow: $niceShadowShort;
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    //Color Filters
+      &[data-action-state-load="just-after-load-2"],
+      &[data-action-state-load="load-sequence-complete"]{
+        .cardsFilter,
+        .colorFilter{
+          opacity:0.15;
         }
-      } 
+        &[data-action-state-cards="card-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.35;
+          }
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.15;
+          }
+        }
+      }
+  
+    //Emphasize first card
+      &[data-action-state-load="just-after-load-2"],
+      &[data-action-state-load="load-sequence-complete"]{
+        #enrollment .inner{
+          transform: translate(0, -4vh);
+        }
+        #enrollment [data-tooltip]{
+          transform: translate(-50%, -4vh);
+        }
+
+        
+      }
+
   }
 
-  #LayoutOuter[data-action-page="lvl-1"]{
-    [data-tooltip="lvl-1-place-card-here"]{
-      opacity: 0;
-      pointer-events: none;
+/* =================== */
+/* ===== Tooltips ===== */
+/* =================== */
+  
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    [data-tooltip]{
+      @include hidden;
     }
-    [data-tooltip="lvl-1-card-instructions"]{
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-  #LayoutOuter[data-action-page="lvl-1"][data-action-state="just-after-load-2"],
-  #LayoutOuter[data-action-page="lvl-1"][data-action-state="load-sequence-complete"]{
-    .cardsFilter,
-    .colorFilter{
-      opacity:0.15;
-    }
-    #enrollment{
-      .inner{
-        $cardOffset: clamp(-65px, -2vw, -25px);
-        transform: translate(0, $cardOffset);
-      }
+    &[data-action-state-tooltips="initial-hide"]{
       [data-tooltip]{
-        $cardOffset: clamp(-65px, -2vw, -25px);
-        transform: translate(-50%, $cardOffset);
+        @include hidden;
       }
     }
-    [data-tooltip="lvl-1-card-instructions"]{
-      opacity: 1;
-      pointer-events: auto;
+    &[data-action-state-tooltips="show-after-load"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include visible;
+      }
     }
-
-  }
-
-  /* ===== Card is Picked Up ===== */
-    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-1"]{
-      .draggable{
-        z-index: -1;
-        [data-tooltip]{
-          opacity: 0;
-          pointer-events: none;
-        }
+    &[data-action-state-tooltips="card-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
       }
-      #enrollment{
-        .inner, [data-tooltip]{
-          transform: translate(0, 0);
-        }
-      }
-      .cardsFilter,
-      .colorFilter{
-        opacity:1;
-        //z-index: 21;
-        pointer-events: auto;
-      }
-
       [data-tooltip="lvl-1-place-card-here"]{
-        opacity: 1;
-        pointer-events: auto;
-      }
-      [data-tooltip="lvl-2-card-initial"]{
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      /*#mainContent{
-        z-index: 21;
-      }
-      #rightSidebar{
-        z-index: 20;
-      }*/
-      #scannerBorder{
-        border-color: $purple;
-      }
-      #scannerLight{
-        &>div{
-          background-color: $purple;
-        }
-      }
-      #ScannerIcon{
-        $duration: 0.15s;
-        $iteration: 1;
-        [data-name="hand"] path{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.25s;
-        }
-        [data-name="wave-1"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.5s;
-        }
-        [data-name="wave-2"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.75s;
-        }
-        [data-name="wave-3"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 1s;
-        }
-        [data-name="wave-4"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 1.25s;
-        }
+        @include visible;
       }
     }
-
-    @keyframes fillPurple {
-      from {
-        fill: $white;
+    &[data-action-state-tooltips="card-post-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
       }
-      to {
-        fill: $purple;
+      [data-tooltip="lvl-1-place-card-here"]{
+        @include hidden;
       }
     }
-
-    #LayoutOuter[data-action-state="card-dropped"][data-action-page="lvl-1"]{
-      [data-tooltip]{
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      #enrollment{
-        .inner, [data-tooltip]{
-          transform: translate(0, 0);
-        }
-      }
-
-    }
-
-    /* ===== Page lvl 2 ===== */
-      #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-2"]{
-        [data-tooltip]{
-          opacity: 0;
-          pointer-events: none;
-        }
-      }
-
-      #LayoutOuter[data-action-state="card-dropped"][data-action-page="lvl-2"]{
-        [data-tooltip]{
-          opacity: 0;
-          pointer-events: none;
-        }
-      }
-
-
-
-
+    //end of block
+  }
 
 /* ================================== */
 /* ===== Level 3 Page Transitions ===== */
@@ -333,8 +277,8 @@
         transform-origin: $zoomFocus;
       }
     /* ===== Initial State ===== */
-      &[data-action-state-2="initial"],
-      &[data-action-state-2="load-finished"]{
+      &[data-action-state-load="initial"],
+      &[data-action-state-load="load-finished"]{
         
       /* [data-transition-screen]{
           transform-origin: $zoomFocus;
@@ -343,7 +287,7 @@
       }
 
     /* ===== Animation Begin ===== */
-      &[data-action-state-2="just-after-load"]{
+      &[data-action-state-load="just-after-load"]{
         [data-transition-screen]{
           //zoom in
           transform: scale($zoomAmount);
@@ -371,7 +315,7 @@
       }
     
     /* ===== Animation Point 1 ===== */
-      &[data-action-state-2="just-after-load-2"]{
+      &[data-action-state-load="just-after-load-2"]{
         [data-transition-screen]{
           //keep zoom in, fade out & reveal content
           transform: scale(4);
@@ -381,7 +325,7 @@
       }
 
     /* ===== Complete, Clear Animations ===== */
-      &[data-action-state-2="load-sequence-complete"]{
+      &[data-action-state-load="load-sequence-complete"]{
         [data-transition-screen]{
           //clear everything after animations are complete
           //transform: none;
