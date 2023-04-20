@@ -202,10 +202,78 @@
         #enrollment [data-tooltip]{
           transform: translate(-50%, -4vh);
         }
+        &[data-action-state-cards="card-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
+          }
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
+          }
+        }
 
         
       }
 
+    //Sidebar Animation
+      &[data-action-state-cards="card-interaction"]{
+        #scannerBorder{
+          border-color: $purple;
+        }
+        #ScannerIcon{
+          $duration: 0.15s;
+          $iteration: 1;
+          [data-name="hand"] path{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.25s;
+          }
+          [data-name="wave-1"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.5s;
+          }
+          [data-name="wave-2"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.75s;
+          }
+          [data-name="wave-3"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1s;
+          }
+          [data-name="wave-4"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1.25s;
+          }
+        }
+        #scannerLight{
+          &>div{
+            background-color: $purple;
+          }
+        }
+        //end
+      }
+      
   }
 
 /* =================== */
@@ -337,3 +405,5 @@
 
       //end
     }
+
+
