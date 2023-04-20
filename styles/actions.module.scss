@@ -15,265 +15,407 @@
 /* ================== */
   @import "@styles/vars.module.scss";
 
-  /* ============================ */
-  /* ===== Initial Page Load  ===== */
-  /* ============================ */
 
-    /* ===== Global Page Transition ===== */
-      #LayoutOuter{
-        //initial page load
-        &[data-action-state="none"]{
+/* =================================== */
+/* ===== Vars & Mixins & Keyframes ===== */
+/* =================================== */
+  //SYNTAX:
+  //var:        width: $varName;
+  //mixin:   @include mixinName;
+
+  @mixin hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  @mixin visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  @keyframes fillPurple {
+    from {
+      fill: $white;
+    }
+    to {
+      fill: $purple;
+    }
+  }
+
+/* =========================== */
+/* ===== General Template ===== */
+/* =========================== */
+
+  #LayoutOuter{
+    &[data-action-state-load="load-finished"]{
+      
+    }
+    &[data-action-state-load="just-after-load"]{
+      
+    }
+    &[data-action-state-load="just-after-load-2"]{
+      
+    }
+    &[data-action-state-load="load-sequence-complete"]{
+      
+    }
+    //end of block
+  }
+
+/* ============================ */
+/* ===== Initial Page Load  ===== */
+/* ============================ */
+
+  /* ===== Global Page Transition ===== */
+    #LayoutOuter{
+      transition: 0s;
+      //initial page load
+      &[data-action-state="initial"]{
+        opacity: 0;
+        pointer-events: none;
+        //transform: translate3d(0px, 25px, 0px);
+      }
+      &[data-action-state="load-finished"]{
+        transition: $transitionMedium;
+      }
+
+      &[data-action-state="page-transition-started"]{
+        transition: $transitionMedium;
+        opacity: 0;
+        pointer-events: none;
+        //transform: translate3d(0px, 25px, 0px);
+
+        [data-tooltip]{
           opacity: 0;
           pointer-events: none;
-          //transform: translate3d(0px, 25px, 0px);
         }
-        &[data-action-state="load-finished"]{
-          opacity: 1;
-          pointer-events: auto;
-          //transform: translate3d(0px, 0px, 0px);
+      }
+
+    }
+    
+	/* ===== Home ===== */
+		// bg filter lightly fades in,
+		// IDCards fade in one-by-one
+		#LayoutOuter[data-action-state="initial"],
+    #LayoutOuter[data-action-state="load-finished"]{
+			[data-animation="fadeInUp"]{
+				transform: translate3d(0em, 8vh, 0em);
+				opacity: 0;
+				pointer-events: none;
+				transition: 1s ease-in-out;
+			}
+			$delay: 0.15s;
+			[data-animation-delay="1"]{
+				transition-delay: calc(1 * #{$delay}) ;
+			}
+			[data-animation-delay="2"]{
+				transition-delay: calc(2 * #{$delay}) ;
+			}
+			[data-animation-delay="3"]{
+				transition-delay: calc(3 * #{$delay}) ;
+			}
+			[data-animation-delay="4"]{
+				transition-delay: calc(4 * #{$delay}) ;
+			}
+		}
+
+		#LayoutOuter[data-action-state="just-after-load"]{
+			[data-animation="fadeInUp"],{
+				transform: translate3d(0em, 0vh, 0em);
+				opacity: 1;
+				pointer-events: none;
+				transition: 1s ease-in-out;
+			}
+			$delay: 0.25s;
+			[data-animation-delay="1"]{
+				transition-delay: calc(1 * #{$delay}) ;
+			}
+			[data-animation-delay="2"]{
+				transition-delay: calc(2 * #{$delay}) ;
+			}
+			[data-animation-delay="3"]{
+				transition-delay: calc(3 * #{$delay}) ;
+			}
+			[data-animation-delay="4"]{
+				transition-delay: calc(4 * #{$delay}) ;
+			}
+		}
+		#LayoutOuter[data-action-state="load-sequence-complete"]{
+			[data-animation="fadeInUp"]{
+				transition:0s;
+				//transition-delay: 0s;
+				pointer-events: auto;
+			}
+		}
+
+/* ================================= */
+/* ===== Draggable Card States ===== */
+/* ================================ */
+
+  /* ===== Global ===== */
+    .draggable{
+      z-index: 21;
+      .inner{
+        transition: $transitionMedium;
+      }
+      
+      &.getting--dragged{
+         z-index: 100 !important;
+        .inner{
+            transform: rotate(15deg) translate(0, -6vh) !important;
+            box-shadow: $niceShadowShort;
+          }
+        } 
+    }
+  
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    //Color Filters
+      &[data-action-state-load="just-after-load-2"],
+      &[data-action-state-load="load-sequence-complete"]{
+        .cardsFilter,
+        .colorFilter{
+          opacity:0.15;
         }
-
-        &[data-action-state="page-transition-started"]{
-          opacity: 0;
-          pointer-events: none;
-          //transform: translate3d(0px, 25px, 0px);
-
-          [data-tooltip]{
-            opacity: 0;
-            pointer-events: none;
+        &[data-action-state-cards="card-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.35;
+          }
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.15;
+          }
+        }
+      }
+  
+    //Emphasize first card
+      &[data-action-state-load="just-after-load-2"],
+      &[data-action-state-load="load-sequence-complete"]{
+        #enrollment .inner{
+          transform: translate(0, -4vh);
+        }
+        #enrollment [data-tooltip]{
+          transform: translate(-50%, -4vh);
+        }
+        &[data-action-state-cards="card-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
+          }
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
           }
         }
 
+        
+      }
+
+    //Sidebar Animation
+      &[data-action-state-cards="card-interaction"]{
+        #scannerBorder{
+          border-color: $purple;
+        }
+        #ScannerIcon{
+          $duration: 0.15s;
+          $iteration: 1;
+          [data-name="hand"] path{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.25s;
+          }
+          [data-name="wave-1"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.5s;
+          }
+          [data-name="wave-2"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.75s;
+          }
+          [data-name="wave-3"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1s;
+          }
+          [data-name="wave-4"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1.25s;
+          }
+        }
+        #scannerLight{
+          &>div{
+            background-color: $purple;
+          }
+        }
+        //end
       }
       
-  	/* ===== Home ===== */
-  		// bg filter lightly fades in,
-  		// IDCards fade in one-by-one
-  		#LayoutOuter[data-action-state="none"]{
-  			[data-animation="fadeInUp"]{
-  				transform: translate3d(0em, 8vh, 0em);
-  				opacity: 0;
-  				pointer-events: none;
-  				transition: 1s ease-in-out;
-  			}
-  			$delay: 0.15s;
-  			[data-animation-delay="1"]{
-  				transition-delay: calc(1 * #{$delay}) ;
-  			}
-  			[data-animation-delay="2"]{
-  				transition-delay: calc(2 * #{$delay}) ;
-  			}
-  			[data-animation-delay="3"]{
-  				transition-delay: calc(3 * #{$delay}) ;
-  			}
-  			[data-animation-delay="4"]{
-  				transition-delay: calc(4 * #{$delay}) ;
-  			}
-  		}
+  }
 
-  		#LayoutOuter[data-action-state="just-after-load"]{
-  			[data-animation="fadeInUp"],{
-  				transform: translate3d(0em, 0vh, 0em);
-  				opacity: 1;
-  				pointer-events: none;
-  				transition: 1s ease-in-out;
-  			}
-  			$delay: 0.25s;
-  			[data-animation-delay="1"]{
-  				transition-delay: calc(1 * #{$delay}) ;
-  			}
-  			[data-animation-delay="2"]{
-  				transition-delay: calc(2 * #{$delay}) ;
-  			}
-  			[data-animation-delay="3"]{
-  				transition-delay: calc(3 * #{$delay}) ;
-  			}
-  			[data-animation-delay="4"]{
-  				transition-delay: calc(4 * #{$delay}) ;
-  			}
-  		}
-  		#LayoutOuter[data-action-state="just-after-load-2"]{
-  			[data-animation="fadeInUp"]{
-  				transition:0s;
-  				//transition-delay: 0s;
-  				pointer-events: auto;
-  			}
-  		}
+  /* ===== Page lvl 2 ===== */
+  #LayoutOuter[data-action-state-page="lvl-2"]{
 
-/* ================================ */
-/* ===== Draggable Card States ===== */
-/* ================================ */
+  }
+
+  /* ===== Page lvl 3 ===== */
+  #LayoutOuter[data-action-state-page="lvl-3"]{
+    .draggable{
+      pointer-events: none;
+    }
+  }
+
+/* =================== */
+/* ===== Tooltips ===== */
+/* =================== */
   
-  /* ===== Initial Page State ===== */
-  .draggable{
-    z-index: 21 ;
-    .inner{
-      transition: $transitionMedium;
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    [data-tooltip]{
+      @include hidden;
     }
-    
-    &.getting--dragged{
-       z-index: 100 !important;
-       //position: fixed;
-      .inner{
-          transform: rotate(15deg) translate(0, -6vh) !important;
-          box-shadow: $niceShadowShort;
-        }
-      } 
-  }
-
-  #LayoutOuter[data-action-page="lvl-1"]{
-    [data-tooltip="lvl-1-place-card-here"]{
-      opacity: 0;
-      pointer-events: none;
-    }
-    [data-tooltip="lvl-1-card-instructions"]{
-      opacity: 0;
-      pointer-events: none;
-    }
-  }
-  #LayoutOuter[data-action-page="lvl-1"][data-action-state="just-after-load-2"]{
-    .cardsFilter,
-    .colorFilter{
-      opacity:0.15;
-    }
-    #enrollment{
-      .inner{
-        $cardOffset: clamp(-65px, -2vw, -25px);
-        transform: translate(0, $cardOffset);
-      }
+    &[data-action-state-tooltips="initial-hide"]{
       [data-tooltip]{
-        $cardOffset: clamp(-65px, -2vw, -25px);
-        transform: translate(-50%, $cardOffset);
+        @include hidden;
       }
     }
-    [data-tooltip="lvl-1-card-instructions"]{
-      opacity: 1;
-      pointer-events: auto;
+    &[data-action-state-tooltips="show-after-load"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include visible;
+      }
     }
-
-  }
-
-  /* ===== Card is Picked Up ===== */
-    #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-1"]{
-      .draggable{
-        z-index: -1;
-        [data-tooltip]{
-          opacity: 0;
-          pointer-events: none;
-        }
+    &[data-action-state-tooltips="card-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
       }
-      #enrollment{
-        .inner, [data-tooltip]{
-          transform: translate(0, 0);
-        }
-      }
-      .cardsFilter,
-      .colorFilter{
-        opacity:1;
-        //z-index: 21;
-        pointer-events: auto;
-      }
-
       [data-tooltip="lvl-1-place-card-here"]{
-        opacity: 1;
-        pointer-events: auto;
-      }
-      [data-tooltip="lvl-2-card-initial"]{
-        opacity: 0;
-        pointer-events: none;
-      }
-
-      /*#mainContent{
-        z-index: 21;
-      }
-      #rightSidebar{
-        z-index: 20;
-      }*/
-      #scannerBorder{
-        border-color: $purple;
-      }
-      #scannerLight{
-        &>div{
-          background-color: $purple;
-        }
-      }
-      #ScannerIcon{
-        $duration: 0.15s;
-        $iteration: 1;
-        [data-name="hand"] path{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.25s;
-        }
-        [data-name="wave-1"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.5s;
-        }
-        [data-name="wave-2"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 0.75s;
-        }
-        [data-name="wave-3"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 1s;
-        }
-        [data-name="wave-4"]{
-          animation-name: fillPurple;
-           animation-duration: $duration;
-           animation-iteration-count: $iteration;
-           animation-fill-mode: forwards;
-           animation-delay: 1.25s;
-        }
+        @include visible;
       }
     }
-
-    @keyframes fillPurple {
-      from {
-        fill: $white;
+    &[data-action-state-tooltips="card-post-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
       }
-      to {
-        fill: $purple;
+      [data-tooltip="lvl-1-place-card-here"]{
+        @include hidden;
       }
     }
+    //end of block
+  }
 
-    #LayoutOuter[data-action-state="card-dropped"][data-action-page="lvl-1"]{
-      [data-tooltip]{
-        opacity: 0;
-        pointer-events: none;
+/* ================================== */
+/* ===== Level 3 Page Transitions ===== */
+/* ================================== */
+
+  #LayoutOuter{
+    //Default animation vars, override below
+      $zoomFocus: 50% 83%;
+      $zoomAmount: 2.5;
+      transform-origin: $zoomFocus;
+    //Individual Screens
+      [data-transition-screen="1"]{
+        $zoomFocus: 55% 83%;
+        $zoomAmount: 2.5; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="2"]{
+        $zoomFocus: 48% 25%;
+        $zoomAmount: 3.5; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="3"]{
+        $zoomFocus: 73% 68%;
+        $zoomAmount: 2.15; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="4"]{
+        $zoomFocus: 65% 55%;
+        $zoomAmount: 2; 
+        transform-origin: $zoomFocus;
+      }
+    /* ===== Initial State ===== */
+      &[data-action-state-load="initial"],
+      &[data-action-state-load="load-finished"]{
+        
+      /* [data-transition-screen]{
+          transform-origin: $zoomFocus;
+        }*/
+        
       }
 
-      #enrollment{
-        .inner, [data-tooltip]{
-          transform: translate(0, 0);
+    /* ===== Animation Begin ===== */
+      &[data-action-state-load="just-after-load"]{
+        [data-transition-screen]{
+          //zoom in
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="1"]{
+          $zoomFocus: 50% 83%;
+          $zoomAmount: 2.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="2"]{
+          $zoomFocus: 48% 25%;
+          $zoomAmount: 3.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="3"]{
+          $zoomFocus: 73% 68%;
+          $zoomAmount: 2.15; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="4"]{
+          $zoomFocus: 65% 55%;
+          $zoomAmount: 2; 
+          transform-origin: $zoomFocus;
         }
       }
-
-    }
-
-    /* ===== Page lvl 2 ===== */
-      #LayoutOuter[data-action-state="card-picked-up"][data-action-page="lvl-2"]{
-        [data-tooltip]{
+    
+    /* ===== Animation Point 1 ===== */
+      &[data-action-state-load="just-after-load-2"]{
+        [data-transition-screen]{
+          //keep zoom in, fade out & reveal content
+          transform: scale(4);
           opacity: 0;
           pointer-events: none;
         }
       }
 
-      #LayoutOuter[data-action-state="card-dropped"][data-action-page="lvl-2"]{
-        [data-tooltip]{
+    /* ===== Complete, Clear Animations ===== */
+      &[data-action-state-load="load-sequence-complete"]{
+        [data-transition-screen]{
+          //clear everything after animations are complete
+          //transform: none;
+          //transform-origin: none;
           opacity: 0;
           pointer-events: none;
         }
       }
+
+      //end
+    }
 
 
