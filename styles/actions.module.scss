@@ -276,6 +276,18 @@
       
   }
 
+  /* ===== Page lvl 2 ===== */
+  #LayoutOuter[data-action-state-page="lvl-2"]{
+
+  }
+
+  /* ===== Page lvl 3 ===== */
+  #LayoutOuter[data-action-state-page="lvl-3"]{
+    .draggable{
+      pointer-events: none;
+    }
+  }
+
 /* =================== */
 /* ===== Tooltips ===== */
 /* =================== */
