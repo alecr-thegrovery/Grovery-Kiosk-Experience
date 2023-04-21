@@ -370,6 +370,21 @@
         //$zoomAmount: 2.75; 
         transform-origin: $zoomFocus;
       }
+      [data-transition-screen="6"]{
+        $zoomFocus: 46% 53%;
+        //$zoomAmount: 2.75; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="7"]{
+        $zoomFocus: 20% 71%;
+        //$zoomAmount: 2.75; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="8"]{
+        $zoomFocus: 28% 52%;
+        //$zoomAmount: 2.75; 
+        transform-origin: $zoomFocus;
+      }
     /* ===== Initial State ===== */
       &[data-action-state-load="initial"],
       &[data-action-state-load="load-finished"]{
@@ -409,6 +424,21 @@
         [data-transition-screen="5"]{
           //$zoomFocus: 5% 81%;
           $zoomAmount: 2.75; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="6"]{
+          //$zoomFocus: 5% 81%;
+          $zoomAmount: 2.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="7"]{
+          //$zoomFocus: 5% 81%;
+          $zoomAmount: 2.15; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="8"]{
+          //$zoomFocus: 5% 81%;
+          $zoomAmount: 2.35; 
           transform: scale($zoomAmount);
         }
       }
