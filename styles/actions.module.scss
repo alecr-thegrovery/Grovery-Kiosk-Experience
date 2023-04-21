@@ -347,22 +347,27 @@
     //Individual Screens
       [data-transition-screen="1"]{
         $zoomFocus: 55% 83%;
-        $zoomAmount: 2.5; 
+        //$zoomAmount: 2.5; 
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="2"]{
         $zoomFocus: 48% 25%;
-        $zoomAmount: 3.5; 
+        //$zoomAmount: 3.5; 
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="3"]{
         $zoomFocus: 73% 68%;
-        $zoomAmount: 2.15; 
+        //$zoomAmount: 2.15; 
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="4"]{
         $zoomFocus: 65% 55%;
-        $zoomAmount: 2; 
+        //$zoomAmount: 2; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="5"]{
+        $zoomFocus: 5% 81%;
+        //$zoomAmount: 2.75; 
         transform-origin: $zoomFocus;
       }
     /* ===== Initial State ===== */
@@ -382,24 +387,29 @@
           transform: scale($zoomAmount);
         }
         [data-transition-screen="1"]{
-          $zoomFocus: 50% 83%;
+          //$zoomFocus: 50% 83%;
           $zoomAmount: 2.5; 
           transform: scale($zoomAmount);
         }
         [data-transition-screen="2"]{
-          $zoomFocus: 48% 25%;
+          //$zoomFocus: 48% 25%;
           $zoomAmount: 3.5; 
           transform: scale($zoomAmount);
         }
         [data-transition-screen="3"]{
-          $zoomFocus: 73% 68%;
+          //$zoomFocus: 73% 68%;
           $zoomAmount: 2.15; 
           transform: scale($zoomAmount);
         }
         [data-transition-screen="4"]{
-          $zoomFocus: 65% 55%;
+          //$zoomFocus: 65% 55%;
           $zoomAmount: 2; 
-          transform-origin: $zoomFocus;
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="5"]{
+          //$zoomFocus: 5% 81%;
+          $zoomAmount: 2.75; 
+          transform: scale($zoomAmount);
         }
       }
     
@@ -424,7 +434,7 @@
         }
       }
 
-      //end
+    //end
     }
 
 
