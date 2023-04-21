@@ -86,11 +86,6 @@
         opacity: 0;
         pointer-events: none;
         //transform: translate3d(0px, 25px, 0px);
-
-        [data-tooltip]{
-          opacity: 0;
-          pointer-events: none;
-        }
       }
 
     }
@@ -182,7 +177,7 @@
         &[data-action-state-cards="card-interaction"]{
           .cardsFilter,
           .colorFilter{
-            opacity:0.35;
+            opacity:0.5;
           }
         }
         &[data-action-state-cards="card-post-interaction"]{
@@ -324,6 +319,20 @@
       }
     }
     //end of block
+  }
+
+  /* ===== Page lvl 2 ===== */
+  #LayoutOuter[data-action-state-page="lvl-2"]{
+    &[data-action-state-cards="card-interaction"]{
+      [data-tooltip]{
+        @include hidden;
+      }
+    }
+    &[data-action-state-cards="card-post-interaction"]{
+      [data-tooltip]{
+        @include hidden;
+      }
+    }
   }
 
 /* ================================== */
