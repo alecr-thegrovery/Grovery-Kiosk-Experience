@@ -9,7 +9,7 @@ $fixedWidth: clamp(250px, 20vw,360px);
   transition: $transitionMedium;
   height: 100vh;
 
-  &[data-hidden="true"]{
+  /*&[data-hidden="true"]{
     opacity: 0;
     pointer-events: none;
     //transform: translate3d(0px, 25px, 0px);
@@ -18,7 +18,7 @@ $fixedWidth: clamp(250px, 20vw,360px);
     opacity: 1;
     pointer-events: auto;
     //transform: translate3d(0px, 0px, 0px);
-  }
+  }*/
 }
 
 .main{

@@ -9,6 +9,7 @@ import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
 import ComputerFrame from '@components/SVGComponents/ComputerFrame'
+import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
 import QRCodePreset from "@components/ContentComponents/QRCodePreset";
@@ -23,7 +24,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout access>
+    <Layout access pageActionState="lvl-3">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -36,6 +37,7 @@ export default function Post({ postData }) {
 
         {/*Content*/}
         <div className={pageStyles.pageLevel3}>          
+          <TransitionScreen screen="6"/>   
           <section className={pageStyles.mainSection}>
             <ComputerFrame frame="4">
               {/*Inner Page Content*/}

@@ -21,6 +21,7 @@
 	.mainSection{
 		height: 100%;
 		width: 100%;
+		position: relative;
 	}
 }
 
@@ -76,11 +77,13 @@
 .pageLevel3{
 	height: 100%;
 	width: 100%;
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-end;
+	overflow: hidden;
 	.mainSection{
 		height: 80%;
 		width: 100%;

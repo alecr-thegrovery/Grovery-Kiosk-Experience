@@ -9,6 +9,7 @@ import Layout, { siteData } from '@components/layout'
 import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
 import ComputerFrame from '@components/SVGComponents/ComputerFrame'
+import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
 import QRCodePreset from "@components/ContentComponents/QRCodePreset";
@@ -22,7 +23,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout financial>
+    <Layout financial pageActionState="lvl-3">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
@@ -30,11 +31,13 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading={["Commercial Patients"]}
+          subhead={["BMS Access Support may be able to help identify financial assistance programs for eligible patients who have been prescribed select BMS medications and need help managing the cost of treatment. The appropriate program will depend on the patient’s coverage."]}
         />
 
         {/*Content*/}
         <div className={pageStyles.pageLevel3}>          
+          <TransitionScreen screen="7"/>
           <section className={pageStyles.mainSection}>
             <ComputerFrame frame="1">
               {/*Inner Page Content*/}
