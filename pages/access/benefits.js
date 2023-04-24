@@ -37,7 +37,7 @@ export default function Post({ postData }) {
 
         {/*Content*/}
         <div className={pageStyles.pageLevel3}>       
-        <TransitionScreen screen="4"/>   
+          <TransitionScreen screen="4"/>   
           <section className={pageStyles.mainSection}>
             <ComputerFrame frame="4">
               {/*Inner Page Content*/}
