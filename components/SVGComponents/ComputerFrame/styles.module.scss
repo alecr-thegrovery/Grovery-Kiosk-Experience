@@ -75,6 +75,24 @@
 	}
 }
 
+.scrollNotice{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 18%;
+	left: 50%;
+	transform: translate3d(-50%, 1em, 0);
+	opacity: 0;
+	pointer-events: none;
+	transition: $transitionMedium;
+
+	background-color: $white;
+	border: 2px solid $purple;
+	border-radius: 0.5em;
+	padding:0.5em 1em;
+}
 
 .Frame1{
 	position: relative;
@@ -107,19 +125,8 @@
 		padding-left: $clampLarge;
 		padding-right: $clampLarge;
 	}
-}
 
-.scrollNotice{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	bottom: 18%;
-	left: 50%;
-	transform: translate3d(-50%, 1em, 0);
-
-	opacity: 0;
-	pointer-events: none;
-	transition: $transitionMedium;
+	.scrollNotice{
+		bottom: 22%;
+	}
 }

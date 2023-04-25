@@ -1,6 +1,7 @@
 /*===== Components =====*/
 import React from "react"
 import Link from 'next/link'
+import ChevronDown from '@components/SVGComponents/ChevronDown'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -30,8 +31,12 @@ export default function Frame3({
         </g>
         
         <foreignObject className={componentStyles.content} x="0" y="0" width="500" height="500">
-          <div className={componentStyles.contentInner}>
+          <div className={componentStyles.contentInner} data-overflow-detect>
             {children}
+          </div>
+          <div className={componentStyles.scrollNotice}>
+            Scroll to continue
+            <ChevronDown/>
           </div>
         </foreignObject>
 
