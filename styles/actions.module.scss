@@ -205,7 +205,6 @@
       }
   
     //Emphasize first card
-      &[data-action-state-load="just-after-load-2"],
       &[data-action-state-load="load-sequence-complete"]{
         #enrollment .inner{
           transform: translate(0, -4vh);
