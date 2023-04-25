@@ -152,7 +152,7 @@ export default function Sidebar({
               <a className={componentStyles.alt} data-page-back>
                 <BackIcon/> BACK
               </a>
-              <a data-page-transition="/" data-delay="500">
+              <a data-page-transition="/" data-delay="0">
                 <HomeIcon/> HOME
               </a>
             </div>

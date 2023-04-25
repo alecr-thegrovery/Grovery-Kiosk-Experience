@@ -69,6 +69,7 @@
 /* ========================== */
   #LayoutOuter{
     transition: $transitionMedium;
+    background: $white;
     &[data-action-state-transition="initial"]{
       @include visible;
     }
@@ -171,7 +172,7 @@
       &.getting--dragged{
          z-index: 100 !important;
         .inner{
-            transform: rotate(15deg) translate(0, -6vh) !important;
+            transform: rotate(15deg) translate(0, -6vh);
             box-shadow: $niceShadowShort;
           }
         } 
@@ -284,7 +285,11 @@
 
   /* ===== Page lvl 2 ===== */
   #LayoutOuter[data-action-state-page="lvl-2"]{
-
+    .getting--dragged{
+      .inner{
+          transform: rotate(15deg) translate(0, -6vh) scale(0.75);
+        }
+      } 
   }
 
   /* ===== Page lvl 3 ===== */

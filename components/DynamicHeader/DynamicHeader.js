@@ -53,11 +53,11 @@ export default function DynamicHeader({
           
           {/*Logo/Home Link*/}
           <div className={componentStyles.logo}>
-            <Link href="/">
-              <a>
+            {/*<Link href="/">*/}
+              <a data-page-transition="/" data-delay="0">
                 <img src="/images/BMSLogo.svg" alt="Bristol Myers Squibb - Access Support"/>
               </a>
-            </Link>
+            {/*</Link>*/}
 
           </div>
 
