@@ -69,6 +69,7 @@
 /* ========================== */
   #LayoutOuter{
     transition: $transitionMedium;
+    background: $white;
     &[data-action-state-transition="initial"]{
       @include visible;
     }
