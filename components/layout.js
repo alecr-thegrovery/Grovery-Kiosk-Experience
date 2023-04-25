@@ -35,6 +35,7 @@ export default function Layout({
       data-hidden="true" 
       data-action-state="initial"  
       data-action-state-load="initial"  
+      data-action-state-transition="hidden"  
       data-action-state-tooltips="initial"
       data-action-state-cards="initial"
       data-action-state-page={pageActionState}

@@ -2,13 +2,6 @@ import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
 import 'normalize.css';
-//Swiper.JS
-import 'swiper/swiper.scss';
-import 'swiper/components/a11y/a11y.scss';
-import 'swiper/components/controller/controller.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/thumbs/thumbs.scss';
 
 //Drag n Drop 
 import interact from 'interactjs'
@@ -30,6 +23,8 @@ export default function App({ Component, pageProps }) {
           let element = document.querySelector("#LayoutOuter");
           if(thread == "load"){
             element.setAttribute("data-action-state-load", stateValue);
+          } else if(thread == "transition"){
+            element.setAttribute("data-action-state-transition", stateValue);
           } else if(thread == "tooltips"){
             element.setAttribute("data-action-state-tooltips", stateValue);
           } else if(thread == "cards"){
@@ -43,39 +38,36 @@ export default function App({ Component, pageProps }) {
       }
 
       /* ===== Global ===== */
-        updateActionState('initial', 0);
         updateActionState('initial', 0, 'load');
+
+        updateActionState('initial', 0);
+        
         updateActionState('initial', 0, 'tooltips');
         updateActionState('initial', 0, 'cards');
 
-        //
+        //just after initial
         updateActionState('post-initial', 250), 'load';
         //global page transition
-        updateActionState('load-finished', 1000);
         updateActionState('load-finished', 1000, 'load');
         //wait a beat after page load
-        updateActionState('just-after-load', 2500);
         updateActionState('just-after-load', 2500, 'load');
         //and another
-        updateActionState('just-after-load-2', 5000);
         updateActionState('just-after-load-2', 5000, 'load');
         updateActionState('show-after-load', 5000, 'tooltips');
         //final load-based animations 
-        updateActionState('load-sequence-complete', 6000);
         updateActionState('load-sequence-complete', 6000, 'load');
 
     /* ========================== */
     /* ===== Page Transition ===== */
     /* ========================== */
+        updateActionState('visible', 1000, 'transition');
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
           router.prefetch(url); //prefetch next page
-          updateActionState('page-transition-started', 0, 'load');
-          updateActionState('page-transition-engaged', delay, 'load');
-           //updateActionState('initial', 0, 'cards');
-          //updateActionState('initial', 250, 'load');
-          router.push(url);
-           
+          updateActionState('hidden', delay, 'transition');
+          setTimeout(function() {
+            router.push(url);
+          }, delay);
         } //END pageTransition function
 
     /* ================================= */
@@ -250,11 +242,13 @@ export default function App({ Component, pageProps }) {
                //do nothing
               } else{
                 updateActionState('card-drop-success', 0);
-                router.prefetch(link); //prefetch next page
+                pageTransition(link, 1000)
+
+                /*router.prefetch(link); //prefetch next page
                 setTimeout(function() { 
                     updateActionState('page-transition-started', 0);//page transition
                     router.push(link); //move user to next page
-                }, 1000);
+                }, 1000);*/
               }
 
             },
