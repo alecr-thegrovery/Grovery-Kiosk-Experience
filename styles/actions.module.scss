@@ -64,50 +64,33 @@
     //end of block
   }
 
+/* ========================== */
+/* ===== Page Transition ===== */
+/* ========================== */
+  #LayoutOuter{
+    transition: $transitionMedium;
+    &[data-action-state-transition="initial"]{
+      @include visible;
+    }
+    &[data-action-state-transition="hidden"]{
+      @include hidden;
+    }
+    &[data-action-state-transition="visible"]{
+      @include visible;
+    }
+  }
+
+
 /* ============================ */
 /* ===== Initial Page Load  ===== */
 /* ============================ */
-
-  /* ===== Global Page Transition ===== */
-    #LayoutOuter{
-      transition: 0s;
-      @include hidden;
-      //initial page load
-      &[data-action-state-load="initial"]{
-        transition: 0s;
-        @include hidden;
-        //transform: translate3d(0px, 25px, 0px);
-      }
-      &[data-action-state-load="post-initial"]{
-        transition: $transitionMedium;
-      }
-      &[data-action-state-load="load-finished"]{
-        transition: $transitionMedium;
-        @include visible;
-      }
-      &[data-action-state-load="load-sequence-complete"],
-      &[data-action-state-load="just-after-load"],
-      &[data-action-state-load="just-after-load-2"]{
-        transition: 0;
-        @include visible;
-      }
-
-      &[data-action-state-load="page-transition-started"]{
-        transition: $transitionMedium;
-      }
-      &[data-action-state-load="page-transition-engaged"]{
-        transition: $transitionMedium;
-        @include hidden;
-        //transform: translate3d(0px, 25px, 0px);
-      }
-
-    }
     
 	/* ===== Home ===== */
 		// bg filter lightly fades in,
 		// IDCards fade in one-by-one
-		#LayoutOuter[data-action-state="initial"],
-    #LayoutOuter[data-action-state="load-finished"]{
+		#LayoutOuter[data-action-state-load="initial"],
+    #LayoutOuter[data-action-state-load="post-initial"],
+    #LayoutOuter[data-action-state-load="load-finished"]{
 			[data-animation="fadeInUp"]{
 				transform: translate3d(0em, 8vh, 0em);
 				opacity: 0;
