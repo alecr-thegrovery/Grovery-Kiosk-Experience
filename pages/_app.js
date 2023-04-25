@@ -29,6 +29,8 @@ export default function App({ Component, pageProps }) {
             element.setAttribute("data-action-state-tooltips", stateValue);
           } else if(thread == "cards"){
             element.setAttribute("data-action-state-cards", stateValue);
+          }else if(thread == "cards-show"){
+            element.setAttribute("data-action-state-cards-show", stateValue);
           } else if(thread == "page"){
             element.setAttribute("data-action-state-page", stateValue);
           } else{
@@ -37,25 +39,28 @@ export default function App({ Component, pageProps }) {
         }, delay);
       }
 
-      /* ===== Global ===== */
-        updateActionState('initial', 0, 'load');
+      /* ===== General  ===== */
+        updateActionState('initial', 0);       
 
-        updateActionState('initial', 0);
-        
+      /* ===== Cards ===== */
+        updateActionState('initial', 0, 'cards-show');
+        updateActionState('animate-start', 1500, 'cards-show');
+        updateActionState('visible', 1550, 'cards-show');
+        updateActionState('post-visible', 2500, 'cards-show');
+
+      /* ===== Tooltips ===== */
         updateActionState('initial', 0, 'tooltips');
-        updateActionState('initial', 0, 'cards');
-
-        //just after initial
-        updateActionState('post-initial', 250), 'load';
-        //global page transition
-        updateActionState('load-finished', 1000, 'load');
-        //wait a beat after page load
-        updateActionState('just-after-load', 2500, 'load');
-        //and another
-        updateActionState('just-after-load-2', 5000, 'load');
         updateActionState('show-after-load', 5000, 'tooltips');
-        //final load-based animations 
-        updateActionState('load-sequence-complete', 6000, 'load');
+
+     /* ===== Load Sequence ===== */
+      updateActionState('initial', 0, 'load');
+      updateActionState('post-initial', 250), 'load';
+      updateActionState('load-finished', 1000, 'load');
+      updateActionState('just-after-load', 2500, 'load');
+      updateActionState('just-after-load-2', 5000, 'load');
+      updateActionState('load-sequence-complete', 6000, 'load');
+
+      
 
     /* ========================== */
     /* ===== Page Transition ===== */

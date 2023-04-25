@@ -38,6 +38,7 @@ export default function Layout({
       data-action-state-transition="hidden"  
       data-action-state-tooltips="initial"
       data-action-state-cards="initial"
+      data-action-state-cards-show="initial"
       data-action-state-page={pageActionState}
     >
       <Head>
