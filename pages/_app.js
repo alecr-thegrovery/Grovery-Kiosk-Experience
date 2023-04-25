@@ -44,7 +44,12 @@ export default function App({ Component, pageProps }) {
 
       /* ===== Global ===== */
         updateActionState('initial', 0);
+        updateActionState('initial', 0, 'load');
+        updateActionState('initial', 0, 'tooltips');
+        updateActionState('initial', 0, 'cards');
 
+        //
+        updateActionState('post-initial', 250), 'load';
         //global page transition
         updateActionState('load-finished', 1000);
         updateActionState('load-finished', 1000, 'load');
@@ -65,8 +70,12 @@ export default function App({ Component, pageProps }) {
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
           router.prefetch(url); //prefetch next page
-          updateActionState('page-transition-started', delay);
+          updateActionState('page-transition-started', 0, 'load');
+          updateActionState('page-transition-engaged', delay, 'load');
+           //updateActionState('initial', 0, 'cards');
+          //updateActionState('initial', 250, 'load');
           router.push(url);
+           
         } //END pageTransition function
 
     /* ================================= */
