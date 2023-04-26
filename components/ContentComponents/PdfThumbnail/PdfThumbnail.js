@@ -14,16 +14,15 @@ export default function PdfThumbnail({
   //console.log(author);
 
   const modalOpenDetect = () => {
-    const element = document.getElementById("PdfModal");
-    console.log("modal test success - start");
+    const element = document.getElementById("ModalWrapper");
     if (element.getAttribute('data-modal-status') == "active") {
       //Modal is open, close it
-      console.log("modal test success - close");
       element.setAttribute('data-modal-status', 'inactive');
+      element.setAttribute('data-modal-show', '');
     } else {
       //Modal is closed, open it
-      console.log("modal test success - open");
       element.setAttribute('data-modal-status', 'active');
+      element.setAttribute('data-modal-show', 'PDFModal');
     }
   }
 

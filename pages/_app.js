@@ -328,22 +328,18 @@ export default function App({ Component, pageProps }) {
     /* =========================== */
         function inactivityTimer(timer){
           //vars
-            const WAIT_TIME_SECONDS = 10;
+            let WAIT_TIME_SECONDS = 10;
             let hasInteracted = false;
 
           //sub-functions
-            function redirect() {
+            function modalOpen() {
               //window.location.href = "index.html";
+              const element = document.getElementById("ModalWrapper");
               console.log("USER INTERACTION - TIMER OUT");
+              element.setAttribute('data-modal-status', 'active');
+              element.setAttribute('data-modal-show', 'InactivityModal');
             }
-            function restartTimerSequence() {
-              hasInteracted = false;
-              setTimeout(function() {
-                if (!hasInteracted) {
-                  redirect();
-                }
-              }, WAIT_TIME_SECONDS * 1000);
-            }
+            
             function resetTimer() {
               console.log("USER INTERACTION - TIMER RESET");
               hasInteracted = true;
@@ -359,7 +355,7 @@ export default function App({ Component, pageProps }) {
           //main snippet
           setTimeout(function() {
             if (!hasInteracted) {
-              redirect();
+              modalOpen();
               //return('end');
             }
           }, WAIT_TIME_SECONDS * 1000);

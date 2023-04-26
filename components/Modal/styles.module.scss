@@ -11,19 +11,48 @@ $backdropColor: rgba($black, 0.25);
 	z-index: 10000;
 	transition: $transitionMedium;
 
-	&[data-modal-status="inactive"]{
-		opacity: 0%;
-		pointer-events: none;
+	/* ===== Modal State ===== */
+		&[data-modal-status="inactive"]{
+			opacity: 0%;
+			pointer-events: none;
 
-		.modalInner{
-			transform: translate(-50%, -40%);
+			.modalInner{
+				transform: translate(-50%, -40%);
+			}
 		}
-	}
+		&[data-modal-status="active"]{
+			opacity: 100%;
+			pointer-events: auto;
+		}
 
-	&[data-modal-status="active"]{
-		opacity: 100%;
-		pointer-events: auto;
-	}
+	/* ===== Modal Selection ===== */
+		.PDFModal,
+		.VideoModal,
+		.SupportModal,
+		.InactivityModal{
+			display: none;
+		}
+		&[data-modal-show="PDFModal"]{
+			.PDFModal{
+				display: block;
+			}
+		}
+		&[data-modal-show="VideoModal"]{
+			.VideoModal{
+				display: block;
+			}
+		}
+		&[data-modal-show="SupportModal"]{
+			.SupportModal{
+				display: block;
+			}
+		}
+		&[data-modal-show="InactivityModal"]{
+			.InactivityModal{
+				display: block;
+			}
+		}
+	//end
 }
 
 .backdrop{
@@ -86,6 +115,49 @@ $backdropColor: rgba($black, 0.25);
 	}
 
 	.copyArea{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width:50vw;
+		margin: auto;
+		padding: $clampSmall;
+		font-size: $clampExtraSmall;
+	}
+}
+
+.InactivityModal{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: $white;
+	padding: 0 $clampLarge;
+
+	.closeButton{
+		position: absolute;
+		top: $clampSmall;
+		right: $clampSmall;
+		width: $clampSmall;
+		aspect-ratio: 1/1;
+		cursor: pointer;
+	}
+
+	.titleArea{
+		text-align: center;
+		padding: $clampSmall;
+		font-size: $clampSmall;
+	}
+
+	.copyArea{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width:50vw;
+		margin: auto;
+		padding: $clampSmall;
+		font-size: $clampSmall;
+	}
+
+	.buttonArea{
 		display: flex;
 		justify-content: center;
 		width: 100%;
