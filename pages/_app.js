@@ -322,6 +322,58 @@ export default function App({ Component, pageProps }) {
         });
 
 
+    /* =========================== */
+    /* ===== Inactivity Timer  ===== */
+    /* =========================== */
+        function inactivityTimer(timer){
+          //vars
+            let timerMinutes = 10;  
+            let timerSeconds = 30;  
+            let hasInteracted = false;
+            let hasInteracted2 = false;
+
+          //sub-functions
+            function modalOpen() {
+              console.log("USER INTERACTION - TIMER OUT");
+              const element = document.getElementById("ModalWrapper");
+              element.setAttribute('data-modal-status', 'active');
+              element.setAttribute('data-modal-show', 'InactivityModal');
+            }
+            function resetTimer() {
+              console.log("USER INTERACTION - TIMER RESET");
+              hasInteracted = true;
+              //restartTimerSequence();
+            }
+            function secondaryTimer(){
+              setTimeout(function() {
+                if (!hasInteracted2) {
+                  const element = document.getElementById("ModalWrapper");
+                  element.setAttribute('data-modal-status', 'inactive');
+                  element.setAttribute('data-modal-show', '');
+                  pageTransition('/', 0);
+                }
+              }, timerSeconds * 1000); //minutes, into seconds, into milliseconds
+            }
+
+          //event listeners
+            document.addEventListener("click", resetTimer);
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+
+          //main snippet
+          setTimeout(function() {
+            if (!hasInteracted) {
+              modalOpen();
+              secondaryTimer();
+              //return('end');
+            }
+          }, timerMinutes /** 60 */* 1000);  //minutes, into seconds, into milliseconds
+
+          
+        } //END inactivityTimer function
+
+        inactivityTimer();
+
   });
 
   return <Component {...pageProps} />
