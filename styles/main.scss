@@ -59,6 +59,12 @@
     background: $purple;
   }
 
+  *{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
+  }
+
 
 /* ===================================== */
 /* ===== Page Transition Background ===== */

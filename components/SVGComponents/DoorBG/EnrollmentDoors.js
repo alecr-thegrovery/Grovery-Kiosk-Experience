@@ -44,13 +44,15 @@ export default function EnrollmentDoors({
               <rect id="Rectangle_161" data-name="Rectangle 161" width="28.247" height="5.048" transform="translate(3937.923 610.686) rotate(-0.279)" fill="#f0e8e5"/>
             </g>
           </g>
-          <g id="door1" transform="translate(-2434.939 184.607)">
+          <g id="door1" className="doorElement" transform="translate(-2434.939 184.607)">
             <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)" className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive">
-              <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-              <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
-              <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
-              <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
-              <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
+              <g className="doorInner">
+                <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+                <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" stroke-width="1"/>
+                <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.403"/>
+                <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" stroke-width="1"/>
+                <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" stroke-width="1"/>
+              </g>
             </g>
           </g>
           <g id="door2" transform="translate(-2097.943 184.607)">
