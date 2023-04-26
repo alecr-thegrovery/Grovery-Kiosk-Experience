@@ -98,8 +98,7 @@ export default function App({ Component, pageProps }) {
         backButton.forEach(element => {
           element.addEventListener('click', () => {
             console.log("data-page-back click");
-            updateActionState('page-transition-started', 0);
-            updateActionState('initial', 1000);
+            updateActionState('hidden', 0, 'transition');
             window.history.back();
           });
         });
