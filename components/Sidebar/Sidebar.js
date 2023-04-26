@@ -10,6 +10,8 @@ import SupportIcon from '@components/SVGComponents/SupportIcon'
 import BackIcon from '@components/SVGComponents/BackIcon'
 import HomeIcon from '@components/SVGComponents/HomeIcon'
 import ScannerIcon from '@components/SVGComponents/ScannerIcon'
+import FullscreenOpenIcon from '@components/SVGComponents/FullscreenOpenIcon'
+import FullscreenCloseIcon from '@components/SVGComponents/FullscreenCloseIcon'
 import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
@@ -22,12 +24,16 @@ export default function Sidebar({
   access, enrollment, financial, resources,
   cardTooltipText
 }) {
-
+  
   const handleFullScreenClick = () => {
+    let element = document.querySelector("#fullscreenButton");
     if (document.fullscreenElement) {
       document.exitFullscreen();
+      element.setAttribute("data-icon", "open");
     } else {
       document.documentElement.requestFullscreen();
+      element.setAttribute("data-icon", "close");
+
     }
   };
 
@@ -142,8 +148,14 @@ export default function Sidebar({
           
           {home ?
             <div className={componentStyles.controls}>
-              <a  onClick={handleFullScreenClick}>
-                <p>&#9746;</p>
+              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open">
+                {/*<p>&#9746;</p>*/}
+                <div className={componentStyles.openIcon}>
+                  <FullscreenOpenIcon/>
+                </div>
+                <div className={componentStyles.closeIcon}>
+                  <FullscreenCloseIcon/>
+                </div>
                  FULLSCREEN
               </a>
             </div>
