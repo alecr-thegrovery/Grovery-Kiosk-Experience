@@ -323,6 +323,52 @@ export default function App({ Component, pageProps }) {
         });
 
 
+    /* =========================== */
+    /* ===== Inactivity Timer  ===== */
+    /* =========================== */
+        function inactivityTimer(timer){
+          //vars
+            const WAIT_TIME_SECONDS = 10;
+            let hasInteracted = false;
+
+          //sub-functions
+            function redirect() {
+              //window.location.href = "index.html";
+              console.log("USER INTERACTION - TIMER OUT");
+            }
+            function restartTimerSequence() {
+              hasInteracted = false;
+              setTimeout(function() {
+                if (!hasInteracted) {
+                  redirect();
+                }
+              }, WAIT_TIME_SECONDS * 1000);
+            }
+            function resetTimer() {
+              console.log("USER INTERACTION - TIMER RESET");
+              hasInteracted = true;
+              //restartTimerSequence();
+            }
+            
+
+          //event listeners
+            document.addEventListener("click", resetTimer);
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+
+          //main snippet
+          setTimeout(function() {
+            if (!hasInteracted) {
+              redirect();
+              //return('end');
+            }
+          }, WAIT_TIME_SECONDS * 1000);
+
+          
+        } //END inactivityTimer function
+
+        inactivityTimer();
+
   });
 
   return <Component {...pageProps} />
