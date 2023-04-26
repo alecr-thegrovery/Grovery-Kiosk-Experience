@@ -328,24 +328,33 @@ export default function App({ Component, pageProps }) {
     /* =========================== */
         function inactivityTimer(timer){
           //vars
-            let WAIT_TIME_SECONDS = 10;
+            let timerMinutes = 10;  
+            let timerSeconds = 30;  
             let hasInteracted = false;
+            let hasInteracted2 = false;
 
           //sub-functions
             function modalOpen() {
-              //window.location.href = "index.html";
-              const element = document.getElementById("ModalWrapper");
               console.log("USER INTERACTION - TIMER OUT");
+              const element = document.getElementById("ModalWrapper");
               element.setAttribute('data-modal-status', 'active');
               element.setAttribute('data-modal-show', 'InactivityModal');
             }
-            
             function resetTimer() {
               console.log("USER INTERACTION - TIMER RESET");
               hasInteracted = true;
               //restartTimerSequence();
             }
-            
+            function secondaryTimer(){
+              setTimeout(function() {
+                if (!hasInteracted2) {
+                  const element = document.getElementById("ModalWrapper");
+                  element.setAttribute('data-modal-status', 'inactive');
+                  element.setAttribute('data-modal-show', '');
+                  pageTransition('/', 0);
+                }
+              }, timerSeconds * 1000); //minutes, into seconds, into milliseconds
+            }
 
           //event listeners
             document.addEventListener("click", resetTimer);
@@ -356,9 +365,10 @@ export default function App({ Component, pageProps }) {
           setTimeout(function() {
             if (!hasInteracted) {
               modalOpen();
+              secondaryTimer();
               //return('end');
             }
-          }, WAIT_TIME_SECONDS * 1000);
+          }, timerMinutes /** 60 */* 1000);  //minutes, into seconds, into milliseconds
 
           
         } //END inactivityTimer function
