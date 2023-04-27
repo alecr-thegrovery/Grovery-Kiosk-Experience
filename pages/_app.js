@@ -20,21 +20,21 @@ export default function App({ Component, pageProps }) {
       //define function
       function updateActionState(stateValue, delay, thread) {
         setTimeout(function() {
-          let element = document.querySelector("#LayoutOuter");
+          const LayoutOuter = document.querySelector("#LayoutOuter");
           if(thread == "load"){
-            element.setAttribute("data-action-state-load", stateValue);
+            LayoutOuter.setAttribute("data-action-state-load", stateValue);
           } else if(thread == "transition"){
-            element.setAttribute("data-action-state-transition", stateValue);
+            LayoutOuter.setAttribute("data-action-state-transition", stateValue);
           } else if(thread == "tooltips"){
-            element.setAttribute("data-action-state-tooltips", stateValue);
+            LayoutOuter.setAttribute("data-action-state-tooltips", stateValue);
           } else if(thread == "cards"){
-            element.setAttribute("data-action-state-cards", stateValue);
+            LayoutOuter.setAttribute("data-action-state-cards", stateValue);
           }else if(thread == "cards-show"){
-            element.setAttribute("data-action-state-cards-show", stateValue);
+            LayoutOuter.setAttribute("data-action-state-cards-show", stateValue);
           } else if(thread == "page"){
-            element.setAttribute("data-action-state-page", stateValue);
+            LayoutOuter.setAttribute("data-action-state-page", stateValue);
           } else{
-            element.setAttribute("data-action-state", stateValue);
+            LayoutOuter.setAttribute("data-action-state", stateValue);
           }
         }, delay);
       }
@@ -321,6 +321,59 @@ export default function App({ Component, pageProps }) {
           });
         });
 
+
+    /* =========================== */
+    /* ===== Inactivity Timer  ===== */
+    /* =========================== */
+        function inactivityTimer(timer){
+          //vars
+            let timerMinutes = 10;  
+            let timerSeconds = 30;  
+            let hasInteracted = false;
+            let hasInteracted2 = false;
+
+          //sub-functions
+            function modalOpen() {
+              console.log("USER INTERACTION - TIMER OUT");
+              const element = document.getElementById("ModalWrapper");
+              element.setAttribute('data-modal-status', 'active');
+              element.setAttribute('data-modal-show', 'InactivityModal');
+            }
+            function resetTimer() {
+              console.log("USER INTERACTION - TIMER RESET");
+              hasInteracted = true;
+              //restartTimerSequence();
+            }
+            function secondaryTimer(){
+              setTimeout(function() {
+                if (!hasInteracted2) {
+                  const element = document.getElementById("ModalWrapper");
+                  element.setAttribute('data-modal-status', 'inactive');
+                  element.setAttribute('data-modal-show', '');
+                  pageTransition('/', 0);
+                }
+              }, timerSeconds * 1000); //minutes, into seconds, into milliseconds
+            }
+
+          //event listeners
+            document.addEventListener("click", resetTimer);
+            document.addEventListener("mousemove", resetTimer);
+            document.addEventListener("keydown", resetTimer);
+
+          //main snippet
+          setTimeout(function() {
+            if (!hasInteracted) {
+              modalOpen();
+              secondaryTimer();
+              //return('end');
+            }
+          }, timerMinutes /** 60 */* 1000);  //minutes, into seconds, into milliseconds
+
+          
+        } //END inactivityTimer function
+
+        //disabled during build
+        //inactivityTimer();
 
   });
 

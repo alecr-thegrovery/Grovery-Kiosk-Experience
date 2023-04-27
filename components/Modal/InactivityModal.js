@@ -7,7 +7,7 @@ import CloseIcon from '@components/SVGComponents/CloseIcon'
 import componentStyles from './styles.module.scss'
 
 
-export default function PDFModal({ 
+export default function InactivityModal({ 
   //Props
   url, title, defaultZoom, disclaimerCopy,
 }) {
@@ -28,8 +28,8 @@ export default function PDFModal({
 
   return (
     <div 
-      id="PDFModal"
-      className={componentStyles.PDFModal}
+      id="InactivityModal"
+      className={componentStyles.InactivityModal}
     >
 
       <div 
@@ -40,17 +40,17 @@ export default function PDFModal({
       </div>
       
       <div className={componentStyles.titleArea}>
-        NO-US-2200226_BMS10289 AS Sample SOB Form_Pending Determination_FINAL.pdf
+         <h4>Still Using The App?</h4>
       </div>
 
-      <div className={componentStyles.iframeWrapper}>
-        <iframe src="#" frameborder="0"></iframe>
-      </div>
-      
       <div className={componentStyles.copyArea}>
         <p>
-          The accurate completion of reimbursement- or coverage-related documentation is the responsibility of the healthcare provider and patient. Bristol Myers Squibb and its agents make no guarantee regarding reimbursement for any service or item.
+          If not, we'll just go back to the home page for the next user.
         </p>
+      </div>
+
+      <div className={componentStyles.buttonArea}>
+        <a href="#">Keep Browsing</a>
       </div>
 
     </div>
