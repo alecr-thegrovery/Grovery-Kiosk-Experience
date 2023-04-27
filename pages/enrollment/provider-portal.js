@@ -60,7 +60,7 @@ export default function Post({ postData }) {
                   </ul>
                   <br/>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.mybmscases.com/bmsProviderLightningPortal/s/login/?ec=302&startURL=%2FbmsProviderLightningPortal%2Fs%2F%29%5D&utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan to visit Provider Portal"
                     toolTipPlacement="right"
                   />

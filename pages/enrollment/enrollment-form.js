@@ -12,6 +12,7 @@ import ComputerFrame from '@components/SVGComponents/ComputerFrame'
 import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
+import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 
 /*===== Styles =====*/
 import utilStyles from '@styles/utils.module.css'
@@ -46,6 +47,12 @@ export default function Post({ postData }) {
                   </BlockQuote>
 
                   <img src="/images/content/EnrollmentFormContentImage.png" alt="" />
+
+                  <QRCodePreset 
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/sign?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
+                    toolTipText="Scan for patient e-Signature"
+                    toolTipPlacement="right"
+                  />
               </div>
 
             </ComputerFrame>            
