@@ -52,10 +52,11 @@ export default function Post({ postData }) {
                     Scan the QR code below, or call 1-800-861-0048 for details. 
                   </p>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/access14/charitable-foundations-resource?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Visit the charitable foundations page at BMSAccessSupport.com"
                     toolTipPlacement="right"
                   />
+                  <br/>
                   <p className={pageStyles.italics}>
                     Please Note: Each charitable foundation is independent from Bristol Myers Squibb and will have its own eligibility criteria and evaluation process. Bristol Myers Squibb cannot guarantee that a patient will receive assistance.
                   </p>
