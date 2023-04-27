@@ -75,7 +75,7 @@ export default function Post({ postData }) {
                   </p>
 
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/forms-resources?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan to view Forms &amp; Resources"
                     toolTipPlacement="right"
                   />
@@ -86,7 +86,6 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail name="Understanding Healthcare Benefits" />
                   <PdfThumbnail name="Patient Reimbursement Process Map" />
-
                   <PdfThumbnail name="AS Sample SOB Form Pending Determination" />
                   <PdfThumbnail name="BMS Access Support Patient Brochure" />
                 </div>
