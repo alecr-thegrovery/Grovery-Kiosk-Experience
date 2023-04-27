@@ -44,7 +44,7 @@ export default function PDFModal({
       </div>
 
       <div className={componentStyles.iframeWrapper}>
-        <iframe src={url+"#view=FitH"} frameborder="0"></iframe>
+        <iframe src="#" frameborder="0"></iframe>
       </div>
       
       <div className={componentStyles.copyArea}>

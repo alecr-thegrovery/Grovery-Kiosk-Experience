@@ -20,21 +20,21 @@ export default function App({ Component, pageProps }) {
       //define function
       function updateActionState(stateValue, delay, thread) {
         setTimeout(function() {
-          let element = document.querySelector("#LayoutOuter");
+          const LayoutOuter = document.querySelector("#LayoutOuter");
           if(thread == "load"){
-            element.setAttribute("data-action-state-load", stateValue);
+            LayoutOuter.setAttribute("data-action-state-load", stateValue);
           } else if(thread == "transition"){
-            element.setAttribute("data-action-state-transition", stateValue);
+            LayoutOuter.setAttribute("data-action-state-transition", stateValue);
           } else if(thread == "tooltips"){
-            element.setAttribute("data-action-state-tooltips", stateValue);
+            LayoutOuter.setAttribute("data-action-state-tooltips", stateValue);
           } else if(thread == "cards"){
-            element.setAttribute("data-action-state-cards", stateValue);
+            LayoutOuter.setAttribute("data-action-state-cards", stateValue);
           }else if(thread == "cards-show"){
-            element.setAttribute("data-action-state-cards-show", stateValue);
+            LayoutOuter.setAttribute("data-action-state-cards-show", stateValue);
           } else if(thread == "page"){
-            element.setAttribute("data-action-state-page", stateValue);
+            LayoutOuter.setAttribute("data-action-state-page", stateValue);
           } else{
-            element.setAttribute("data-action-state", stateValue);
+            LayoutOuter.setAttribute("data-action-state", stateValue);
           }
         }, delay);
       }
