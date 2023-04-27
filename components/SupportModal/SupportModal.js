@@ -99,7 +99,7 @@ export default function SupportModal({
 
           <div className={componentStyles.qrCode}>
             <QRCodePreset 
-              link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+              link="https://www.bmsaccesssupport.bmscustomerconnect.com/?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
               toolTipText="Visit BMSAccessSupport.com to schedule support assistance"
               toolTipPlacement="right"
             />
