@@ -56,12 +56,8 @@ export default function Modal({
       
       <div className={componentStyles.modalInner}>
 
-      <PDFModal url="/pdf/test.pdf" />
-      <InactivityModal url="/pdf/test.pdf" />
-        
-        {pdf && 
-          <PDFModal url={pdf ? pdf : "/pdf/test.pdf"} />
-        }  
+        <PDFModal  />
+        <InactivityModal />
 
       </div>
 

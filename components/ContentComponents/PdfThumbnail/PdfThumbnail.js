@@ -14,7 +14,7 @@ export default function PdfThumbnail({
   //console.log(author);
 
   const modalOpenDetect = () => {
-    const element = document.getElementById("ModalWrapper");
+    let element = document.getElementById("ModalWrapper");
     if (element.getAttribute('data-modal-status') == "active") {
       //Modal is open, close it
       element.setAttribute('data-modal-status', 'inactive');

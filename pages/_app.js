@@ -372,7 +372,8 @@ export default function App({ Component, pageProps }) {
           
         } //END inactivityTimer function
 
-        inactivityTimer();
+        //disabled during build
+        //inactivityTimer();
 
   });
 

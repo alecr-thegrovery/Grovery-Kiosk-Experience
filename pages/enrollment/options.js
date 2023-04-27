@@ -66,6 +66,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail
                     name="Sample forms"
+                    url="/pdf/test.pdf"
                   />
                 </div>
 
