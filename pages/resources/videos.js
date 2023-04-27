@@ -52,7 +52,7 @@ export default function Post({ postData }) {
                     Our resources help provide a better understanding of the health insurance landscape. They are located on the Forms &amp; Resources page of the BMS Access Support website.
                   </p>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/forms-resources?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan to view Forms &amp; Resources"
                     toolTipPlacement="right"
                   />

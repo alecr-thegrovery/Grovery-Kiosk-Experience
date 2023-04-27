@@ -4,7 +4,8 @@
 	max-width: 100%;
 	width: clamp(220px, 100%, 375px);
 	cursor: pointer;
-	//width: 375px;
+	margin-bottom: 0.5rem;
+
 	.thumbnail{
 		position: relative;
 		img{

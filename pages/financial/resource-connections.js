@@ -55,7 +55,7 @@ export default function Post({ postData }) {
                     <li>Help with treatment-related appointments for general care (childcare and adult care)</li>
                   </ul>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.patient-resources.com/?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan to learn more about Patient Resource Connections"
                     toolTipPlacement="right"
                   />

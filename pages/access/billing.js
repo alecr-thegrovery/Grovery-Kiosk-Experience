@@ -54,7 +54,7 @@ export default function Post({ postData }) {
                   </ul>
                   <br/>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/opdivo/billing-diagnosis-codes?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan the QR code to access Reimbursement Guides available for all relevant products at BMSAccessSupport.com. "
                     toolTipPlacement="right"
                   />
