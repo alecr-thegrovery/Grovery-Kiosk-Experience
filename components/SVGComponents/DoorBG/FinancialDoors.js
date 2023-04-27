@@ -120,7 +120,7 @@ export default function FinancialDoors({
             <g id="Doors" transform="translate(-2577.383 -1)">
               <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(2910.074 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
               <rect id="Rectangle_186" data-name="Rectangle 186" width="279.31" height="86.697" transform="translate(3242.813 307.358)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
-              <text id="Government_uninsured_patients" data-name="Government &amp; uninsured patients" transform="translate(3251.968 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-86.445" y="24">GOVERNMENT &amp; </tspan><tspan x="-112.542" y="46">UNINSURED PATIENTS</tspan></text>
+              <text id="Government_uninsured_patients" data-name="Government &amp; uninsured patients" transform="translate(3380  324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-86.445" y="24">GOVERNMENT &amp; </tspan><tspan x="-112.542" y="46">UNINSURED PATIENTS</tspan></text>
               <rect id="Rectangle_187" data-name="Rectangle 187" width="279.31" height="86.697" transform="translate(3582.998 307.359)" fill="#fff" stroke="#9f9089" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.264"/>
               <text id="Patient_resource_connections" data-name="Patient resource connections" transform="translate(3588.766 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="-0.01em"><tspan x="36.831" y="24">PATIENT RESOURCE </tspan><tspan x="60.099" y="46">CONNECTIONS</tspan></text>
               <g id="Door_1" data-name="Door 1" transform="translate(320.439 0.607)" className="droppable" data-door="1" data-door-name="Commercial Patients" data-link="/financial/commercial-patients/" data-active="inactive">
@@ -204,7 +204,7 @@ export default function FinancialDoors({
               <rect id="Rectangle_617" data-name="Rectangle 617" width="278" height="12" transform="translate(2910.383 382)" fill="#c0f2fb"/>
               <rect id="Rectangle_1408" data-name="Rectangle 1408" width="278" height="12" transform="translate(3244.383 382)" fill="#c0f2fb"/>
               <rect id="Rectangle_1409" data-name="Rectangle 1409" width="278" height="12" transform="translate(3583.383 382)" fill="#c0f2fb"/>
-              <text id="Commercial_Patients" data-name="Commercial Patients" transform="translate(2925.929 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-70.542" y="24">COMMERCIAL </tspan><tspan x="-47.13" y="46">PATIENTS</tspan></text>
+              <text id="Commercial_Patients" data-name="Commercial Patients" transform="translate(3045 324)" fill="#595454" font-size="22" font-family="SegoeUI, Segoe UI" letter-spacing="0.02em"><tspan x="-70.542" y="24">COMMERCIAL </tspan><tspan x="-47.13" y="46">PATIENTS</tspan></text>
             </g>
           </g>
         </g>
