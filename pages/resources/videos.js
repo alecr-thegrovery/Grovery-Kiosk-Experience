@@ -12,6 +12,7 @@ import ComputerFrame from '@components/SVGComponents/ComputerFrame'
 import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
+import VideoThumbnail from '@components/ContentComponents/VideoThumbnail'
 import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 
 /*===== Styles =====*/
@@ -48,8 +49,8 @@ export default function Post({ postData }) {
                   <p>
                     Our video library contains useful information that may help answer common questions related to accessing a patient’s prescribed BMS medication.
                   </p>
-                  <p className={pageStyles.italics}>
-                    Our resources help provide a better understanding of the health insurance landscape. They are located on the Forms &amp; Resources page of the BMS Access Support website.
+                  <p>
+                    Our resources help provide a better understanding of the health insurance landscape. They are located on the Forms & Resources page of the BMS Access Support website.
                   </p>
                   <QRCodePreset 
                     link="https://www.bmsaccesssupport.bmscustomerconnect.com/forms-resources?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
@@ -61,9 +62,17 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <PdfThumbnail name="What is health insurance?" />
+                  <VideoThumbnail
+                    thumbnail="/images/content/as-video-generic-poster_ss.png"
+                    name="What is health insurance?" 
+                    url="https://players.brightcove.net/1892432924001/default_default/index.html?videoId=5729106370001"
+                  />
                   <br/><br/>
-                  <PdfThumbnail name="What is explanation of benefits (EOB)" />
+                  <VideoThumbnail
+                    thumbnail="/images/content/as-video-generic-poster_ss.png"
+                    name="What is an Explanation of Benefits (EOB)? " 
+                    url="https://players.brightcove.net/1892432924001/default_default/index.html?videoId=5729102364001"
+                  />
                 </div>
 
               </div>
