@@ -39,7 +39,7 @@ export default function PDFModal({
         <CloseIcon/>
       </div>
       
-      <div className={componentStyles.titleArea}>
+      <div id="PDFModalTitle" className={componentStyles.titleArea}>
         NO-US-2200226_BMS10289 AS Sample SOB Form_Pending Determination_FINAL.pdf
       </div>
 

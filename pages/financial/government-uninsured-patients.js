@@ -31,7 +31,8 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading={["Government & Uninsured Patients"]}
+          subhead="BMS Access Support may be able to help identify financial assistance programs for eligible patients who have been prescribed select BMS medications and need help managing the cost of treatment. The appropriate program will depend on the patient’s coverage."
         />
 
         {/*Content*/}
@@ -46,7 +47,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
 
                   <p>
-                    Patients who are not covered by prescription drug insurance or are insured through Federal Healthcare Programs are not eligible for co-pay assistance programs sponsored by Bristol Myers Squibb. BMS Access Support may be able to refer patients to independent charitable foundations. 
+                    Patients who are not covered by prescription drug insurance or insured through Federal Healthcare Programs are not eligible for co-pay assistance programs sponsored by Bristol Myers Squibb. BMS Access Support may be able to refer patients to independent charitable foundations. 
                   </p>
                   <p>
                     Scan the QR code below, or call 1-800-861-0048 for details. 
@@ -65,7 +66,7 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <img src="/images/content/bmsas-charitable-foundations-resource.png" alt="" />
                 </div>
 
               </div>

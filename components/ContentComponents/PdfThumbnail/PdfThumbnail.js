@@ -14,30 +14,12 @@ export default function PdfThumbnail({
 
   //console.log(author);
 
-  /*function modalOpenDetect(this) {
-    let ModalWrapper = document.getElementById("ModalWrapper");
-    let pdfLink = this.getAttribute('data-pdf-url');
-    console.log(pdfLink);
-    if (ModalWrapper.getAttribute('data-modal-status') == "active") {
-      //Modal is open, close it
-      ModalWrapper.setAttribute('data-modal-status', 'inactive');
-      ModalWrapper.setAttribute('data-modal-show', '');
-    } else {
-      //Modal is closed, open it
-      ModalWrapper.setAttribute('data-modal-status', 'active');
-      ModalWrapper.setAttribute('data-modal-show', 'PDFModal');
-    }
-  }
-
-  const handleClick = (this) => {
-    modalOpenDetect(this);
-  };*/
-
   useEffect(() => {
     $(document).ready(function() {
       //vars
       let ModalWrapper = $("#ModalWrapper");
       let PDFWindow = $("#PDFModal iframe");
+      let PDFTitle = $("#PDFModalTitle");
 
       //open modal
       $("[data-modal-open='pdf']").click(function(e){
@@ -45,11 +27,13 @@ export default function PdfThumbnail({
         e.preventDefault();
         //set PDF in iframe
         let pdfLink = $(this).attr('data-pdf-url');
+        let pdfName = $(this).attr('data-pdf-name');
         console.log(pdfLink);
         PDFWindow.attr("src", pdfLink+"#view=FitH"); 
         //activate PDF modal
         ModalWrapper.attr("data-modal-status", "active");
         ModalWrapper.attr("data-modal-show", "PDFModal");
+        PDFTitle.text(pdfName);
         
       });
 
@@ -68,6 +52,7 @@ export default function PdfThumbnail({
       /*onClick={handleClick(this)}*/
       data-modal-open='pdf'
       data-pdf-url={url}
+      data-pdf-name={name}
     >
 
       <div className={componentStyles.thumbnail}>
