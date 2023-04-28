@@ -89,16 +89,19 @@ export default function Post({ postData }) {
                     name="Understanding Healthcare Benefits"
                     url="/pdf/Understanding_Healthcare_Benefits.pdf"
                    />
+                   <br/>
                   <PdfThumbnail 
                     thumbnail="/images/content/Patient_Reimbursement_Process_Map.png"
                     name="Patient Reimbursement Process Map"
                     url="/pdf/Patient_Reimbursement_Process_Map.pdf"
                    />
+                   <br/>
                    <PdfThumbnail 
                     thumbnail="/images/content/A_Guide_to_Medicare_Part_D_2023_thumbnail.png"
                     name="Medicare Part D Guide"
                     url="/pdf/A_Guide_to_Medicare_Part_D_2023.pdf"
                    />
+                   <br/>
                    <PdfThumbnail 
                     thumbnail="/images/content/Patient_Brochure_thumbnail.png"
                     name="BMS Access Support Patient Brochure"
