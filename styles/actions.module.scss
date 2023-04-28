@@ -285,6 +285,12 @@
 
   /* ===== Page lvl 2 ===== */
   #LayoutOuter[data-action-state-page="lvl-2"]{
+    .draggable{
+      .inner{
+        transform: rotate(3deg);
+      }
+    } 
+    
     .getting--dragged{
       .inner{
           transform: rotate(15deg) translate(0, -6vh) scale(0.75) !important;
@@ -296,6 +302,9 @@
   #LayoutOuter[data-action-state-page="lvl-3"]{
     .draggable{
       pointer-events: none;
+      .inner{
+        transform: rotate(3deg);
+      }
     }
   }
 
