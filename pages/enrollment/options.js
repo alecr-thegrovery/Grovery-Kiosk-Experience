@@ -49,24 +49,24 @@ export default function Post({ postData }) {
                   
                   <BlockQuote icon="/images/icons/contentPrinterIcon.svg">
                     <h2>Option 1: Enroll via Fax</h2>
-                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a href="#">Tap for information on how to complete the enrollment form</a>.</p>
+                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a href="/enrollment/enrollment-form">Tap for information on how to complete the enrollment form</a>.</p>
                   </BlockQuote>
 
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
                     <h2>Option 2: Enroll via the Provider Portal</h2>
-                    <p><a href="#">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal. </p>
+                    <p><a href="MyBMSCases.com" target="_blank">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal.</p>
                   </BlockQuote>
 
                   <p>Once the enrollment form has been submitted and a Benefits Review has been conducted, you will receive your patient’s summary of healthcare benefits.</p>
 
-                  <em className={pageStyles.italics}>Please Note: While enrollment in the BMS Access Support program is required to receive certain support offerings, such as benefits reviews and appeals assistance, patients can also access select support offerings through the online resources found at BMSAccessSupport.com.</em>
+                  <p>Please Note: While enrollment in the BMS Access Support program is required to receive certain support offerings, such as Benefits Reviews and appeals assistance, patients can also access select support offerings through the online resources found at BMSAccessSupport.com.</p>
                 </div>               
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail
-                    name="Sample forms"
-                    url="/pdf/test.pdf"
+                    name="Enrollment Form"
+                    url="/pdf/Oncology_Enrollment_Form_EN.pdf"
                   />
                 </div>
 
