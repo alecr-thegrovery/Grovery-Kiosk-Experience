@@ -12,6 +12,7 @@ import ComputerFrame from '@components/SVGComponents/ComputerFrame'
 import TransitionScreen from '@components/SVGComponents/TransitionScreen'
 import BlockQuote from '@components/ContentComponents/BlockQuote'
 import PdfThumbnail from '@components/ContentComponents/PdfThumbnail'
+import PdfLink from '@components/ContentComponents/PdfLink'
 import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 
 /*===== Styles =====*/
@@ -42,30 +43,31 @@ export default function Post({ postData }) {
             <ComputerFrame frame="1">
               {/*Inner Page Content*/}
 
-              <div className={pageStyles.twoColumn}>
-                {/*LEFT CELL*/}
-                <div className={pageStyles.cell}>
-                  <p>The BMS Access Support Co-Pay Assistance Program offers financial assistance to eligible, commercially insured patients. </p>
-                  <p className={pageStyles.italics}>
-                   Please Note:  The program will cover the out-of-pocket expenses of the BMS product only. It does not cover the costs of any other healthcare provider charges or any other treatment costs. Patients may be responsible for non-drug-related, out-of-pocket costs, depending on their specific healthcare benefits.
-                  </p>
-                  <p className={pageStyles.italics}>
-                    Restrictions apply. Please see full Terms and Conditions, including complete eligibility requirements. 
-                  </p>
-                  <p>
-                    <a href="#">Terms and Conditions for Empliciti, Opdivo, Opdivo + Yervoy, Opdualag, &amp; Yervoy</a>
-                    <br/><br/>
-                    <a href="#">Terms and Conditions for Abraxane &amp; Reblozyl</a>
+              <div className={pageStyles.oneColumn}>
+                  
+                  <p >
+                   Please Note:  The program will cover the out-of-pocket expenses of the BMS product only. It does not cover the costs of any other healthcare provider charges or any other treatment costs. Patients may be responsible for non-drug-related, out-of-pocket costs, depending on their specific healthcare benefits. Restrictions apply. 
                   </p>
 
-                </div>               
-
-                {/*RIGHT CELL*/}
-                <div className={pageStyles.cell} data-centered>
-                  <PdfThumbnail name="A Guide to Electronic Benefits Reverification (eBRV) 2023"/>
-                </div>
+                  <BlockQuote icon="/images/icons/contentFormIcon.svg">
+                    <ul>
+                      <li>
+                        <PdfLink url="/pdf/Empliciti_Opdivo_O+Y_Opdualag_Yervoy_T_C.pdf" name="Empliciti_Opdivo_O+Y_Opdualag_Yervoy_T_C.pdf">Terms and Conditions for Empliciti, Opdivo, Opdivo + Yervoy, Opdualag, &amp; Yervoy</PdfLink>
+                      </li>
+                      <li>
+                        <PdfLink url="/pdf/Abraxane_Reblozyl_T_C.pdf" name="Abraxane_Reblozyl_T_C.pdf">Terms and Conditions for Abraxane &amp; Reblozyl</PdfLink>
+                      </li>
+                      <li>
+                        <PdfLink url="/pdf/Heme_Orals_Terms_and_Conditions.pdf" name="Heme_Orals_Terms_and_Conditions.pdf">Terms and Conditions for Idhifa, Inrebic, Onureg, Pomalyst, Revlimid, &amp; Thalomid</PdfLink>
+                      </li>
+                      <li>
+                        <PdfLink url="/pdf/Sprycel_Terms_and_Conditions_Copay_Card.pdf" name="Sprycel_Terms_and_Conditions_Copay_Card.pdf">Terms and Conditions for Sprycel</PdfLink>
+                      </li>
+                    </ul>
+                  </BlockQuote>
 
               </div>
+
             </ComputerFrame>            
           </section>
         </div>        
