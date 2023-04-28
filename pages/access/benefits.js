@@ -56,12 +56,12 @@ export default function Post({ postData }) {
                     <li>If a medication is covered by a patient’s insurance plan</li>
                     <li>If a prior authorization is required</li>
                     <li>The estimated patient out-of-pocket costs, the out-of-pocket maximum, and if there is a deductible</li>
-                    <li>If there is a preferred specialty pharmacy, optional specialty pharmacy, or open specialty pharmacy network (applies to orals or HCP-administered medications when buy & bill is not an option)</li>
+                    <li>If there is a preferred specialty pharmacy, optional specialty pharmacy, or open specialty pharmacy network (applies to orals or HCP-administered medications when buy &amp; bill is not an option)</li>
                   </ul> 
-
-                  <img src="/images/content/EnrollmentFormContentImage.png" alt="" />
               </div>
+              
               <br/>
+
               <div className={pageStyles.twoColumn}>
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
@@ -73,7 +73,7 @@ export default function Post({ postData }) {
                       <li>Timely filing guidelines for claims/appeals </li>
                     </ul>        
                     <BlockQuote icon="/images/icons/contentCalendarIcon.svg">
-                      <p><strong>For patients who are enrolled in BMS Access Support</strong>, reverification of benefits (eBRV) is available for each new calendar year upon HCP request to confirm a patient’s continued access to therapy and minimize disruption in therapy.</p>
+                      <p><strong>For patients who are enrolled in BMS Access Support</strong>, reverification of benefits is available upon HCP request for each new calendar year to confirm a patient’s continued access and minimize disruption in therapy.</p>
                     </BlockQuote>          
                 </div>               
 
@@ -81,7 +81,8 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail 
                     name="Sample forms"
-                    url=""
+                    thumbnail="/images/content/sob-sample-form-thumbnail-1.png"
+                    url="/pdf/N0-US-2200225_BMS10288 AS Sample SOB Form_Site of Care_FINAL.pdf"
                   />
                 </div>
 

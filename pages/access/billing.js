@@ -32,7 +32,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={["Using the My BMS Cases ", <strong>Provider Portal</strong>]}
+          heading={["Billing & Coding Assistance"]}
         />
 
         {/*Content*/}
@@ -47,23 +47,30 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
 
                   <h2>We offer product-specific Billing &amp; Coding resources for your healthcare office.</h2>
-                  <ul>
-                    <li><strong>Billing &amp; Coding Guides</strong> provide an overview of relevant product and diagnosis codes, dosing and administration, and general reimbursement information</li>
-                    <li><strong>Online Code Search Tool</strong> allows providers to type in a keyword to find specific HCPCS, CPT, NDC, 5010, or ICD-10 code</li>
-                    <li><strong>Sample Claim Forms</strong> call out where to enter important information on health insurance claim forms (e.g., drug name, dosing NDC information, diagnosis code, and HCPCS code)</li>
-                  </ul>
+                  <BlockQuote icon="/images/icons/contentClipboardIcon.svg">
+                    <p><strong>Billing &amp; Coding Guides</strong> provide an overview of relevant product and diagnosis codes, dosing and administration, and general reimbursement information</p>
+                  </BlockQuote>
+
+                  <BlockQuote icon="/images/icons/contentClipboardIcon.svg">
+                    <p><strong>Online Code Search Tool</strong> allows providers to type in a keyword to find a specific HCPCS, CPT, NDC, 5010, or ICD-10 code</p>
+                  </BlockQuote>
+
+                  <BlockQuote icon="/images/icons/contentListIcon.svg">
+                    <p><strong>Sample Claim Forms</strong> call out where to enter important information on health insurance claim forms (e.g., drug name, dosing information, HCPCS code, etc.)</p>
+                  </BlockQuote>
                   <br/>
-                  <QRCodePreset 
-                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/opdivo/billing-diagnosis-codes?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
-                    toolTipText="Scan the QR code to access Reimbursement Guides available for all relevant products at BMSAccessSupport.com. "
-                    toolTipPlacement="right"
-                  />
+                  
                   
                 </div>               
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
                   <img src="/images/content/billing-coding-medselector-img.png" alt="" />
+                  <QRCodePreset 
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/opdivo/billing-diagnosis-codes?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
+                    toolTipText="SScan to access Reimbursement Guides available for all relevant products at BMSAccessSupport.com"
+                    toolTipPlacement="right"
+                  />
                 </div>
 
               </div>

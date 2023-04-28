@@ -47,7 +47,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
                   
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
-                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
+                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for BMS medications.</p>
                   </BlockQuote>
 
                   <h2>The provider portal allows you to: </h2>
