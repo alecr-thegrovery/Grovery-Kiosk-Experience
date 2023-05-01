@@ -45,7 +45,7 @@ export default function Post({ postData }) {
                 {/*LEFT CELL*/}
                 <div className={pageStyles.cell}>
                   <BlockQuote icon="/images/icons/contentFormIcon.svg">
-                    <p>Patients can download brochures and coverage-related resources that may help answer questions regarding accessing their prescribed BMS medication </p>
+                    <p>Patients can download brochures and coverage-related resources that may help answer questions regarding accessing their prescribed BMS medication.</p>
                   </BlockQuote>
 
                   <p>

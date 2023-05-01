@@ -72,8 +72,8 @@ export default function SupportModal({
               
               <div className={componentStyles.columnBody}>
                 <ul>
-                  <li key="li-2-1">Get answers regarding state-specific insurance policies, general HCP topics, and all Access Support services</li>
-                  <li key="li-2-2">Assistance with claims tracking and    specific BMS cases with submitted PA for enrolled patients</li>
+                  <li key="li-2-1">Aanswers regarding state-specific insurance policies, general HCP topics, and all Access Support services</li>
+                  <li key="li-2-2">Assistance with claims tracking and specific BMS cases with submitted PA for enrolled patients</li>
                 </ul>
               </div>            
             </div>

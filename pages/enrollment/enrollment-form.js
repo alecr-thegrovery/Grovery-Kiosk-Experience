@@ -54,7 +54,7 @@ export default function Post({ postData }) {
                   <div className={pageStyles.centeredRow}>
                     <QRCodePreset 
                       link="https://www.bmsaccesssupport.bmscustomerconnect.com/sign?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
-                      toolTipText="Scan for patient e-Signature"
+                      toolTipText="Scan for patient e-signature"
                       toolTipPlacement="right"
                     />
                   </div>
