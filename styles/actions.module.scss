@@ -167,6 +167,18 @@
       z-index: 21;
       .inner{
         transition: $transitionMedium;
+        &:after{
+          content:'';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(33, 33, 33, 0.5);
+          border-radius: 15px;
+          transition: $transitionMedium;
+          opacity:0;
+        }
       }
       
       &.getting--dragged{
@@ -192,6 +204,15 @@
           .colorFilter{
             opacity:0.5;
           }
+          .draggable:not(.getting--dragged){
+            .inner{
+                transform: translate(0, 2vh) !important;
+                box-shadow: none;
+                &:after{
+                  opacity:0.5;
+                }
+              }
+            } 
         }
         &[data-action-state-cards="card-post-interaction"]{
           .cardsFilter,

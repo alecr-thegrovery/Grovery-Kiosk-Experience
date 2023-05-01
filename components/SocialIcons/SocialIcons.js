@@ -14,7 +14,7 @@ export default function SocialIcons({
     <>
       <ul className={componentStyles.list}>
         {instagram && 
-          <li className={componentStyles.cell}>
+          <li key="social-instagram" className={componentStyles.cell}>
             <a 
               href={instagram}
               className=""
@@ -24,7 +24,7 @@ export default function SocialIcons({
           </li>
         }
         {facebook &&
-          <li className={componentStyles.cell}>
+          <li key="social-facebook" className={componentStyles.cell}>
             <a 
               href={facebook}
               className=""
@@ -34,7 +34,7 @@ export default function SocialIcons({
           </li>
         }
         {twitter &&
-          <li className={componentStyles.cell}>
+          <li key="social-twitter" className={componentStyles.cell}>
             <a 
               href={twitter}
               className=""
@@ -44,7 +44,7 @@ export default function SocialIcons({
           </li>
         }
         {tumblr && 
-          <li className={componentStyles.cell}>
+          <li key="social-tumblr" className={componentStyles.cell}>
             <a 
               href={tumblr}
               className=""
@@ -54,7 +54,7 @@ export default function SocialIcons({
           </li>
         }
         {pinterest && 
-          <li className={componentStyles.cell}>
+          <li key="social-pinterest" className={componentStyles.cell}>
             <a 
               href={pinterest}
               className=""

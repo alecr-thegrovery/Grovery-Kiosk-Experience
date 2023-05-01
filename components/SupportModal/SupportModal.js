@@ -54,8 +54,8 @@ export default function SupportModal({
               
               <div className={componentStyles.columnBody}>
                 <ul>
-                  <li>Quick access to reimbursement information and co-pay program information</li>
-                  <li>Easy enrollment through the provider portal</li>
+                  <li key="li-1-1">Quick access to reimbursement information and co-pay program information</li>
+                  <li key="li-1-2">Easy enrollment through the provider portal</li>
                 </ul>
               </div>            
             </div>
@@ -72,8 +72,8 @@ export default function SupportModal({
               
               <div className={componentStyles.columnBody}>
                 <ul>
-                  <li>Get answers regarding state-specific insurance policies, general HCP topics, and all Access Support services</li>
-                  <li>Assistance with claims tracking and    specific BMS cases with submitted PA for enrolled patients</li>
+                  <li key="li-2-1">Get answers regarding state-specific insurance policies, general HCP topics, and all Access Support services</li>
+                  <li key="li-2-2">Assistance with claims tracking and    specific BMS cases with submitted PA for enrolled patients</li>
                 </ul>
               </div>            
             </div>
@@ -90,8 +90,8 @@ export default function SupportModal({
               
               <div className={componentStyles.columnBody}>
                 <ul>
-                  <li>Real-time responses to Access Support and case-related questions</li>
-                  <li>Assistance with case status tracking, reimbursement claims, and appeals</li>
+                  <li key="li-3-1">Real-time responses to Access Support and case-related questions</li>
+                  <li key="li-3-1">Assistance with case status tracking, reimbursement claims, and appeals</li>
                 </ul>
               </div>            
             </div>
