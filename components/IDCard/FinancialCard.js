@@ -27,7 +27,7 @@ export default function IDCard({
             </g>
           </g>
         </g>
-        <text id="Co-Pay_Financial_Assistance" data-name="Co-Pay &amp; Financial Assistance" transform="translate(798.903 3193.566)" fill="#453939" font-size="30" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="32">Co-Pay &amp; </tspan><tspan x="0" y="65.609">Financial </tspan><tspan x="0" y="99.219">Assistance</tspan></text>
+        <text id="Co-Pay_Financial_Assistance" data-name="Co-Pay &amp; Financial Assistance" transform="translate(798.903 3193.566)" fill="#453939" fontSize="30"  fontWeight="700"><tspan x="0" y="32">Co-Pay &amp; </tspan><tspan x="0" y="65.609">Financial </tspan><tspan x="0" y="99.219">Assistance</tspan></text>
         <path id="Accent" d="M0,0H277.118a0,0,0,0,1,0,0V60.067a14.256,14.256,0,0,1-14.256,14.256H14.256A14.256,14.256,0,0,1,0,60.067V0A0,0,0,0,1,0,0Z" transform="translate(784.775 3305.796)" fill="#c8eaec" opacity="0.6"/>
         <g id="BmsLogo">
           <g id="Group_112" data-name="Group 112">
