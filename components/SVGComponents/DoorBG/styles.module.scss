@@ -55,7 +55,7 @@
 	position: relative;
 	//z-index: 50;
 	svg{
-		position: relative;
+		position: absolute;
 		bottom: 0%;
 		left: 0px;
 		width: 100%;
@@ -70,6 +70,18 @@
 			}
 		}
 		
+	}
+
+	[data-element="lights"]{
+		transform: translate(0%, 5%);
+		//position: absolute;
+		//top: 10%;
+	}
+	[data-element="objects"]{
+		transform: translate(5%, 0%);
+	}
+	[data-element="doors"]{
+		transform: translate(5%, 0%);
 	}
 }
 
