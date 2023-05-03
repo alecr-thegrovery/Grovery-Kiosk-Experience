@@ -11,7 +11,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	display: none;
+	
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+
 	&:before{
 		content: '';
 		background-color: $grey_1;
@@ -24,13 +28,21 @@
 		//animation:scroll 5s infinite linear;
 	}
 
-	@media screen and (max-width: 768px) {
-		display: flex;
+	@media screen and (max-aspect-ratio: 3/2), (max-width: 1000px) {
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
 	}
 
 	.content{
+		font-size: $fontSizeBody;
 		background-color: $white;
 		padding: 1em;
+		text-align: center;
+
+		img{
+			margin: 0 auto 1em;
+		}
 	}
 }
 
