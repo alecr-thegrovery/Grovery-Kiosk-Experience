@@ -8,7 +8,6 @@ import data from "@data/data.json"
 import $ from 'jquery'
 
 import Sidebar from '@components/Sidebar'
-import SupportModal from '@components/SupportModal'
 import Modal from '@components/Modal'
 import BackToHome from '@components/BackToHome'
 import SmallScreenWarning from '@components/SmallScreenWarning'
