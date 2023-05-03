@@ -123,17 +123,28 @@
 				font-weight: 600;
 			}
 		}
+		.purple{
+			color: $purple;
+		}
 		.italics{
 			font-style: $fontBMSLightItalic;
-			font-style: italics;
+			font-style: italic;
 			font-weight: 100;
+		}
+		.centeredRow{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
 		}
 
 		.QRCode{
 			$clampWidth: clamp(150px, 7vw, 350px);
 			width: 100%;
-			max-width: $clampWidth;
-			//margin: auto;
+			//max-width: $clampWidth;
+			margin: auto;
 			svg{
 				//max-width: 100%;
 			}

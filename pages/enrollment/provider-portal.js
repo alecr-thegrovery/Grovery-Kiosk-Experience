@@ -47,7 +47,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
                   
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
-                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for select BMS medications.</p>
+                    <p>This secure provider portal offers convenient, on-demand access to patient reimbursement cases for BMS medications.</p>
                   </BlockQuote>
 
                   <h2>The provider portal allows you to: </h2>
@@ -59,12 +59,14 @@ export default function Post({ postData }) {
                     <li>Securely message your regional Patient Access Specialist</li>
                   </ul>
                   <br/>
-                  <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
-                    toolTipText="Scan to visit Provider Portal"
-                    toolTipPlacement="right"
-                  />
-                  
+                  <div className={pageStyles.centeredRow}>
+                    <QRCodePreset 
+                      link="https://www.mybmscases.com/bmsProviderLightningPortal/s/login/?ec=302&startURL=%2FbmsProviderLightningPortal%2Fs%2F%29%5D&utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
+                      toolTipText="Scan to visit Provider Portal"
+                      toolTipPlacement="right"
+                    />
+                  </div>
+                                    
                 </div>               
 
                 {/*RIGHT CELL*/}

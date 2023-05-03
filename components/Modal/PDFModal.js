@@ -18,7 +18,7 @@ export default function PDFModal({
   //Open functions are in /ContentComponents/PdfThumbnail
 
   const modalClose = () => {
-    const element = document.getElementById("PdfModal");
+    const element = document.getElementById("ModalWrapper");
     element.setAttribute('data-modal-status', 'inactive');
   }
 
@@ -27,7 +27,10 @@ export default function PDFModal({
   };
 
   return (
-    <div className={componentStyles.PDFModal}>
+    <div 
+      id="PDFModal"
+      className={componentStyles.PDFModal}
+    >
 
       <div 
         className={componentStyles.closeButton}
@@ -36,12 +39,12 @@ export default function PDFModal({
         <CloseIcon/>
       </div>
       
-      <div className={componentStyles.titleArea}>
+      <div id="PDFModalTitle" className={componentStyles.titleArea}>
         NO-US-2200226_BMS10289 AS Sample SOB Form_Pending Determination_FINAL.pdf
       </div>
 
       <div className={componentStyles.iframeWrapper}>
-        <iframe src={url+"#view=FitH"} frameborder="0"></iframe>
+        <iframe src="#" frameBorder="0"></iframe>
       </div>
       
       <div className={componentStyles.copyArea}>

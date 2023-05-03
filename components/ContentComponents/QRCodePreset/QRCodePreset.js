@@ -40,7 +40,7 @@ export default function QRCodePreset({
           size={256}
           bgColor="#ffffff"
           fgColor="#212121"
-          style={{ height: "auto", width: "10vw" }}
+          style={{ height:"auto", width:"500px", maxWidth:"10vw" }}
          /* data-qr-code-tooltip
           data-tippy-content={toolTipText}
           data-tippy-placement={toolTipPlacement ? toolTipPlacement : "right"}*/

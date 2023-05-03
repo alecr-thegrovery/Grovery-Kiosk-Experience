@@ -173,5 +173,22 @@
 				top: -10%;
 			}
 		}
+
+		.openIcon{
+			display: none;
+		}
+		.closeIcon{
+			display: none;
+		}
+		[data-icon="open"]{
+			.openIcon{
+				display: block;
+			}
+		}
+		[data-icon="close"]{
+			.closeIcon{
+				display: block;
+			}
+		}
 	}
 }

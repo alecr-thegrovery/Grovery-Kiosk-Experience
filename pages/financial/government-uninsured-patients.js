@@ -31,7 +31,8 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading={["Government & Uninsured Patients"]}
+          subhead="BMS Access Support may be able to help identify financial assistance programs for eligible patients who have been prescribed select BMS medications and need help managing the cost of treatment. The appropriate program will depend on the patient’s coverage."
         />
 
         {/*Content*/}
@@ -46,16 +47,17 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell}>
 
                   <p>
-                    Patients who are not covered by prescription drug insurance or are insured through Federal Healthcare Programs are not eligible for co-pay assistance programs sponsored by Bristol Myers Squibb. BMS Access Support may be able to refer patients to independent charitable foundations. 
+                    Patients who are not covered by prescription drug insurance or insured through Federal Healthcare Programs are not eligible for co-pay assistance programs sponsored by Bristol Myers Squibb. BMS Access Support may be able to refer patients to independent charitable foundations. 
                   </p>
                   <p>
                     Scan the QR code below, or call 1-800-861-0048 for details. 
                   </p>
                   <QRCodePreset 
-                    link="https://www.youtube.com/watch?v=nM4okRvCg2g"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/access14/charitable-foundations-resource?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Visit the charitable foundations page at BMSAccessSupport.com"
                     toolTipPlacement="right"
                   />
+                  <br/>
                   <p className={pageStyles.italics}>
                     Please Note: Each charitable foundation is independent from Bristol Myers Squibb and will have its own eligibility criteria and evaluation process. Bristol Myers Squibb cannot guarantee that a patient will receive assistance.
                   </p>
@@ -64,7 +66,7 @@ export default function Post({ postData }) {
 
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
-                  <img src="/images/content/assistpoint_supporting-image.png" alt="" />
+                  <img src="/images/content/bmsas-charitable-foundations-resource.png" alt="" />
                 </div>
 
               </div>

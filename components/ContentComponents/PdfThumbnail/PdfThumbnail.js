@@ -1,5 +1,6 @@
 /*===== Components =====*/
-import React from "react"
+import React, { useState, useEffect } from 'react';
+import $ from 'jquery'
 import ZoomIcon from '@components/SVGComponents/ZoomIcon'
 
 /*===== Styles =====*/
@@ -13,30 +14,45 @@ export default function PdfThumbnail({
 
   //console.log(author);
 
-  const modalOpenDetect = () => {
-    const element = document.getElementById("PdfModal");
-    console.log("modal test success - start");
-    if (element.getAttribute('data-modal-status') == "active") {
-      //Modal is open, close it
-      console.log("modal test success - close");
-      element.setAttribute('data-modal-status', 'inactive');
-    } else {
-      //Modal is closed, open it
-      console.log("modal test success - open");
-      element.setAttribute('data-modal-status', 'active');
-    }
-  }
+  useEffect(() => {
+    $(document).ready(function() {
+      //vars
+      let ModalWrapper = $("#ModalWrapper");
+      let PDFWindow = $("#PDFModal iframe");
+      let PDFTitle = $("#PDFModalTitle");
 
-  const handleClick = () => {
-    modalOpenDetect();
-  };
+      //open modal
+      $("[data-modal-open='pdf']").click(function(e){
+        console.log("pdf thumbnail click");
+        e.preventDefault();
+        //set PDF in iframe
+        let pdfLink = $(this).attr('data-pdf-url');
+        let pdfName = $(this).attr('data-pdf-name');
+        console.log(pdfLink);
+        PDFWindow.attr("src", pdfLink+"#view=FitH"); 
+        //activate PDF modal
+        ModalWrapper.attr("data-modal-status", "active");
+        ModalWrapper.attr("data-modal-show", "PDFModal");
+        PDFTitle.text(pdfName);
+        
+      });
 
+      //close modal
+      $("[data-modal-close]").click(function(e){
+        e.preventDefault();
+        ModalWrapper.attr("data-modal-status", "inactive");
+      });
+
+    });
+  });
 
   return (
     <div 
       className={componentStyles.PdfThumbnail}
-      onClick={handleClick}
+      /*onClick={handleClick(this)}*/
+      data-modal-open='pdf'
       data-pdf-url={url}
+      data-pdf-name={name}
     >
 
       <div className={componentStyles.thumbnail}>

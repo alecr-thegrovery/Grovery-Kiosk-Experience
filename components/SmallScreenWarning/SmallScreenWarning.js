@@ -17,9 +17,15 @@ export default function SmallScreenWarning({
     <div id="SmallScreenWarning" className={componentStyles.SmallScreenWarning}>
        
        <Container>
-         <p className={componentStyles.content}>
-          Looks like you're viewing this site on a small screen.  This experience is meant to be viewed on a large display or tablet, and doesn't really translate to small screens.
-         </p>
+         <div className={componentStyles.content}>
+           <img src="/images/BMSLogo.svg" alt="Bristol Myers Squibb - Access Support"/>
+            <p >
+             Looks like you're viewing this site on too small of a small screen.  This experience is meant to be viewed in landscape orientation on a large display or tablet, and doesn't quite  translate to small or portrait-oriented screens.
+             <br/>
+             <br/>
+             Minimum size: 3:2 aspect ratio or 1000px wide.
+            </p>
+         </div>        
        </Container>
         
       

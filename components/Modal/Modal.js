@@ -2,6 +2,8 @@
 import React from "react"
 import Link from 'next/link'
 import PDFModal from './PDFModal'
+import InactivityModal from './InactivityModal'
+import SupportModal from './SupportModal'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -11,9 +13,26 @@ export default function Modal({
   children, pdf, support, 
 }) {
 
+  /*const modalOpenDetect = () => {
+    const element = document.getElementById("ModalWrapper");
+    if (element.getAttribute('data-modal-status') == "active") {
+      //Modal is open, close it
+      element.setAttribute('data-modal-status', 'inactive');
+      element.setAttribute('data-modal-show', '');
+    } else {
+      //Modal is closed, open it
+      element.setAttribute('data-modal-status', 'active');
+      element.setAttribute('data-modal-show', 'PDFModal');
+    }
+  }
+
+  const handleClick = () => {
+    modalOpenDetect();
+  };*/
+
   //console.log(author);
   const modalClose = () => {
-    const element = document.getElementById("PdfModal");
+    const element = document.getElementById("ModalWrapper");
     element.setAttribute('data-modal-status', 'inactive');
   }
 
@@ -24,9 +43,10 @@ export default function Modal({
   return (
 
     <div 
-      id="PdfModal"
+      id="ModalWrapper"
       className={componentStyles.ModalWrapper}
       data-modal-status="inactive"
+      data-modal-show=""
     >
       
       {/*Backdrop filter, click to close*/}
@@ -36,12 +56,9 @@ export default function Modal({
       />
       
       <div className={componentStyles.modalInner}>
-
-      <PDFModal url="/pdf/test.pdf" />
-        
-        {pdf && 
-          <PDFModal url={pdf ? pdf : "/pdf/test.pdf"} />
-        }  
+        <SupportModal />
+        <PDFModal  />
+        <InactivityModal />
 
       </div>
 
