@@ -3,6 +3,7 @@ import React from "react"
 import Link from 'next/link'
 import PDFModal from './PDFModal'
 import InactivityModal from './InactivityModal'
+import SupportModal from './SupportModal'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
@@ -55,7 +56,7 @@ export default function Modal({
       />
       
       <div className={componentStyles.modalInner}>
-
+        <SupportModal />
         <PDFModal  />
         <InactivityModal />
 

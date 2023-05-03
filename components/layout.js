@@ -60,7 +60,7 @@ export default function Layout({
 
       <SmallScreenWarning/>
       {/*<FullScreenWidget/>*/}
-      <SupportModal/>
+      {/*<SupportModal/>*/}
       <Modal/>
       
       {/* MAIN SECTION */}

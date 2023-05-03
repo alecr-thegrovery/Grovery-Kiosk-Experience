@@ -40,15 +40,17 @@ export default function Sidebar({
   //console.log(author);
   useEffect(() => {
     $(document).ready(function() {
-      
+      let ModalWrapper = $("#ModalWrapper");
       $("[data-modal-open='support']").click(function(e){
         e.preventDefault();
-        $("#SupportModal").attr("data-modal-status", "active");
+        ModalWrapper.attr("data-modal-status", "active");
+        ModalWrapper.attr("data-modal-show", "SupportModal");
       });
 
-      $("[data-modal-close='support']").click(function(e){
+      $("[data-modal-close]").click(function(e){
         e.preventDefault();
-        $("#SupportModal").attr("data-modal-status", "inactive");
+        //$("#SupportModal").attr("data-modal-status", "inactive");
+        ModalWrapper.attr("data-modal-status", "inactive");
       });
 
     });

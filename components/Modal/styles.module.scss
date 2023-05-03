@@ -125,6 +125,143 @@ $backdropColor: rgba($black, 0.25);
 	}
 }
 
+.SupportModal{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: $white;
+	padding: $clampLarge $clampExtraLarge;
+	.scroll{
+		overflow-y: auto;
+		max-height: 85vh;
+		padding: $clampMedium;
+	}
+
+	.closeButton{
+		position: absolute;
+		top: $clampSmall;
+		right: $clampSmall;
+		width: $clampSmall;
+		aspect-ratio: 1/1;
+		cursor: pointer;
+	}
+
+	/*Modal Heading*/
+	.heading{
+		text-align: center;
+		display: block;
+		width: 100%;
+		max-width: 1200px;
+		margin: auto;
+		margin-bottom: $clampLarge;
+		h2{
+			font-size: $clampLarge;
+			margin-bottom: $clampSmall;
+		}
+		p{
+			font-size: $clampSmall;
+		}
+	}
+
+	/*Body Section - Columns*/
+	.body{
+		display: flex;
+		flex-direction: row;
+		//flex-wrap: wrap;
+		justify-content: center;
+		//align-items: flex-start;
+		gap: 3.33%;
+		//font-size: $clampSmall;
+		line-height: 1.35;
+
+		.column{
+			width: 30%;
+			padding: $clampMedium;
+			background-color: $grey;
+			border-radius: 5%;
+			.columnHeading{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: $clampSmall;
+				.icon{
+					font-size: $clampLarge;
+					margin-bottom: $clampSmall;
+				}
+				.hTag{
+					font-size: $clampMedium;
+				}
+			}
+			.columnBody{
+				font-size: $clampSmall;
+				ul{
+					list-style: none;
+					padding: 0;;
+				}
+				li{
+					margin-bottom: 0.65em;
+					display: flex;
+					justify-content: flex-start;
+					align-items: flex-start;
+					&:before {
+						content:'•';
+					  	color: $purple;
+					  	font-size: 2.5em;
+					  	position: relative;
+					  	top: -0.5em;
+					  	margin-right: 5px;
+					}
+				}
+			}
+			.columnFooter{
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+
+				h4{
+					font-size: $clampSmall;
+				}
+				.qrCode{
+					margin-top: $clampMedium;
+				}
+			}
+		}
+	}
+
+	.qrCode{
+		display: flex;
+		justify-content: center;
+		padding: $clampLarge 0;
+		width: 100%;
+		max-width: 600px;
+		margin: auto;
+	}
+
+	.modalFooter{
+		border-top: solid 2px $purple;
+		padding-top: 1em;
+		font-size: $clampSmall;
+		text-align: center;
+		h5{
+			font-size: inherit;
+			width: 100%;
+			max-width: 1000px;
+			margin: auto;
+		}
+		p{
+			font-size: $clampExtraSmall;
+			width: 100%;
+			max-width: 1000px;
+			margin: auto;
+			margin-top: $clampMedium;
+		}
+	}
+}
+
 .InactivityModal{
 	position: relative;
 	height: 100%;
