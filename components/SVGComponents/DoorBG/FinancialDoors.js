@@ -31,50 +31,63 @@ export default function FinancialDoors({
           <g id="all-objects">
             <g id="doors" data-element="doors">
               <g id="door1" transform="translate(-2434.939 184.607)" className="droppable" data-door="1" data-door-name="Commercial Patients" data-link="/financial/commercial-patients/" data-active="inactive">
-                <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
-                  <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                  <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" strokeWidth="1"/>
-                  <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.403"/>
-                  <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" strokeWidth="1"/>
-                  <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" strokeWidth="1"/>
-                </g>
-                <g id="door-scanner" transform="translate(2678.939 600.393)">
-                  <g id="Path_5268" data-name="Path 5268" fill="url(#linear-gradient)">
-                    <path d="M 97 55.25 L 3 55.25 C 1.759346723556519 55.25 0.75 54.24065399169922 0.75 53 L 0.75 3 C 0.75 1.759346723556519 1.759346723556519 0.75 3 0.75 L 97 0.75 C 98.24065399169922 0.75 99.25 1.759346723556519 99.25 3 L 99.25 53 C 99.25 54.24065399169922 98.24065399169922 55.25 97 55.25 Z" stroke="none"/>
-                    <path d="M 3 1.5 C 2.172897338867188 1.5 1.5 2.172901153564453 1.5 3 L 1.5 53 C 1.5 53.82709884643555 2.172897338867188 54.5 3 54.5 L 97 54.5 C 97.82710266113281 54.5 98.5 53.82709884643555 98.5 53 L 98.5 3 C 98.5 2.172901153564453 97.82710266113281 1.5 97 1.5 L 3 1.5 M 3 0 L 97 0 C 98.6568603515625 0 100 1.343143463134766 100 3 L 100 53 C 100 54.65685653686523 98.6568603515625 56 97 56 L 3 56 C 1.3431396484375 56 0 54.65685653686523 0 53 L 0 3 C 0 1.343143463134766 1.3431396484375 0 3 0 Z" stroke="none" fill="#707070"/>
+                <g className="doorInnerBlack"></g>
+                <g className="doorInner">
+                  <g className="doorInnerAnimate">
+                              <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
+                                <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+                                <rect id="Rectangle_181" data-name="Rectangle 181" width="232.288" height="486.115" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" strokeWidth="1"/>
+                                <rect id="Rectangle_183" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.403"/>
+                                <path id="Path_3486" data-name="Path 3486" d="M70.567,369.352,208.763,237.8" fill="none" stroke="#707070" strokeWidth="1"/>
+                                <path id="Path_3487" data-name="Path 3487" d="M70.567,369.352,208.763,237.8" transform="translate(-7 37)" fill="none" stroke="#707070" strokeWidth="1"/>
+                              </g>
+                              <g id="door-scanner" transform="translate(2678.939 600.393)">
+                                <g id="Path_5268" data-name="Path 5268" fill="url(#linear-gradient)">
+                                  <path d="M 97 55.25 L 3 55.25 C 1.759346723556519 55.25 0.75 54.24065399169922 0.75 53 L 0.75 3 C 0.75 1.759346723556519 1.759346723556519 0.75 3 0.75 L 97 0.75 C 98.24065399169922 0.75 99.25 1.759346723556519 99.25 3 L 99.25 53 C 99.25 54.24065399169922 98.24065399169922 55.25 97 55.25 Z" stroke="none"/>
+                                  <path d="M 3 1.5 C 2.172897338867188 1.5 1.5 2.172901153564453 1.5 3 L 1.5 53 C 1.5 53.82709884643555 2.172897338867188 54.5 3 54.5 L 97 54.5 C 97.82710266113281 54.5 98.5 53.82709884643555 98.5 53 L 98.5 3 C 98.5 2.172901153564453 97.82710266113281 1.5 97 1.5 L 3 1.5 M 3 0 L 97 0 C 98.6568603515625 0 100 1.343143463134766 100 3 L 100 53 C 100 54.65685653686523 98.6568603515625 56 97 56 L 3 56 C 1.3431396484375 56 0 54.65685653686523 0 53 L 0 3 C 0 1.343143463134766 1.3431396484375 0 3 0 Z" stroke="none" fill="#707070"/>
+                                </g>
+                                <text id="Scan_Here" data-name="Scan
+                    Here" transform="translate(45.349 26.412)" fill="#fff" fontSize="16"  fontWeight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
+                                <g id="Group_875" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
+                                  <path id="Path_160" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
+                                  <path id="Path_161" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
+                                  <path id="Path_162" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
+                                  <path id="Path_163" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
+                                </g>
+                              </g>
                   </g>
-                  <text id="Scan_Here" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" fontSize="16"  fontWeight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                  <g id="Group_875" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                    <path id="Path_160" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                    <path id="Path_161" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                    <path id="Path_162" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                    <path id="Path_163" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                  </g>
                 </g>
+                
               </g>
               <g id="door2" transform="translate(-2097.943 184.607)" className="droppable" data-door="1" data-door-name="Government Uninsured Patients" data-link="/financial/government-uninsured-patients/" data-active="inactive">
-                <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
-                  <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
-                  <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" strokeWidth="1"/>
-                  <rect id="Rectangle_183-2" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.403"/>
-                  <path id="Path_3487-2" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" strokeWidth="1"/>
-                  <path id="Path_3488" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" strokeWidth="1"/>
-                </g>
-                <g id="door-scanner-2" data-name="door-scanner" transform="translate(2678.943 600.393)">
-                  <g id="Path_5268-2" data-name="Path 5268" fill="url(#linear-gradient)">
-                    <path d="M 97 55.25 L 3 55.25 C 1.759346723556519 55.25 0.75 54.24065399169922 0.75 53 L 0.75 3 C 0.75 1.759346723556519 1.759346723556519 0.75 3 0.75 L 97 0.75 C 98.24065399169922 0.75 99.25 1.759346723556519 99.25 3 L 99.25 53 C 99.25 54.24065399169922 98.24065399169922 55.25 97 55.25 Z" stroke="none"/>
-                    <path d="M 3 1.5 C 2.172897338867188 1.5 1.5 2.172901153564453 1.5 3 L 1.5 53 C 1.5 53.82709884643555 2.172897338867188 54.5 3 54.5 L 97 54.5 C 97.82710266113281 54.5 98.5 53.82709884643555 98.5 53 L 98.5 3 C 98.5 2.172901153564453 97.82710266113281 1.5 97 1.5 L 3 1.5 M 3 0 L 97 0 C 98.6568603515625 0 100 1.343143463134766 100 3 L 100 53 C 100 54.65685653686523 98.6568603515625 56 97 56 L 3 56 C 1.3431396484375 56 0 54.65685653686523 0 53 L 0 3 C 0 1.343143463134766 1.3431396484375 0 3 0 Z" stroke="none" fill="#707070"/>
+                <g className="doorInnerBlack"></g>
+                <g className="doorInner">
+                  <g className="doorInnerAnimate">
+                              <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
+                                <path id="Path_3483-2" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#a69f9f"/>
+                                <rect id="Rectangle_181-2" data-name="Rectangle 181" width="52.952" height="231.056" transform="translate(24.139 23.792)" fill="#fff" stroke="#595454" strokeWidth="1"/>
+                                <rect id="Rectangle_183-2" data-name="Rectangle 183" width="10.71" height="161.774" transform="translate(6.14 185.963)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.403"/>
+                                <path id="Path_3487-2" data-name="Path 3487" d="M128.4,267.483,159.178,237.8" transform="translate(-89.051 -79.297)" fill="none" stroke="#707070" strokeWidth="1"/>
+                                <path id="Path_3488" data-name="Path 3488" d="M128.4,267.483l16.985-16.615" transform="translate(-89.051 -102.297)" fill="none" stroke="#707070" strokeWidth="1"/>
+                              </g>
+                              <g id="door-scanner-2" data-name="door-scanner" transform="translate(2678.943 600.393)">
+                                <g id="Path_5268-2" data-name="Path 5268" fill="url(#linear-gradient)">
+                                  <path d="M 97 55.25 L 3 55.25 C 1.759346723556519 55.25 0.75 54.24065399169922 0.75 53 L 0.75 3 C 0.75 1.759346723556519 1.759346723556519 0.75 3 0.75 L 97 0.75 C 98.24065399169922 0.75 99.25 1.759346723556519 99.25 3 L 99.25 53 C 99.25 54.24065399169922 98.24065399169922 55.25 97 55.25 Z" stroke="none"/>
+                                  <path d="M 3 1.5 C 2.172897338867188 1.5 1.5 2.172901153564453 1.5 3 L 1.5 53 C 1.5 53.82709884643555 2.172897338867188 54.5 3 54.5 L 97 54.5 C 97.82710266113281 54.5 98.5 53.82709884643555 98.5 53 L 98.5 3 C 98.5 2.172901153564453 97.82710266113281 1.5 97 1.5 L 3 1.5 M 3 0 L 97 0 C 98.6568603515625 0 100 1.343143463134766 100 3 L 100 53 C 100 54.65685653686523 98.6568603515625 56 97 56 L 3 56 C 1.3431396484375 56 0 54.65685653686523 0 53 L 0 3 C 0 1.343143463134766 1.3431396484375 0 3 0 Z" stroke="none" fill="#707070"/>
+                                </g>
+                                <text id="Scan_Here-2" data-name="Scan
+                    Here" transform="translate(45.349 26.412)" fill="#fff" fontSize="16"  fontWeight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
+                                <g id="Group_875-2" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
+                                  <path id="Path_160-2" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
+                                  <path id="Path_161-2" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
+                                  <path id="Path_162-2" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
+                                  <path id="Path_163-2" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
+                                </g>
+                              </g>
                   </g>
-                  <text id="Scan_Here-2" data-name="Scan
-      Here" transform="translate(45.349 26.412)" fill="#fff" fontSize="16"  fontWeight="700"><tspan x="0" y="0">SCAN</tspan><tspan x="0" y="16">HERE</tspan></text>
-                  <g id="Group_875-2" data-name="Group 875" transform="translate(18.949 15.597) rotate(3)">
-                    <path id="Path_160-2" data-name="Path 160" d="M0,5.252c0,.016,0,.032,0,.048A7.41,7.41,0,0,0,1.4,9.639a4.838,4.838,0,0,0,.326.422,1.342,1.342,0,0,0,2-1.79s-.016-.018-.04-.048L3.7,8.217l.01.01a1.4,1.4,0,0,1-.126-.153,5.039,5.039,0,0,1-.9-2.822,5.037,5.037,0,0,1,.894-2.816,1.631,1.631,0,0,1,.127-.156l-.01.01L3.69,2.286c.024-.031.04-.049.04-.049a1.342,1.342,0,0,0-2-1.789A4.849,4.849,0,0,0,1.4.872,7.409,7.409,0,0,0,0,5.207Z" transform="translate(16.048 7.468)" fill="#fff"/>
-                    <path id="Path_161-2" data-name="Path 161" d="M3.1,0A1.317,1.317,0,0,1,4.148,2.117,9.8,9.8,0,0,0,2.635,7.554a10.787,10.787,0,0,0,1.541,5.655,1.317,1.317,0,0,1-2.149,1.524A13.2,13.2,0,0,1,0,7.554,12.229,12.229,0,0,1,2.054.518,1.315,1.315,0,0,1,3.1,0Z" transform="translate(10.971 5.124)" fill="#fff"/>
-                    <path id="Path_162-2" data-name="Path 162" d="M3.757,0A1.318,1.318,0,0,1,4.811,2.106a14.4,14.4,0,0,0-2.176,7.927,15.568,15.568,0,0,0,2.2,8.215,1.318,1.318,0,1,1-2.165,1.5A18.132,18.132,0,0,1,0,10.033,16.735,16.735,0,0,1,2.7.529,1.315,1.315,0,0,1,3.757,0Z" transform="translate(5.483 2.61)" fill="#fff"/>
-                    <path id="Path_163-2" data-name="Path 163" d="M4.476,0A1.318,1.318,0,0,1,5.531,2.106a19.019,19.019,0,0,0-2.9,10.5A20.8,20.8,0,0,0,5.56,23.47a1.317,1.317,0,0,1-2.167,1.5A23.053,23.053,0,0,1,0,12.606,21.249,21.249,0,0,1,3.42.529,1.314,1.314,0,0,1,4.476,0Z" transform="translate(0)" fill="#fff"/>
-                  </g>
                 </g>
+                
+                
               </g>
               <g id="signs">
                 <g id="sign2" transform="translate(0 20)">
