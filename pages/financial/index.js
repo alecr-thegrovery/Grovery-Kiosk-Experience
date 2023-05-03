@@ -46,7 +46,7 @@ export default function Home({ allPostsData }) {
     >
       
       <Head>
-        <title>Enrollment | {siteData.siteTitleBase}</title>
+        <title>Financial | {siteData.siteTitleBase}</title>
       </Head>
       <div className={pageStyles.pageLayout}>
         <DynamicHeader
