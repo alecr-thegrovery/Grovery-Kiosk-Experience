@@ -5,16 +5,16 @@
 
 ### Code Libraries ###
 * Drag and Drop library: https://interactjs.io/
-* Element shapes: https://augmented-ui.com/
+
 
 ### Server Links ###
 * Local: http://localhost:3000/
-* Staging: https://planet-caravan-simple-blog-template.netlify.app/
+* Staging: https://bms-kiosk-staging.netlify.app/
 * Live: 
 
 ---
 
-## Planet Caravan Simple Blog Template ##
+## BMS ACCESS SUPPORT EXPERIENCE ##
 
 
 ### Best Practices ###
@@ -33,7 +33,7 @@
 
 
 ### Update Test/Staging Server ###
-This site uses Netlify's auto-deploy functions.  Every time you push to 
+This site uses Netlify's auto-deploy functions.  Every time you push to your main branch, Netlify will do a new deploy.
 
 ### Form Configuration ###
 
@@ -59,6 +59,7 @@ When you start the project, check in with the projects's Analyst for the followi
 * [swiper](https://swiperjs.com/)
 * [normalize.css](https://necolas.github.io/normalize.css/)
 * [react-headroom](https://kyleamathews.github.io/react-headroom/)
+* [tippy.js](https://atomiks.github.io/tippyjs/)
 
 ### Coming Features ###
 * Contact page

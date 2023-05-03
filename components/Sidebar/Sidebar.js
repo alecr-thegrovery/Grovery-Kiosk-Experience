@@ -1,29 +1,73 @@
 /*===== Components =====*/
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
 import Card from '@components/DragDrop/Card.js'
+import IDCard from '@components/IDCard'
 import { BsUpcScan } from "react-icons/bs";
 import { MdArrowBackIosNew } from "react-icons/md";
+import $ from 'jquery'
+import SupportIcon from '@components/SVGComponents/SupportIcon'
+import BackIcon from '@components/SVGComponents/BackIcon'
+import HomeIcon from '@components/SVGComponents/HomeIcon'
+import ScannerIcon from '@components/SVGComponents/ScannerIcon'
+import FullscreenOpenIcon from '@components/SVGComponents/FullscreenOpenIcon'
+import FullscreenCloseIcon from '@components/SVGComponents/FullscreenCloseIcon'
+import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
-import utilStyles from '@styles/utils.module.css'
+
 
 export default function Sidebar({ 
   //Props
   scanner, card, home, 
-  access, enrollment, financial, resources
+  access, enrollment, financial, resources,
+  cardTooltipText
 }) {
+  
+  const handleFullScreenClick = () => {
+    let element = document.querySelector("#fullscreenButton");
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      element.setAttribute("data-icon", "open");
+    } else {
+      document.documentElement.requestFullscreen();
+      element.setAttribute("data-icon", "close");
+
+    }
+  };
 
   //console.log(author);
+  useEffect(() => {
+    $(document).ready(function() {
+      let ModalWrapper = $("#ModalWrapper");
+      $("[data-modal-open='support']").click(function(e){
+        e.preventDefault();
+        ModalWrapper.attr("data-modal-status", "active");
+        ModalWrapper.attr("data-modal-show", "SupportModal");
+      });
+
+      $("[data-modal-close]").click(function(e){
+        e.preventDefault();
+        //$("#SupportModal").attr("data-modal-status", "inactive");
+        ModalWrapper.attr("data-modal-status", "inactive");
+      });
+
+    });
+  });
 
   return (
     <div className={componentStyles.Sidebar}>
       <div className={componentStyles.inner}>
+
+      <div className={"cardsFilter "+ componentStyles.cardsFilter}></div>
         
         <div className={componentStyles.controlsOuter}>
           <div className={componentStyles.controls}>
-            <a href="#">QUESTIONS</a>
+            <a data-modal-open='support' href="#">
+              <SupportIcon/>
+              SUPPORT
+            </a>
           </div>
         </div>
         
@@ -31,92 +75,103 @@ export default function Sidebar({
         <div className={componentStyles.scannerWrapper}>
           <div id="DropZone" className={componentStyles.scanner + ' droppable'}>
 
-            {/*{card &&
-              <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Enrollment"
-                  text="Enrollment"
-                  link="/enrollment-1/"
-                  color="brown"
-                />
-              </div>
-            }*/}
             {access && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Access"
+                <IDCard
+                  cardID="access"
                   text="Access and Reimbursement Report"
-                  link="/access-1/"
-                  color="orange"
+                  color="mutedRed"
+                  tooltipID="lvl-2-card-initial"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
             {enrollment && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Enrollment"
+                <IDCard
+                  cardID="enrollment"
                   text="Enrollment"
-                  link="/enrollment-1/"
-                  color="brown"
+                  color="mutedYellow"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
             {financial && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Copay"
+                <IDCard
+                  cardID="financial"
                   text="Co-Pay &amp; Finacial Assistance Services"
-                  link="/financial-1/"
-                  color="teal"
+                  color="mutedBlue"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
             {resources && 
               <div className={componentStyles.cardOutter}>
-                <Card
-                  cardID="Resources"
+                <IDCard
+                  cardID="resources"
                   text="Patient Resources"
-                  link="/resources-1/"
-                  color="purple"
+                  color="mutedGreen"
+                  tooltipText={cardTooltipText ? cardTooltipText : ""}
+                  tooltipPlacement="left"
                 />
               </div>
             }
             
 
-            <div className={componentStyles.scannerBorder}>
-              
-              <div className={componentStyles.light}>
+            <div id="scannerBorder" className={componentStyles.scannerBorder}>
+              <div id="scannerLight" className={componentStyles.light}>
                 <div className={componentStyles.lightInner}></div>
               </div>
               <div className={componentStyles.icon}>
-                <BsUpcScan
-                  color="#fafafa" 
-                  size={65}
-                />
+                <ScannerIcon/>
               </div>
               <div className={componentStyles.text}>
                 <p>
                   Place your access card here
                 </p>
               </div>
-
-
-
+              {home &&
+                <Tooltip
+                  tooltipID="lvl-1-place-card-here"
+                  placement="up"
+                  text={[<h2>Place Access Card Here</h2>]}
+                />
+              }
+              
             </div>
           </div>
         </div>
 
         <div className={componentStyles.controlsOuter}>
-          {!home && 
+          
+          {home ?
+            <div className={componentStyles.controls}>
+              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open">
+                {/*<p>&#9746;</p>*/}
+                <div className={componentStyles.openIcon}>
+                  <FullscreenOpenIcon/>
+                </div>
+                <div className={componentStyles.closeIcon}>
+                  <FullscreenCloseIcon/>
+                </div>
+                 FULLSCREEN
+              </a>
+            </div>
+          :
             <div className={componentStyles.controls}>
               <a className={componentStyles.alt} data-page-back>
-                <MdArrowBackIosNew/> Back
+                <BackIcon/> BACK
               </a>
               <a data-page-transition="/" data-delay="0">
-                Home
+                <HomeIcon/> HOME
               </a>
             </div>
           }
+
         </div>
         
       </div>

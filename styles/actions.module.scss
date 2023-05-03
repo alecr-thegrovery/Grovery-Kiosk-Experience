@@ -1,0 +1,517 @@
+/*========================================*/
+//	Action State Styles
+//	
+//	Use this file to set the styles for when 
+//	actions are being performed.  
+//	
+//	Use the base selector:
+//		#LayoutOuter[data-action-state=""]
+//	and use the data-attr to reference the action
+//	
+/*========================================*/
+
+/* ================== */
+/* ===== Imports ===== */
+/* ================== */
+  @import "@styles/vars.module.scss";
+
+
+/* =================================== */
+/* ===== Vars & Mixins & Keyframes ===== */
+/* =================================== */
+  //SYNTAX:
+  //var:        width: $varName;
+  //mixin:   @include mixinName;
+
+  @mixin hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  @mixin visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  @keyframes fillPurple {
+    from {
+      fill: $white;
+    }
+    to {
+      fill: $purple;
+    }
+  }
+
+/* =========================== */
+/* ===== General Template ===== */
+/* =========================== */
+
+  #LayoutOuter{
+    &[data-action-state-load="load-finished"]{
+      
+    }
+    &[data-action-state-load="just-after-load"]{
+      
+    }
+    &[data-action-state-load="just-after-load-2"]{
+      
+    }
+    &[data-action-state-load="load-sequence-complete"]{
+      
+    }
+    //end of block
+  }
+
+/* ========================== */
+/* ===== Page Transition ===== */
+/* ========================== */
+  #LayoutOuter{
+    transition: $transitionMedium;
+    background: $white;
+    &[data-action-state-transition="initial"]{
+      @include visible;
+    }
+    &[data-action-state-transition="hidden"]{
+      @include hidden;
+    }
+    &[data-action-state-transition="visible"]{
+      @include visible;
+    }
+  }
+
+
+/* =========================== */
+/* ===== Cards Animate In  ===== */
+/* =========================== */
+    #LayoutOuter[data-action-state-page="lvl-1"]{
+      [data-animation="fadeInUp"]{
+        transform: translate3d(0em, 8vh, 0em);
+        opacity: 0;
+        pointer-events: none;          
+        transition: 0;
+      } 
+
+
+
+      &[data-action-state-cards-show="initial"]{
+        [data-animation="fadeInUp"]{
+          transform: translate3d(0em, 8vh, 0em);
+          opacity: 0;
+          pointer-events: none;          
+          transition: 0;
+        } 
+      }
+
+      &[data-action-state-cards-show="animate-start'"]{
+        [data-animation="fadeInUp"]{
+          transform: translate3d(0em, 8vh, 0em);
+          opacity: 0;
+          pointer-events: none;          
+          transition: $transitionSlow;
+          $delay: 0.15s;
+          &[data-animation-delay="1"]{
+            transition-delay: calc(1 * #{$delay}) ;
+          }
+          &[data-animation-delay="2"]{
+            transition-delay: calc(2 * #{$delay}) ;
+          }
+          &[data-animation-delay="3"]{
+            transition-delay: calc(3 * #{$delay}) ;
+          }
+          &[data-animation-delay="4"]{
+            transition-delay: calc(4 * #{$delay}) ;
+          }
+        } 
+      }
+
+      &[data-action-state-cards-show="visible"]{
+        [data-animation="fadeInUp"]{
+          transform: translate3d(0em, 0vh, 0em);
+          opacity: 1;
+          pointer-events: auto;          
+          transition: $transitionSlow;
+          $delay: 0.15s;
+          &[data-animation-delay="1"]{
+            transition-delay: calc(1 * #{$delay}) ;
+          }
+          &[data-animation-delay="2"]{
+            transition-delay: calc(2 * #{$delay}) ;
+          }
+          &[data-animation-delay="3"]{
+            transition-delay: calc(3 * #{$delay}) ;
+          }
+          &[data-animation-delay="4"]{
+            transition-delay: calc(4 * #{$delay}) ;
+          }
+        } 
+      }
+      &[data-action-state-cards-show="post-visible"]{
+        [data-animation="fadeInUp"]{
+          transform: translate3d(0em, 0vh, 0em);
+          opacity: 1;
+          pointer-events: auto;        
+          transition: 0;
+        } 
+      }
+      //end
+    }
+
+/* ================================= */
+/* ===== Draggable Card States ===== */
+/* ================================ */
+
+  /* ===== Global ===== */
+    .draggable{
+      z-index: 21;
+      .inner{
+        transition: $transitionMedium;
+        &:after{
+          content:'';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(33, 33, 33, 0.5);
+          border-radius: 15px;
+          transition: $transitionMedium;
+          opacity:0;
+        }
+      }
+      
+      &.getting--dragged{
+         z-index: 100 !important;
+        .inner{
+            transform: rotate(15deg) translate(0, -6vh) !important;
+            box-shadow: $niceShadowShort;
+          }
+        } 
+    }
+  
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    //Color Filters
+      &[data-action-state-load="just-after-load-2"],
+      &[data-action-state-load="load-sequence-complete"]{
+        .cardsFilter,
+        .colorFilter{
+          opacity:0.15;
+        }
+        &[data-action-state-cards="card-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.5;
+          }
+          .draggable:not(.getting--dragged){
+            .inner{
+                transform: translate(0, 2vh) !important;
+                box-shadow: none;
+                &:after{
+                  opacity:0.5;
+                }
+              }
+            } 
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          .cardsFilter,
+          .colorFilter{
+            opacity:0.15;
+          }
+        }
+      }
+  
+    //Emphasize first card
+      &[data-action-state-load="load-sequence-complete"]{
+        #enrollment .inner{
+          transform: translate(0, -4vh);
+        }
+        #enrollment [data-tooltip]{
+          transform: translate(-50%, -4vh);
+        }
+        &[data-action-state-cards="card-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
+          }
+        }
+        &[data-action-state-cards="card-post-interaction"]{
+          #enrollment .inner{
+            transform: translate(0, 0);
+          }
+          #enrollment [data-tooltip]{
+            transform: translate(-50%, 0);
+          }
+        }
+
+        
+      }
+
+    //Sidebar Animation
+      &[data-action-state-cards="card-interaction"]{
+        #scannerBorder{
+          border-color: $purple;
+        }
+        #ScannerIcon{
+          $duration: 0.15s;
+          $iteration: 1;
+          [data-name="hand"] path{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.25s;
+          }
+          [data-name="wave-1"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.5s;
+          }
+          [data-name="wave-2"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 0.75s;
+          }
+          [data-name="wave-3"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1s;
+          }
+          [data-name="wave-4"]{
+            animation-name: fillPurple;
+             animation-duration: $duration;
+             animation-iteration-count: $iteration;
+             animation-fill-mode: forwards;
+             animation-delay: 1.25s;
+          }
+        }
+        #scannerLight{
+          &>div{
+            background-color: $purple;
+          }
+        }
+        //end
+      }
+      
+  }
+
+  /* ===== Page lvl 2 ===== */
+  #LayoutOuter[data-action-state-page="lvl-2"]{
+    .draggable{
+      .inner{
+        transform: rotate(3deg);
+      }
+    } 
+    
+    .getting--dragged{
+      .inner{
+          transform: rotate(15deg) translate(0, -6vh) scale(0.75) !important;
+        }
+      } 
+  }
+
+  /* ===== Page lvl 3 ===== */
+  #LayoutOuter[data-action-state-page="lvl-3"]{
+    .draggable{
+      pointer-events: none;
+      .inner{
+        transform: rotate(3deg);
+      }
+    }
+  }
+
+/* =================== */
+/* ===== Tooltips ===== */
+/* =================== */
+  
+  /* ===== Page lvl 1 ===== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    [data-tooltip]{
+      @include hidden;
+    }
+    &[data-action-state-tooltips="initial-hide"]{
+      [data-tooltip]{
+        @include hidden;
+      }
+    }
+    &[data-action-state-tooltips="show-after-load"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include visible;
+      }
+    }
+    &[data-action-state-tooltips="card-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
+      }
+      [data-tooltip="lvl-1-place-card-here"]{
+        @include visible;
+      }
+    }
+    &[data-action-state-tooltips="card-post-interaction"]{
+      [data-tooltip="lvl-1-card-instructions"]{
+        @include hidden;
+      }
+      [data-tooltip="lvl-1-place-card-here"]{
+        @include hidden;
+      }
+    }
+    //end of block
+  }
+
+  /* ===== Page lvl 2 ===== */
+  #LayoutOuter[data-action-state-page="lvl-2"]{
+    &[data-action-state-cards="card-interaction"]{
+      [data-tooltip]{
+        @include hidden;
+      }
+    }
+    &[data-action-state-cards="card-post-interaction"]{
+      [data-tooltip]{
+        @include hidden;
+      }
+    }
+  }
+
+/* ================================== */
+/* ===== Level 3 Page Transitions ===== */
+/* ================================== */
+
+  #LayoutOuter{
+    //Default animation vars, override below
+      $zoomFocus: 50% 83%;
+      $zoomAmount: 2.5;
+      transform-origin: $zoomFocus;
+    //Individual Screens
+      [data-transition-screen="1"]{
+        $zoomFocus: 55% 83%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="2"]{
+        $zoomFocus: 48% 25%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="3"]{
+        $zoomFocus: 73% 68%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="4"]{
+        $zoomFocus: 65% 55%;
+        //$zoomAmount: 2; 
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="5"]{
+        $zoomFocus: 5% 81%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="6"]{
+        $zoomFocus: 46% 53%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="7"]{
+        $zoomFocus: 20% 71%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="8"]{
+        $zoomFocus: 28% 52%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="9"]{
+        $zoomFocus: 57% 64%;
+        transform-origin: $zoomFocus;
+      }
+      [data-transition-screen="10"]{
+        $zoomFocus: 30% 57%;
+        transform-origin: $zoomFocus;
+      }
+    /* ===== Initial State ===== */
+      &[data-action-state-load="initial"],
+      &[data-action-state-load="load-finished"]{
+        
+      /* [data-transition-screen]{
+          transform-origin: $zoomFocus;
+        }*/
+        
+      }
+
+    /* ===== Animation Begin ===== */
+      &[data-action-state-load="just-after-load"]{
+        [data-transition-screen]{
+          //zoom in
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="1"]{
+          $zoomAmount: 2.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="2"]{
+          $zoomAmount: 3.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="3"]{
+          $zoomAmount: 2.15; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="4"]{
+          $zoomAmount: 2; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="5"]{
+          $zoomAmount: 2.75; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="6"]{
+          $zoomAmount: 2.5; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="7"]{
+          $zoomAmount: 2.15; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="8"]{
+          $zoomAmount: 2.35; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="9"]{
+          $zoomAmount: 2.35; 
+          transform: scale($zoomAmount);
+        }
+        [data-transition-screen="10"]{
+          $zoomAmount: 1.8; 
+          transform: scale($zoomAmount);
+        }
+      }
+    
+    /* ===== Animation Point 1 ===== */
+      &[data-action-state-load="just-after-load-2"]{
+        [data-transition-screen]{
+          //keep zoom in, fade out & reveal content
+          transform: scale(4);
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+    /* ===== Complete, Clear Animations ===== */
+      &[data-action-state-load="load-sequence-complete"]{
+        [data-transition-screen]{
+          //clear everything after animations are complete
+          //transform: none;
+          //transform-origin: none;
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+    //end
+    }
+
+

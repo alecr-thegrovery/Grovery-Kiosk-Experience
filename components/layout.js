@@ -3,83 +3,51 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { router } from 'next/router'
 import styles from './layout.module.scss'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import data from "@data/data.json"
 import $ from 'jquery'
 
-import DesktopNav from '@components/DesktopNav'
-import NavMenu from '@components/NavMenu'
 import Sidebar from '@components/Sidebar'
-import Footer from '@components/Footer'
-import Container from '@components/Container'
+import Modal from '@components/Modal'
 import BackToHome from '@components/BackToHome'
 import SmallScreenWarning from '@components/SmallScreenWarning'
+import FullScreenWidget from '@components/FullScreenWidget'
 
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'BMS Congress Access Support'
 export const siteData = data
 
 export default function Layout({ 
   //PROPS
   children, home, card,
-  access, enrollment, financial, resources
+  access, enrollment, financial, resources,
+  pageActionState, cardTooltipText
 }) {
   
   useEffect(() => {
-    $(document).ready(function() {
-      smoothLoad();
-
-      function smoothLoad(){
-        let bufferTime = 250;
-        setTimeout(function() { 
-            $("#LayoutOuter").attr("data-hidden", "false");
-        }, bufferTime);
-      }
-
-      function pageTransition(url, delay){
-        console.log("page-transition: " + url + " | "+ delay);
-        router.prefetch(url); //prefetch next page
-        setTimeout(function() { 
-          $("#LayoutOuter").attr("data-hidden", "true"); //page transition
-          setTimeout(function() { 
-            router.push(url); //move user to next page
-          }, 250); //allow time for page transition
-        }, delay); //allow time for element animations
-      } //END pageTransition function
-
-      let url = "";
-      let delay = 1000;
-
-      $("[data-page-transition]").click(function(){
-        console.log("data-page-transition click");
-        url = $(this).attr("data-page-transition");
-        delay = $(this).attr("data-delay");
-        pageTransition(url, delay);
-      }); 
-
-      $("[data-page-back]").click(function(){
-        console.log("data-page-back click");
-        window.history.back()
-        /*url = window.history.back();
-        delay = 0;
-        console.log(url);
-        pageTransition(url, delay);*/
-      }); 
-
-    });
-
+    
   });
 
   return (
-    <div id="LayoutOuter" className={styles.outer} data-hidden="true">
+    <div 
+      id="LayoutOuter" 
+      className={styles.outer} 
+      data-hidden="true" 
+      data-action-state="initial"  
+      data-action-state-load="initial"  
+      data-action-state-transition="hidden"  
+      data-action-state-tooltips="initial"
+      data-action-state-cards="initial"
+      data-action-state-cards-show="initial"
+      data-action-state-page={pageActionState}
+    >
       <Head>
         <link rel="icon" href="/favicon.png" />
         <meta
           name="description"
-          content="Simple blog-style template for Planet Caravan Studios"
+          content="Bristol Myers Squibb Access Support - Learn more about how we can help you."
         />
         <meta property="og:image"
-          content={`/images/planet-caravan-studios-logo.png`}
+          content={`/images/BMSLogo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -90,13 +58,10 @@ export default function Layout({
       </Head>
 
       <SmallScreenWarning/>
+      {/*<FullScreenWidget/>*/}
+      {/*<SupportModal/>*/}
+      <Modal/>
       
-      <section className={styles.header}>
-        <DesktopNav/>
-        <NavMenu/>
-      </section>
-      
-
       {/* MAIN SECTION */}
       <main className={styles.main}>
         
@@ -111,11 +76,11 @@ export default function Layout({
             </Container>
           )}*/}
           
-          <div className={styles.mainContent}>
+          <div id="mainContent" className={styles.mainContent}>
             {children}
           </div>
 
-          <div className={styles.rightSidebar}>
+          <div id="rightSidebar" className={styles.rightSidebar}>
             <Sidebar 
               card={card}
               access={access}
@@ -123,14 +88,15 @@ export default function Layout({
               financial={financial}
               resources={resources}
               home={home}
+              cardTooltipText={cardTooltipText}
             />
           </div>
   
       </main>
 
-      <section className={styles.footer}>
+      {/*<section className={styles.footer}>
         <Footer/>
-      </section>
+      </section>*/}
       
       
     </div>

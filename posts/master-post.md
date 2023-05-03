@@ -1,65 +1,29 @@
 ---
-title: "Master Post"
-date: "2022-08-03"
-author: "Alec Reimel"
+title: "Options to enroll in BMS Access Support"
+previewImage: "/images/BMSLogo.svg"
+frameImage: "/images/computerFrames/frame-1.svg"
+footerText: ""
 
-image: "/images/hm-hero-img.jpg"
-previewText: "Copy this post for any new posts"
 ---
 
-# README #
+# Level 3 Page Template
 
-### Project-Specific Notes ###
-* Project-specific notes go here.
+Option 1:  Visit BMSAccessSupport.com and click the “Get Started” link under the Enrollment tab. Select the medication, download and complete the form, and then fax it to the fax number provided on the form.
+<img src="/images/BMSLogo.svg"/>
 
-#### Server Links ####
-* Local: <http://localhost:3000/>
-* Staging: <https://planet-caravan-simple-blog-template.netlify.app/>
-* Live: 
+---
 
-## Planet Caravan Simple Blog Template ##
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-### Best Practices ###
-* Use lots of comments and documentation
-* Keep your tabs lined up correctly
-* Follow HTML5 element heirarchy
-* Double check your title tags and favicon
-* Store your local project in a regular folder with no cloud syncing - this can cause issues with running/building the project
-
-### Initialize ###
-* Use Node v14.15.3 - you can just run "npm run nvm" to set
-* npm install
-* npm run dev
-
-### Initial Server Deploy ###
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
 
 
-### Update Test Server ###
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-### Form Configuration ###
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-#### Page Links ####
-* <http://localhost:3000/> - Index/Home
-* <http://localhost:3000/posts> - Blog posts directory
-* <http://localhost:3000/posts/master-post> - Post master template
-
-
-### Assets Checklist ###
-When you start the project, check in with the projects's Analyst for the following:
-* Font files
-* Logo(s) - as PNGs
-* Favicon - you can usually resize the logo for this
-* Figma/PSD of the design to export individual assets
-* Legal copy/links
-* Social links
-
-### Coming Features ###
-
-### Plugin/Library Links ###
-* [react-icons](https://react-icons.github.io/react-icons)
-* [swiper](https://swiperjs.com/)
-* [normalize.css](https://necolas.github.io/normalize.css/)
-* [react-headroom](https://kyleamathews.github.io/react-headroom/)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

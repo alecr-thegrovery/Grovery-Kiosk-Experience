@@ -4,6 +4,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100%;
 	
 	
 	/*===== DropZone =====*/
@@ -51,59 +53,121 @@
 
 /*===== DnD Cards =====*/
 .cardsOuter{
+	position: relative;
 	width: 100%;
+	height: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	z-index: 10;
+	z-index: 20;
 	.cell{
 		width: 25%;
 		padding: 25px;
 	}
+
+	.cardsFilter{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba($black, 0.5);
+		opacity: 0;
+		transition: $transitionMedium;
+		pointer-events: none;
+		z-index:21;
+	}
 }
 
 .dragDropCard{
-	width: clamp(100px,100%,250px);
+	width: clamp(200px,15vw,375px);
 	max-width: 100%;
-	aspect-ratio: 1/1.25;
-	z-index: 10;
+	aspect-ratio: 1/1.5;
+	z-index: 20;
 	touch-action: none;
-	$accentHeight: 2em;
+	$accentHeight:  clamp(80px, 5vw, 120px);
+	$holeHeight:  clamp(50px, 3vw, 80px);
 	.inner{
 		position: relative;
-		border: solid $borderWidth $black;
+		//border: solid $borderWidth $black;
 		border-radius: 0.5em;
+		box-shadow: $simpleShadowLarge;
 		font-size: $clampSmall;
 		width: 100%;
 		height: 100%;
 		background-color: $white;
-		padding-bottom: $accentHeight;
+		//padding-bottom: $accentHeight;
 		overflow: hidden;
+		.hole{
+			position: absolute;
+			left: 0;
+			top: 0px;
+			width: 100%;
+			//aspect-ratio:3/1;
+			height: $holeHeight;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1em;
+			//border-radius: 0.5em 0 0.5em 0.5em;
+			background-color: transparent;
+			z-index: 0;
+
+			.holePlaceholder{
+				background-color: $grey_1;
+				height: $clampMedium;
+				aspect-ratio: 5/1;
+				border-radius:50px;
+			}
+		}
 		.content{
+			//height: calc(100% - #{$accentHeight});
+			height: 100%;
 			padding: 0.5em;
+			padding-top: $holeHeight;
+			padding-bottom: $accentHeight;
+			display: flex;
+			flex-direction: column;
+			//flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+
+			.icon{
+				max-width: clamp(80px, 5vw, 200px);
+				width: 100%;
+			}
 		}
 		.accent{
 			position: absolute;
 			left: 0;
 			bottom: 0px;
 			width: 100%;
+			//aspect-ratio:3/1;
 			height: $accentHeight;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 1em;
 			//border-radius: 0.5em 0 0.5em 0.5em;
-			background-color: $red;
+			background-color: $mutedRed;
 			z-index: 0;
-			&[data-color="brown"]{
-				background-color: $brown;
+			&[data-color="mutedRed"]{
+				background-color: $mutedRed;
 			}
-			&[data-color="orange"]{
-				background-color: $orange;
+			&[data-color="mutedYellow"]{
+				background-color: $mutedYellow;
 			}
-			&[data-color="teal"]{
-				background-color: $teal;
+			&[data-color="mutedBlue"]{
+				background-color: $mutedBlue;
 			}
-			&[data-color="purple"]{
-				background-color: $purple;
+			&[data-color="mutedGreen"]{
+				background-color: $mutedGreen;
 			}
 		}
 		

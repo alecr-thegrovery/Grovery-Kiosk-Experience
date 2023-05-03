@@ -4,7 +4,7 @@
 	//border: solid $borderWidth $black;
 	background-color: $grey_1;
 	height: 100%;
-	padding: 1em;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,8 +12,23 @@
 	position: relative;
 	//z-index:  $zIndexMedium;
 
+	.cardsFilter{
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba($black, 0.5);
+		opacity: 0;
+		transition: $transitionMedium;
+		z-index: 9;
+		pointer-events: none;
+	}
+
 	.inner{
 		height: 100%;
+		width: 100%;
+		padding: 1em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,20 +50,24 @@
 		align-items: center;
 		justify-content: center;
 		margin: 1em 0em;
+		z-index: 10;
 	}
 
 	.scanner{
 	  background-color: $grey_2;
 	  border-radius: 0.5em;
-	  width: 100%;
-	  aspect-ratio:1/2;
+	  width: clamp(180px, 10vw, 200px);
+	  aspect-ratio:1/2.75;
 	  padding: 0.5em;
+	  text-align: center;
+	  position: relative;
 
 	  .scannerBorder{
-	    border: dashed $borderWidth $grey_1;
-	    width: 100%;
-	    height: 100%;
-	    padding: 0.5em 0.5em;
+	  	$dynamicBorder: clamp(2px, 0.25vw, 3px);
+		border: dashed $dynamicBorder $grey_1;
+		width: 100%;
+		height: 100%;
+		padding: 0.5em 0.5em;
 	  }
 	  .light{
 	  	height: 20%;
@@ -59,15 +78,19 @@
 	  	.lightInner{
 	  		width: 1em;
 	  		height: 1em;
-	  		background-color: $green;
+	  		background-color:#9F9089;
 	  		border-radius: 100%;
-	  		border: solid $borderWidth $white;
-	  		box-shadow:
-				0 0 0.15em rgba($white, 1.0),
-				0 0 0.25em rgba($white, 1.0),
-				0 0 0.5em rgba($green, 1.0),
-				0 0 1em rgba($green, 1.0),
-				0 0 1.25em rgba($green, 1.0);
+	  		border: solid $borderWidth #707070;
+			&[data-active]{
+				background-color: $green;
+		  		border: solid $borderWidth $white;
+		  		box-shadow:
+					0 0 0.15em rgba($white, 1.0),
+					0 0 0.25em rgba($white, 1.0),
+					0 0 0.5em rgba($green, 1.0),
+					0 0 1em rgba($green, 1.0),
+					0 0 1.25em rgba($green, 1.0);
+			}
 	  	}
 	  }
 	  .icon{
@@ -91,7 +114,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		width: 100%;
+		//width: 100%;
+		width: 18vw;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -104,8 +128,11 @@
 		display: flex;
 		justify-content:center;
 		align-items: center;
+		//width: 100%;
+		width: clamp(180px, 10vw, 200px);
 	}
 	.controls{
+		width: 100%;
 		display: flex;
 		justify-content:center;
 		align-items: center;
@@ -113,12 +140,17 @@
 		border-radius: 0.5em;
 		overflow: hidden;
 		//margin-top: 1em;
+
 		a{
+			height: 95px;
+			width: 100%;
 			position: relative;
 			background-color: $grey_2;
 			color: $white;
+			font-size: $clampSmall;
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
+			justify-content: flex-end;
 			align-items: center;
 			padding: 0.25em 0.5em;
 			cursor: pointer;
@@ -135,6 +167,27 @@
 				right: 0px;
 				top: 50%;
 				transform: translate(0%, -50%);
+			}
+			svg{
+				position: relative;
+				top: -10%;
+			}
+		}
+
+		.openIcon{
+			display: none;
+		}
+		.closeIcon{
+			display: none;
+		}
+		[data-icon="open"]{
+			.openIcon{
+				display: block;
+			}
+		}
+		[data-icon="close"]{
+			.closeIcon{
+				display: block;
 			}
 		}
 	}
