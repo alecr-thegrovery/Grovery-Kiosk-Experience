@@ -30,7 +30,7 @@ export default function Frame3({
           <rect id="computer_bottombar" width="1393.008" height="56.268" transform="translate(4558.752 2058.381)" fill="#eee7e7"/>
         </g>
         
-        <foreignObject className={componentStyles.content} x="0" y="0" width="calc(100% - 100px);" height="calc(100% - 100px);">
+        <foreignObject className={componentStyles.content} width="calc(100% - 100px);" height="calc(100% - 100px);">
           <div className={componentStyles.contentInner} data-overflow-detect>
             {children}
           </div>
