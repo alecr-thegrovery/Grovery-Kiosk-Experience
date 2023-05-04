@@ -94,12 +94,12 @@ export default function FinancialDoors({
                   <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                   <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#c0f2fb" stroke="#c0f2fb" strokeLinecap="round" strokeWidth="1.264"/>
                   <text id="Government_uninsured_patients" data-name="Government &amp; 
-      uninsured patients" transform="translate(631.346 528)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-89.679" y="0">GOVERNMENT &amp; </tspan><tspan x="-112.542" y="22">UNINSURED PATIENTS</tspan></text>
+      uninsured patients" transform="translate(631.346 528)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-89.679" y="0">GOVERNMENT &amp; </tspan><tspan x="-112.542" y="22">UNINSURED PATIENTS</tspan></text>
                 </g>
                 <g id="sign1" transform="translate(-336.996 20)">
                   <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                   <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#c0f2fb" stroke="#c0f2fb" strokeLinecap="round" strokeWidth="1.264"/>
-                  <text id="Commercial_Patients" data-name="Commercial Patients" transform="translate(631.347 539)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-121.125" y="0">COMMERCIAL PATIENTS</tspan></text>
+                  <text id="Commercial_Patients" data-name="Commercial Patients" transform="translate(631.347 539)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-121.125" y="0">COMMERCIAL PATIENTS</tspan></text>
                 </g>
               </g>
             </g>
