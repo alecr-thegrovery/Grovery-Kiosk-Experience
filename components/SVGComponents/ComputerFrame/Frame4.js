@@ -43,7 +43,7 @@ export default function Frame4({
           </g>
         </g>
         
-        <foreignObject className={componentStyles.content} x="0" y="0" width="500" height="500">
+        <foreignObject className={componentStyles.content} >
           <div className={componentStyles.contentInner} data-overflow-detect>
             {children}
           </div>
