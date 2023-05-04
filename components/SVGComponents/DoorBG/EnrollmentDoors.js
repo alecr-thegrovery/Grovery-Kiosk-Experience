@@ -130,17 +130,17 @@ export default function EnrollmentDoors({
                   <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.5 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                   <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" strokeLinecap="round" strokeWidth="1.264"/>
                   <text id="HOW_TO_COMPLETE_THE_ENROLLMENT_FORM" data-name="HOW TO COMPLETE THE 
-      ENROLLMENT FORM" transform="translate(631 528)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-127.941" y="0">HOW TO COMPLETE THE </tspan><tspan x="-104.561" y="22">ENROLLMENT FORM</tspan></text>
+      ENROLLMENT FORM" transform="translate(631 528)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-127.941" y="0">HOW TO COMPLETE THE </tspan><tspan x="-104.561" y="22">ENROLLMENT FORM</tspan></text>
                 </g>
                 <g id="sign1" transform="translate(-336.996 20)">
                   <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                   <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" strokeLinecap="round" strokeWidth="1.264"/>
-                  <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(631.269 539)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-107.515" y="0">OPTIONS TO ENROLL</tspan></text>
+                  <text id="OPTIONS_TO_ENROLL" data-name="OPTIONS TO ENROLL" transform="translate(631.269 539)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-107.515" y="0">OPTIONS TO ENROLL</tspan></text>
                 </g>
                 <g id="sign3" transform="translate(328.653 20)">
                   <rect id="Rectangle_185-3" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.847 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                   <rect id="Rectangle_1905-3" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#fecdb4" stroke="#fecdb4" strokeLinecap="round" strokeWidth="1.264"/>
-                  <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(631.347 539)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-94.19" y="0">PROVIDER PORTAL</tspan></text>
+                  <text id="PROVIDER_PORTAL" data-name="PROVIDER PORTAL" transform="translate(631.347 539)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-94.19" y="0">PROVIDER PORTAL</tspan></text>
                 </g>
               </g>
             </g>

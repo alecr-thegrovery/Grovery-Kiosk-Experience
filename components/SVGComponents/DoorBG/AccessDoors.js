@@ -135,17 +135,17 @@ export default function AccessDoors({
                   <g id="sign2" transform="translate(0 20)">
                     <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                     <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#ffd186" stroke="#ffd186" strokeLinecap="round" strokeWidth="1.264"/>
-                    <text id="PA_Appeals_Support" data-name="PA &amp; Appeals Support" transform="translate(631.579 539)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-123.488" y="0">PA &amp; APPEALS SUPPORT</tspan></text>
+                    <text id="PA_Appeals_Support" data-name="PA &amp; Appeals Support" transform="translate(631.579 539)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-123.488" y="0">PA &amp; APPEALS SUPPORT</tspan></text>
                   </g>
                   <g id="sign1" transform="translate(-335.996 21)">
                     <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                     <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#ffd186" stroke="#ffd186" strokeLinecap="round" strokeWidth="1.264"/>
-                    <text id="BENEFITS_REVIEW" data-name="BENEFITS REVIEW" transform="translate(630.269 538)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-89.189" y="0">BENEFITS REVIEW</tspan></text>
+                    <text id="BENEFITS_REVIEW" data-name="BENEFITS REVIEW" transform="translate(630.269 538)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-89.189" y="0">BENEFITS REVIEW</tspan></text>
                   </g>
                   <g id="sign3" transform="translate(328.653 20)">
                     <rect id="Rectangle_185-3" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
                     <rect id="Rectangle_1905-3" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#ffd186" stroke="#ffd186" strokeLinecap="round" strokeWidth="1.264"/>
-                    <text id="Billing_Coding" data-name="Billing &amp; Coding" transform="translate(631.269 539)" fill="#595454" fontSize="22" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-97.643" y="0">BILLING &amp; CODING</tspan></text>
+                    <text id="Billing_Coding" data-name="Billing &amp; Coding" transform="translate(631.269 539)" fill="#595454" fontSize="22"   letterSpacing="0.02em"><tspan x="-97.643" y="0">BILLING &amp; CODING</tspan></text>
                   </g>
                 </g>
               </g>

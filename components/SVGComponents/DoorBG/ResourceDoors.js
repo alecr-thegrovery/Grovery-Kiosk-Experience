@@ -100,12 +100,12 @@ export default function ResourceDoors({
           <g id="sign2" transform="translate(-336.991 20)">
             <rect id="Rectangle_185" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
             <rect id="Rectangle_1905" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#c5ffe6" stroke="#c5ffe6" strokeLinecap="round" strokeWidth="1.264"/>
-            <text id="BROCHURES" transform="translate(631.347 543.003)" fill="#595454" fontSize="24" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-68.723" y="0">BROCHURES</tspan></text>
+            <text id="BROCHURES" transform="translate(631.347 543.003)" fill="#595454" fontSize="24"   letterSpacing="0.02em"><tspan x="-68.723" y="0">BROCHURES</tspan></text>
           </g>
           <g id="sign3" transform="translate(-8.338 20)">
             <rect id="Rectangle_185-2" data-name="Rectangle 185" width="279.31" height="86.697" transform="translate(491.691 491.358)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.264"/>
             <rect id="Rectangle_1905-2" data-name="Rectangle 1905" width="279.31" height="9.697" transform="translate(491.691 568.358)" fill="#c5ffe6" stroke="#c5ffe6" strokeLinecap="round" strokeWidth="1.264"/>
-            <text id="Videos" transform="translate(631.347 540)" fill="#595454" fontSize="24" font-family="SegoeUI, Segoe UI" letterSpacing="0.02em"><tspan x="-41.753" y="0">VIDEOS</tspan></text>
+            <text id="Videos" transform="translate(631.347 540)" fill="#595454" fontSize="24"   letterSpacing="0.02em"><tspan x="-41.753" y="0">VIDEOS</tspan></text>
           </g>
         </g>
       </g>
