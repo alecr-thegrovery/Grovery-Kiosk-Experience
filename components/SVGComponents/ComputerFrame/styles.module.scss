@@ -26,7 +26,7 @@
 		.contentInner{
 			position: relative;
 			width: 100%;
-			height: 100%;
+			height: clamp(300px, 65vh, 600px);
 			overflow: auto;
 			padding-right: $clampMedium;
 			&::-webkit-scrollbar {
