@@ -59,9 +59,12 @@ export default function Sidebar({
 
     if(isTablet){
       //alert("safari");
-      //let element = document.querySelector("#fullscreenButton");
-      document.querySelector("#fullscreenButton").style.opacity="0";
-      document.querySelector("#fullscreenButton").style.pointerEvents="none";
+      let element = document.querySelector("#fullscreenButton");
+      if(element){
+        document.querySelector("#fullscreenButton").style.opacity="0";
+        document.querySelector("#fullscreenButton").style.pointerEvents="none";
+      }
+      
     }
   });
 
