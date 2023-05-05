@@ -41,7 +41,9 @@ export default function AccessDoors({
             <g id="all-objects">
               <g id="doors" data-element="doors">
                 <g id="door1" transform="translate(-2433.939 185.607)" className="droppable" data-door="1" data-door-name="Benefits Rreview" data-link="/access/benefits/" data-active="inactive">
-                  <g className="doorInnerBlack"></g>
+                  <g className="doorInnerBlack">
+                    <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" transform="translate(2589.634 442.31)" fill="#212121"/>
+                  </g>
                   <g className="doorInner">
                     <g className="doorInnerAnimate">
                                 <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
@@ -71,7 +73,9 @@ export default function AccessDoors({
                 </g>
 
                 <g id="door2" transform="translate(-2097.943 184.607)" className="droppable" data-door="2" data-door-name="PA Appeals Support" data-link="/access/appeals/" data-active="inactive">
-                  <g className="doorInnerBlack"></g>
+                  <g className="doorInnerBlack">
+                    <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#212121" transform="translate(2589.634 442.31)"/>
+                  </g>
                   <g className="doorInner">
                     <g className="doorInnerAnimate">
                                 <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
@@ -102,7 +106,9 @@ export default function AccessDoors({
                 </g>
 
                 <g id="door3" transform="translate(-1769.29 184.607)" className="droppable" data-door="3" data-door-name="Billing Coding" data-link="/access/billing/" data-active="inactive">
-                  <g className="doorInnerBlack"></g>
+                  <g className="doorInnerBlack">
+                    <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#212121" transform="translate(2589.634 442.31)"/>
+                  </g>
                   <g className="doorInner">
                     <g className="doorInnerAnimate">
                                 <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">
