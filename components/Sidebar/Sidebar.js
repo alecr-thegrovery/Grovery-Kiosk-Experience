@@ -58,7 +58,7 @@ export default function Sidebar({
     });
 
     if(isTablet){
-      alert("safari");
+      //alert("safari");
       let element = document.querySelector("#fullscreenButton");
       element.style.opacity="0";
       element.style.pointerEvents="none";
