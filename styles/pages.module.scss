@@ -84,6 +84,14 @@
 	justify-content: center;
 	align-items: flex-end;
 	overflow: hidden;
+
+	&[data-bg-color="cream"]{
+		background-color: $cream3;
+	}
+	&[data-bg-color="blue"]{
+		background-color: $lightBlue;
+	}
+
 	.mainSection{
 		height: 80%;
 		width: 100%;
@@ -181,3 +189,8 @@
 		}
 	}
 }
+
+/* =================================== */
+/* ===== Simple Background Colors ===== */
+/* =================================== */
+	

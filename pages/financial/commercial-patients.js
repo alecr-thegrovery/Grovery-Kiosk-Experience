@@ -37,7 +37,7 @@ export default function Post({ postData }) {
         />
 
         {/*Content*/}
-        <div className={pageStyles.pageLevel3}>          
+        <div className={pageStyles.pageLevel3} data-bg-color="blue">          
           <TransitionScreen screen="7"/>
           <section className={pageStyles.mainSection}>
             <ComputerFrame frame="1">
