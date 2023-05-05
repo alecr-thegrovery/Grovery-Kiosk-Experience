@@ -1,6 +1,8 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
+import {isTablet, isSafari, } from 'react-device-detect';
+
 import Card from '@components/DragDrop/Card.js'
 import IDCard from '@components/IDCard'
 import { BsUpcScan } from "react-icons/bs";
@@ -54,6 +56,16 @@ export default function Sidebar({
       });
 
     });
+
+    if(isTablet){
+      //alert("safari");
+      let element = document.querySelector("#fullscreenButton");
+      if(element){
+        document.querySelector("#fullscreenButton").style.opacity="0";
+        document.querySelector("#fullscreenButton").style.pointerEvents="none";
+      }
+      
+    }
   });
 
   return (
