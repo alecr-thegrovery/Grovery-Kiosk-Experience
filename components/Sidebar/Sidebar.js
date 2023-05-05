@@ -46,6 +46,7 @@ export default function Sidebar({
       element.style.opacity="0";
     }
   };
+  safariDetect();
 
   //console.log(author);
   useEffect(() => {
