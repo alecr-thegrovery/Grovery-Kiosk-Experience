@@ -9,6 +9,9 @@
 	svg{
 		width: 100%;
 		height: auto;
-		filter: drop-shadow(10px 10px 5px rgba($black, 0.5));
+		filter: 
+			drop-shadow(10px 10px 10px rgba($black, 0.5))
+			drop-shadow(-1px -1px 10px rgba($black, 0.5))
+		;
 	}
 }
