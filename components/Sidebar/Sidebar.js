@@ -41,6 +41,7 @@ export default function Sidebar({
 
   const safariDetect = () => {
     if(isMobileSafari){
+      alert("safari");
       let element = document.querySelector("#fullscreenButton");
       element.style.opacity="0";
     }
