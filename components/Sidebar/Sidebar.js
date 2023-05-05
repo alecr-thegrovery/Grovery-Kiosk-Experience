@@ -39,15 +39,6 @@ export default function Sidebar({
     }
   };
 
-  const safariDetect = () => {
-    if(isMobileSafari){
-      alert("safari");
-      let element = document.querySelector("#fullscreenButton");
-      element.style.opacity="0";
-    }
-  };
-  safariDetect();
-
   //console.log(author);
   useEffect(() => {
     $(document).ready(function() {
@@ -65,6 +56,12 @@ export default function Sidebar({
       });
 
     });
+
+    if(isTablet){
+      alert("safari");
+      let element = document.querySelector("#fullscreenButton");
+      element.style.opacity="0";
+    }
   });
 
   return (
