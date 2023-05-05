@@ -174,9 +174,9 @@
 /* =============================== */
 /* ===== Browser/Device Hide  ===== */
 /* =============================== */
-  #LayoutOuter[data-device-detect="ipad"],
-  #LayoutOuter[data-device-detect="tablet"],
-  #LayoutOuter[data-device-detect="safari"]{
+  #LayoutOuter.detect--tablet,
+  #LayoutOuter.detect--ipad,
+  #LayoutOuter.detect--safari{
     [data-device-hide]{
       opacity: 0;
       pointer-events: none;
