@@ -7,7 +7,7 @@
 		width: auto;
 	}
 	.contentWrapper{
-		overflow: auto;
+		//overflow: auto;
 		background-color: $white;
 	}
 	.content{
@@ -18,7 +18,7 @@
 		padding-left: $clampMedium;
 		padding-right: $clampMedium;
 		padding-bottom: 10vw;
-		overflow: auto;
+		//overflow: auto;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
