@@ -8,6 +8,10 @@
 	}
 }
 
+.doorInnerBlack{
+	fill: $black;
+}
+
 .EnrollmentDoors{
 	height: 100%;
 	width: 100%;
@@ -131,8 +135,8 @@
 	background-color: $lightGreen;
 	//z-index: 50;
 	svg{
-		position: relative;
-		bottom: 0%;
+		position: fixed;
+		bottom: 50px;
 		left: 0px;
 		width: auto;
 		height: 100%;
