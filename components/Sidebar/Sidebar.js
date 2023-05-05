@@ -1,7 +1,7 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import {isSafari} from 'react-device-detect';
+import {isTablet} from 'react-device-detect';
 
 import Card from '@components/DragDrop/Card.js'
 import IDCard from '@components/IDCard'
