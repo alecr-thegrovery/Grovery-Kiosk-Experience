@@ -84,6 +84,7 @@
 	justify-content: center;
 	align-items: flex-end;
 	overflow: hidden;
+	background-color: $cream3;
 
 	&[data-bg-color="cream"]{
 		background-color: $cream3;
