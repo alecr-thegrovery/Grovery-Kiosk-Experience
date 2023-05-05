@@ -58,10 +58,10 @@ export default function Sidebar({
     });
 
     if(isTablet){
-      //alert("safari");
-      let element = document.querySelector("#fullscreenButton");
+      alert("safari");
+      /*let element = document.querySelector("#fullscreenButton");
       element.style.opacity="0";
-      element.style.pointerEvents="none";
+      element.style.pointerEvents="none";*/
     }
   });
 
