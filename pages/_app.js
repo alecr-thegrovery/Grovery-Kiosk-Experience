@@ -6,6 +6,9 @@ import 'normalize.css';
 //Drag n Drop 
 import interact from 'interactjs'
 
+//Device Detection
+import {isTablet, isSafari, isIPad13} from 'react-device-detect';
+
 //Custom CSS/JS
 import '@styles/main.scss';
 //import '@scripts/script.js';
@@ -374,6 +377,26 @@ export default function App({ Component, pageProps }) {
 
         //disabled during build
         //inactivityTimer();
+
+    /* ================================= */
+    /* ===== Browser/Device Detect  ===== */
+    /* ================================= */
+        function deviceDetect(timer){
+          let element = document.querySelector("#LayoutOuter");
+          if(isTablet){
+            element.classList.add("detect--tablet");
+            alert("detect--tablet");
+          }
+          if(isSafari){
+            element.classList.add("detect--safari");
+            alert("detect--safari");
+          }
+          if(isIPad13){
+            element.classList.add("detect--ipad");
+            alert("detect--ipad");
+          }
+        }
+        
 
   });
 
