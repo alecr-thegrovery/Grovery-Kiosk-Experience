@@ -381,7 +381,7 @@ export default function App({ Component, pageProps }) {
     /* ================================= */
     /* ===== Browser/Device Detect  ===== */
     /* ================================= */
-        function deviceDetect(timer){
+        function deviceDetect(){
           let element = document.querySelector("#LayoutOuter");
           if(isTablet){
             element.classList.add("detect--tablet");
@@ -396,6 +396,8 @@ export default function App({ Component, pageProps }) {
             alert("detect--ipad");
           }
         }
+        //run function
+        deviceDetect();
         
 
   });
