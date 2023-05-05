@@ -9,20 +9,23 @@
 	}
 }
 
+.doorInnerBlack{
+	fill: $black;
+}
+
 .EnrollmentDoors{
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
 	//z-index: 50;
-	background-color: #FFF7F3;
+	background-color: $cream2;
 	svg{
-		position: absolute;
-		bottom: clamp(65px, 6%, 250px);
-		//bottom: 0;
+		position: fixed;
+		bottom: 50px;
 		left: 0%;
-		width: 100%;
-		height: auto;
+		width: auto;
+		height: 100%;
 		/*@media screen and (min-width: 2400px) {
 			width: 100%;
 			height: auto;
@@ -54,13 +57,14 @@
 	width: 100%;
 	overflow: hidden;
 	position: relative;
+	background-color: $cream3;
 	//z-index: 50;
 	svg{
-		position: absolute;
-		bottom: 0%;
-		left: 0px;
-		width: 100%;
-		height: auto;
+		position: fixed;
+		bottom: 50px;
+		left: 0%;
+		width: auto;
+		height: 100%;
 		/*@media screen and (min-width: 2400px) {
 			width: 100%;
 			height: auto;
@@ -94,9 +98,9 @@
 	background-color: $lightBlue;
 	//z-index: 50;
 	svg{
-		position: absolute;
-		bottom: 0%;
-		left: 0px;
+		position: fixed;
+		bottom: 50px;
+		left: 0%;
 		width: auto;
 		height: 100%;
 		/*@media screen and (min-width: 2400px) {
@@ -132,8 +136,8 @@
 	background-color: $lightGreen;
 	//z-index: 50;
 	svg{
-		position: relative;
-		bottom: 0%;
+		position: fixed;
+		bottom: 50px;
 		left: 0px;
 		width: auto;
 		height: 100%;

@@ -38,8 +38,12 @@ export default function EnrollmentDoors({
           <g id="All-Objects">
             <g id="Doors-Group" data-element="doors">
 
+
+
               <g id="door1" transform="translate(-2434.939 184.607)" className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive">
-                <g className="doorInnerBlack"></g>
+                <g className="doorInnerBlack">
+                  <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#212121" transform="translate(2589.634 442.31)"/>
+                </g>
                 <g className="doorInner">
                   <g className="doorInnerAnimate">
                     <g id="Group_193" data-name="Group 193" transform="translate(2589.634 442.31)">
@@ -68,7 +72,9 @@ export default function EnrollmentDoors({
               </g>
 
               <g id="door2" transform="translate(-2097.943 184.607)" className="droppable" data-door="2" data-door-name="enrollmentForm" data-link="/enrollment/enrollment-form/" data-active="inactive">
-                <g className="doorInnerBlack"></g>
+                <g className="doorInnerBlack">
+                  <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#212121" transform="translate(2589.634 442.31)"/>
+                </g>
                 <g className="doorInner">
                   <g className="doorInnerAnimate">
                     <g id="Group_193-2" data-name="Group 193" transform="translate(2589.634 442.31)">
@@ -97,7 +103,9 @@ export default function EnrollmentDoors({
               </g>
 
               <g id="door3" transform="translate(-1769.29 184.607)" className="droppable" data-door="3" data-door-name="providerPortal" data-link="/enrollment/provider-portal/" data-active="inactive">
-                <g className="doorInnerBlack"></g>
+                <g className="doorInnerBlack">
+                  <path id="Path_3483" data-name="Path 3483" d="M0,0H279.311V526.307H0Z" fill="#212121" transform="translate(2589.634 442.31)"/>
+                </g>
                 <g className="doorInner">
                   <g className="doorInnerAnimate">
                     <g id="Group_193-3" data-name="Group 193" transform="translate(2589.634 442.31)">

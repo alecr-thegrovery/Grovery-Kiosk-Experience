@@ -39,10 +39,10 @@ export default function PDFModal({
         <CloseIcon/>
       </div>
       
-      <div id="PDFModalTitle" className={componentStyles.titleArea}>
+      {/*<div id="PDFModalTitle" className={componentStyles.titleArea}>
         NO-US-2200226_BMS10289 AS Sample SOB Form_Pending Determination_FINAL.pdf
-      </div>
-
+      </div>*/}
+      
       <div className={componentStyles.iframeWrapper}>
         <iframe src="#" frameBorder="0"></iframe>
       </div>
