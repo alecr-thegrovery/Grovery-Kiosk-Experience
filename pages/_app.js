@@ -385,15 +385,12 @@ export default function App({ Component, pageProps }) {
           let element = document.querySelector("#LayoutOuter");
           if(isTablet){
             element.classList.add("detect--tablet");
-            alert("detect--tablet");
           }
           if(isSafari){
             element.classList.add("detect--safari");
-            alert("detect--safari");
           }
           if(isIPad13){
             element.classList.add("detect--ipad");
-            alert("detect--ipad");
           }
         }
         //run function

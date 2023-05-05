@@ -1,8 +1,6 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import {isTablet, isSafari, } from 'react-device-detect';
-
 import Card from '@components/DragDrop/Card.js'
 import IDCard from '@components/IDCard'
 import { BsUpcScan } from "react-icons/bs";
@@ -57,7 +55,7 @@ export default function Sidebar({
 
     });
 
-    if(isTablet){
+   /* if(isTablet){
       //alert("safari");
       let element = document.querySelector("#fullscreenButton");
       if(element){
@@ -65,7 +63,7 @@ export default function Sidebar({
         document.querySelector("#fullscreenButton").style.pointerEvents="none";
       }
       
-    }
+    }*/
   });
 
   return (
@@ -162,7 +160,7 @@ export default function Sidebar({
           
           {home ?
             <div className={componentStyles.controls}>
-              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open">
+              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open" data-device-hide>
                 {/*<p>&#9746;</p>*/}
                 <div className={componentStyles.openIcon}>
                   <FullscreenOpenIcon/>
