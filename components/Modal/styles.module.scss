@@ -84,7 +84,7 @@ $backdropColor: rgba($black, 0.25);
 	height: 100%;
 	width: 100%;
 	background-color: $white;
-	padding: 0 $clampLarge;
+	padding: 2.25rem $clampLarge 0;
 
 	.closeButton{
 		position: absolute;
