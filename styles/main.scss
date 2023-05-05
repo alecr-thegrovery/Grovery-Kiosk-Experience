@@ -169,3 +169,18 @@
     pointer-events: auto;
   }
 }
+
+
+/* =============================== */
+/* ===== Browser/Device Hide  ===== */
+/* =============================== */
+  #LayoutOuter.detect--tablet,
+  #LayoutOuter.detect--ipad,
+  #LayoutOuter.detect--safari{
+    [data-device-hide]{
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+  

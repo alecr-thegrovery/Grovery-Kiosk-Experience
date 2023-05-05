@@ -5,6 +5,7 @@
 
 ### Code Libraries ###
 * Drag and Drop library: https://interactjs.io/
+* Browser/Device detection: https://www.npmjs.com/package/react-device-detect
 
 
 ### Server Links ###
