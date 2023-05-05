@@ -1,7 +1,7 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'
-import {isTablet} from 'react-device-detect';
+import {isTablet, isSafari, } from 'react-device-detect';
 
 import Card from '@components/DragDrop/Card.js'
 import IDCard from '@components/IDCard'
@@ -59,9 +59,9 @@ export default function Sidebar({
 
     if(isTablet){
       alert("safari");
-      /*let element = document.querySelector("#fullscreenButton");
+      let element = document.querySelector("#fullscreenButton");
       element.style.opacity="0";
-      element.style.pointerEvents="none";*/
+      element.style.pointerEvents="none";
     }
   });
 
