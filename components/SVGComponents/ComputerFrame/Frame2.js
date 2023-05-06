@@ -37,7 +37,7 @@ export default function Frame2({
           <ellipse id="camera" cx="12.86" cy="13.149" rx="12.86" ry="13.149" transform="translate(5246.067 1412.125)" fill="#be2bbb"/>
         </g>
         
-        <foreignObject className={componentStyles.content} x="0" y="0" width="100%" height="100%">
+        {/*<foreignObject className={componentStyles.content} x="0" y="0" width="100%" height="100%">
           <div className={componentStyles.contentInner} data-overflow-detect>
             {children}
           </div>
@@ -45,9 +45,19 @@ export default function Frame2({
             Scroll to continue
             <ChevronDown/>
           </div>
-        </foreignObject>
+        </foreignObject>*/}
 
       </svg>
+
+      <div className={componentStyles.content} x="0" y="0" width="100%" height="100%">
+        <div className={componentStyles.contentInner} data-overflow-detect>
+          {children}
+        </div>
+        <div className={componentStyles.scrollNotice}>
+          Scroll to continue
+          <ChevronDown/>
+        </div>
+      </div>
 
     </div>
       
