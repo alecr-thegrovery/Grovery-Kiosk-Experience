@@ -43,7 +43,7 @@ export default function Frame4({
           </g>
         </g>
         
-        <foreignObject className={componentStyles.content} x="0" y="0" width="100%" height="100%">
+        {/*<foreignObject className={componentStyles.content} x="0" y="0" width="100%" height="100%">
           <div className={componentStyles.contentInner} data-overflow-detect>
             {children}
           </div>
@@ -51,9 +51,19 @@ export default function Frame4({
             Scroll to continue
             <ChevronDown/>
           </div>
-        </foreignObject>
+        </foreignObject>*/}
 
       </svg>
+
+      <div className={componentStyles.content} x="0" y="0" width="100%" height="100%">
+        <div className={componentStyles.contentInner} data-overflow-detect>
+          {children}
+        </div>
+        <div className={componentStyles.scrollNotice}>
+          Scroll to continue
+          <ChevronDown/>
+        </div>
+      </div>
 
     </div>
       
