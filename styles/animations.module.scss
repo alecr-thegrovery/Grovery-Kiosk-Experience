@@ -5,5 +5,30 @@
 //	
 /*========================================*/
 
+	.animateCloud1{
+		opacity: 0;
+		animation: 20s linear cloudMove1 infinite;
+	}
+	.animateCloud2{
+		opacity: 0;
+		animation: 25s linear cloudMove1 infinite;
+	}
 
-
+	@keyframes cloudMove1 {
+	  0% {
+	    transform: translate3d(0%, 0px, 0px);
+	    opacity: 0;
+	  }
+	  5%{
+	  	opacity: 1;
+	  }
+	  
+	  95% {
+	    transform: translate3d(-95%, 0px, 0px);
+	    opacity: 1;
+	  }
+	  100% {
+	    transform: translate3d(-100%, 0px, 0px);
+	    opacity: 0;
+	  }
+	}
