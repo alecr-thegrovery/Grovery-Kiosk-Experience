@@ -72,10 +72,10 @@ export default function HomeBG({
            <rect id="Rectangle_1082" data-name="Rectangle 1082" width="106.989" height="17.322" transform="translate(345.484 558.704)" fill="#e9e1e0"/>
            <rect id="Rectangle_1083" data-name="Rectangle 1083" width="106.989" height="17.322" transform="translate(345.484 489.415)" fill="#e9e1e0"/>
            <rect id="Rectangle_1084" data-name="Rectangle 1084" width="104.951" height="18.341" transform="translate(484.061 385.483)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1085" data-name="Rectangle 1085" width="104.951" height="17.322" transform="translate(484.061 524.059)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1085" className={animationStyles.animateWindow1} data-name="Rectangle 1085" width="104.951" height="17.322" transform="translate(484.061 524.059)" fill="#e9e1e0"/>
            <rect id="Rectangle_1086" data-name="Rectangle 1086" width="104.951" height="17.322" transform="translate(484.061 454.771)" fill="#e9e1e0"/>
            <rect id="Rectangle_1087" data-name="Rectangle 1087" width="104.951" height="17.322" transform="translate(484.061 594.5)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1088" data-name="Rectangle 1088" width="104.951" height="17.322" transform="translate(484.061 420.127)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1088" className={animationStyles.animateWindow3} data-name="Rectangle 1088" width="104.951" height="17.322" transform="translate(484.061 420.127)" fill="#e9e1e0"/>
            <rect id="Rectangle_1089" data-name="Rectangle 1089" width="104.951" height="17.322" transform="translate(484.061 558.704)" fill="#e9e1e0"/>
            <rect id="Rectangle_1090" data-name="Rectangle 1090" width="104.951" height="17.322" transform="translate(484.061 489.415)" fill="#e9e1e0"/>
            <rect id="Rectangle_1091" data-name="Rectangle 1091" width="104.951" height="17.322" transform="translate(484.061 629.145)" fill="#e9e1e0"/>
@@ -145,11 +145,11 @@ export default function HomeBG({
            <rect id="Rectangle_1125" data-name="Rectangle 1125" width="112.136" height="56.427" transform="translate(1095.286 682.753)" fill="#e9e1e0"/>
            <rect id="Rectangle_1126" data-name="Rectangle 1126" width="101.279" height="56.427" transform="translate(1224.783 682.753)" fill="#e9e1e0"/>
            <rect id="Rectangle_1127" data-name="Rectangle 1127" width="101.279" height="56.427" transform="translate(1224.783 747.862)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1128" data-name="Rectangle 1128" width="112.136" height="56.427" transform="translate(1095.286 747.862)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1129" data-name="Rectangle 1129" width="101.279" height="56.427" transform="translate(1224.783 812.969)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1128" className={animationStyles.animateWindow2} data-name="Rectangle 1128" width="112.136" height="56.427" transform="translate(1095.286 747.862)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1129" className={animationStyles.animateWindow3} data-name="Rectangle 1129" width="101.279" height="56.427" transform="translate(1224.783 812.969)" fill="#e9e1e0"/>
            <rect id="Rectangle_1130" data-name="Rectangle 1130" width="112.136" height="56.427" transform="translate(1095.286 812.969)" fill="#e9e1e0"/>
            <rect id="Rectangle_1131" data-name="Rectangle 1131" width="112.136" height="56.427" transform="translate(1095.286 878.077)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1132" data-name="Rectangle 1132" width="101.279" height="56.427" transform="translate(1224.783 878.077)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1132" className={animationStyles.animateWindow1} data-name="Rectangle 1132" width="101.279" height="56.427" transform="translate(1224.783 878.077)" fill="#e9e1e0"/>
          </g>
          <g id="building4" transform="translate(0 0)">
            <path id="Path_3925" data-name="Path 3925" d="M1074.724,676.16l2.627-2.091-.3-56.428-2.322-1.821v-8.194L1323.922,445.88l.005,300.964v.551h277.8V961.87H1323.585v-.058H1074.724V937.324l3.39-2.826v-56.68l-3.39-1.144v-5.235l3.263-2.05V812.962l-3.263-1.407V806.07l3.263-1.783V747.861l-3.263-1.547v-4.725l3.454-2.409V682.753l-3.454-1.585Z" transform="translate(16.054 0.004)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
@@ -254,8 +254,8 @@ export default function HomeBG({
            <rect id="Rectangle_1178" data-name="Rectangle 1178" width="73.345" height="41.912" transform="translate(77.895 702.411)" fill="#e9e1e0"/>
            <rect id="Rectangle_1179" data-name="Rectangle 1179" width="73.345" height="66.797" transform="translate(77.895 626.856)" fill="#e9e1e0"/>
            <rect id="Rectangle_1180" data-name="Rectangle 1180" width="74.655" height="66.797" transform="translate(166.957 626.856)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1181" data-name="Rectangle 1181" width="73.345" height="66.797" transform="translate(77.895 753.08)" fill="#e9e1e0"/>
-           <rect id="Rectangle_1182" data-name="Rectangle 1182" width="74.655" height="66.797" transform="translate(166.957 753.08)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1181" className={animationStyles.animateWindow1} data-name="Rectangle 1181" width="73.345" height="66.797" transform="translate(77.895 753.08)" fill="#e9e1e0"/>
+           <rect id="Rectangle_1182" className={animationStyles.animateWindow2} data-name="Rectangle 1182" width="74.655" height="66.797" transform="translate(166.957 753.08)" fill="#e9e1e0"/>
            <rect id="Rectangle_1183" data-name="Rectangle 1183" width="73.345" height="68.107" transform="translate(77.895 499.323)" fill="#e9e1e0"/>
            <rect id="Rectangle_1184" data-name="Rectangle 1184" width="74.655" height="68.107" transform="translate(166.957 499.323)" fill="#e9e1e0"/>
          </g>
