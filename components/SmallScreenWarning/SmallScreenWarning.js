@@ -24,6 +24,8 @@ export default function SmallScreenWarning({
              <br/>
              <br/>
              Minimum size: 3:2 aspect ratio or 1000px wide.
+             <br/>
+             Reccomended browser: Chrome or Firefox.
             </p>
          </div>        
        </Container>
