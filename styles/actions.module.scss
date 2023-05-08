@@ -458,17 +458,20 @@
       }
       [data-transition-screen="8"] svg,
       [data-transition-screen="8"] img{
-        $zoomFocus: 28% 52%;
+        //$zoomFocus: 28% 52%;
+        $zoomFocus: calc(36% + 0px) calc(48% + 100px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="9"] svg,
       [data-transition-screen="9"] img{
-        $zoomFocus: 57% 64%;
+        //$zoomFocus: 57% 64%;
+        $zoomFocus: calc(80% + 0px) calc(64% + 50px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="10"] svg,
       [data-transition-screen="10"] img{
         $zoomFocus: 30% 57%;
+        $zoomFocus: calc(45% + 0px) calc(64% + 100px);
         transform-origin: $zoomFocus;
       }
     /* ===== Initial State ===== */
@@ -524,16 +527,17 @@
         }
         [data-transition-screen="8"] svg,
         [data-transition-screen="8"] img{
-          $zoomAmount: 2.35; 
+          $zoomAmount: 1.85; 
           transform: scale($zoomAmount);
         }
         [data-transition-screen="9"] svg,
         [data-transition-screen="9"] img{
-          $zoomAmount: 2.35; 
+          $zoomAmount: 2.15; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="10"] svg{
-          $zoomAmount: 1.8; 
+        [data-transition-screen="10"] svg,
+        [data-transition-screen="10"] img{
+          $zoomAmount: 1.65; 
           transform: scale($zoomAmount);
         }
       }
