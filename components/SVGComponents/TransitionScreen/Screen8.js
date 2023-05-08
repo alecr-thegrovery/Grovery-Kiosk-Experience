@@ -16,7 +16,7 @@ export default function Screen8({
 
   return (
     <div className={componentStyles.Screen8}>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080">
+      {/*<svg width="1920" height="1080" viewBox="0 0 1920 1080">
         <defs>
           <clipPath id="clip-path">
             <rect id="Rectangle_1521" data-name="Rectangle 1521" width="1616.299" height="1440.279" transform="translate(0 0.001)" fill="none"/>
@@ -269,7 +269,9 @@ export default function Screen8({
             </g>
           </g>
         </g>
-      </svg>
+      </svg>*/}
+
+      <img src="/images/transitionScreens/screen-8.svg" alt="" />
 
     </div>
       
