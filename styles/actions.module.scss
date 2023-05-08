@@ -417,44 +417,55 @@
       $zoomAmount: 2.5;
       transform-origin: $zoomFocus;
     //Individual Screens
-      [data-transition-screen="1"]{
-        $zoomFocus: 55% 83%;
+      [data-transition-screen="1"] svg,
+      [data-transition-screen="1"] img{
+        $zoomFocus: calc(50% + 100px) calc(60% + 100px);
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="2"]{
-        $zoomFocus: 48% 25%;
+      [data-transition-screen="2"] svg,
+      [data-transition-screen="2"] img{
+        $zoomFocus: calc(41% + 80px) calc(13% + 65px);
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="3"]{
+      [data-transition-screen="3"] svg,
+      [data-transition-screen="3"] img{
         $zoomFocus: 73% 68%;
+        $zoomFocus: calc(68% + 80px) calc(72% + 50px);
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="4"]{
+      [data-transition-screen="4"] svg,
+      [data-transition-screen="4"] img{
         $zoomFocus: 65% 55%;
         //$zoomAmount: 2; 
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="5"]{
+      [data-transition-screen="5"] svg,
+      [data-transition-screen="5"] img{
         $zoomFocus: 5% 81%;
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="6"]{
+      [data-transition-screen="6"] svg,
+      [data-transition-screen="6"] img{
         $zoomFocus: 46% 53%;
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="7"]{
+      [data-transition-screen="7"] svg,
+      [data-transition-screen="7"] img{
         $zoomFocus: 20% 71%;
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="8"]{
+      [data-transition-screen="8"] svg,
+      [data-transition-screen="8"] img{
         $zoomFocus: 28% 52%;
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="9"]{
+      [data-transition-screen="9"] svg,
+      [data-transition-screen="9"] img{
         $zoomFocus: 57% 64%;
         transform-origin: $zoomFocus;
       }
-      [data-transition-screen="10"]{
+      [data-transition-screen="10"] svg,
+      [data-transition-screen="10"] img{
         $zoomFocus: 30% 57%;
         transform-origin: $zoomFocus;
       }
@@ -470,47 +481,56 @@
 
     /* ===== Animation Begin ===== */
       &[data-action-state-load="just-after-load"]{
-        [data-transition-screen]{
+        [data-transition-screen] svg{
           //zoom in
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="1"]{
+        [data-transition-screen="1"] svg,
+        [data-transition-screen="1"] img{
           $zoomAmount: 2.5; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="2"]{
+        [data-transition-screen="2"] svg,
+        [data-transition-screen="2"] img{
           $zoomAmount: 3.5; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="3"]{
+        [data-transition-screen="3"] svg,
+        [data-transition-screen="3"] img{
           $zoomAmount: 2.15; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="4"]{
+        [data-transition-screen="4"] svg,
+        [data-transition-screen="4"] img{
           $zoomAmount: 2; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="5"]{
+        [data-transition-screen="5"] svg,
+        [data-transition-screen="5"] img{
           $zoomAmount: 2.75; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="6"]{
+        [data-transition-screen="6"] svg,
+        [data-transition-screen="6"] img{
           $zoomAmount: 2.5; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="7"]{
+        [data-transition-screen="7"] svg,
+        [data-transition-screen="7"] img{
           $zoomAmount: 2.15; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="8"]{
+        [data-transition-screen="8"] svg,
+        [data-transition-screen="8"] img{
           $zoomAmount: 2.35; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="9"]{
+        [data-transition-screen="9"] svg,
+        [data-transition-screen="9"] img{
           $zoomAmount: 2.35; 
           transform: scale($zoomAmount);
         }
-        [data-transition-screen="10"]{
+        [data-transition-screen="10"] svg{
           $zoomAmount: 1.8; 
           transform: scale($zoomAmount);
         }
@@ -518,7 +538,8 @@
     
     /* ===== Animation Point 1 ===== */
       &[data-action-state-load="just-after-load-2"]{
-        [data-transition-screen]{
+        [data-transition-screen] svg,
+        [data-transition-screen] img{
           //keep zoom in, fade out & reveal content
           transform: scale(4);
           opacity: 0;
@@ -528,7 +549,7 @@
 
     /* ===== Complete, Clear Animations ===== */
       &[data-action-state-load="load-sequence-complete"]{
-        [data-transition-screen]{
+        [data-transition-screen] {
           //clear everything after animations are complete
           //transform: none;
           //transform-origin: none;

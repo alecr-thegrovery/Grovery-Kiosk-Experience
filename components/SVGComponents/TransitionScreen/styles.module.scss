@@ -6,8 +6,23 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
+	//width: calc(100% - clamp(250px, 20vw, 360px));
 	z-index: 10;
-	transition: $transitionSlow;
+
+	img{
+		transition: $transitionSlow;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 1500px;
+		height: auto;
+	}
+	
+	svg{
+		transition: $transitionSlow;
+		transform-box: view-box;
+	}
+	//
 }
 
 /* ===== Enrollment Pages ===== */
