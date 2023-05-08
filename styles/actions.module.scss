@@ -424,12 +424,13 @@
       }
       [data-transition-screen="2"] svg,
       [data-transition-screen="2"] img{
-        $zoomFocus: 48% 25%;
+        $zoomFocus: calc(41% + 80px) calc(13% + 65px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="3"] svg,
       [data-transition-screen="3"] img{
         $zoomFocus: 73% 68%;
+        $zoomFocus: calc(68% + 80px) calc(72% + 50px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="4"] svg,

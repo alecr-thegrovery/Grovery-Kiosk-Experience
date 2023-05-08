@@ -16,7 +16,7 @@ export default function Screen3({
 
   return (
     <div className={componentStyles.Screen3}>
-      <svg width="1706" height="960" viewBox="0 0 1706 960">
+      {/*<svg width="1706" height="960" viewBox="0 0 1706 960">
         <defs>
           <clipPath id="clip-path">
             <rect id="Rectangle_1192" data-name="Rectangle 1192" width="219.248" height="240.745" fill="none"/>
@@ -163,8 +163,8 @@ export default function Screen3({
           </g>
           <rect id="Invisible_-_Size_Setter" data-name="Invisible - Size Setter" width="1706" height="960" transform="translate(0 71)" fill="none"/>
         </g>
-      </svg>
-
+      </svg>*/}
+      <img src="/images/transitionScreens/screen-3.svg" alt="" />
     </div>
       
   )
