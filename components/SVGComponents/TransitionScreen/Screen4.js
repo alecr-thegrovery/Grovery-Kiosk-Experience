@@ -16,7 +16,7 @@ export default function Screen4({
 
   return (
     <div className={componentStyles.Screen4}>
-      <svg width="1761.473" height="1081.059" viewBox="0 0 1761.473 1081.059">
+      {/*<svg width="1761.473" height="1081.059" viewBox="0 0 1761.473 1081.059">
         <defs>
           <clipPath id="clip-path">
             <rect id="Rectangle_1205" data-name="Rectangle 1205" width="1617.114" height="1081.059" transform="translate(0 0.002)" fill="none"/>
@@ -142,8 +142,8 @@ export default function Screen4({
             </g>
           </g>
         </g>
-      </svg>
-
+      </svg>*/}
+    <img src="/images/transitionScreens/screen-4.svg" alt="" />
     </div>
       
   )
