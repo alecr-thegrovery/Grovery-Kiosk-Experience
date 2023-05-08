@@ -436,12 +436,13 @@
       [data-transition-screen="4"] svg,
       [data-transition-screen="4"] img{
         $zoomFocus: 65% 55%;
-        //$zoomAmount: 2; 
+        //$zoomFocus: calc(65% + 80px) calc(55% + 50px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="5"] svg,
       [data-transition-screen="5"] img{
         $zoomFocus: 5% 81%;
+        $zoomFocus: calc(5% + 0px) calc(81% + 80px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="6"] svg,

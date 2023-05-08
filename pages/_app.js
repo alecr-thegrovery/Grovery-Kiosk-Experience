@@ -60,8 +60,8 @@ export default function App({ Component, pageProps }) {
       updateActionState('post-initial', 250), 'load';
       updateActionState('load-finished', 1000, 'load');
       updateActionState('just-after-load', 2500, 'load');
-      //updateActionState('just-after-load-2', 4500, 'load');
-      //updateActionState('load-sequence-complete', 5000, 'load');
+      updateActionState('just-after-load-2', 4500, 'load');
+      updateActionState('load-sequence-complete', 5000, 'load');
 
       
 

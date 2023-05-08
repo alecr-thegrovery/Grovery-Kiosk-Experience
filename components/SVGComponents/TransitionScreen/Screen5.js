@@ -16,7 +16,7 @@ export default function Screen5({
 
   return (
     <div className={componentStyles.Screen5}>
-      <svg width="1959.473" height="1080" viewBox="0 0 1959.473 1080">
+      {/*<svg width="1959.473" height="1080" viewBox="0 0 1959.473 1080">
         <defs>
           <clipPath id="clip-path">
             <rect id="Rectangle_1232" data-name="Rectangle 1232" width="1727.6" height="818.026" fill="none"/>
@@ -192,8 +192,9 @@ export default function Screen5({
           </g>
           <rect id="Size_Setter" data-name="Size Setter" width="1912" height="1080" fill="none"/>
         </g>
-      </svg>
+      </svg>*/}
 
+      <img src="/images/transitionScreens/screen-5.svg" alt="" />
     </div>
       
   )
