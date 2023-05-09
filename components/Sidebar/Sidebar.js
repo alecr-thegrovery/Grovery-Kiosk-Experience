@@ -22,7 +22,7 @@ export default function Sidebar({
   //Props
   scanner, card, home, 
   access, enrollment, financial, resources,
-  cardTooltipText
+  cardTooltipText, backButtonUrl
 }) {
   
   const handleFullScreenClick = () => {
@@ -55,15 +55,7 @@ export default function Sidebar({
 
     });
 
-   /* if(isTablet){
-      //alert("safari");
-      let element = document.querySelector("#fullscreenButton");
-      if(element){
-        document.querySelector("#fullscreenButton").style.opacity="0";
-        document.querySelector("#fullscreenButton").style.pointerEvents="none";
-      }
-      
-    }*/
+
   });
 
   return (
@@ -173,7 +165,7 @@ export default function Sidebar({
             </div>
           :
             <div className={componentStyles.controls}>
-              <a className={componentStyles.alt} data-page-back>
+              <a className={componentStyles.alt} data-page-transition={backButtonUrl} data-delay="0">
                 <BackIcon/> BACK
               </a>
               <a data-page-transition="/" data-delay="0">
