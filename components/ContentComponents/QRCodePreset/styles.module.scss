@@ -1,5 +1,7 @@
 @import "@styles/vars.module.scss";
 
+$qrCodeSize: clamp(100px, 1vw, 200px);
+
 .QRCodePreset{
 	position: relative;
 	display: flex;
@@ -11,6 +13,7 @@
 		padding: 5px;
 		border: solid 5px $purple;
 		border-radius: 8%;
+		width: $qrCodeSize;
 	}
 
 	.Tooltip{
@@ -22,6 +25,7 @@
 		border-radius: 0.65em;
 		margin-left: 1em;
 		position: relative;
+		width: calc(100% - #{$qrCodeSize});
 
 		$arrowSize: 0.5em;
 		&[data-placement="right"]::before{

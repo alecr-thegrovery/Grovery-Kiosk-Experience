@@ -125,7 +125,7 @@
 		a{
 			color: $purple;
 			text-decoration: underline;
-			border-bottom: solid 1px inherit;
+			/*border-bottom: solid 1px inherit;*/
 			&:after{
 				content:">";
 				text-decoration: none;
