@@ -335,7 +335,9 @@
         will-change: transform;
       }
       &.can--catch{
-        outline: $clampExtraExtraSmall solid $purple;
+        .doorInnerBlack{
+          outline: $clampExtraExtraSmall solid $purple;
+        }
         .doorInnerAnimate{
           transform: rotateY(45deg) translate3d(0, 0, 0);
         }
