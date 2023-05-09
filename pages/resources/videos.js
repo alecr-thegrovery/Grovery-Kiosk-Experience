@@ -24,7 +24,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout resources pageActionState="lvl-3">
+    <Layout resources pageActionState="lvl-3" backButtonUrl="/resources">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>

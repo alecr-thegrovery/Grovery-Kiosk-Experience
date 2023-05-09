@@ -41,6 +41,7 @@ export default function Home({ allPostsData }) {
     <Layout 
       enrollment
       pageActionState="lvl-2" 
+      backButtonUrl="/"
       cardTooltipText={[<h2>Explore the Building!</h2> , <p>Drag the access card to a door on the left and release it to enter that room.</p>]}
     >
       
