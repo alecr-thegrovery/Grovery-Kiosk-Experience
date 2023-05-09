@@ -24,7 +24,11 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout access pageActionState="lvl-3">
+    <Layout 
+      access 
+      pageActionState="lvl-3" 
+      backButtonUrl="/access"
+    >
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>

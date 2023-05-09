@@ -22,7 +22,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout enrollment pageActionState="lvl-3">
+    <Layout enrollment pageActionState="lvl-3" backButtonUrl="/enrollment">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>

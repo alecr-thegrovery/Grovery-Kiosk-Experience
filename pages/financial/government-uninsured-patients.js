@@ -23,7 +23,7 @@ let footerText = "";
 
 export default function Post({ postData }) {
   return (
-    <Layout financial pageActionState="lvl-3">
+    <Layout financial pageActionState="lvl-3" backButtonUrl="/financial">
       
       <Head>
         <title>{title} | {siteData.siteTitleBase}</title>
