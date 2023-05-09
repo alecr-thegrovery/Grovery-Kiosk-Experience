@@ -33,7 +33,9 @@ export default function Modal({
   //console.log(author);
   const modalClose = () => {
     const element = document.getElementById("ModalWrapper");
+    const iframe = document.getElementById("ModalIframe");
     element.setAttribute('data-modal-status', 'inactive');
+    iframe.setAttribute('src', '/images/BMSLogo.svg');
   }
 
   const closeClick = () => {
