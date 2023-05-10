@@ -1,12 +1,13 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
+import { router } from 'next/router'
 import { useIdleTimer } from 'react-idle-timer'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-const timeout = 10_000
-const promptBeforeIdle = 4_000
+const timeout = 20_000
+const promptBeforeIdle = 10_000
 
 export default function IdleTimer({ 
   //Props
@@ -19,18 +20,26 @@ export default function IdleTimer({
   const [open, setOpen] = useState(false)
 
   const onIdle = () => {
+      //alert("onIdle");
       setState('Idle')
       setOpen(false)
+      redirect()
     }
 
     const onActive = () => {
+      //alert("onActive");
       setState('Active')
       setOpen(false)
     }
 
     const onPrompt = () => {
+      //alert("onPrompt");
       setState('Prompted')
       setOpen(true)
+    }
+
+    const redirect = () => {
+      router.push("/");
     }
 
     const { getRemainingTime, activate } = useIdleTimer({
@@ -71,6 +80,7 @@ export default function IdleTimer({
           {timeTillPrompt} {seconds} until prompt
         </p>
       )}
+
       <div
         className='modal'
         style={{
