@@ -8,10 +8,17 @@ import CloseIcon from '@components/SVGComponents/CloseIcon'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-//let timeout = 2.5
-let timeout = 0.75  //shortened for testing
-let promptBeforeIdle = 0.5
 
+/*===== JS Functions =====*/
+//redirect location
+let redirectUrl = "/?idle"  //test setting, replace
+
+//set time in minutes
+let timeout = 2.5 //total time
+//let timeout = 0.75  //shortened for testing
+let promptBeforeIdle = 0.5 //time set in prompt
+
+//convert minutes to milliseconds
 timeout = timeout * 1000 * 60
 promptBeforeIdle = promptBeforeIdle * 1000 * 60
 
@@ -23,6 +30,7 @@ export default function IdleTimer({
   const [remaining, setRemaining] = useState(timeout)
   const [open, setOpen] = useState(false)
 
+  //fires when prompt timer runs out
   const onIdle = () => {
       //alert("onIdle");
       setState('Idle')
@@ -30,20 +38,23 @@ export default function IdleTimer({
       redirect()
     }
 
+    //fires when user interacts
     const onActive = () => {
       //alert("onActive");
       setState('Active')
       setOpen(false)
     }
 
+    //fires on prompt display
     const onPrompt = () => {
       //alert("onPrompt");
       setState('Prompted')
       setOpen(true)
     }
 
+    //resets application
     const redirect = () => {
-      router.push("/?idle");
+      router.push(redirectUrl);
     }
 
     const { getRemainingTime, activate } = useIdleTimer({
