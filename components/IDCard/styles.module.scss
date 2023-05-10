@@ -6,6 +6,7 @@
 	position: relative;
 	z-index: 25;
 	will-change: transform;
+	touch-action: none;
 	svg{
 		width: 100%;
 		height: auto;
