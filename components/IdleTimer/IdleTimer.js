@@ -2,17 +2,21 @@
 import React, { useState, useEffect } from 'react';
 import { router } from 'next/router'
 import { useIdleTimer } from 'react-idle-timer'
+import CloseIcon from '@components/SVGComponents/CloseIcon'
+
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
-const timeout = 20_000
-const promptBeforeIdle = 10_000
+//let timeout = 2.5
+let timeout = 0.75  //shortened for testing
+let promptBeforeIdle = 0.5
+
+timeout = timeout * 1000 * 60
+promptBeforeIdle = promptBeforeIdle * 1000 * 60
 
 export default function IdleTimer({ 
   //Props
-  id, image, title, 
-  previewText, author, date
 }) {
 
   const [state, setState] = useState('Active')
@@ -39,7 +43,7 @@ export default function IdleTimer({
     }
 
     const redirect = () => {
-      router.push("/");
+      router.push("/?idle");
     }
 
     const { getRemainingTime, activate } = useIdleTimer({
@@ -70,8 +74,18 @@ export default function IdleTimer({
 
 
   return (
-    <div className={componentStyles.IdleTimer}>
-      <h1>React Idle Timer</h1>
+    <div 
+      id="IdleTimerWrapper"
+      className={componentStyles.IdleTimer}
+      data-modal-status={
+        open ? 'active' : 'inactive'
+      }
+      //data-modal-status="active"
+      data-modal-show=""
+      //key={router.asPath}
+    >
+
+     {/* <h1>React Idle Timer</h1>
       <h2>Confirm Prompt</h2>
       <br />
       <p>Current State: {state}</p>
@@ -79,17 +93,40 @@ export default function IdleTimer({
         <p>
           {timeTillPrompt} {seconds} until prompt
         </p>
-      )}
+      )}*/}
+
+      {/*Backdrop filter, click to close*/}
+      <div 
+        className={componentStyles.backdrop} 
+        onClick={handleStillHere}
+      />
 
       <div
-        className='modal'
-        style={{
-          display: open ? 'flex' : 'none'
-        }}>
-        <h3>Are you still here?</h3>
-        <p>Logging out in {remaining} seconds</p>
-        <button onClick={handleStillHere}>Im still here</button>
-      </div>
+        className={componentStyles.modalInner}
+      >
+
+        <div className={componentStyles.InactivityModal}>
+          <div 
+            className={componentStyles.closeButton}
+            onClick={handleStillHere}
+          >
+            <CloseIcon/>
+          </div>
+
+            <div className={componentStyles.titleArea}>
+              <h2>Are you still here?</h2>              
+            </div>
+            <div className={componentStyles.copyArea}>
+              <p>Resetting in {remaining} seconds</p>
+            </div>
+            <div className={componentStyles.buttonArea}>
+              <button onClick={handleStillHere}>KEEP BROWSING</button>
+            </div>
+            
+            
+          </div>
+        </div>
+        
     </div>
   )
 }
