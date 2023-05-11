@@ -84,6 +84,7 @@ $backdropColor: rgba($black, 0.25);
 	height: 100%;
 	width: 100%;
 	background-color: $white;
+	border-radius: 3px;
 	padding: 2.25rem $clampLarge 0;
 
 	.closeButton{
@@ -131,6 +132,7 @@ $backdropColor: rgba($black, 0.25);
 	width: 100%;
 	background-color: $white;
 	padding: $clampLarge $clampExtraLarge;
+	border-radius: 3px;
 	.scroll{
 		overflow-y: auto;
 		max-height: 85vh;

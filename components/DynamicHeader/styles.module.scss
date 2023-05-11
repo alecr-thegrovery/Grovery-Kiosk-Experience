@@ -11,6 +11,9 @@ $fixedWidth: 310px;
 	top: 25px;
 	width: 75%;
 	box-shadow: $simpleShadow;
+	border-radius: 3px;
+	border-top-left-radius: 0px;
+    	border-bottom-left-radius: 0px;
 	
 	.inner{
 		width: 100%;
