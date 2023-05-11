@@ -12,6 +12,7 @@ import DynamicHeader from '@components/DynamicHeader'
 import DynamicFooter from '@components/DynamicFooter'
 import DoorBG from '@components/SVGComponents/DoorBG'
 
+
 /*===== Styles =====*/
 import pageStyles from '@styles/pages.module.scss'
 
