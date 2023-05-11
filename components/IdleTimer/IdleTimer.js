@@ -125,6 +125,7 @@ export default function IdleTimer({
           </div>
 
             <div className={componentStyles.titleArea}>
+              <img src="/images/icons/iconIdleTimer.svg" alt="" />
               <h2>Are you still here?</h2>              
             </div>
             <div className={componentStyles.copyArea}>

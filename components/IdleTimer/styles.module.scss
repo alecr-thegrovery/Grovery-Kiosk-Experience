@@ -75,6 +75,11 @@ $backdropColor: rgba($black, 0.25);
 		padding: $clampSmall;
 		font-size: $clampSmall;
 		color: $grey_2;
+
+		img{
+			max-width: 100%;
+			margin: 1em auto;
+		}
 	}
 
 	.copyArea{
