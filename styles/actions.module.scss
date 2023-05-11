@@ -450,7 +450,7 @@
       [data-transition-screen="6"] svg,
       [data-transition-screen="6"] img{
         $zoomFocus: 46% 53%;
-        $zoomFocus: calc(46% + 0px) calc(25% + 80px);
+        $zoomFocus: calc(46% + 0px) calc(60% + 80px);
         transform-origin: $zoomFocus;
       }
       [data-transition-screen="7"] svg,
