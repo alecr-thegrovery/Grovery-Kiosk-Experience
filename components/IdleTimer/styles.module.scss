@@ -74,6 +74,12 @@ $backdropColor: rgba($black, 0.25);
 		text-align: center;
 		padding: $clampSmall;
 		font-size: $clampSmall;
+		color: #5A5454;
+
+		img{
+			max-width: 100%;
+			margin: 1em auto;
+		}
 	}
 
 	.copyArea{
@@ -84,6 +90,7 @@ $backdropColor: rgba($black, 0.25);
 		margin: auto;
 		padding: $clampSmall;
 		font-size: $clampSmall;
+		color: #5A5454;
 	}
 
 	.buttonArea{

@@ -14,8 +14,8 @@ import componentStyles from './styles.module.scss'
 let redirectUrl = "/?idle"  //test setting, replace
 
 //set time in minutes
-let timeout = 2.5 //total time
-//let timeout = 0.75  //shortened for testing
+//let timeout = 2.5 //total time
+let timeout = 0.75  //shortened for testing
 let promptBeforeIdle = 0.5 //time left in prompt
 
 //convert minutes to milliseconds
@@ -125,6 +125,7 @@ export default function IdleTimer({
           </div>
 
             <div className={componentStyles.titleArea}>
+              <img src="/images/icons/iconIdleTimer.svg" alt="" />
               <h2>Are you still here?</h2>              
             </div>
             <div className={componentStyles.copyArea}>
