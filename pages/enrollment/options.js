@@ -67,6 +67,7 @@ export default function Post({ postData }) {
                   <PdfThumbnail
                     name="Enrollment Form"
                     url="/pdf/Oncology_Enrollment_Form_EN.pdf"
+                    thumbnail="/images/thumbnails/Oncology_Enrollment_Form_EN.jpg"
                   />
                 </div>
 
