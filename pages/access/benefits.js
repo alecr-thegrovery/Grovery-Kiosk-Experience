@@ -85,7 +85,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail 
                     name="Sample forms"
-                    thumbnail="/images/content/sob-sample-form-thumbnail-1.png"
+                    thumbnail="/images/thumbnails/N0-US-2200225_BMS10288 AS Sample SOB Form_Site of Care_FINAL.png"
                     url="/pdf/N0-US-2200225_BMS10288 AS Sample SOB Form_Site of Care_FINAL.pdf"
                   />
                 </div>

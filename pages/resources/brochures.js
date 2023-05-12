@@ -85,25 +85,25 @@ export default function Post({ postData }) {
                 {/*RIGHT CELL*/}
                 <div className={pageStyles.cell} data-centered>
                   <PdfThumbnail 
-                    thumbnail="/images/content/Understanding_Healthcare_Benefits_thumbnail.jpg"
+                    thumbnail="/images/thumbnails/Understanding_Healthcare_Benefits_thumb.png"
                     name="Understanding Healthcare Benefits"
                     url="/pdf/Understanding_Healthcare_Benefits.pdf"
                    />
                    <br/>
                   <PdfThumbnail 
-                    thumbnail="/images/content/Patient_Reimbursement_Process_Map.png"
+                    thumbnail="/images/thumbnails/Patient_Reimbursement_Process_Map_thumb.png"
                     name="Patient Reimbursement Process Map"
                     url="/pdf/Patient_Reimbursement_Process_Map.pdf"
                    />
                    <br/>
                    <PdfThumbnail 
-                    thumbnail="/images/content/A_Guide_to_Medicare_Part_D_2023_thumbnail.png"
+                    thumbnail="/images/thumbnails/NO-US-2200487_A_Guide_to_Medicare_Part_D_2023_thumb2x.jpg"
                     name="Medicare Part D Guide"
                     url="/pdf/A_Guide_to_Medicare_Part_D_2023.pdf"
                    />
                    <br/>
                    <PdfThumbnail 
-                    thumbnail="/images/content/Patient_Brochure_thumbnail.png"
+                    thumbnail="/images/thumbnails/PatientBrochure_Thumb.png"
                     name="BMS Access Support Patient Brochure"
                     url="/pdf/Patient_Brochure.pdf"
                    />
