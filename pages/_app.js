@@ -239,6 +239,8 @@ export default function App({ Component, pageProps }) {
               if($(".drop--me").attr("data-link")){
                 console.log("get link home");
                 var link = $(".drop--me").attr("data-link");
+                updateActionState('transition-out-pre', 0, 'cards-show');
+                updateActionState('transition-out', 250, 'cards-show');
               } else{
                 console.log("get link inner");
                 var link = $(".droppable.caught--it").attr("data-link");
@@ -249,13 +251,7 @@ export default function App({ Component, pageProps }) {
                //do nothing
               } else{
                 updateActionState('card-drop-success', 0);
-                pageTransition(link, 1000)
-
-                /*router.prefetch(link); //prefetch next page
-                setTimeout(function() { 
-                    updateActionState('page-transition-started', 0);//page transition
-                    router.push(link); //move user to next page
-                }, 1000);*/
+                pageTransition(link, 5500)
               }
 
             },
