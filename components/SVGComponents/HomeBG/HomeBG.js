@@ -217,20 +217,27 @@ export default function HomeBG({
          </g>
          <rect id="building1_entrance-inside" width="134" height="117" transform="translate(108.654 852.774)" fill="#352a2b"/>
          <g id="building1_clipmask" clip-path="url(#clip-path-7)">
+
            <g id="building1_leftdoor" transform="translate(15.981 -0.366)">
-             <path id="Path_3940" data-name="Path 3940" d="M0,0H67.047V116.732H0Z" transform="translate(92.673 853.14)" fill="#fedcca" stroke="#595454" stroke-width="0.5"/>
-             <g id="Rectangle_1155" data-name="Rectangle 1155" transform="translate(152.073 884.37)" fill="#fff" stroke="#595454" stroke-width="0.5">
-               <rect width="3" height="61" rx="1.5" stroke="none"/>
-               <rect x="0.25" y="0.25" width="2.5" height="60.5" rx="1.25" fill="none"/>
-             </g>
+            <g className="animateInner">
+              <path id="Path_3940" data-name="Path 3940" d="M0,0H67.047V116.732H0Z" transform="translate(92.673 853.14)" fill="#fedcca" stroke="#595454" stroke-width="0.5"/>
+              <g id="Rectangle_1155" data-name="Rectangle 1155" transform="translate(152.073 884.37)" fill="#fff" stroke="#595454" stroke-width="0.5">
+                <rect width="3" height="61" rx="1.5" stroke="none"/>
+                <rect x="0.25" y="0.25" width="2.5" height="60.5" rx="1.25" fill="none"/>
+              </g>
+            </g>
            </g>
+
            <g id="building1_rightdoor" transform="translate(16.054 0.004)">
-             <path id="Path_3908" data-name="Path 3908" d="M0,0H66.847V116.732H0Z" transform="translate(159.753 852.77)" fill="#fedcca" stroke="#595454" stroke-width="0.5"/>
-             <g id="Rectangle_1156" data-name="Rectangle 1156" transform="translate(164 884)" fill="#fff" stroke="#595454" stroke-width="0.5">
-               <rect width="3" height="61" rx="1.5" stroke="none"/>
-               <rect x="0.25" y="0.25" width="2.5" height="60.5" rx="1.25" fill="none"/>
-             </g>
+            <g className="animateInner">
+              <path id="Path_3908" data-name="Path 3908" d="M0,0H66.847V116.732H0Z" transform="translate(159.753 852.77)" fill="#fedcca" stroke="#595454" stroke-width="0.5"/>
+              <g id="Rectangle_1156" data-name="Rectangle 1156" transform="translate(164 884)" fill="#fff" stroke="#595454" stroke-width="0.5">
+                <rect width="3" height="61" rx="1.5" stroke="none"/>
+                <rect x="0.25" y="0.25" width="2.5" height="60.5" rx="1.25" fill="none"/>
+              </g>
+            </g>
            </g>
+
          </g>
          <g id="building1_windows" transform="translate(16.055 0.004)">
            <rect id="Rectangle_1169" data-name="Rectangle 1169" width="73.345" height="68.107" transform="translate(77.895 371.79)" fill="#e9e1e0"/>

@@ -86,12 +86,12 @@
 /* ===== Cards Animate In  ===== */
 /* =========================== */
     #LayoutOuter[data-action-state-page="lvl-1"]{
-      /*[data-animation="fadeInUp"]{
+      [data-animation="fadeInUp"]{
         transform: translate3d(0em, 8vh, 0em);
         opacity: 0;
         pointer-events: none;          
         transition: 0s;
-      } */
+      }
 
 
 
@@ -194,8 +194,8 @@
             transition-delay: calc(4 * #{$delay}) !important;
           }
           &.drop--me{
-            transform: translate3d(0em, 0vh, 0em);
-            opacity: 1;
+            transform: translate3d(0em, 0vh, 0em) !important;
+            opacity: 1 !important;
           }
         } 
       }
@@ -614,3 +614,49 @@
     }
 
 
+
+
+
+
+/* ================================== */
+/* ===== Home BG Zoom/Doors Open  ===== */
+/* ================================== */
+  #LayoutOuter[data-action-state-page="lvl-1"]{
+    //Default animation vars, override below
+      
+      &[data-action-state-home-bg="home-bg-init-enrollment"] [data-name="home background"]{
+        $zoomAmount: 3.5;
+        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        transition: $transitionMedium;
+        transition-timing-function: ease-in;
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-zoom-enrollment"] [data-name="home background"]{
+        $zoomAmount: 3.5;
+        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-open-enrollment"] [data-name="home background"]{
+        $zoomAmount: 3.5;
+        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+        #building1_leftdoor .animateInner{
+          transition: $transitionMedium;
+          //transform-origin: 8%;
+          //transform: rotateY(30deg);
+          transform: translateX(-50px);
+        }
+        #building1_rightdoor .animateInner{
+          transition: $transitionMedium;
+          //transform-origin: 15%;
+          //transform: rotateY(-30deg);
+          transform: translateX(50px);
+        }
+      }
+  }

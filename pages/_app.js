@@ -36,6 +36,8 @@ export default function App({ Component, pageProps }) {
             LayoutOuter.setAttribute("data-action-state-cards-show", stateValue);
           } else if(thread == "page"){
             LayoutOuter.setAttribute("data-action-state-page", stateValue);
+          } else if(thread == "home-bg"){
+            LayoutOuter.setAttribute("data-action-state-home-bg", stateValue);
           } else{
             LayoutOuter.setAttribute("data-action-state", stateValue);
           }
@@ -249,9 +251,15 @@ export default function App({ Component, pageProps }) {
               console.log(link);
               if(link  == null){
                //do nothing
-              } else{
-                updateActionState('card-drop-success', 0);
-                pageTransition(link, 5500)
+              } else if(link  == "/enrollment/"){
+                console.log("enrollment card dropped");
+                updateActionState('home-bg-init-enrollment', 0, 'home-bg');
+                updateActionState('home-bg-zoom-enrollment', 1200, 'home-bg');
+                updateActionState('home-bg-open-enrollment', 2000, 'home-bg');
+                pageTransition(link, 2800);
+              }else{
+                //updateActionState('card-drop-success', 0);
+                pageTransition(link, 5500);
               }
 
             },
