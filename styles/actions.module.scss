@@ -86,12 +86,12 @@
 /* ===== Cards Animate In  ===== */
 /* =========================== */
     #LayoutOuter[data-action-state-page="lvl-1"]{
-      [data-animation="fadeInUp"]{
+      /*[data-animation="fadeInUp"]{
         transform: translate3d(0em, 8vh, 0em);
         opacity: 0;
         pointer-events: none;          
         transition: 0s;
-      } 
+      } */
 
 
 
@@ -175,9 +175,9 @@
         }
       }
       &[data-action-state-cards-show="transition-out"]{
-        [data-animation="fadeInUp"]{
+        [data-animation="fadeInUp"]:not(.drop--me){
           transform: translate3d(0em, 8vh, 0em);
-          //opacity: 0;
+          opacity: 0;
           pointer-events: none;          
           transition: $transitionSlow !important;
           $delay: 0.15s;
@@ -192,6 +192,10 @@
           }
           &[data-animation-delay="4"]{
             transition-delay: calc(4 * #{$delay}) !important;
+          }
+          &.drop--me{
+            transform: translate3d(0em, 0vh, 0em);
+            opacity: 1;
           }
         } 
       }
