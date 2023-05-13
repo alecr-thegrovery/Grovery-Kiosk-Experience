@@ -36,6 +36,8 @@ export default function App({ Component, pageProps }) {
             LayoutOuter.setAttribute("data-action-state-cards-show", stateValue);
           } else if(thread == "page"){
             LayoutOuter.setAttribute("data-action-state-page", stateValue);
+          } else if(thread == "home-bg"){
+            LayoutOuter.setAttribute("data-action-state-home-bg", stateValue);
           } else{
             LayoutOuter.setAttribute("data-action-state", stateValue);
           }
@@ -59,8 +61,8 @@ export default function App({ Component, pageProps }) {
       updateActionState('initial', 0, 'load');
       updateActionState('post-initial', 250), 'load';
       updateActionState('load-finished', 1000, 'load');
-      updateActionState('just-after-load', 2500, 'load');
-      updateActionState('just-after-load-2', 4500, 'load');
+      updateActionState('just-after-load', 2000, 'load');
+      updateActionState('just-after-load-2', 2500, 'load');
       updateActionState('load-sequence-complete', 5000, 'load');
 
       
@@ -249,9 +251,33 @@ export default function App({ Component, pageProps }) {
               console.log(link);
               if(link  == null){
                //do nothing
-              } else{
-                updateActionState('card-drop-success', 0);
-                pageTransition(link, 5500)
+              } else if(link  == "/enrollment/"){
+                console.log("enrollment card dropped");
+                updateActionState('home-bg-init-enrollment', 0, 'home-bg');
+                updateActionState('home-bg-zoom-enrollment', 1200, 'home-bg');
+                updateActionState('home-bg-open-enrollment', 2000, 'home-bg');
+                pageTransition(link, 2800);
+              }else if(link  == "/access/"){
+                console.log("access card dropped");
+                updateActionState('home-bg-init-access', 0, 'home-bg');
+                updateActionState('home-bg-zoom-access', 1200, 'home-bg');
+                updateActionState('home-bg-open-access', 2000, 'home-bg');
+                pageTransition(link, 2800);
+              }else if(link  == "/financial/"){
+                console.log("financial card dropped");
+                updateActionState('home-bg-init-financial', 0, 'home-bg');
+                updateActionState('home-bg-zoom-financial', 1200, 'home-bg');
+                updateActionState('home-bg-open-financial', 2000, 'home-bg');
+                pageTransition(link, 2800);
+              }else if(link  == "/resources/"){
+                console.log("resources card dropped");
+                updateActionState('home-bg-init-resources', 0, 'home-bg');
+                updateActionState('home-bg-zoom-resources', 1200, 'home-bg');
+                updateActionState('home-bg-open-resources', 2000, 'home-bg');
+                pageTransition(link, 2800);
+              }else{
+                //updateActionState('card-drop-success', 0);
+                pageTransition(link, 5500);
               }
 
             },
