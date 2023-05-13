@@ -622,41 +622,159 @@
 /* ===== Home BG Zoom/Doors Open  ===== */
 /* ================================== */
   #LayoutOuter[data-action-state-page="lvl-1"]{
-    //Default animation vars, override below
+    
+    //remove color filter
+      &[data-action-state-home-bg="home-bg-init-enrollment"],
+      &[data-action-state-home-bg="home-bg-init-access"]
+      &[data-action-state-home-bg="home-bg-init-financial"]
+      &[data-action-state-home-bg="home-bg-init-resources"]{
+        .cardsFilter,
+        .colorFilter{
+          opacity:0 !important;
+        }
+      }
       
+    /* =========================== */
+    /* ===== Enrollment Doors ===== */
+    /* =========================== */
       &[data-action-state-home-bg="home-bg-init-enrollment"] [data-name="home background"]{
-        $zoomAmount: 3.5;
-        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionMedium;
         transition-timing-function: ease-in;
         transform-origin: $zoomFocus;
       }
       &[data-action-state-home-bg="home-bg-zoom-enrollment"] [data-name="home background"]{
-        $zoomAmount: 3.5;
-        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionSlow;
         transition-timing-function: ease-in;
         transform: scale($zoomAmount);
         transform-origin: $zoomFocus;
       }
       &[data-action-state-home-bg="home-bg-open-enrollment"] [data-name="home background"]{
-        $zoomAmount: 3.5;
-        $zoomFocus: calc(-7% + 0px) calc(97% + 50px);
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionSlow;
         transition-timing-function: ease-in;
         transform: scale($zoomAmount);
         transform-origin: $zoomFocus;
         #building1_leftdoor .animateInner{
           transition: $transitionMedium;
-          //transform-origin: 8%;
-          //transform: rotateY(30deg);
           transform: translateX(-50px);
         }
         #building1_rightdoor .animateInner{
           transition: $transitionMedium;
-          //transform-origin: 15%;
-          //transform: rotateY(-30deg);
           transform: translateX(50px);
         }
       }
+
+    /* ======================= */
+    /* ===== Access Doors ===== */
+    /* ======================= */
+      &[data-action-state-home-bg="home-bg-init-access"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(13% + 0px) calc(70% + 50px);
+        transition: $transitionMedium;
+        transition-timing-function: ease-in;
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-zoom-access"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(13% + 0px) calc(70% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-open-access"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(13% + 0px) calc(70% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+        #building2_leftdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(-50px);
+        }
+        #building2_rightdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(50px);
+        }
+      }
+
+
+        //end
+  
+    /* ========================== */
+    /* ===== Financial Doors ===== */
+    /* ========================== */
+      &[data-action-state-home-bg="home-bg-init-financial"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(38% + 0px) calc(70% + 50px);
+        transition: $transitionMedium;
+        transition-timing-function: ease-in;
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-zoom-financial"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(38% + 0px) calc(70% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg="home-bg-open-financial"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(38% + 0px) calc(70% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+        #building3_leftdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(-65px);
+        }
+        #building3_rightdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(65px);
+        }
+      }
+
+      /* ========================== */
+      /* ===== Resources Doors ===== */
+      /* ========================== */
+        &[data-action-state-home-bg="home-bg-init-resources"] [data-name="home background"]{
+          $zoomAmount: 4.25;
+          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+          transition: $transitionMedium;
+          transition-timing-function: ease-in;
+          transform-origin: $zoomFocus;
+        }
+        &[data-action-state-home-bg="home-bg-zoom-resources"] [data-name="home background"]{
+          $zoomAmount: 4.25;
+          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+          transition: $transitionSlow;
+          transition-timing-function: ease-in;
+          transform: scale($zoomAmount);
+          transform-origin: $zoomFocus;
+        }
+        &[data-action-state-home-bg="home-bg-open-resources"] [data-name="home background"]{
+          $zoomAmount: 4.25;
+          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+          transition: $transitionSlow;
+          transition-timing-function: ease-in;
+          transform: scale($zoomAmount);
+          transform-origin: $zoomFocus;
+          #building4_leftdoor .animateInner{
+            transition: $transitionMedium;
+            transform: translateX(-50px);
+          }
+          #building4_rightdoor .animateInner{
+            transition: $transitionMedium;
+            transform: translateX(50px);
+          }
+        }
+
   }
