@@ -54,7 +54,14 @@ export default function IdleTimer({
 
     //resets application
     const redirect = () => {
-      router.push(redirectUrl);
+      if(window.location.href.indexOf("idle") > -1){
+        //already on idle redirect, just refresh
+        router.reload();
+      } else{
+        //send user to redirect location
+        router.push(redirectUrl);
+      }
+      
     }
 
     const { getRemainingTime, activate } = useIdleTimer({
