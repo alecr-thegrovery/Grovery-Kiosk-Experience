@@ -71,7 +71,7 @@ export default function Post({ postData }) {
                 <div className={pageStyles.cell} data-centered>
                   <img src="/images/content/billing-coding-medselector-img.png" alt="" />
                   <QRCodePreset 
-                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/opdivo/billing-diagnosis-codes?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
+                    link="https://www.bmsaccesssupport.bmscustomerconnect.com/?utm_source=bms_congress_access_app&utm_medium=qr_code_scan&utm_campaign=congress_access_event"
                     toolTipText="Scan to access Reimbursement Guides available for all relevant products at BMSAccessSupport.com"
                     toolTipPlacement="right"
                   />
