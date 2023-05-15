@@ -66,9 +66,9 @@ export default function Post({ postData }) {
                     </ul>
                   </BlockQuote>
 
-                  <img src="/images/content/commerical-patients-image-1.png" alt=""/>
+                  <img src="/images/content/commerical-patients-image-1.jpg" alt=""/>
                   <br/><br/>
-                  <img src="/images/content/commerical-patients-image-2.png" alt=""/>
+                  <img src="/images/content/commerical-patients-image-2.jpg" alt=""/>
 
               </div>
 

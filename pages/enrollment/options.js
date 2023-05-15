@@ -49,7 +49,7 @@ export default function Post({ postData }) {
                   
                   <BlockQuote icon="/images/icons/contentPrinterIcon.svg">
                     <h2>Option 1: Enroll via Fax</h2>
-                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a href="/enrollment/enrollment-form">Tap for information on how to complete the enrollment form</a>.</p>
+                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a href="/enrollment/provider-portal">Tap for information on how to complete the enrollment form</a>.</p>
                   </BlockQuote>
 
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
