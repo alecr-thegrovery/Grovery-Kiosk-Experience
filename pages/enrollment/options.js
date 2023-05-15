@@ -54,7 +54,7 @@ export default function Post({ postData }) {
 
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
                     <h2>Option 2: Enroll via the Provider Portal</h2>
-                    <p><a href="MyBMSCases.com" target="_blank">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal.</p>
+                    <p><a href="https://www.mybmscases.com" target="_blank">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal.</p>
                   </BlockQuote>
 
                   <p>Once the enrollment form has been submitted and a Benefits Review has been conducted, you will receive your patient’s summary of healthcare benefits.</p>
