@@ -125,11 +125,15 @@
 		a{
 			color: $purple;
 			text-decoration: underline;
+			position: relative;
+			padding-right: 0.75em;
 			/*border-bottom: solid 1px inherit;*/
 			&:after{
-				content:">";
+				content:" > ";
 				text-decoration: none;
 				font-weight: 600;
+				position: absolute;
+				padding-left: 0.15em;
 			}
 		}
 		.purple{
