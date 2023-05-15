@@ -24,15 +24,15 @@
   //mixin:   @include mixinName;
 
   @mixin hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    //visibility: hidden;
   }
 
   @mixin visible {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    //visibility: visible;
   }
 
   @keyframes fillPurple {
@@ -464,6 +464,10 @@
       $zoomFocus: 50% 83%;
       $zoomAmount: 2.5;
       transform-origin: $zoomFocus;
+      [data-transition-screen="1"] svg,
+      [data-transition-screen="1"] img{
+        opacity: 1;
+      }
     //Individual Screens
       [data-transition-screen="1"] svg,
       [data-transition-screen="1"] img{
@@ -592,6 +596,10 @@
     
     /* ===== Animation Point 1 ===== */
       &[data-action-state-load="just-after-load-2"]{
+        [data-transition-screen]{
+          transition: $transitionMedium;
+          opacity: 0;
+        }
         [data-transition-screen] svg,
         [data-transition-screen] img{
           //keep zoom in, fade out & reveal content
@@ -603,10 +611,13 @@
 
     /* ===== Complete, Clear Animations ===== */
       &[data-action-state-load="load-sequence-complete"]{
-        [data-transition-screen] {
+        [data-transition-screen],
+        [data-transition-screen] svg,
+        [data-transition-screen] img{
           //clear everything after animations are complete
           //transform: none;
           //transform-origin: none;
+          transition: $transitionMedium;
           opacity: 0;
           pointer-events: none;
         }
