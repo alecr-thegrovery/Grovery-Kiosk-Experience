@@ -61,8 +61,8 @@ export default function App({ Component, pageProps }) {
       updateActionState('initial', 0, 'load');
       updateActionState('post-initial', 250), 'load';
       updateActionState('load-finished', 1000, 'load');
-      updateActionState('just-after-load', 2500, 'load');
-      updateActionState('just-after-load-2', 3000, 'load');
+      updateActionState('just-after-load', 2000, 'load');
+      updateActionState('just-after-load-2', 3500, 'load');
       updateActionState('load-sequence-complete', 5000, 'load');
 
       
@@ -277,7 +277,7 @@ export default function App({ Component, pageProps }) {
                 pageTransition(link, 2800);
               }else{
                 //updateActionState('card-drop-success', 0);
-                pageTransition(link, 5500);
+                pageTransition(link, 500);
               }
 
             },
