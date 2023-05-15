@@ -19,7 +19,7 @@ import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 import utilStyles from '@styles/utils.module.css'
 import pageStyles from '@styles/pages.module.scss'
 
-let title = "NEW AssistPoint Integration";
+let title = "Video Resources";
 let footerText = "";
 
 export default function Post({ postData }) {
@@ -32,7 +32,7 @@ export default function Post({ postData }) {
       <div className={pageStyles.pageLayout}>
         {/*Header*/}
         <DynamicHeader
-          heading={[<strong>NEW</strong>, " AssistPoint Integration"]}
+          heading={[ "Video Resources"]}
         />
 
         {/*Content*/}
