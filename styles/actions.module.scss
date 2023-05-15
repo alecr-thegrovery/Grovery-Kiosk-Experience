@@ -249,9 +249,11 @@
             opacity:0.5;
           }
           .draggable:not(.getting--dragged){
+            pointer-events: none;
             .inner{
                 transform: translate(0, 2vh) !important;
                 box-shadow: none;
+
                 &:after{
                   opacity:0.5;
                 }
