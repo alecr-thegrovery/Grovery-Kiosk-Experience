@@ -44,7 +44,7 @@ export default function PDFModal({
       </div>*/}
       
       <div className={componentStyles.iframeWrapper}>
-        <iframe id="ModalIframe" src="#" frameBorder="0"></iframe>
+        <iframe id="ModalIframe" src="/images/BMSLogo.svg" frameBorder="0"></iframe>
       </div>
       
       <div className={componentStyles.copyArea}>
