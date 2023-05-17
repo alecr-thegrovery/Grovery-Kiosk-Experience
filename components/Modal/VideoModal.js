@@ -17,14 +17,17 @@ export default function VideoModal({
   //NOTES:
   //Open functions are in /ContentComponents/PdfThumbnail
 
-  const modalClose = () => {
-    const element = document.getElementById("PdfModal");
-    element.setAttribute('data-modal-status', 'inactive');
-  }
+  //console.log(author);
+    const modalClose = () => {
+      const element = document.getElementById("ModalWrapper");
+      const iframe = document.getElementById("ModalIframe");
+      element.setAttribute('data-modal-status', 'inactive');
+      iframe.setAttribute('src', '/images/BMSLogo.svg');
+    }
 
-  const closeClick = () => {
-    modalClose();
-  };
+    const closeClick = () => {
+      modalClose();
+    };
 
   return (
     <div className={componentStyles.VideoModal}>
