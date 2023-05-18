@@ -49,12 +49,12 @@ export default function Post({ postData }) {
                   
                   <BlockQuote icon="/images/icons/contentPrinterIcon.svg">
                     <h2>Option 1: Enroll via Fax</h2>
-                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a href="/enrollment/provider-portal">Tap for information on how to complete the enrollment form</a>.</p>
+                    <p>Obtain enrollment forms at BMSAccessSupport.com, under the Enrollment tab. <a data-page-transition="/enrollment/enrollment-form" data-delay="0">Tap for information on how to complete the enrollment form</a>.</p>
                   </BlockQuote>
 
                   <BlockQuote icon="/images/icons/contentComputerScreen.svg">
                     <h2>Option 2: Enroll via the Provider Portal</h2>
-                    <p><a href="/enrollment/provider-portal">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal.</p>
+                    <p><a data-page-transition="/enrollment/provider-portal" data-delay="0">Visit MyBMSCases.com</a> to submit completed forms with physician and patient signatures through the provider portal.</p>
                   </BlockQuote>
 
                   <p>Once the enrollment form has been submitted and a Benefits Review has been conducted, you will receive your patient’s summary of healthcare benefits.</p>

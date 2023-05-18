@@ -62,6 +62,9 @@
 	  text-align: center;
 	  position: relative;
 
+	  box-shadow: 1px 2px 6px rgba(128, 128, 128, 0.55);
+	  background-image: linear-gradient(to bottom, #373231, #373231, #373231, #373231, #373231, #342f2e, #302d2b, #2d2a28, #262422, #1f1e1c, #191817, #121110);
+
 	  .scannerBorder{
 	  	$dynamicBorder: clamp(2px, 0.25vw, 3px);
 		border: dashed $dynamicBorder $grey_1;
