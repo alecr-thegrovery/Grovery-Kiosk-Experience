@@ -151,8 +151,8 @@ export default function Sidebar({
         <div className={componentStyles.controlsOuter}>
           
           {home ?
-            <div className={componentStyles.controls}>
-              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open" data-device-hide>
+            <div className={componentStyles.controls} data-device-hide>
+              <a id="fullscreenButton" onClick={handleFullScreenClick} data-icon="open" >
                 {/*<p>&#9746;</p>*/}
                 <div className={componentStyles.openIcon}>
                   <FullscreenOpenIcon/>
