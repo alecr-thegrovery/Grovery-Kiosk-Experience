@@ -11,7 +11,7 @@
 ### Server Links ###
 * Local: http://localhost:3000/
 * Staging: https://bms-kiosk-staging.netlify.app/
-* Live: 
+* Live: http://congress.bmsvirtualcongress.com/
 
 ---
 
