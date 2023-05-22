@@ -38,6 +38,8 @@ export default function App({ Component, pageProps }) {
             LayoutOuter.setAttribute("data-action-state-page", stateValue);
           } else if(thread == "home-bg"){
             LayoutOuter.setAttribute("data-action-state-home-bg", stateValue);
+          } else if(thread == "transition-screen"){
+            LayoutOuter.setAttribute("data-action-state-transition-screen", stateValue);
           } else{
             LayoutOuter.setAttribute("data-action-state", stateValue);
           }
@@ -65,6 +67,12 @@ export default function App({ Component, pageProps }) {
       updateActionState('just-after-load-2', 3500, 'load');
       updateActionState('load-sequence-complete', 5000, 'load');
 
+    /* ===== Load Sequence ===== */
+     updateActionState('initial', 0, 'transition-screen');
+     updateActionState('zoom', 2000, 'transition-screen');
+     updateActionState('fade', 3300, 'transition-screen');
+     updateActionState('end', 5000, 'transition-screen');
+     
       
 
     /* ========================== */
