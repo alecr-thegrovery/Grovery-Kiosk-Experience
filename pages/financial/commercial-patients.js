@@ -109,7 +109,7 @@ export default function Post({ postData }) {
 
                   <img src="/images/content/commerical-patients-image-1-v2.png" alt=""/>
                   <br/><br/>
-                  <img src="/images/content/commerical-patients-image-2.jpg" alt=""/>
+                  <img src="/images/content/commerical-patients-image-2-v3.png" alt=""/>
 
               </div>
 
