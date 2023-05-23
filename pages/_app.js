@@ -72,10 +72,10 @@ export default function App({ Component, pageProps }) {
       if(el.getAttribute("data-action-state-page") == "lvl-3"){
         console.log("page lvl 3 detected");
         /* ===== Transition Screens ===== */
-         /*updateActionState('initial', 0, 'transition-screen');
+         updateActionState('initial', 0, 'transition-screen');
          updateActionState('zoom', 2000, 'transition-screen');
          updateActionState('fade', 3500, 'transition-screen');
-         updateActionState('end', 5000, 'transition-screen');*/
+         updateActionState('end', 5000, 'transition-screen');
       }
 
     
@@ -291,11 +291,11 @@ export default function App({ Component, pageProps }) {
                 //updateActionState('card-drop-success', 0);
                 pageTransition(link, 500);
                 /* ===== Transition Screens ===== */
-                 updateActionState('initial', 0, 'transition-screen');
+                 /*updateActionState('initial', 0, 'transition-screen');
                  updateActionState('zoom', 2000, 'transition-screen');
                  updateActionState('fade', 3500, 'transition-screen');
                  updateActionState('end', 5000, 'transition-screen');
-              }
+              }*/
 
             },
 
