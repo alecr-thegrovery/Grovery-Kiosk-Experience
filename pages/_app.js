@@ -81,11 +81,6 @@ export default function App({ Component, pageProps }) {
           updateActionState('hidden', delay, 'transition');
           setTimeout(function() {
             router.push(url);
-            /* ===== Transition Screens ===== */
-             updateActionState('initial', 2000, 'transition-screen');
-             updateActionState('zoom', 4000, 'transition-screen');
-             updateActionState('fade', 5300, 'transition-screen');
-             updateActionState('end', 7000, 'transition-screen');
           }, delay);
         } //END pageTransition function
 
@@ -287,6 +282,11 @@ export default function App({ Component, pageProps }) {
               }else{
                 //updateActionState('card-drop-success', 0);
                 pageTransition(link, 500);
+                /* ===== Transition Screens ===== */
+                 updateActionState('initial', 0, 'transition-screen');
+                 updateActionState('zoom', 4000, 'transition-screen');
+                 updateActionState('fade', 5500, 'transition-screen');
+                 updateActionState('end', 7000, 'transition-screen');
               }
 
             },
