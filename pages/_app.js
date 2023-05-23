@@ -67,11 +67,7 @@ export default function App({ Component, pageProps }) {
       updateActionState('just-after-load-2', 3500, 'load');
       updateActionState('load-sequence-complete', 5000, 'load');
 
-    /* ===== Load Sequence ===== */
-     updateActionState('initial', 0, 'transition-screen');
-     updateActionState('zoom', 2000, 'transition-screen');
-     updateActionState('fade', 3300, 'transition-screen');
-     updateActionState('end', 5000, 'transition-screen');
+    
      
       
 
@@ -85,6 +81,11 @@ export default function App({ Component, pageProps }) {
           updateActionState('hidden', delay, 'transition');
           setTimeout(function() {
             router.push(url);
+            /* ===== Transition Screens ===== */
+             updateActionState('initial', 2000, 'transition-screen');
+             updateActionState('zoom', 4000, 'transition-screen');
+             updateActionState('fade', 5300, 'transition-screen');
+             updateActionState('end', 7000, 'transition-screen');
           }, delay);
         } //END pageTransition function
 
