@@ -67,10 +67,18 @@ export default function App({ Component, pageProps }) {
       updateActionState('just-after-load-2', 3500, 'load');
       updateActionState('load-sequence-complete', 5000, 'load');
 
-    
-     
       
+      let el = document.querySelector("#LayoutOuter");
+      if(el.getAttribute("data-action-state-page") == "lvl-3"){
+        console.log("page lvl 3 detected");
+        /* ===== Transition Screens ===== */
+         /*updateActionState('initial', 0, 'transition-screen');
+         updateActionState('zoom', 2000, 'transition-screen');
+         updateActionState('fade', 3500, 'transition-screen');
+         updateActionState('end', 5000, 'transition-screen');*/
+      }
 
+    
     /* ========================== */
     /* ===== Page Transition ===== */
     /* ========================== */
