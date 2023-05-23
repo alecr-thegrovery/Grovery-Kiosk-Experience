@@ -38,6 +38,8 @@ export default function App({ Component, pageProps }) {
             LayoutOuter.setAttribute("data-action-state-page", stateValue);
           } else if(thread == "home-bg"){
             LayoutOuter.setAttribute("data-action-state-home-bg", stateValue);
+          } else if(thread == "transition-screen"){
+            LayoutOuter.setAttribute("data-action-state-transition-screen", stateValue);
           } else{
             LayoutOuter.setAttribute("data-action-state", stateValue);
           }
@@ -66,7 +68,17 @@ export default function App({ Component, pageProps }) {
       updateActionState('load-sequence-complete', 5000, 'load');
 
       
+      let el = document.querySelector("#LayoutOuter");
+      if(el.getAttribute("data-action-state-page") == "lvl-3"){
+        console.log("page lvl 3 detected");
+        /* ===== Transition Screens ===== */
+         updateActionState('initial', 0, 'transition-screen');
+         updateActionState('zoom', 2000, 'transition-screen');
+         updateActionState('fade', 3500, 'transition-screen');
+         updateActionState('end', 5000, 'transition-screen');
+      }
 
+    
     /* ========================== */
     /* ===== Page Transition ===== */
     /* ========================== */
@@ -278,6 +290,11 @@ export default function App({ Component, pageProps }) {
               }else{
                 //updateActionState('card-drop-success', 0);
                 pageTransition(link, 500);
+                /* ===== Transition Screens ===== */
+                 /*updateActionState('initial', 0, 'transition-screen');
+                 updateActionState('zoom', 2000, 'transition-screen');
+                 updateActionState('fade', 3500, 'transition-screen');
+                 updateActionState('end', 5000, 'transition-screen');*/
               }
 
             },
