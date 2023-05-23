@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
+import { useRouter } from 'next/router';
 import 'normalize.css';
 
 //Drag n Drop 
@@ -384,6 +385,6 @@ export default function App({ Component, pageProps }) {
         
 
   });
-  let routerKey = 0;
-  return <Component key={routerKey++} {...pageProps} />
+  const router = useRouter();
+  return <Component key={router.asPath} {...pageProps} />
 }
