@@ -52,7 +52,7 @@ export default function Post({ postData }) {
                   <BlockQuote icon="/images/icons/contentFormIcon.svg">
                     <ul>
                       <li>
-                        <PdfLink url="/pdf/Empliciti_Opdivo_O+Y_Opdualag_Yervoy_T_C.pdf" name="Empliciti_Opdivo_O+Y_Opdualag_Yervoy_T_C.pdf">Terms and Conditions for Empliciti, Opdivo, Opdivo + Yervoy, Opdualag, &amp; Yervoy</PdfLink>
+                        <PdfLink url="/pdf/Empliciti_Opdivo_O_Y_Opdualag_Yervoy_T_C.pdf" name="Empliciti_Opdivo_O+Y_Opdualag_Yervoy_T_C.pdf">Terms and Conditions for Empliciti, Opdivo, Opdivo + Yervoy, Opdualag, &amp; Yervoy</PdfLink>
                       </li>
                       <li>
                         <PdfLink url="/pdf/Abraxane_Reblozyl_T_C.pdf" name="Abraxane_Reblozyl_T_C.pdf">Terms and Conditions for Abraxane &amp; Reblozyl</PdfLink>
