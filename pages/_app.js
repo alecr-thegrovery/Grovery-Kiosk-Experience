@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import $ from 'jquery'
 import { router } from 'next/router'
+import { useRouter } from 'next/router';
 import 'normalize.css';
 
 //Drag n Drop 
@@ -47,37 +48,39 @@ export default function App({ Component, pageProps }) {
       }
 
       /* ===== General  ===== */
-        updateActionState('initial', 0);       
+           updateActionState('initial', 0);       
 
-      /* ===== Cards ===== */
-        updateActionState('initial', 0, 'cards-show');
-        updateActionState('animate-start', 1500, 'cards-show');
-        updateActionState('visible', 1550, 'cards-show');
-        updateActionState('post-visible', 2500, 'cards-show');
+         /* ===== Cards ===== */
+           updateActionState('initial', 0, 'cards-show');
+           updateActionState('animate-start', 1500, 'cards-show');
+           updateActionState('visible', 1550, 'cards-show');
+           updateActionState('post-visible', 2500, 'cards-show');
 
-      /* ===== Tooltips ===== */
-        updateActionState('initial', 0, 'tooltips');
-        updateActionState('show-after-load', 5000, 'tooltips');
+         /* ===== Tooltips ===== */
+           updateActionState('initial', 0, 'tooltips');
+           updateActionState('show-after-load', 5000, 'tooltips');
 
-     /* ===== Load Sequence ===== */
-      updateActionState('initial', 0, 'load');
-      updateActionState('post-initial', 250), 'load';
-      updateActionState('load-finished', 1000, 'load');
-      updateActionState('just-after-load', 2000, 'load');
-      updateActionState('just-after-load-2', 3500, 'load');
-      updateActionState('load-sequence-complete', 5000, 'load');
+        /* ===== Load Sequence ===== */
+         updateActionState('initial', 0, 'load');
+         updateActionState('post-initial', 250), 'load';
+         updateActionState('load-finished', 1000, 'load');
+         updateActionState('just-after-load', 2000, 'load');
+         updateActionState('just-after-load-2', 3500, 'load');
+         updateActionState('load-sequence-complete', 5000, 'load');
 
-      
-      let el = document.querySelector("#LayoutOuter");
-      if(el.getAttribute("data-action-state-page") == "lvl-3"){
-        console.log("page lvl 3 detected");
-        /* ===== Transition Screens ===== */
-         updateActionState('initial', 0, 'transition-screen');
-         updateActionState('zoom', 2000, 'transition-screen');
-         updateActionState('fade', 3500, 'transition-screen');
-         updateActionState('end', 5000, 'transition-screen');
+         
+      /*function transtionScreenAnimationChain(){
+         let el = document.querySelector("#LayoutOuter");
+         if(el.getAttribute("data-action-state-page") == "lvl-3"){
+           console.log("page lvl 3 detected");
+            updateActionState('initial', 0, 'transition-screen');
+            updateActionState('zoom', 2000, 'transition-screen');
+            updateActionState('fade', 3500, 'transition-screen');
+            updateActionState('end', 5000, 'transition-screen');
+         }
       }
-
+      
+      router.events.on('routeChangeComplete', transtionScreenAnimationChain);*/
     
     /* ========================== */
     /* ===== Page Transition ===== */
@@ -85,11 +88,14 @@ export default function App({ Component, pageProps }) {
         updateActionState('visible', 1000, 'transition');
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
-          router.prefetch(url); //prefetch next page
+          //router.prefetch(url); //prefetch next page
           updateActionState('hidden', delay, 'transition');
           setTimeout(function() {
             router.push(url);
+            //router.reload();
+            //window.location.href = url;
           }, delay);
+
         } //END pageTransition function
 
     /* ================================= */
@@ -384,6 +390,6 @@ export default function App({ Component, pageProps }) {
         
 
   });
-  let routerKey = 0;
-  return <Component key={routerKey++} {...pageProps} />
+ 
+  return <Component {...pageProps} />
 }

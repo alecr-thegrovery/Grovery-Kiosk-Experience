@@ -23,6 +23,49 @@ let title = "Using the My BMS Cases Provider Portal";
 let footerText = "";
 
 export default function Post({ postData }) {
+
+  useEffect(() => {
+
+    //define function
+          function updateActionState(stateValue, delay, thread) {
+            setTimeout(function() {
+              const LayoutOuter = document.querySelector("#LayoutOuter");
+              if(thread == "load"){
+                LayoutOuter.setAttribute("data-action-state-load", stateValue);
+              } else if(thread == "transition"){
+                LayoutOuter.setAttribute("data-action-state-transition", stateValue);
+              } else if(thread == "tooltips"){
+                LayoutOuter.setAttribute("data-action-state-tooltips", stateValue);
+              } else if(thread == "cards"){
+                LayoutOuter.setAttribute("data-action-state-cards", stateValue);
+              }else if(thread == "cards-show"){
+                LayoutOuter.setAttribute("data-action-state-cards-show", stateValue);
+              } else if(thread == "page"){
+                LayoutOuter.setAttribute("data-action-state-page", stateValue);
+              } else if(thread == "home-bg"){
+                LayoutOuter.setAttribute("data-action-state-home-bg", stateValue);
+              } else if(thread == "transition-screen"){
+                LayoutOuter.setAttribute("data-action-state-transition-screen", stateValue);
+              } else{
+                LayoutOuter.setAttribute("data-action-state", stateValue);
+              }
+            }, delay);
+          }
+
+    function transtionScreenAnimationChain(){
+       
+         console.log("page lvl 3 detected");
+          updateActionState('initial', 0, 'transition-screen');
+          updateActionState('zoom', 2000, 'transition-screen');
+          updateActionState('fade', 3500, 'transition-screen');
+          updateActionState('end', 5000, 'transition-screen');
+       
+    }
+
+    transtionScreenAnimationChain();
+  });
+
+  
   return (
     <Layout 
       access 
