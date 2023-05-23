@@ -3,6 +3,7 @@
  */
 const nextConfig = {
   /* config options here */
+  reactStrictMode: true,
 
   //IMAGE LOADER
   images: {

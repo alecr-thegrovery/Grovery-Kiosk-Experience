@@ -86,12 +86,12 @@ export default function App({ Component, pageProps }) {
         updateActionState('visible', 1000, 'transition');
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
-          //router.prefetch(url); //prefetch next page
+          router.prefetch(url); //prefetch next page
           updateActionState('hidden', delay, 'transition');
           setTimeout(function() {
             router.push(url);
+            
           }, delay);
-          //router.reload(url);
         } //END pageTransition function
 
     /* ================================= */
