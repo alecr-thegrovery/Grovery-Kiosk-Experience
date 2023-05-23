@@ -384,6 +384,6 @@ export default function App({ Component, pageProps }) {
         
 
   });
-
-  return <Component {...pageProps} />
+  let routerKey = 0;
+  return <Component key={routerKey++} {...pageProps} />
 }
