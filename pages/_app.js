@@ -284,9 +284,9 @@ export default function App({ Component, pageProps }) {
                 pageTransition(link, 500);
                 /* ===== Transition Screens ===== */
                  updateActionState('initial', 0, 'transition-screen');
-                 updateActionState('zoom', 4000, 'transition-screen');
-                 updateActionState('fade', 5500, 'transition-screen');
-                 updateActionState('end', 7000, 'transition-screen');
+                 updateActionState('zoom', 2000, 'transition-screen');
+                 updateActionState('fade', 3500, 'transition-screen');
+                 updateActionState('end', 5000, 'transition-screen');
               }
 
             },
