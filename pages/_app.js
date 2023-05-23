@@ -294,8 +294,8 @@ export default function App({ Component, pageProps }) {
                  /*updateActionState('initial', 0, 'transition-screen');
                  updateActionState('zoom', 2000, 'transition-screen');
                  updateActionState('fade', 3500, 'transition-screen');
-                 updateActionState('end', 5000, 'transition-screen');
-              }*/
+                 updateActionState('end', 5000, 'transition-screen');*/
+              }
 
             },
 
