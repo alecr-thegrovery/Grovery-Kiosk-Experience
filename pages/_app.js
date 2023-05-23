@@ -69,11 +69,10 @@ export default function App({ Component, pageProps }) {
          updateActionState('load-sequence-complete', 5000, 'load');
 
          
-      function transtionScreenAnimationChain(){
+      /*function transtionScreenAnimationChain(){
          let el = document.querySelector("#LayoutOuter");
          if(el.getAttribute("data-action-state-page") == "lvl-3"){
            console.log("page lvl 3 detected");
-           /* ===== Transition Screens ===== */
             updateActionState('initial', 0, 'transition-screen');
             updateActionState('zoom', 2000, 'transition-screen');
             updateActionState('fade', 3500, 'transition-screen');
@@ -81,7 +80,7 @@ export default function App({ Component, pageProps }) {
          }
       }
       
-      router.events.on('routeChangeComplete', transtionScreenAnimationChain);
+      router.events.on('routeChangeComplete', transtionScreenAnimationChain);*/
     
     /* ========================== */
     /* ===== Page Transition ===== */
@@ -391,6 +390,6 @@ export default function App({ Component, pageProps }) {
         
 
   });
-  const router = useRouter();
-  return <Component key={router.asPath} {...pageProps} />
+ 
+  return <Component {...pageProps} />
 }
