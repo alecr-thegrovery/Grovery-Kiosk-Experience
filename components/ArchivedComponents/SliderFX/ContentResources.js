@@ -1,6 +1,6 @@
 /*===== Components =====*/
 import React, { useState, useEffect } from 'react';
-import Button1 from '@components/Button1'
+//import Button1 from '@components/Button1'
 import PlaceholderContent from '@components/PlaceholderContent'
 import Slide from './Slide'
 import Asset from './Asset'
