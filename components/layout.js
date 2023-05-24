@@ -11,7 +11,7 @@ import Sidebar from '@components/Sidebar'
 import Modal from '@components/Modal'
 
 import SmallScreenWarning from '@components/SmallScreenWarning'
-import FullScreenWidget from '@components/FullScreenWidget'
+
 import IdleTimer from '@components/IdleTimer'
 
 export const siteTitle = 'BMS Congress Access Support'
