@@ -1,9 +1,9 @@
 /*===== Components =====*/
 import React from "react"
 import Link from 'next/link'
-import Date from '@components/date'
+
 import CloseIcon from '@components/SVGComponents/CloseIcon'
-import Button1 from '@components/Button1'
+//import Button1 from '@components/Button1'
 import QRCodePreset from "@components/ContentComponents/QRCodePreset";
 
 /*===== Styles =====*/

@@ -1,9 +1,9 @@
 /*===== Components =====*/
 import React from "react"
 import Link from 'next/link'
-import Date from '@components/date'
-import SocialIcons from '@components/SocialIcons'
-import Button1 from '@components/Button1'
+
+
+//import Button1 from '@components/Button1'
 import { BsXLg } from "react-icons/bs";
 
 /*===== Styles =====*/

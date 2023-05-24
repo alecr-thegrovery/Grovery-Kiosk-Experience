@@ -1,6 +1,6 @@
 /*===== Components =====*/
 import React from "react"
-import Button1 from '@components/Button1'
+//import Button1 from '@components/Button1'
 import QRCode from "react-qr-code";
 
 /*===== Styles =====*/

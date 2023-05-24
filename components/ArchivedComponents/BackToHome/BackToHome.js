@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { router } from 'next/router'
 import $ from 'jquery'
 import Link from 'next/link'
-import Date from '@components/date'
-import SocialIcons from '@components/SocialIcons'
-import Button1 from '@components/Button1'
+
+
+//import Button1 from '@components/Button1'
 
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'

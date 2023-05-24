@@ -9,9 +9,9 @@ import $ from 'jquery'
 
 import Sidebar from '@components/Sidebar'
 import Modal from '@components/Modal'
-import BackToHome from '@components/BackToHome'
+
 import SmallScreenWarning from '@components/SmallScreenWarning'
-import FullScreenWidget from '@components/FullScreenWidget'
+
 import IdleTimer from '@components/IdleTimer'
 
 export const siteTitle = 'BMS Congress Access Support'
