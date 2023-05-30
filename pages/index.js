@@ -48,8 +48,8 @@ export default function Home({ allPostsData }) {
         
         <DynamicHeader
           
-          heading={["Bristol Myers Squibb ", <strong>Access Support</strong>]}
-          subhead="Through financial assistance options, access and reimbursements support, and patient resources, we help your patients take a more active and informed role in their care."
+          heading={["The Grovery ", <strong>Kiosk Experience</strong>]}
+          subhead="This template is designed for a fullscreen, touch-based experience.  Drag and drop the below elements to navigate the site."
         />
 
         <div className={pageStyles.pageLevel1}>

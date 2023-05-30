@@ -1,34 +1,29 @@
 /*===== Ultility Components =====*/
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
-import Image from 'next/image'
-import { router } from 'next/router'
+  import React, { useState, useEffect } from 'react';
+  import Head from 'next/head'
+  import Image from 'next/image'
+  import { router } from 'next/router'
+  import Link from 'next/link'
+  import data from "@data/data.json"
+  import $ from 'jquery'
 
-import Link from 'next/link'
-import data from "@data/data.json"
-import $ from 'jquery'
-
-
+/*===== Theme Components =====*/
+  import Sidebar from '@components/Sidebar'
+  import Modal from '@components/Modal'
+  import SmallScreenWarning from '@components/SmallScreenWarning'
+  import IdleTimer from '@components/IdleTimer'
+  import VersionNotice from '@components/UtilityComponents/VersionNotice'
 
 /*===== Styles =====*/
-import styles from './layout.module.scss'
+  import styles from './layout.module.scss'
 
 /*===== JS Code =====*/
   import interact from 'interactjs'
   import {isTablet, isSafari, isIPad13} from 'react-device-detect';
 
-
-import Sidebar from '@components/Sidebar'
-import Modal from '@components/Modal'
-
-import SmallScreenWarning from '@components/SmallScreenWarning'
-
-import IdleTimer from '@components/IdleTimer'
-
-import VersionNotice from '@components/UtilityComponents/VersionNotice'
-
-export const siteTitle = 'BMS Congress Access Support'
-export const siteData = data
+/*===== Data Vars =====*/
+  export const siteTitle = 'BMS Congress Access Support'
+  export const siteData = data
 
 export default function Layout({ 
   //PROPS
@@ -43,7 +38,7 @@ export default function Layout({
     /* ===== Global Action State ===== */
     /* ============================= */
       //define function
-      function updateActionState(stateValue, delay, thread) {
+      /*function updateActionState(stateValue, delay, thread) {
         setTimeout(function() {
           const LayoutOuter = document.querySelector("#LayoutOuter");
           if(thread == "load"){
@@ -65,6 +60,22 @@ export default function Layout({
           } else{
             LayoutOuter.setAttribute("data-action-state", stateValue);
           }
+        }, delay);
+      }*/
+
+      //revised, fully dynamic function
+      function updateActionState(thread, stateValue, delay) {
+        let actionStateTarget = document.querySelector("#LayoutOuter");
+        setTimeout(function() {
+          let existingState = actionStateTarget.getAttribute("data-action-state-"+thread);
+          actionStateTarget.setAttribute("data-action-state-"+thread, existingState+" "+stateValue);
+        }, delay);
+      }
+
+      function clearActionState(thread, stateValue, delay) {
+        let actionStateTarget = document.querySelector("#LayoutOuter");
+        setTimeout(function() {
+          actionStateTarget.setAttribute("data-action-state-"+thread, stateValue);
         }, delay);
       }
 
@@ -113,10 +124,7 @@ export default function Layout({
           updateActionState('hidden', delay, 'transition');
           setTimeout(function() {
             router.push(url);
-            //router.reload();
-            //window.location.href = url;
           }, delay);
-
         } //END pageTransition function
 
     /* ================================= */

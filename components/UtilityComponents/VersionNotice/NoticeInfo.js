@@ -30,7 +30,7 @@ export default function NoticeInfo({
     >
       
       <div className={componentStyles.version}>
-        <div className={componentStyles.cell}>{projectName} | v.{versionNumber}</div>
+        <div className={componentStyles.cell}>{projectName} /// v.{versionNumber}</div>
         <div className={componentStyles.cell}>
           Sprint Completion: {updatePercentComplete}
           <ProgressBar progress={updatePercentComplete}/>
