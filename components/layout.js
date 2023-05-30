@@ -489,9 +489,10 @@ export default function Layout({
       
       {/* VERSION NOTICE */}
       <VersionNotice
+        projectName="Kiosk Template"
         versionNumber="0.9.1"
         updatePercentComplete="50%"
-        totalPercentComplete="50%"
+        totalPercentComplete="91%"
       >
         <ul>
           <li>Previous Update - BMS project finalization</li>

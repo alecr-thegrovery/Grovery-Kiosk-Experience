@@ -13,7 +13,7 @@ import componentStyles from './styles.module.scss'
 
 export default function VersionNotice({ 
   //Props
-  children, versionNumber, updatePercentComplete,
+  children, projectName, versionNumber, updatePercentComplete,
   totalPercentComplete, notes, currentUpdate, nextUpdate
 }) {
 
@@ -56,6 +56,7 @@ export default function VersionNotice({
   return (
     <div className={componentStyles.VersionNotice}>
       <NoticeInfo
+        projectName={projectName}
         versionNumber={versionNumber}
         updatePercentComplete={updatePercentComplete}
         totalPercentComplete={totalPercentComplete}

@@ -13,7 +13,7 @@ import componentStyles from './styles.module.scss'
 
 export default function NoticeInfo({ 
   //Props
-  children, versionNumber, updatePercentComplete,
+  children, projectName, versionNumber, updatePercentComplete,
   totalPercentComplete, notes, currentUpdate, nextUpdate
 }) {
 
@@ -30,7 +30,7 @@ export default function NoticeInfo({
     >
       
       <div className={componentStyles.version}>
-        <div className={componentStyles.cell}>v.{versionNumber}</div>
+        <div className={componentStyles.cell}>{projectName} | v.{versionNumber}</div>
         <div className={componentStyles.cell}>
           Sprint Completion: {updatePercentComplete}
           <ProgressBar progress={updatePercentComplete}/>
