@@ -48,8 +48,8 @@ export default function Home({ allPostsData }) {
         
         <DynamicHeader
           
-          heading={["The Grovery ", <strong>Kiosk Experience</strong>]}
-          subhead="This template is designed for a fullscreen, touch-based experience.  Drag and drop the below elements to navigate the site."
+          heading={["The Grovery | ", <strong>Kiosk Experience</strong>]}
+          subhead="This template is designed for a fullscreen, touch-based experience.  Drag and drop the below elements to navigate the site.  The site is always locked in to 100% screen height and width, has smooth transitions between pages, and will reset after 2 minutes of inactivity."
         />
 
         <div className={pageStyles.pageLevel1}>
