@@ -80,48 +80,35 @@ export default function Layout({
       }
 
       /* ===== General  ===== */
-           updateActionState('initial', 0);       
+        updateActionState('', 'initial', 0);       
 
-         /* ===== Cards ===== */
-           updateActionState('initial', 0, 'cards-show');
-           updateActionState('animate-start', 1500, 'cards-show');
-           updateActionState('visible', 1550, 'cards-show');
-           updateActionState('post-visible', 2500, 'cards-show');
+      /* ===== Cards ===== */
+        updateActionState('cards-show', 'initial', 0);
+        updateActionState('cards-show', 'animate-start', 1500);
+        updateActionState('cards-show', 'visible', 1550);
+        updateActionState('cards-show', 'post-visible', 2500);
 
-         /* ===== Tooltips ===== */
-           updateActionState('initial', 0, 'tooltips');
-           updateActionState('show-after-load', 5000, 'tooltips');
+      /* ===== Tooltips ===== */
+        updateActionState('tooltips', 0, 'initial');
+        updateActionState('tooltips', 5000, 'show-after-load');
 
-        /* ===== Load Sequence ===== */
-         updateActionState('initial', 0, 'load');
-         updateActionState('post-initial', 250), 'load';
-         updateActionState('load-finished', 1000, 'load');
-         updateActionState('just-after-load', 2000, 'load');
-         updateActionState('just-after-load-2', 3500, 'load');
-         updateActionState('load-sequence-complete', 5000, 'load');
+      /* ===== Load Sequence ===== */
+        updateActionState('load', 'initial', 0);
+        updateActionState('load', 'post-initial', 250);
+        updateActionState('load', 'load-finished', 1000);
+        updateActionState('load', 'just-after-load', 2000);
+        updateActionState('load', 'just-after-load-2', 3500);
+        updateActionState('load', 'load-sequence-complete', 5000);
 
-         
-      /*function transtionScreenAnimationChain(){
-         let el = document.querySelector("#LayoutOuter");
-         if(el.getAttribute("data-action-state-page") == "lvl-3"){
-           console.log("page lvl 3 detected");
-            updateActionState('initial', 0, 'transition-screen');
-            updateActionState('zoom', 2000, 'transition-screen');
-            updateActionState('fade', 3500, 'transition-screen');
-            updateActionState('end', 5000, 'transition-screen');
-         }
-      }
-      
-      router.events.on('routeChangeComplete', transtionScreenAnimationChain);*/
     
     /* ========================== */
     /* ===== Page Transition ===== */
     /* ========================== */
-        updateActionState('visible', 1000, 'transition');
+        updateActionState('transition', 'visible', 1000);
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
           //router.prefetch(url); //prefetch next page
-          updateActionState('hidden', delay, 'transition');
+          updateActionState('transition', 'hidden', delay);
           setTimeout(function() {
             router.push(url);
           }, delay);
@@ -150,7 +137,7 @@ export default function Layout({
         backButton.forEach(element => {
           element.addEventListener('click', () => {
             console.log("data-page-back click");
-            updateActionState('hidden', 0, 'transition');
+            updateActionState('transition', 'hidden', 0);
             window.history.back();
           });
         });
