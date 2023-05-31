@@ -32,11 +32,11 @@ export default function DynamicFooter({
               <p className={componentStyles.dynamicText}>{dynamicText}</p>
             :
               <p className={componentStyles.dynamicText}>
-                The accurate completion of reimbursement- or coverage-related documentation is the responsibility of the healthcare provider and patient. <br/>Bristol Myers Squibb and its agents make no guarantee regarding reimbursement for any service or item.
+                This section can accept custom text on a per-page basis, or if none is set, use static text.
               </p>
             }
             <p>
-              &copy;2023 Bristol-Myers Squibb Company. Access Support is a registered trademark of Bristol-Myers Squibb Company. Use of the information on this site is subject to the terms of our Legal Notice and Privacy Statement.  NO-US-2200598  04/23
+              &copy;2023 Client Name. Use of the information on this site is subject to the terms of our Legal Notice and Privacy Statement. 
               </p>
                         
           </div>

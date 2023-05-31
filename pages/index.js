@@ -1,30 +1,33 @@
 /*===== Components =====*/
-import React, { useState, useEffect } from 'react';
-import { router } from 'next/router'
-import Head from 'next/head'
-import Link from 'next/link'
-import $ from 'jquery'
-import interact from 'interactjs'
-import Layout, { siteData } from '@components/layout'
-import DynamicHeader from '@components/DynamicHeader'
-import DynamicFooter from '@components/DynamicFooter'
-import DragDrop from '@components/DragDrop'
-import IDCard from '@components/IDCard'
-import HomeBG from '@components/SVGComponents/HomeBG'
+  import React, { useState, useEffect } from 'react';
+  import { router } from 'next/router'
+  import Head from 'next/head'
+  import Link from 'next/link'
+  import $ from 'jquery'
+  import interact from 'interactjs'
+  import Layout, { siteData } from '@components/layout'
+  import DynamicHeader from '@components/DynamicHeader'
+  import DynamicFooter from '@components/DynamicFooter'
+  import DragDrop from '@components/DragDrop'
+  import IDCard from '@components/IDCard'
+  import HomeBG from '@components/SVGComponents/HomeBG'
 
 /*===== Styles =====*/
-import pageStyles from '@styles/pages.module.scss'
+  import pageStyles from '@styles/pages.module.scss'
+
+/*===== Site Data =====*/
+  import data from "@data/data.json"
 
 /*===== Posts Data =====*/
-import { getSortedPostsData } from '@lib/posts'
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
+  import { getSortedPostsData } from '@lib/posts'
+  export async function getStaticProps() {
+    const allPostsData = getSortedPostsData()
+    return {
+      props: {
+        allPostsData
+      }
     }
   }
-}
 
 /*===== Page Content =====*/
 export default function Home({ allPostsData }) {

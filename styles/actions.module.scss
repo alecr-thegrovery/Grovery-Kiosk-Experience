@@ -413,17 +413,17 @@
     [data-tooltip]{
       @include hidden;
     }
-    &[data-action-state-tooltips~="initial-hide"]{
+    &[data-action-state-tooltips="initial-hide"]{
       [data-tooltip]{
         @include hidden;
       }
     }
-    &[data-action-state-tooltips~="show-after-load"]{
+    &[data-action-state-tooltips="show-after-load"]{
       [data-tooltip="lvl-1-card-instructions"]{
         @include visible;
       }
     }
-    &[data-action-state-tooltips~="card-interaction"]{
+    &[data-action-state-tooltips="card-interaction"]{
       [data-tooltip="lvl-1-card-instructions"]{
         @include hidden;
       }
@@ -431,7 +431,7 @@
         @include visible;
       }
     }
-    &[data-action-state-tooltips~="card-post-interaction"]{
+    &[data-action-state-tooltips="card-post-interaction"]{
       [data-tooltip="lvl-1-card-instructions"]{
         @include hidden;
       }
@@ -783,39 +783,39 @@
         }
       }
 
-      /* ========================== */
-      /* ===== Resources Doors ===== */
-      /* ========================== */
-        &[data-action-state-home-bg~="home-bg-init-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+    /* ========================== */
+    /* ===== Resources Doors ===== */
+    /* ========================== */
+      &[data-action-state-home-bg~="home-bg-init-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionMedium;
+        transition-timing-function: ease-in;
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg~="home-bg-zoom-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg~="home-bg-open-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+        #building4_leftdoor .animateInner{
           transition: $transitionMedium;
-          transition-timing-function: ease-in;
-          transform-origin: $zoomFocus;
+          transform: translateX(-50px);
         }
-        &[data-action-state-home-bg~="home-bg-zoom-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
-          transition: $transitionSlow;
-          transition-timing-function: ease-in;
-          transform: scale($zoomAmount);
-          transform-origin: $zoomFocus;
+        #building4_rightdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(50px);
         }
-        &[data-action-state-home-bg~="home-bg-open-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
-          transition: $transitionSlow;
-          transition-timing-function: ease-in;
-          transform: scale($zoomAmount);
-          transform-origin: $zoomFocus;
-          #building4_leftdoor .animateInner{
-            transition: $transitionMedium;
-            transform: translateX(-50px);
-          }
-          #building4_rightdoor .animateInner{
-            transition: $transitionMedium;
-            transform: translateX(50px);
-          }
-        }
+      }
 
   }

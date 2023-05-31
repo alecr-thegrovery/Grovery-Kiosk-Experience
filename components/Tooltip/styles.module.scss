@@ -1,8 +1,11 @@
 @import "@styles/vars.module.scss";
 
+$backgroundColor: $accentColor;
+$textColor: $white;
+
 .Tooltip{
-	background-color: $purple;
-	border: solid 2px $purple;
+	background-color: $backgroundColor;
+	border: solid 2px $backgroundColor;
 	color: $white;
 	font-size: $clampExtraSmall;
 	padding: 0.5em 1em;
@@ -43,7 +46,7 @@
 		height: 0px;
 		border-top: $arrowSize solid transparent;
 		border-bottom: $arrowSize solid transparent;
-		border-right: $arrowSize solid $purple;
+		border-right: $arrowSize solid $backgroundColor;
 	}
 	&[data-placement="left"]{
 		position:absolute;
@@ -60,7 +63,7 @@
 			height: 0px;
 			border-top: $arrowSize solid transparent;
 			border-bottom: $arrowSize solid transparent;
-			border-left: $arrowSize solid $purple;
+			border-left: $arrowSize solid $backgroundColor;
 		}
 	}
 	&[data-placement="up"]{
@@ -79,7 +82,7 @@
 			height: 0px;
 			border-right: $arrowSize solid transparent;
 			border-left: $arrowSize solid transparent;
-			border-top: $arrowSize solid $purple;
+			border-top: $arrowSize solid $backgroundColor;
 		}
 	}
 	&[data-placement="down"]::before{
@@ -92,6 +95,6 @@
 		height: 0px;
 		border-top: $arrowSize solid transparent;
 		border-bottom: $arrowSize solid transparent;
-		border-right: $arrowSize solid $purple;
+		border-right: $arrowSize solid $backgroundColor;
 	}
 }

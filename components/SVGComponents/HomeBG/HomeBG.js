@@ -7,10 +7,16 @@ import $ from 'jquery'
 import componentStyles from './styles.module.scss'
 import animationStyles from '@styles/animations.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
+
+
 export default function HomeBG({ 
   //Props
   id, children, 
 }) {
+
+  let accentColor = data.accentColor1;
 
   //console.log(author);
   useEffect(() => {
@@ -59,7 +65,7 @@ export default function HomeBG({
        <g id="Building-2">
          <g id="building2_bg" transform="translate(16.055 0.004)">
            <rect id="Rectangle_1075" data-name="Rectangle 1075" width="312.816" height="477.885" transform="translate(310.84 326.384)" fill="#fff" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
-           <path id="Path_3898" data-name="Path 3898" d="M0,0H312.816V16.3H0Z" transform="translate(310.84 326.384)" fill="#be2bbb"/>
+           <path id="Path_3898" data-name="Path 3898" d="M0,0H312.816V16.3H0Z" transform="translate(310.84 326.384)" fill={accentColor}/>
            <path id="Path_3947" data-name="Path 3947" d="M378.929,270.983l-12.153,9.889-1.574,1.28L310.84,326.383H623.656l-55.965-55.965Z" fill="#fff" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
          </g>
          <g id="building2_windows" transform="translate(16.055 0.004)">
@@ -81,7 +87,7 @@ export default function HomeBG({
            <rect id="Rectangle_1091" className="animateWindow1-1" data-name="Rectangle 1091" width="104.951" height="17.322" transform="translate(484.061 629.145)" fill="#e9e1e0"/>
          </g>
          <path id="building2_entrance-outer" d="M0,0H243.528V128.387H0Z" transform="translate(361.539 675.886)" fill="#a69f9f"/>
-         <rect id="building2_entrance-top" width="256.921" height="12.515" transform="translate(352.263 669.03)" fill="#be2bbb"/>
+         <rect id="building2_entrance-top" width="256.921" height="12.515" transform="translate(352.263 669.03)" fill={accentColor}/>
          <rect id="building2_entrance-inside" width="132" height="110" transform="translate(416.653 695.004)" fill="#352a2b"/>
          <g id="building2_clipmask" transform="translate(0 0)" clipPath="url(#clipPath)">
            <g id="building2_rightdoor" transform="translate(16.054 -0.238)">
@@ -114,8 +120,8 @@ export default function HomeBG({
            <path id="Path_3911" data-name="Path 3911" d="M692.929,545.742H1151.3a3,3,0,0,1,3,3v10.082a3,3,0,0,1-3,3H692.929a3,3,0,0,1-3-3V548.742a3,3,0,0,1,3-3" fill="#fff" stroke="#a69f9f" strokeWidth="1"/>
            <rect id="Rectangle_1190" data-name="Rectangle 1190" width="436.23" height="175.899" transform="translate(702.996 628.666)" fill="#fff"/>
          </g>
-         <path id="Path_3912" data-name="Path 3912" d="M692.929,621.225H1151.3a3,3,0,0,1,3,3v10.082a3,3,0,0,1-3,3H692.929a3,3,0,0,1-3-3V624.225a3,3,0,0,1,3-3" fill="#be2bbb"/>
-         <path id="Path_3913" data-name="Path 3913" d="M690.432,333.658h463.784V346.1a2.632,2.632,0,0,1-2.633,2.631H693.066a2.632,2.632,0,0,1-2.634-2.63h0Z" transform="translate(-0.503)" fill="#be2bbb"/>
+         <path id="Path_3912" data-name="Path 3912" d="M692.929,621.225H1151.3a3,3,0,0,1,3,3v10.082a3,3,0,0,1-3,3H692.929a3,3,0,0,1-3-3V624.225a3,3,0,0,1,3-3" fill={accentColor}/>
+         <path id="Path_3913" data-name="Path 3913" d="M690.432,333.658h463.784V346.1a2.632,2.632,0,0,1-2.633,2.631H693.066a2.632,2.632,0,0,1-2.634-2.63h0Z" transform="translate(-0.503)" fill={accentColor}/>
          <path id="building3_top" d="M789.091,278.616l-98.659,54.9,463.281-.049L1070.4,278.053Z" fill="#fff" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
          <g id="building3_shadow" opacity="0.15" >
            <g id="Group_1115" data-name="Group 1115">
@@ -146,11 +152,11 @@ export default function HomeBG({
        </g>
        <g id="Building-4">
          <path id="Path_3924" data-name="Path 3924" d="M1074.724,676.16l2.627-2.091-.3-56.428-2.322-1.821v-8.194L1323.922,445.88l.005,300.964v.551h277.8V961.87H1323.585v-.058H1074.724V937.324l3.39-2.826v-56.68l-3.39-1.144v-5.235l3.263-2.05V812.962l-3.263-1.407V806.07l3.263-1.783V747.861l-3.263-1.547v-4.725l3.454-2.409V682.753l-3.454-1.585Z" transform="translate(16.055 0.004)" fill="#fff"/>
-         <path id="building4_window-topright" d="M1207.285,608.96V530.217l103.287-67.736V608.96Z" transform="translate(16.055 0.004)" fill="#be2bbb"/>
+         <path id="building4_window-topright" d="M1207.285,608.96V530.217l103.287-67.736V608.96Z" transform="translate(16.055 0.004)" fill={accentColor}/>
          <rect id="building4_entrance-outer" width="202.557" height="163.766" transform="translate(1378.149 798.227)" fill="#a69f9f"/>
          <rect id="building4_entrance-shadow" width="14" height="170" transform="translate(1377.555 792.055)" fill="#373231" opacity="0.147"/>
          <rect id="building4_entrance-inside-2" data-name="building4_entrance-inside" width="151.341" height="144.542" transform="translate(1405.508 817.451)" fill="#352a2b"/>
-         <path id="building4_window-topleft" d="M1191.368,540.359v69.973l-109.148,1.123Z" transform="translate(16.055 0.004)" fill="#be2bbb" stroke="rgba(0,0,0,0)" strokeWidth="1"/>
+         <path id="building4_window-topleft" d="M1191.368,540.359v69.973l-109.148,1.123Z" transform="translate(16.055 0.004)" fill={accentColor} stroke="rgba(0,0,0,0)" strokeWidth="1"/>
          <g id="building4_windows" transform="translate(0 0)">
            <rect id="Rectangle_1123" data-name="Rectangle 1123" width="101.279" height="56.427" transform="translate(1224.783 617.646)" fill="#e9e1e0"/>
            <rect id="Rectangle_1124" data-name="Rectangle 1124" width="113.19" height="56.427" transform="translate(1094.232 617.646)" fill="#e9e1e0"/>
@@ -172,7 +178,7 @@ export default function HomeBG({
            <path id="Path_3932" data-name="Path 3932" d="M1664.654,661.879V898.746l-62.995,63.243V748.2Z" transform="translate(16.054 0.004)" fill="#eee7e7"/>
            <path id="Path_3933" data-name="Path 3933" d="M1664.654,661.879V898.746l-62.995,63.243V748.2Z" transform="translate(16.054 0.004)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
          </g>
-         <path id="building4_entrance-top" d="M0,0H202.557V15.643H0Z" transform="translate(1378.149 791.794)" fill="#be2bbb"/>
+         <path id="building4_entrance-top" d="M0,0H202.557V15.643H0Z" transform="translate(1378.149 791.794)" fill={accentColor}/>
          <g id="building4_clipmask" transform="translate(0 0)" clipPath="url(#clipPath-4)">
            <g id="building4_rightdoor" transform="translate(16.054 0.004)">
             <g className="animateInner">
@@ -226,11 +232,11 @@ export default function HomeBG({
            <path id="Path_3904" data-name="Path 3904" d="M249.069,188.15l17.23,58.927-1.484,27.406-1.31,2.166,1.31,692.853H32.991L34.3,188.15Z" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
            <path id="Path_3905" data-name="Path 3905" d="M33.646,247.18H266.292l-.082,27.8-2.7,1.694v31.462l2.606,1.495L264.165,969.5H33.646Z" fill="#fff"/>
            <path id="Path_3906" data-name="Path 3906" d="M33.646,247.18H266.292l-.082,27.8-2.7,1.694v31.462l2.606,1.495L264.165,969.5H33.646Z" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1"/>
-           <rect id="Rectangle_1157" data-name="Rectangle 1157" width="229.205" height="31.434" transform="translate(34.301 276.649)" fill="#be2bbb" stroke="#595454" strokeWidth="1"/>
+           <rect id="Rectangle_1157" data-name="Rectangle 1157" width="229.205" height="31.434" transform="translate(34.301 276.649)" fill={accentColor} stroke="#595454" strokeWidth="1"/>
          </g>
          <g id="building1_entrance-outer" transform="translate(16.055 0.004)">
            <path id="Path_3943" data-name="Path 3943" d="M0,0H163.718V137.025H0Z" transform="translate(77.895 832.477)" fill="#a69f9f"/>
-           <rect id="Rectangle_1167" data-name="Rectangle 1167" width="164" height="11" transform="translate(77.5 832.051)" fill="#be2bbb"/>
+           <rect id="Rectangle_1167" data-name="Rectangle 1167" width="164" height="11" transform="translate(77.5 832.051)" fill={accentColor}/>
            <rect id="Rectangle_1168" data-name="Rectangle 1168" width="8" height="137" transform="translate(77.5 832.051)" fill="#373231" opacity="0.147"/>
          </g>
          <rect id="building1_entrance-inside" width="134" height="117" transform="translate(108.654 852.774)" fill="#352a2b"/>

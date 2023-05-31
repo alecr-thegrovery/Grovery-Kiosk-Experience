@@ -209,7 +209,7 @@ $backdropColor: rgba($black, 0.25);
 					align-items: flex-start;
 					&:before {
 						content:'•';
-					  	color: $purple;
+					  	color: $accentColor;
 					  	font-size: 2.5em;
 					  	position: relative;
 					  	top: -0.5em;
@@ -244,7 +244,7 @@ $backdropColor: rgba($black, 0.25);
 	}
 
 	.modalFooter{
-		border-top: solid 2px $purple;
+		border-top: solid 2px $accentColor;
 		padding-top: 1em;
 		font-size: $clampSmall;
 		text-align: center;

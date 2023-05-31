@@ -57,7 +57,7 @@
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
   *::-webkit-scrollbar-thumb {
-    background: $purple;
+    background: $accentColor;
   }
 
   *{
@@ -75,7 +75,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-image:url('/images/BMSLogo.svg');
+      background-image:url('/images/grovery-logo.svg');
       background-size: 50%;
       background-position: center center;
       background-repeat: no-repeat;
@@ -119,7 +119,7 @@
       margin: 0px;
     }
     li::marker {
-        color: $purple;
+        color: $accentColor;
     }
 
     hr{

@@ -89,8 +89,8 @@ export default function Layout({
         updateActionState('cards-show', 'post-visible', 2500);
 
       /* ===== Tooltips ===== */
-        updateActionState('tooltips', 0, 'initial');
-        updateActionState('tooltips', 5000, 'show-after-load');
+        clearActionState('tooltips', 'initial', 0);
+        clearActionState('tooltips', 'show-after-load', 5000);
 
       /* ===== Load Sequence ===== */
         updateActionState('load', 'initial', 0);
@@ -183,8 +183,8 @@ export default function Layout({
               target.setAttribute('data-y', y);
 
               //update global event state
-              updateActionState('card-interaction', 0, 'tooltips');
-              updateActionState('card-interaction', 0, 'cards');
+              clearActionState('tooltips', 'card-interaction', 0);
+              clearActionState('cards', 'card-interaction', 0);
 
               event.interactable.draggable({
                 snap: {
@@ -212,8 +212,8 @@ export default function Layout({
 
             onend: function (event) {
               event.target.classList.remove('getting--dragged');
-              updateActionState('card-post-interaction', 0, 'tooltips');
-              updateActionState('card-post-interaction', 0, 'cards');
+              clearActionState('tooltips', 'card-post-interaction', 0);
+              clearActionState('cards', 'card-post-interaction', 0);
             }
           });
 
@@ -275,8 +275,8 @@ export default function Layout({
               if($(".drop--me").attr("data-link")){
                 console.log("get link home");
                 var link = $(".drop--me").attr("data-link");
-                updateActionState('transition-out-pre', 0, 'cards-show');
-                updateActionState('transition-out', 250, 'cards-show');
+                updateActionState('cards-show', 'transition-out-pre', 0);
+                updateActionState('cards-show', 'transition-out', 250);
               } else{
                 console.log("get link inner");
                 var link = $(".droppable.caught--it").attr("data-link");
@@ -287,9 +287,9 @@ export default function Layout({
                //do nothing
               } else if(link  == "/enrollment/"){
                 console.log("enrollment card dropped");
-                updateActionState('home-bg-init-enrollment', 0, 'home-bg');
-                updateActionState('home-bg-zoom-enrollment', 1200, 'home-bg');
-                updateActionState('home-bg-open-enrollment', 2000, 'home-bg');
+                updateActionState('home-bg', 'home-bg-init-enrollment', 0);
+                updateActionState('home-bg', 'home-bg-zoom-enrollment', 1200);
+                updateActionState('home-bg', 'home-bg-open-enrollment', 2000);
                 pageTransition(link, 2800);
               }else if(link  == "/access/"){
                 console.log("access card dropped");
