@@ -40,7 +40,7 @@
       fill: $white;
     }
     to {
-      fill: $purple;
+      fill: $accentColor2;
     }
   }
 
@@ -49,16 +49,16 @@
 /* =========================== */
 
   #LayoutOuter{
-    &[data-action-state-load="load-finished"]{
+    &[data-action-state-load~="load-finished"]{
       
     }
-    &[data-action-state-load="just-after-load"]{
+    &[data-action-state-load~="just-after-load"]{
       
     }
-    &[data-action-state-load="just-after-load-2"]{
+    &[data-action-state-load~="just-after-load-2"]{
       
     }
-    &[data-action-state-load="load-sequence-complete"]{
+    &[data-action-state-load~="load-sequence-complete"]{
       
     }
     //end of block
@@ -104,7 +104,7 @@
         } 
       }
 
-      &[data-action-state-cards-show="animate-start'"]{
+      &[data-action-state-cards-show~="animate-start'"]{
         [data-animation="fadeInUp"]{
           transform: translate3d(0em, 8vh, 0em);
           opacity: 0;
@@ -126,7 +126,7 @@
         } 
       }
 
-      &[data-action-state-cards-show="visible"]{
+      &[data-action-state-cards-show~="visible"]{
         [data-animation="fadeInUp"]{
           transform: translate3d(0em, 0vh, 0em);
           opacity: 1;
@@ -147,16 +147,17 @@
           }
         } 
       }
-      &[data-action-state-cards-show="post-visible"]{
+      &[data-action-state-cards-show~="post-visible"]{
         [data-animation="fadeInUp"]{
           transform: translate3d(0em, 0vh, 0em);
           opacity: 1;
           pointer-events: auto;        
           transition: 0s;
+          transition-delay: 0s !important;
         } 
       }
 
-      &[data-action-state-cards-show="transition-out-pre"]{
+      &[data-action-state-cards-show~="transition-out-pre"]{
         [data-animation="fadeInUp"]{
           transition: $transitionSlow !important;
           $delay: 0.15s;
@@ -174,7 +175,7 @@
           }
         }
       }
-      &[data-action-state-cards-show="transition-out"]{
+      &[data-action-state-cards-show~="transition-out"]{
         [data-animation="fadeInUp"]:not(.drop--me){
           transform: translate3d(0em, 8vh, 0em);
           opacity: 0;
@@ -237,13 +238,13 @@
   /* ===== Page lvl 1 ===== */
   #LayoutOuter[data-action-state-page="lvl-1"]{
     //Color Filters
-      &[data-action-state-load="just-after-load-2"],
-      &[data-action-state-load="load-sequence-complete"]{
+      &[data-action-state-load~="just-after-load-2"],
+      &[data-action-state-load~="load-sequence-complete"]{
         .cardsFilter,
         .colorFilter{
           opacity:0.15;
         }
-        &[data-action-state-cards="card-interaction"]{
+        &[data-action-state-cards~="card-interaction"]{
           .cardsFilter,
           .colorFilter{
             opacity:0.5;
@@ -260,7 +261,7 @@
               }
             } 
         }
-        &[data-action-state-cards="card-post-interaction"]{
+        &[data-action-state-cards~="card-post-interaction"]{
           .cardsFilter,
           .colorFilter{
             opacity:0.15;
@@ -269,14 +270,14 @@
       }
   
     //Emphasize first card
-      &[data-action-state-load="load-sequence-complete"]{
+      &[data-action-state-load~="load-sequence-complete"]{
         #enrollment .inner{
           transform: translate(0, -4vh);
         }
         #enrollment [data-tooltip]{
           transform: translate(-50%, -4vh);
         }
-        &[data-action-state-cards="card-interaction"]{
+        &[data-action-state-cards~="card-interaction"]{
           #enrollment .inner{
             transform: translate(0, 0);
           }
@@ -284,7 +285,7 @@
             transform: translate(-50%, 0);
           }
         }
-        &[data-action-state-cards="card-post-interaction"]{
+        &[data-action-state-cards~="card-post-interaction"]{
           #enrollment .inner{
             transform: translate(0, 0);
           }
@@ -297,9 +298,9 @@
       }
 
     //Sidebar Animation
-      &[data-action-state-cards="card-interaction"]{
+      &[data-action-state-cards~="card-interaction"]{
         #scannerBorder{
-          border-color: $purple;
+          border-color: $accentColor2;
         }
         #ScannerIcon{
           $duration: 0.15s;
@@ -342,7 +343,7 @@
         }
         #scannerLight{
           &>div{
-            background-color: $purple;
+            background-color: $accentColor2;
           }
         }
         //end
@@ -382,7 +383,7 @@
       }
       &.can--catch{
         .doorInnerBlack{
-          outline: $clampExtraExtraSmall solid $purple;
+          outline: $clampExtraExtraSmall solid $accentColor;
         }
         .doorInnerAnimate{
           transform: rotateY(45deg) translate3d(0, 0, 0);
@@ -443,12 +444,12 @@
 
   /* ===== Page lvl 2 ===== */
   #LayoutOuter[data-action-state-page="lvl-2"]{
-    &[data-action-state-cards="card-interaction"]{
+    &[data-action-state-cards~="card-interaction"]{
       [data-tooltip]{
         @include hidden;
       }
     }
-    &[data-action-state-cards="card-post-interaction"]{
+    &[data-action-state-cards~="card-post-interaction"]{
       [data-tooltip]{
         @include hidden;
       }
@@ -469,7 +470,7 @@
         opacity: 1;
       }
       /* ===== Initial Animation State ===== */
-      &[data-action-state-transition-screen="initial"]{
+      &[data-action-state-transition-screen~="initial"]{
         //Individual Screens
           [data-transition-screen="1"] svg,
           [data-transition-screen="1"] img{
@@ -535,7 +536,7 @@
       }
 
       /* ===== First Action - Zoom ===== */
-      &[data-action-state-transition-screen="zoom"]{
+      &[data-action-state-transition-screen~="zoom"]{
         //screens
           [data-transition-screen="1"] svg,
           [data-transition-screen="1"] img{
@@ -621,7 +622,7 @@
       }
 
       /* ===== Second Action - Fade/Zoom ===== */
-      &[data-action-state-transition-screen="fade"]{
+      &[data-action-state-transition-screen~="fade"]{
         //screens
           [data-transition-screen]{
             transition: $transitionMedium;
@@ -638,7 +639,7 @@
       }
 
       /* ===== Animation End - reset state ===== */
-      &[data-action-state-transition-screen="end"]{
+      &[data-action-state-transition-screen~="end"]{
           [data-transition-screen],
           [data-transition-screen] svg,
           [data-transition-screen] img{
@@ -664,10 +665,10 @@
   #LayoutOuter[data-action-state-page="lvl-1"]{
     
     //remove color filter
-      &[data-action-state-home-bg="home-bg-init-enrollment"],
-      &[data-action-state-home-bg="home-bg-init-access"]
-      &[data-action-state-home-bg="home-bg-init-financial"]
-      &[data-action-state-home-bg="home-bg-init-resources"]{
+      &[data-action-state-home-bg~="home-bg-init-enrollment"],
+      &[data-action-state-home-bg~="home-bg-init-access"]
+      &[data-action-state-home-bg~="home-bg-init-financial"]
+      &[data-action-state-home-bg~="home-bg-init-resources"]{
         .cardsFilter,
         .colorFilter{
           opacity:0 !important;
@@ -677,14 +678,14 @@
     /* =========================== */
     /* ===== Enrollment Doors ===== */
     /* =========================== */
-      &[data-action-state-home-bg="home-bg-init-enrollment"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-init-enrollment"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionMedium;
         transition-timing-function: ease-in;
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-zoom-enrollment"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-zoom-enrollment"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionSlow;
@@ -692,7 +693,7 @@
         transform: scale($zoomAmount);
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-open-enrollment"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-open-enrollment"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(-3% + 0px) calc(93% + 50px);
         transition: $transitionSlow;
@@ -712,14 +713,14 @@
     /* ======================= */
     /* ===== Access Doors ===== */
     /* ======================= */
-      &[data-action-state-home-bg="home-bg-init-access"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-init-access"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(13% + 0px) calc(70% + 50px);
         transition: $transitionMedium;
         transition-timing-function: ease-in;
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-zoom-access"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-zoom-access"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(13% + 0px) calc(70% + 50px);
         transition: $transitionSlow;
@@ -727,7 +728,7 @@
         transform: scale($zoomAmount);
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-open-access"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-open-access"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(13% + 0px) calc(70% + 50px);
         transition: $transitionSlow;
@@ -750,14 +751,14 @@
     /* ========================== */
     /* ===== Financial Doors ===== */
     /* ========================== */
-      &[data-action-state-home-bg="home-bg-init-financial"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-init-financial"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(38% + 0px) calc(70% + 50px);
         transition: $transitionMedium;
         transition-timing-function: ease-in;
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-zoom-financial"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-zoom-financial"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(38% + 0px) calc(70% + 50px);
         transition: $transitionSlow;
@@ -765,7 +766,7 @@
         transform: scale($zoomAmount);
         transform-origin: $zoomFocus;
       }
-      &[data-action-state-home-bg="home-bg-open-financial"] [data-name="home background"]{
+      &[data-action-state-home-bg~="home-bg-open-financial"] [data-name="home background"]{
         $zoomAmount: 4.25;
         $zoomFocus: calc(38% + 0px) calc(70% + 50px);
         transition: $transitionSlow;
@@ -782,39 +783,39 @@
         }
       }
 
-      /* ========================== */
-      /* ===== Resources Doors ===== */
-      /* ========================== */
-        &[data-action-state-home-bg="home-bg-init-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+    /* ========================== */
+    /* ===== Resources Doors ===== */
+    /* ========================== */
+      &[data-action-state-home-bg~="home-bg-init-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionMedium;
+        transition-timing-function: ease-in;
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg~="home-bg-zoom-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+      }
+      &[data-action-state-home-bg~="home-bg-open-resources"] [data-name="home background"]{
+        $zoomAmount: 4.25;
+        $zoomFocus: calc(67% + 0px) calc(90% + 50px);
+        transition: $transitionSlow;
+        transition-timing-function: ease-in;
+        transform: scale($zoomAmount);
+        transform-origin: $zoomFocus;
+        #building4_leftdoor .animateInner{
           transition: $transitionMedium;
-          transition-timing-function: ease-in;
-          transform-origin: $zoomFocus;
+          transform: translateX(-50px);
         }
-        &[data-action-state-home-bg="home-bg-zoom-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
-          transition: $transitionSlow;
-          transition-timing-function: ease-in;
-          transform: scale($zoomAmount);
-          transform-origin: $zoomFocus;
+        #building4_rightdoor .animateInner{
+          transition: $transitionMedium;
+          transform: translateX(50px);
         }
-        &[data-action-state-home-bg="home-bg-open-resources"] [data-name="home background"]{
-          $zoomAmount: 4.25;
-          $zoomFocus: calc(67% + 0px) calc(90% + 50px);
-          transition: $transitionSlow;
-          transition-timing-function: ease-in;
-          transform: scale($zoomAmount);
-          transform-origin: $zoomFocus;
-          #building4_leftdoor .animateInner{
-            transition: $transitionMedium;
-            transform: translateX(-50px);
-          }
-          #building4_rightdoor .animateInner{
-            transition: $transitionMedium;
-            transform: translateX(50px);
-          }
-        }
+      }
 
   }

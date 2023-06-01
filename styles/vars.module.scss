@@ -25,7 +25,7 @@ Description:	Store SCSS vars here
 	$orange: 			#E0603A;
 	$darkOrange:		#BA4103;
 	$brown:				#8B423E;
-	$teal:				#129FBA;
+	$teal:				#00DFC3;
 	$purple:			#C136BE;
 	$green:				#7DC242;
 	$cream: 				#FFF0E8;
@@ -33,6 +33,7 @@ Description:	Store SCSS vars here
 	$cream3:			#FFFDF8;
 	$lightBlue:		#F1FCFE;
 	$lightGreen:		#F4FFFA;
+	$darkBlue:		#007B98;
 	$grey:				#F4EFEF;
 
 	//Card colors
@@ -66,7 +67,8 @@ Description:	Store SCSS vars here
 	$secondaryColor:		$white;
 	$backgroundColor:		$white;
 	$textColor:				$black;
-	$accentColor:			$purple;
+	$accentColor:			$darkBlue;
+	$accentColor2:			$teal;
 
 
 /* ================ */
