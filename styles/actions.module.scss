@@ -40,7 +40,7 @@
       fill: $white;
     }
     to {
-      fill: $purple;
+      fill: $accentColor2;
     }
   }
 
@@ -300,7 +300,7 @@
     //Sidebar Animation
       &[data-action-state-cards~="card-interaction"]{
         #scannerBorder{
-          border-color: $purple;
+          border-color: $accentColor2;
         }
         #ScannerIcon{
           $duration: 0.15s;
@@ -343,7 +343,7 @@
         }
         #scannerLight{
           &>div{
-            background-color: $purple;
+            background-color: $accentColor2;
           }
         }
         //end
@@ -383,7 +383,7 @@
       }
       &.can--catch{
         .doorInnerBlack{
-          outline: $clampExtraExtraSmall solid $purple;
+          outline: $clampExtraExtraSmall solid $accentColor;
         }
         .doorInnerAnimate{
           transform: rotateY(45deg) translate3d(0, 0, 0);
