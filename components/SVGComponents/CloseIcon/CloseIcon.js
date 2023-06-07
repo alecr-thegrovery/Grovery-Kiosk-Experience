@@ -4,6 +4,8 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
 
 export default function CloseIcon({ 
   //Props

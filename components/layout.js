@@ -108,7 +108,7 @@ export default function Layout({
         function pageTransition(url, delay){
           console.log("page-transition: " + url + " | "+ delay);
           //router.prefetch(url); //prefetch next page
-          updateActionState('transition', 'hidden', delay);
+          clearActionState('transition', 'hidden', delay);
           setTimeout(function() {
             router.push(url);
           }, delay);
@@ -293,21 +293,21 @@ export default function Layout({
                 pageTransition(link, 2800);
               }else if(link  == "/access/"){
                 console.log("access card dropped");
-                updateActionState('home-bg-init-access', 0, 'home-bg');
-                updateActionState('home-bg-zoom-access', 1200, 'home-bg');
-                updateActionState('home-bg-open-access', 2000, 'home-bg');
+                updateActionState('home-bg', 'home-bg-init-access', 0);
+                updateActionState('home-bg', 'home-bg-zoom-access', 1200);
+                updateActionState('home-bg', 'home-bg-open-access', 2000);
                 pageTransition(link, 2800);
               }else if(link  == "/financial/"){
                 console.log("financial card dropped");
-                updateActionState('home-bg-init-financial', 0, 'home-bg');
-                updateActionState('home-bg-zoom-financial', 1200, 'home-bg');
-                updateActionState('home-bg-open-financial', 2000, 'home-bg');
+                updateActionState('home-bg', 'home-bg-init-financial', 0);
+                updateActionState('home-bg', 'home-bg-zoom-financial', 1200);
+                updateActionState('home-bg', 'home-bg-open-financial', 2000);
                 pageTransition(link, 2800);
               }else if(link  == "/resources/"){
                 console.log("resources card dropped");
-                updateActionState('home-bg-init-resources', 0, 'home-bg');
-                updateActionState('home-bg-zoom-resources', 1200, 'home-bg');
-                updateActionState('home-bg-open-resources', 2000, 'home-bg');
+                updateActionState('home-bg', 'home-bg-init-resources', 0);
+                updateActionState('home-bg', 'home-bg-zoom-resources', 1200);
+                updateActionState('home-bg', 'home-bg-open-resources', 2000);
                 pageTransition(link, 2800);
               }else{
                 //updateActionState('card-drop-success', 0);
