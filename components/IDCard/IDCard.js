@@ -7,6 +7,7 @@ import EnrollmentCard from './EnrollmentCard'
 import AccessCard from './AccessCard'
 import FinancialCard from './FinancialCard'
 import ResourcesCard from './ResourcesCard'
+import SampleCard from './SampleCard'
 import Tooltip from '@components/Tooltip'
 
 /*===== Styles =====*/
@@ -50,6 +51,9 @@ export default function IDCard({
           }
           {cardID == "resources" &&
             <ResourcesCard/>
+          }
+          {cardID == "sample" &&
+            <SampleCard/>
           }
 
         </div>
