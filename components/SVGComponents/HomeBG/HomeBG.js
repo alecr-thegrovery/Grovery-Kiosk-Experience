@@ -1,11 +1,11 @@
 /*===== Components =====*/
-import React, { useState, useEffect } from 'react';
-import { router } from 'next/router'
-import $ from 'jquery'
+  import React, { useState, useEffect } from 'react';
+  import { router } from 'next/router'
+  import $ from 'jquery'
 
 /*===== Styles =====*/
-import componentStyles from './styles.module.scss'
-import animationStyles from '@styles/animations.module.scss'
+  import componentStyles from './styles.module.scss'
+  import animationStyles from '@styles/animations.module.scss'
 
 /*===== Site Data =====*/
   import data from "@data/data.json"

@@ -42,7 +42,7 @@ export default function DragDrop({
         />
 
         <IDCard
-          cardID="access"
+          cardID="sample"
           text="Access and Reimbursement Report"
           link="/access/"
           color="mutedYellow"
