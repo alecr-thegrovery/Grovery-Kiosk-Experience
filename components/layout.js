@@ -8,6 +8,7 @@
   import $ from 'jquery'
 
 /*===== Theme Components =====*/
+  import HeadAnalytics from '@components/HeadComponents/HeadAnalytics'
   import Sidebar from '@components/Sidebar'
   import Modal from '@components/Modal'
   import SmallScreenWarning from '@components/SmallScreenWarning'
@@ -437,6 +438,7 @@ export default function Layout({
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+        <HeadAnalytics/>
       </Head>
 
       <SmallScreenWarning/>
