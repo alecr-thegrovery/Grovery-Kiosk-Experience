@@ -2,7 +2,12 @@
  * @type {import('next').NextConfig}
  */
 const withPWA = require('next-pwa')({
-  dest: 'public'
+  dest: 'public',
+  runtimeCaching: [{
+      // Routing via a matchCallback function:
+      urlPattern: '/\.(?:html|js|css|jpg|png|svg)$/,',
+      handler:'NetworkFirst'
+  }]
 })
 
 const nextConfig = withPWA({
