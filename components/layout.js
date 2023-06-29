@@ -9,6 +9,7 @@
 
 /*===== Theme Components =====*/
   import HeadAnalytics from '@components/HeadComponents/HeadAnalytics'
+  import HeadPWA from '@components/HeadComponents/HeadPWA'
   import Sidebar from '@components/Sidebar'
   import Modal from '@components/Modal'
   import SmallScreenWarning from '@components/SmallScreenWarning'
