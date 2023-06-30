@@ -5,7 +5,7 @@ const withPWA = require('next-pwa')({
   dest: 'public',
   runtimeCaching: [{
       // Routing via a matchCallback function:
-      urlPattern: '/\.(?:html|js|css|jpg|png|svg)$/,',
+      urlPattern: '**/\.(?:html|js|css|jpg|png|svg)$/,',
       handler:'NetworkFirst'
   }]
 })
