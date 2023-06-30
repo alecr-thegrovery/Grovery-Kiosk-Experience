@@ -15,6 +15,7 @@
   import SmallScreenWarning from '@components/SmallScreenWarning'
   import IdleTimer from '@components/IdleTimer'
   import VersionNotice from '@components/UtilityComponents/VersionNotice'
+  import PrecacheControl from '@components/UtilityComponents/PrecacheControl'
 
 /*===== Styles =====*/
   import styles from './layout.module.scss'
@@ -513,7 +514,7 @@ export default function Layout({
       </section>*/}
       
       {/* VERSION NOTICE */}
-      <VersionNotice
+      {/*<VersionNotice
         projectName="Kiosk Template"
         versionNumber="0.9.1"
         updatePercentComplete="50%"
@@ -524,7 +525,9 @@ export default function Layout({
           <li>Latest Update - Template creation</li>
           <li>Next Update - Placeholder Content & Data files</li>
         </ul>
-      </VersionNotice>
+      </VersionNotice>*/}
+
+      <PrecacheControl/>
       
     </div>
   )
