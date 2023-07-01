@@ -28,7 +28,7 @@ export default function PrecacheControl({
         const url = urls[i];
         try {
           router.prefetch(url);
-          console(`Success while fetching URL ${i + 1}: ${url}`);
+          console.log(`Success while fetching URL ${i + 1}: ${url}`);
         } catch (error) {
           console.error(`Error while fetching URL ${i + 1}: ${url}`, error);
         }
