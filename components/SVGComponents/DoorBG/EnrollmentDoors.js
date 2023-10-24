@@ -4,12 +4,17 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
+  
 /*===== Notes =====*/
 // Add and edit the following to the 
 // elements you want to make interactive:
 /*
   className="droppable" data-door="1" data-door-name="options" data-link="/enrollment/options/" data-active="inactive"
 */
+
+
 
 export default function EnrollmentDoors({
     //Props
@@ -18,6 +23,7 @@ export default function EnrollmentDoors({
 }) {
 
     //console.log(author);
+    let accentColor = data.accentColor1;
 
     return (
         <div className={componentStyles.EnrollmentDoors}>
@@ -194,7 +200,7 @@ export default function EnrollmentDoors({
                     <path id="Path_273" data-name="Path 273" d="M3883.171,863.643c-5.865-3.627-11.2-10.475-14.231-19.2-5.289-15.232-1.551-30.367,8.35-33.8s22.214,6.123,27.5,21.354c3.03,8.726,3.085,17.407.729,23.889,5.866,3.626,11.2,10.474,14.233,19.2a38.683,38.683,0,0,1,1.663,20.618,38.677,38.677,0,0,1,11.472,17.212,39.41,39.41,0,0,1,1.917,19.366,39.4,39.4,0,0,1,10.5,16.386c5.289,15.232,1.55,30.366-8.35,33.8s-22.214-6.123-27.5-21.355a39.409,39.409,0,0,1-1.918-19.365,39.4,39.4,0,0,1-10.5-16.386,38.665,38.665,0,0,1-1.664-20.618,38.673,38.673,0,0,1-11.472-17.212C3880.871,878.806,3880.816,870.123,3883.171,863.643Z" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
                     <line id="Line_25" data-name="Line 25" x2="53.994" y2="160.5" transform="translate(3882.853 824.159)" fill="#fff" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
                   </g>
-                  <path id="Rectangle_162" data-name="Rectangle 162" d="M32.691,0h24.58A32.691,32.691,0,0,1,89.961,32.691v54.78a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V32.691A32.691,32.691,0,0,1,32.691,0Z" transform="translate(3968.364 985.463) rotate(180)" fill="#be2bbb" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
+                  <path id="Rectangle_162" data-name="Rectangle 162" d="M32.691,0h24.58A32.691,32.691,0,0,1,89.961,32.691v54.78a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V32.691A32.691,32.691,0,0,1,32.691,0Z" transform="translate(3968.364 985.463) rotate(180)" fill={accentColor} stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
                   <line id="Line_26" data-name="Line 26" x1="89.007" transform="translate(3878.711 917.646)" fill="#fff" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
                   <path id="Rectangle_163" data-name="Rectangle 163" d="M8.176,0H104.32A8.176,8.176,0,0,1,112.5,8.176V11.25a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8.176A8.176,8.176,0,0,1,8.176,0Z" transform="translate(3980.659 992.567) rotate(-180)" fill="#f0e8e5" stroke="#9f9089" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.362"/>
                 </g>

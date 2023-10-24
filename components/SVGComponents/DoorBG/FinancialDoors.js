@@ -5,12 +5,16 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
+
 export default function FinancialDoors({ 
   //Props
   id, children
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.FinancialDoors}>
@@ -129,23 +133,23 @@ export default function FinancialDoors({
               <g id="couch" transform="translate(-262)">
                 <path id="Path_4403" data-name="Path 4403" d="M1435.554,854.87h0a5.479,5.479,0,0,0,5.055-4.005l17.922-53.709H1441.52l-9.414,53.731a3.362,3.362,0,0,0,3.448,3.984" transform="translate(-35.858 317.104)" fill="#a59f9f"/>
                 <path id="Path_4405" data-name="Path 4405" d="M1922.266,854.87h0a5.478,5.478,0,0,1-5.055-4.005l-17.922-53.709H1916.3l9.414,53.731a3.362,3.362,0,0,1-3.448,3.984" transform="translate(-44.295 317.104)" fill="#a59f9f"/>
-                <path id="Path_4407" data-name="Path 4407" d="M1927.027,727.373V591.97a44.041,44.041,0,0,0-44.041-44.041H1718.452a44.042,44.042,0,0,0-43.943,41.12,44.041,44.041,0,0,0-43.942-41.12H1466.032a44.041,44.041,0,0,0-44.041,44.041v135.4Z" transform="translate(-35.677 321.604)" fill="#ccc8c8" stroke="#be2bbb" strokeWidth="2"/>
-                <path id="Path_4409" data-name="Path 4409" d="M1916.115,657.556v71.209H1430.867V657.556a32.641,32.641,0,1,0-65.282,0v92.276a44.213,44.213,0,0,0,44.214,44.213h527.384a44.213,44.213,0,0,0,44.213-44.213V657.556a32.64,32.64,0,1,0-65.281,0" transform="translate(-34.658 320.215)" fill="#ccc8c8" stroke="#be2bbb" strokeWidth="2"/>
-                <path id="Path_4411" data-name="Path 4411" d="M1454.866,698.982h439.651a22.8,22.8,0,0,1,22.8,22.8v8.32H1432.067v-8.32a22.8,22.8,0,0,1,22.8-22.8" transform="translate(-35.858 318.877)" fill="#ccc8c8" stroke="#be2bbb" strokeWidth="2"/>
+                <path id="Path_4407" data-name="Path 4407" d="M1927.027,727.373V591.97a44.041,44.041,0,0,0-44.041-44.041H1718.452a44.042,44.042,0,0,0-43.943,41.12,44.041,44.041,0,0,0-43.942-41.12H1466.032a44.041,44.041,0,0,0-44.041,44.041v135.4Z" transform="translate(-35.677 321.604)" fill="#ccc8c8" stroke={accentColor} strokeWidth="2"/>
+                <path id="Path_4409" data-name="Path 4409" d="M1916.115,657.556v71.209H1430.867V657.556a32.641,32.641,0,1,0-65.282,0v92.276a44.213,44.213,0,0,0,44.214,44.213h527.384a44.213,44.213,0,0,0,44.213-44.213V657.556a32.64,32.64,0,1,0-65.281,0" transform="translate(-34.658 320.215)" fill="#ccc8c8" stroke={accentColor} strokeWidth="2"/>
+                <path id="Path_4411" data-name="Path 4411" d="M1454.866,698.982h439.651a22.8,22.8,0,0,1,22.8,22.8v8.32H1432.067v-8.32a22.8,22.8,0,0,1,22.8-22.8" transform="translate(-35.858 318.877)" fill="#ccc8c8" stroke={accentColor} strokeWidth="2"/>
                 <line id="Line_450" data-name="Line 450" y2="107.206" transform="translate(1638.833 910.654)" fill="#ede7e7"/>
                 <line id="Line_451" data-name="Line 451" y2="107.206" transform="translate(1638.833 910.654)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.636"/>
               </g>
               <g id="plant" transform="translate(725.98)">
                 <path id="Path_5195" data-name="Path 5195" d="M207.915,511.481c0,33.749-14.175,56.689-31.662,56.689S144.59,545.23,144.59,511.481s14.175-56.689,31.663-56.689,31.662,22.939,31.662,56.689" transform="translate(-12.611 323.287)" fill="#fff"/>
-                <path id="Path_5196" data-name="Path 5196" d="M207.915,511.481c0,33.749-14.175,56.689-31.662,56.689S144.59,545.23,144.59,511.481s14.175-56.689,31.663-56.689S207.915,477.731,207.915,511.481Z" transform="translate(-12.611 323.287)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
-                <ellipse id="Ellipse_127" data-name="Ellipse 127" cx="19.66" cy="56.689" rx="19.66" ry="56.689" transform="translate(143.982 778.079)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
-                <ellipse id="Ellipse_128" data-name="Ellipse 128" cx="6.894" cy="56.689" rx="6.894" ry="56.689" transform="translate(156.748 778.079)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <path id="Path_5196" data-name="Path 5196" d="M207.915,511.481c0,33.749-14.175,56.689-31.662,56.689S144.59,545.23,144.59,511.481s14.175-56.689,31.663-56.689S207.915,477.731,207.915,511.481Z" transform="translate(-12.611 323.287)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <ellipse id="Ellipse_127" data-name="Ellipse 127" cx="19.66" cy="56.689" rx="19.66" ry="56.689" transform="translate(143.982 778.079)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <ellipse id="Ellipse_128" data-name="Ellipse 128" cx="6.894" cy="56.689" rx="6.894" ry="56.689" transform="translate(156.748 778.079)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
                 <path id="Path_5197" data-name="Path 5197" d="M210.223,442.2c11.932-11.932,25.487-14.6,32.2-7.881s4.051,20.272-7.88,32.2-25.487,14.6-32.2,7.88-4.052-20.272,7.881-32.2" transform="translate(-13.588 323.722)" fill="#fff"/>
-                <path id="Path_5198" data-name="Path 5198" d="M210.223,442.2c11.932-11.932,25.487-14.6,32.2-7.881s4.051,20.272-7.88,32.2-25.487,14.6-32.2,7.88S198.29,454.127,210.223,442.2Z" transform="translate(-13.588 323.722)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
-                <path id="Path_5199" data-name="Path 5199" d="M218.195,450.168c11.932-11.932,21.944-18.14,24.289-15.8s-3.863,12.358-15.795,24.29-21.944,18.14-24.29,15.795S206.263,462.1,218.195,450.168Z" transform="translate(-13.646 323.664)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <path id="Path_5198" data-name="Path 5198" d="M210.223,442.2c11.932-11.932,25.487-14.6,32.2-7.881s4.051,20.272-7.88,32.2-25.487,14.6-32.2,7.88S198.29,454.127,210.223,442.2Z" transform="translate(-13.588 323.722)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <path id="Path_5199" data-name="Path 5199" d="M218.195,450.168c11.932-11.932,21.944-18.14,24.289-15.8s-3.863,12.358-15.795,24.29-21.944,18.14-24.29,15.795S206.263,462.1,218.195,450.168Z" transform="translate(-13.646 323.664)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
                 <path id="Path_5200" data-name="Path 5200" d="M193.718,425.4c0,16.875-7.7,28.344-17.2,28.345s-17.2-11.47-17.2-28.345,7.7-28.345,17.2-28.345,17.2,11.47,17.2,28.345" transform="translate(-12.877 324.329)" fill="#fff"/>
-                <path id="Path_5201" data-name="Path 5201" d="M193.718,425.4c0,16.875-7.7,28.344-17.2,28.345s-17.2-11.47-17.2-28.345,7.7-28.345,17.2-28.345S193.718,408.53,193.718,425.4Z" transform="translate(-12.877 324.329)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
-                <path id="Path_5202" data-name="Path 5202" d="M182.731,425.4c0,16.875-2.69,28.344-6.007,28.345s-6.007-11.47-6.007-28.345,2.69-28.345,6.007-28.345S182.731,408.53,182.731,425.4Z" transform="translate(-13.083 324.329)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <path id="Path_5201" data-name="Path 5201" d="M193.718,425.4c0,16.875-7.7,28.344-17.2,28.345s-17.2-11.47-17.2-28.345,7.7-28.345,17.2-28.345S193.718,408.53,193.718,425.4Z" transform="translate(-12.877 324.329)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
+                <path id="Path_5202" data-name="Path 5202" d="M182.731,425.4c0,16.875-2.69,28.344-6.007,28.345s-6.007-11.47-6.007-28.345,2.69-28.345,6.007-28.345S182.731,408.53,182.731,425.4Z" transform="translate(-13.083 324.329)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
                 <path id="Path_5203" data-name="Path 5203" d="M179.794,617.169h-7.068a27.75,27.75,0,0,1-27.749-27.75V556.334h62.565V589.42a27.749,27.749,0,0,1-27.749,27.75" transform="translate(-12.618 321.453)" fill="#c0f2fb"/>
                 <path id="Path_5204" data-name="Path 5204" d="M179.794,617.169h-7.068a27.75,27.75,0,0,1-27.749-27.75V556.334h62.565V589.42A27.749,27.749,0,0,1,179.794,617.169Z" transform="translate(-12.618 321.453)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
                 <line id="Line_725" data-name="Line 725" x2="61.475" transform="translate(132.905 891.456)" fill="#fff"/>
@@ -154,12 +158,12 @@ export default function FinancialDoors({
                 <path id="Path_5206" data-name="Path 5206" d="M207.714,623.175h-63.2a7.523,7.523,0,0,1-7.523-7.523v-.3h78.241v.3A7.523,7.523,0,0,1,207.714,623.175Z" transform="translate(-12.474 320.387)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.04"/>
               </g>
               <g id="clock" transform="translate(84.212 -159)">
-                <path id="Path_5209" data-name="Path 5209" d="M126.653,221.256A71.049,71.049,0,1,0,197.7,292.3a71.049,71.049,0,0,0-71.049-71.049m0,130.259a59.21,59.21,0,1,1,59.21-59.21,59.21,59.21,0,0,1-59.21,59.21" transform="translate(757.996 434.503)" fill="#be2bbb"/>
+                <path id="Path_5209" data-name="Path 5209" d="M126.653,221.256A71.049,71.049,0,1,0,197.7,292.3a71.049,71.049,0,0,0-71.049-71.049m0,130.259a59.21,59.21,0,1,1,59.21-59.21,59.21,59.21,0,0,1-59.21,59.21" transform="translate(757.996 434.503)" fill={accentColor}/>
                 <line id="Line_727" data-name="Line 727" y2="9.549" transform="translate(884.648 678.595)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.148"/>
                 <line id="Line_728" data-name="Line 728" y2="9.549" transform="translate(884.648 765.473)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.148"/>
                 <line id="Line_729" data-name="Line 729" x1="9.549" transform="translate(923.312 726.809)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.148"/>
                 <line id="Line_730" data-name="Line 730" x1="9.549" transform="translate(836.434 726.809)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.148"/>
-                <path id="Path_5211" data-name="Path 5211" d="M101.072,271.338l26.4,21.7L165.12,262" transform="translate(757.175 433.768)" fill="none" stroke="#be2bbb" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
+                <path id="Path_5211" data-name="Path 5211" d="M101.072,271.338l26.4,21.7L165.12,262" transform="translate(757.175 433.768)" fill="none" stroke={accentColor} strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
               </g>
             </g>
           </g>

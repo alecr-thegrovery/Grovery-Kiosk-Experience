@@ -4,6 +4,10 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
+
+
 /*===== Notes =====*/
 // Add and edit the following to the 
 // elements you want to make interactive:
@@ -18,6 +22,7 @@ export default function AccessDoors({
 }) {
 
     //console.log(author);
+    let accentColor = data.accentColor1;
 
     return (
       <div className={componentStyles.AccessDoors}>
@@ -171,7 +176,7 @@ export default function AccessDoors({
                   <line id="Line_275" data-name="Line 275" x2="113.53" transform="translate(9626.25 7514.657)" fill="#fff"/>
                   <g id="Group_1447" data-name="Group 1447" transform="translate(9619.414 7496.94)">
                     <g id="Group_1446" data-name="Group 1446" clipPath="url(#clipPath)">
-                      <path id="Path_5191" data-name="Path 5191" d="M41.9,102.812C6.088,72.383,0,36.983,0,0H136.733c0,36.983-6.084,72.383-41.9,102.812" fill="#be2bbb"/>
+                      <path id="Path_5191" data-name="Path 5191" d="M41.9,102.812C6.088,72.383,0,36.983,0,0H136.733c0,36.983-6.084,72.383-41.9,102.812" fill={accentColor}/>
                     </g>
                   </g>
                   <line id="Line_276" data-name="Line 276" x2="113.53" transform="translate(9626.25 7514.657)" fill="none" stroke="#474343" strokeLinejoin="round" strokeWidth="1"/>
@@ -189,7 +194,7 @@ export default function AccessDoors({
                   <rect id="Rectangle_1910" data-name="Rectangle 1910" width="90.175" height="10.049" transform="translate(128 749.117)" fill="#fff" stroke="#707070" strokeWidth="1"/>
                   <path id="Path_4398" data-name="Path 4398" d="M118.807,854.218h0c-2.345,0-4.195-1.577-4.015-3.424L134.663,645H154.2L122.8,851.415c-.244,1.6-1.96,2.8-4,2.8" transform="translate(-2.073 -11.646)" fill="#fff" stroke="#707070" strokeWidth="1"/>
                   <path id="Path_4400" data-name="Path 4400" d="M233.042,854.218h0c2.345,0,4.194-1.577,4.016-3.424L217.187,645H197.652l31.392,206.416c.244,1.6,1.96,2.8,4,2.8" transform="translate(-3.569 -11.646)" fill="#fff" stroke="#707070" strokeWidth="1"/>
-                  <path id="Path_4402" data-name="Path 4402" d="M217.557,647.7H133.034a11.655,11.655,0,0,1-11.655-11.655v-.935a11.655,11.655,0,0,1,11.655-11.655h84.524a11.655,11.655,0,0,1,11.655,11.655v.935A11.655,11.655,0,0,1,217.557,647.7" transform="translate(-2.192 -11.257)" fill="#be2bbb"/>
+                  <path id="Path_4402" data-name="Path 4402" d="M217.557,647.7H133.034a11.655,11.655,0,0,1-11.655-11.655v-.935a11.655,11.655,0,0,1,11.655-11.655h84.524a11.655,11.655,0,0,1,11.655,11.655v.935A11.655,11.655,0,0,1,217.557,647.7" transform="translate(-2.192 -11.257)" fill={accentColor}/>
                 </g>
               </g>
             </g>

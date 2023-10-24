@@ -5,6 +5,9 @@ import React from "react"
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+  import data from "@data/data.json"
+
 export default function ResourceDoors({
     //Props
     id,
@@ -12,6 +15,7 @@ export default function ResourceDoors({
 }) {
 
     //console.log(author);
+    let accentColor = data.accentColor1;
 
     return (
         <div className={componentStyles.ResourceDoors}>
@@ -146,9 +150,9 @@ export default function ResourceDoors({
           <path id="Path_4466" data-name="Path 4466" d="M1520.116,1006.138h-86.25a7.472,7.472,0,0,1-7.471-7.472v-2.647h101.193v2.647A7.472,7.472,0,0,1,1520.116,1006.138Z" transform="translate(-35.184 -24.57)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.354"/>
         </g>
         <g id="leftside-things" transform="translate(-132)">
-          <rect id="Rectangle_1430" data-name="Rectangle 1430" width="21.322" height="122.632" transform="translate(19.337 421.285)" fill="#be2bbb"/>
+          <rect id="Rectangle_1430" data-name="Rectangle 1430" width="21.322" height="122.632" transform="translate(19.337 421.285)" fill={accentColor}/>
           <rect id="Rectangle_1431" data-name="Rectangle 1431" width="21.322" height="122.632" transform="translate(19.337 421.285)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.331"/>
-          <rect id="Rectangle_1432" data-name="Rectangle 1432" width="10.661" height="122.632" transform="translate(154.162 421.285)" fill="#be2bbb"/>
+          <rect id="Rectangle_1432" data-name="Rectangle 1432" width="10.661" height="122.632" transform="translate(154.162 421.285)" fill={accentColor}/>
           <rect id="Rectangle_1433" data-name="Rectangle 1433" width="10.661" height="122.632" transform="translate(154.162 421.285)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.331"/>
           <rect id="Rectangle_1434" data-name="Rectangle 1434" width="27.1" height="95.349" transform="translate(164.823 448.568)" fill="#ede7e7"/>
           <rect id="Rectangle_1435" data-name="Rectangle 1435" width="27.1" height="95.349" transform="translate(164.823 448.568)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.331"/>
@@ -162,7 +166,7 @@ export default function ResourceDoors({
           <rect id="Rectangle_1443" data-name="Rectangle 1443" width="18.658" height="134.352" transform="translate(63.342 419.191) rotate(-22.1)" fill="none" stroke="#595454" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.331"/>
           <path id="Path_4432" data-name="Path 4432" d="M47.859,565.284H269.976V550.551H47.859" transform="translate(-47.267 175.42)" fill="#fff" stroke="#a69f9f" strokeWidth="2"/>
           <path id="Path_4434" data-name="Path 4434" d="M45.98,379.494H268.1V364.76H45.98" transform="translate(-47.221 180.003)" fill="#fff" stroke="#a69f9f" strokeWidth="2"/>
-          <path id="Path_4438" data-name="Path 4438" d="M172.4,548.078H64.808v-53.4H172.4Z" transform="translate(-47.686 176.798)" fill="#be2bbb" stroke="#595454" strokeWidth="1"/>
+          <path id="Path_4438" data-name="Path 4438" d="M172.4,548.078H64.808v-53.4H172.4Z" transform="translate(-47.686 176.798)" fill={accentColor} stroke="#595454" strokeWidth="1"/>
           <path id="Path_4440" data-name="Path 4440" d="M207.6,424.513c-2.955-3.634-4.854-9.217-4.854-15.49,0-10.952,5.771-19.829,12.89-19.829s12.889,8.878,12.889,19.829c0,6.273-1.9,11.856-4.855,15.49,2.956,3.633,4.855,9.217,4.855,15.49A26.278,26.278,0,0,1,225,453.6a26.276,26.276,0,0,1,3.526,13.6,26.764,26.764,0,0,1-3.085,12.853,26.76,26.76,0,0,1,3.085,12.852c0,10.952-5.771,19.829-12.889,19.829s-12.89-8.877-12.89-19.829a26.76,26.76,0,0,1,3.084-12.852,26.764,26.764,0,0,1-3.084-12.853,26.276,26.276,0,0,1,3.526-13.6,26.278,26.278,0,0,1-3.526-13.6c0-6.273,1.9-11.857,4.854-15.49" transform="translate(-51.088 179.4)" fill="#cde8db"/>
           <path id="Path_4441" data-name="Path 4441" d="M207.6,424.513c-2.955-3.634-4.854-9.217-4.854-15.49,0-10.952,5.771-19.829,12.89-19.829s12.889,8.878,12.889,19.829c0,6.273-1.9,11.856-4.855,15.49,2.956,3.633,4.855,9.217,4.855,15.49A26.278,26.278,0,0,1,225,453.6a26.276,26.276,0,0,1,3.526,13.6,26.764,26.764,0,0,1-3.085,12.853,26.76,26.76,0,0,1,3.085,12.852c0,10.952-5.771,19.829-12.889,19.829s-12.89-8.877-12.89-19.829a26.76,26.76,0,0,1,3.084-12.852,26.764,26.764,0,0,1-3.084-12.853,26.276,26.276,0,0,1,3.526-13.6,26.278,26.278,0,0,1-3.526-13.6C202.748,433.73,204.647,428.146,207.6,424.513Z" transform="translate(-51.088 179.4)" fill="none" stroke="#a59f9f" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0.949"/>
           <line id="Line_458" data-name="Line 458" x1="1.114" y2="115.013" transform="translate(163.993 578.507)" fill="#fff"/>
@@ -225,7 +229,7 @@ export default function ResourceDoors({
         <line id="Line_467" data-name="Line 467" y2="304.917" transform="translate(1430.978 91.911)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
         <path id="Path_4450" data-name="Path 4450" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="#fff"/>
         <path id="Path_4451" data-name="Path 4451" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
-        <path id="Path_4454" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill="#be2bbb"/>
+        <path id="Path_4454" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill={accentColor}/>
         <path id="Path_5207" data-name="Path 5207" d="M1532.412,330.27a18.459,18.459,0,1,1-36.918,0Z" transform="translate(-82.976 180.853)" fill="#ede7e7" stroke="#be2bbb" strokeWidth="1"/>
       </g>
       <g id="light-2" data-name="light" transform="translate(-1136.623 -117.411)">
@@ -233,7 +237,7 @@ export default function ResourceDoors({
         <line id="Line_467-2" data-name="Line 467" y2="304.917" transform="translate(1430.978 91.911)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
         <path id="Path_4450-2" data-name="Path 4450" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="#fff"/>
         <path id="Path_4451-2" data-name="Path 4451" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
-        <path id="Path_4454-2" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill="#be2bbb"/>
+        <path id="Path_4454-2" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill={accentColor}/>
         <path id="Path_5207-2" data-name="Path 5207" d="M1532.412,330.27a18.459,18.459,0,1,1-36.918,0Z" transform="translate(-82.976 180.853)" fill="#ede7e7" stroke="#be2bbb" strokeWidth="1"/>
       </g>
       <g id="light-3" data-name="light" transform="translate(15.359 -117.411)">
@@ -241,7 +245,7 @@ export default function ResourceDoors({
         <line id="Line_467-3" data-name="Line 467" y2="304.917" transform="translate(1430.978 91.911)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
         <path id="Path_4450-3" data-name="Path 4450" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="#fff"/>
         <path id="Path_4451-3" data-name="Path 4451" d="M1522.866,217.328a8.664,8.664,0,1,0-17.329,0" transform="translate(-83.224 183.853)" fill="none" stroke="#595454" strokeMiterlimit="10" strokeWidth="1"/>
-        <path id="Path_4454-3" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill="#be2bbb"/>
+        <path id="Path_4454-3" data-name="Path 4454" d="M1526.971,229.71V217.547H1497.49V229.71a15.85,15.85,0,0,1-11.124,15.13,86.614,86.614,0,0,0-60.739,82.649h173.207a86.614,86.614,0,0,0-60.74-82.649,15.851,15.851,0,0,1-11.123-15.13" transform="translate(-81.252 183.634)" fill={accentColor}/>
         <path id="Path_5207-3" data-name="Path 5207" d="M1532.412,330.27a18.459,18.459,0,1,1-36.918,0Z" transform="translate(-82.976 180.853)" fill="#ede7e7" stroke="#be2bbb" strokeWidth="1"/>
       </g>
     </g>
