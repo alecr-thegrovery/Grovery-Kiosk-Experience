@@ -6,6 +6,9 @@ import ChevronDown from '@components/SVGComponents/ChevronDown'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+import data from "@data/data.json"
+
 
 export default function Screen3({ 
   //Props
@@ -13,6 +16,7 @@ export default function Screen3({
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.Screen3}>
@@ -81,7 +85,7 @@ export default function Screen3({
               </g>
               <g id="Group_493" data-name="Group 493" transform="translate(0 7.533)">
                 <g id="Group_490" data-name="Group 490">
-                  <path id="Path_2844" data-name="Path 2844" d="M7755.214,623.177a92.779,92.779,0,0,0-92.779-92.779H7420.049a97.905,97.905,0,0,0-97.9,97.9V868.782a51.942,51.942,0,0,0,51.942,51.942h323.852a57.078,57.078,0,0,0,57.078-57.032Z" fill="#be2bbb" stroke="#453838" stroke-miterlimit="10" stroke-width="1"/>
+                  <path id="Path_2844" data-name="Path 2844" d="M7755.214,623.177a92.779,92.779,0,0,0-92.779-92.779H7420.049a97.905,97.905,0,0,0-97.9,97.9V868.782a51.942,51.942,0,0,0,51.942,51.942h323.852a57.078,57.078,0,0,0,57.078-57.032Z" fill={accentColor} stroke="#453838" stroke-miterlimit="10" stroke-width="1"/>
                   <path id="Path_2845" data-name="Path 2845" d="M7481.775,838.9,7422.3,824.4V665.2" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
                   <line id="Line_93" data-name="Line 93" y2="205.268" transform="translate(7652.409 661.333)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
                 </g>
@@ -126,7 +130,7 @@ export default function Screen3({
                 <path id="Path_3968" data-name="Path 3968" d="M161.3.9l-2.482,14.562h4.964Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.803"/>
               </g>
             </g>
-            <rect id="Rectangle_1194" data-name="Rectangle 1194" width="9.927" height="166.944" transform="translate(156.338 30.026)" fill="#be2bbb"/>
+            <rect id="Rectangle_1194" data-name="Rectangle 1194" width="9.927" height="166.944" transform="translate(156.338 30.026)" fill={accentColor}/>
             <rect id="Rectangle_1195" data-name="Rectangle 1195" width="9.927" height="166.944" transform="translate(156.338 30.026)" fill="none" stroke="#a84599" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.803"/>
             <g id="Group_1148" data-name="Group 1148">
               <g id="Group_1147" data-name="Group 1147" clip-path="url(#clip-path)">
@@ -153,7 +157,7 @@ export default function Screen3({
                 <line id="Line_293" data-name="Line 293" x2="9.744" y2="1.25" transform="translate(205.507 30.051)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.803"/>
                 <path id="Path_3977" data-name="Path 3977" d="M140.516,239.844h61.53l14.817-123.5H125.7Z" fill="#fff"/>
                 <path id="Path_3978" data-name="Path 3978" d="M140.516,239.844h61.53l14.817-123.5H125.7Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.803"/>
-                <path id="Path_3979" data-name="Path 3979" d="M75.64,150.893v-7.639H0v97.292H75.64V163.787a25.22,25.22,0,0,1,24.118,25.156v42.49a6.433,6.433,0,0,0,12.866,0v-42.49a38.114,38.114,0,0,0-36.984-38.05" fill="#be2bbb"/>
+                <path id="Path_3979" data-name="Path 3979" d="M75.64,150.893v-7.639H0v97.292H75.64V163.787a25.22,25.22,0,0,1,24.118,25.156v42.49a6.433,6.433,0,0,0,12.866,0v-42.49a38.114,38.114,0,0,0-36.984-38.05" fill={accentColor}/>
                 <path id="Path_3980" data-name="Path 3980" d="M29.691,186.563,19.209,173.7,8.727,186.563v28.92H29.691Z" fill="#fff"/>
                 <line id="Line_294" data-name="Line 294" y1="30.443" transform="translate(19.209 143.254)" fill="#ede7e7"/>
                 <line id="Line_295" data-name="Line 295" y1="30.443" transform="translate(19.209 143.254)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.556"/>

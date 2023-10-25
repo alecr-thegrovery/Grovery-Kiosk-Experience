@@ -6,6 +6,9 @@ import ChevronDown from '@components/SVGComponents/ChevronDown'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+import data from "@data/data.json"
+
 
 export default function Screen5({ 
   //Props
@@ -13,6 +16,7 @@ export default function Screen5({
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.Screen5}>
@@ -94,7 +98,7 @@ export default function Screen5({
                   <path id="Path_4076" data-name="Path 4076" d="M1197.371,321.643l14.453,111.716-129.888-1.069L1110.8,359.6l2.329-25.723" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.073"/>
                   <path id="Path_4077" data-name="Path 4077" d="M1216.393,265.269c4.041,9.235,12.417,15.6,22.124,15.6,13.648,0,24.711-12.547,24.711-28.025s-11.063-28.026-24.711-28.026c-9.707,0-18.083,6.364-22.124,15.6" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.073"/>
                   <path id="Path_4078" data-name="Path 4078" d="M1114.722,235.082a5.758,5.758,0,1,1-5.758-5.758,5.758,5.758,0,0,1,5.758,5.758m59.948-5.758a5.757,5.757,0,1,0,5.758,5.758,5.758,5.758,0,0,0-5.758-5.758" fill="#595454"/>
-                  <path id="Path_4079" data-name="Path 4079" d="M1248.941,292.42a11.971,11.971,0,1,1-11.971-11.97,11.972,11.972,0,0,1,11.971,11.97" fill="#be2bbb"/>
+                  <path id="Path_4079" data-name="Path 4079" d="M1248.941,292.42a11.971,11.971,0,1,1-11.971-11.97,11.972,11.972,0,0,1,11.971,11.97" fill={accentColor}/>
                   <circle id="Ellipse_52" data-name="Ellipse 52" cx="11.971" cy="11.971" r="11.971" transform="translate(1221.329 298.899) rotate(-67.5)" fill="none" stroke="#ede7e7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.073"/>
                   <path id="Path_4080" data-name="Path 4080" d="M1142.987,237.049s-4.484,9.383-9.433,17.289a12.777,12.777,0,0,0,4.209,17.838l.063.037" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.069"/>
                   <path id="Path_4081" data-name="Path 4081" d="M1162.55,284.832c-3.427,6.353-17.005,10.53-29.647,5.216" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.069"/>
@@ -105,7 +109,7 @@ export default function Screen5({
                   <path id="Path_4086" data-name="Path 4086" d="M681.923,580.981c11.476,5.424,50.382,11.861,50.382,11.861" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <path id="Path_4087" data-name="Path 4087" d="M685.461,590.193c12.6,4.4,44.276,11.715,44.276,11.715" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <line id="Line_328" data-name="Line 328" x1="7.282" y2="25.714" transform="translate(728.554 580.374)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
-                  <path id="Path_4088" data-name="Path 4088" d="M1073.52,749.645l-38.057,22.33-32.785-22.64,49.748-221.678a567.451,567.451,0,0,1,24.916-81.678l9.571-24.575h89.39l-23.057,49.607a730.578,730.578,0,0,0-50.259,147.618Z" fill="#be2bbb"/>
+                  <path id="Path_4088" data-name="Path 4088" d="M1073.52,749.645l-38.057,22.33-32.785-22.64,49.748-221.678a567.451,567.451,0,0,1,24.916-81.678l9.571-24.575h89.39l-23.057,49.607a730.578,730.578,0,0,0-50.259,147.618Z" fill={accentColor}/>
                   <path id="Path_4089" data-name="Path 4089" d="M1111.429,358.454l-41.9,14.687a99.9,99.9,0,0,0-64.363,72.119l-55,241.835L812.306,589.087V670.1l132.7,120.793h48.344l59.074-263.233a567.585,567.585,0,0,1,24.915-81.678Z" fill="#ede7e7"/>
                   <path id="Path_4090" data-name="Path 4090" d="M1111.429,358.454l-41.9,14.687a99.9,99.9,0,0,0-64.363,72.119l-55,241.835L812.306,589.087V670.1l132.7,120.793h48.344l59.074-263.233a567.585,567.585,0,0,1,24.915-81.678Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <path id="Path_4091" data-name="Path 4091" d="M1248.031,702.915,1232.239,652.8l20.214-54.371,16.538,98.771L1082.643,748l13.2,42.893h225.993a59.791,59.791,0,0,0,59.2-68.212l-39.837-280.093a79.85,79.85,0,0,0-65.656-67.475l-72.02-12.258-50.271,108.159a730.638,730.638,0,0,0-50.259,147.618L1073.52,749.645" fill="#ede7e7"/>
@@ -143,7 +147,7 @@ export default function Screen5({
                   <line id="Line_341" data-name="Line 341" x1="40.317" transform="translate(1433.883 563.897)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.043"/>
                   <rect id="Rectangle_1223" data-name="Rectangle 1223" width="24.349" height="43.538" transform="translate(1040.446 773.633)" fill="#fff"/>
                   <rect id="Rectangle_1224" data-name="Rectangle 1224" width="24.349" height="43.538" transform="translate(1040.446 773.633)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
-                  <rect id="Rectangle_1225" data-name="Rectangle 1225" width="35.84" height="15.474" transform="translate(1034.7 758.159)" fill="#be2bbb"/>
+                  <rect id="Rectangle_1225" data-name="Rectangle 1225" width="35.84" height="15.474" transform="translate(1034.7 758.159)" fill={accentColor}/>
                   <rect id="Rectangle_1226" data-name="Rectangle 1226" width="35.84" height="15.474" transform="translate(1034.7 758.159)" fill="none" stroke="#a84599" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <rect id="Rectangle_1227" data-name="Rectangle 1227" width="12.174" height="25.81" transform="translate(1048.496 782.164)" fill="none" stroke="#a84599" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <line id="Line_342" data-name="Line 342" y2="17.187" transform="translate(1061.58 757.326)" fill="#fff"/>
@@ -154,7 +158,7 @@ export default function Screen5({
                   <line id="Line_347" data-name="Line 347" y2="17.187" transform="translate(1043.66 757.326)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <rect id="Rectangle_1228" data-name="Rectangle 1228" width="68.722" height="31.25" transform="translate(1079.672 778.245)" fill="#fff"/>
                   <rect id="Rectangle_1229" data-name="Rectangle 1229" width="68.722" height="31.25" transform="translate(1079.672 778.245)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
-                  <path id="Path_4109" data-name="Path 4109" d="M1148.393,799.408H1130.53a14.336,14.336,0,0,1-14.336-14.336h-36.523v-6.827h68.722Z" fill="#be2bbb"/>
+                  <path id="Path_4109" data-name="Path 4109" d="M1148.393,799.408H1130.53a14.336,14.336,0,0,1-14.336-14.336h-36.523v-6.827h68.722Z" fill={accentColor}/>
                   <path id="Path_4110" data-name="Path 4110" d="M1148.393,799.408H1130.53a14.336,14.336,0,0,1-14.336-14.336h-36.523v-6.827h68.722Z" fill="none" stroke="#a84599" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <path id="Path_4111" data-name="Path 4111" d="M1086.726,796.563a6.03,6.03,0,1,0,6.03-6.03A6.03,6.03,0,0,0,1086.726,796.563Z" fill="none" stroke="#a84599" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.711"/>
                   <path id="Path_4112" data-name="Path 4112" d="M1187.945,314.541c.967,5.226-6.17,10.926-15.94,12.733s-18.474-.965-19.441-6.19,6.171-10.927,15.941-12.733,18.474.964,19.44,6.19" fill="#827d7d"/>

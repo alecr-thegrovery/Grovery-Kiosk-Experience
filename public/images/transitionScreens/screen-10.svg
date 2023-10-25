@@ -72,7 +72,7 @@
         <path id="Path_4831" data-name="Path 4831" d="M650.07,925.312H809.151V964.19H629.55Z" fill="#ccc8c8"/>
         <path id="Path_4832" data-name="Path 4832" d="M1154.469,877.283H463.828c-10.515,0-19.118-7.843-19.118-17.429V444.489c0-9.586,8.6-17.429,19.118-17.429h690.641c10.515,0,19.118,7.843,19.118,17.429V859.854c0,9.586-8.6,17.429-19.118,17.429" fill="#ede7e7"/>
         <path id="Path_4833" data-name="Path 4833" d="M1154.469,877.283H463.828c-10.515,0-19.118-7.843-19.118-17.429V444.489c0-9.586,8.6-17.429,19.118-17.429h690.641c10.515,0,19.118,7.843,19.118,17.429V859.854C1173.587,869.44,1164.984,877.283,1154.469,877.283Z" fill="none" stroke="#595454" stroke-miterlimit="10" stroke-width="2.052"/>
-        <path id="Path_4834" data-name="Path 4834" d="M814.251,445.518a5.983,5.983,0,1,1-5.958-5.432,5.714,5.714,0,0,1,5.958,5.432" fill="#be2bbb"/>
+        <path id="Path_4834" data-name="Path 4834" d="M814.251,445.518a5.983,5.983,0,1,1-5.958-5.432,5.714,5.714,0,0,1,5.958,5.432" fill="#007B98"/>
         <path id="Path_4835" data-name="Path 4835" d="M1136.026,849.587H481.834a18.41,18.41,0,0,1-18.41-18.41V482.836a18.409,18.409,0,0,1,18.41-18.41h654.192a18.409,18.409,0,0,1,18.41,18.41V831.177a18.41,18.41,0,0,1-18.41,18.41" fill="#fff"/>
         <path id="Path_4836" data-name="Path 4836" d="M438.14,885.132l-40.577,36.121h823.76l-40.58-36.121Z" fill="#dfdcdc"/>
         <path id="Path_4837" data-name="Path 4837" d="M474.033,892.224l1.441-2.371,647.438-2.219,3.38,3.4Z" fill="#595454"/>
@@ -169,7 +169,7 @@
         <path id="Path_4918" data-name="Path 4918" d="M153.484,918.334c-10.748-18.132-23.54-24.008-34.524-24.008-15.227,0-20.719,11.867-20.719,20.854,0,23.965,25.247,58.139,83.282,58.139" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.683"/>
         <path id="Path_4919" data-name="Path 4919" d="M384.135,1018.271c-63.368,33.358-166.109,33.358-229.478,0Z" fill="#fff"/>
         <path id="Path_4920" data-name="Path 4920" d="M384.135,1018.271c-63.368,33.358-166.109,33.358-229.478,0Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.683"/>
-        <path id="Path_4921" data-name="Path 4921" d="M343.952,968.5H300.641V924.948l21.656-18.12,21.655,18.12Z" fill="#be2bbb"/>
+        <path id="Path_4921" data-name="Path 4921" d="M343.952,968.5H300.641V924.948l21.656-18.12,21.655,18.12Z" fill="#007B98"/>
         <path id="Path_4922" data-name="Path 4922" d="M343.952,968.5H300.641V924.948l21.656-18.12,21.655,18.12Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.683"/>
         <line id="Line_638" data-name="Line 638" y2="28.314" transform="translate(322.297 878.582)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.683"/>
       </g>
@@ -202,7 +202,7 @@
         <line id="Line_649" data-name="Line 649" x2="13.652" y2="1.752" transform="translate(1308.727 661.654)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.526"/>
         <line id="Line_650" data-name="Line 650" x2="13.652" y2="1.752" transform="translate(1313.016 628.225)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.526"/>
         <line id="Line_651" data-name="Line 651" x2="13.652" y2="1.752" transform="translate(1317.305 594.796)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.526"/>
-        <path id="Path_4934" data-name="Path 4934" d="M1226.246,888.736h86.21L1333.215,715.7H1205.486Z" fill="#be2bbb"/>
+        <path id="Path_4934" data-name="Path 4934" d="M1226.246,888.736h86.21L1333.215,715.7H1205.486Z" fill="#007B98"/>
         <path id="Path_4935" data-name="Path 4935" d="M1226.246,888.736h86.21L1333.215,715.7H1205.486Z" fill="none" stroke="#a59f9f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.526"/>
         <path id="Path_4936" data-name="Path 4936" d="M1499.616,1060.223l-143.756-106.9,194.18-150.238,143.756,106.9Z" fill="#fff"/>
         <path id="Path_4937" data-name="Path 4937" d="M1499.616,1060.223l-143.756-106.9,194.18-150.238,143.756,106.9Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.175"/>

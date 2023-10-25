@@ -6,6 +6,9 @@ import ChevronDown from '@components/SVGComponents/ChevronDown'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+import data from "@data/data.json"
+
 
 export default function Screen6({ 
   //Props
@@ -13,6 +16,7 @@ export default function Screen6({
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.Screen6}>
@@ -106,18 +110,18 @@ export default function Screen6({
             <line id="Line_437" data-name="Line 437" y1="121.151" x2="127.27" transform="translate(1093.267 644.839)" fill="none" stroke="#707071" stroke-width="0.921"/>
             <line id="Line_438" data-name="Line 438" y1="51.045" x2="54.448" transform="translate(934.013 689.964)" fill="none" stroke="#707071" stroke-width="0.921"/>
             <line id="Line_439" data-name="Line 439" y1="121.151" x2="127.27" transform="translate(1086.82 678.913)" fill="none" stroke="#707071" stroke-width="0.921"/>
-            <rect id="Rectangle_1354" data-name="Rectangle 1354" width="94.847" height="14.754" transform="translate(1554.799 959.394)" fill="#be2bbb"/>
+            <rect id="Rectangle_1354" data-name="Rectangle 1354" width="94.847" height="14.754" transform="translate(1554.799 959.394)" fill={accentColor}/>
             <rect id="Rectangle_1355" data-name="Rectangle 1355" width="94.847" height="14.754" transform="translate(1554.799 959.394)" fill="none" stroke="#595454" stroke-miterlimit="10" stroke-width="1.675"/>
             <path id="Path_4293" data-name="Path 4293" d="M1554.724,959.029,1687.585,698.3l-158.814-107.89" fill="none" stroke="#595454" stroke-miterlimit="10" stroke-width="1.383"/>
             <g id="Group_1196" data-name="Group 1196">
               <g id="Group_1195" data-name="Group 1195" clip-path="url(#clip-path)">
-                <path id="Path_4294" data-name="Path 4294" d="M1693.908,700.406a10.538,10.538,0,1,1-10.538-10.539,10.539,10.539,0,0,1,10.538,10.539" fill="#be2bbb"/>
+                <path id="Path_4294" data-name="Path 4294" d="M1693.908,700.406a10.538,10.538,0,1,1-10.538-10.539,10.539,10.539,0,0,1,10.538,10.539" fill={accentColor}/>
                 <path id="Path_4295" data-name="Path 4295" d="M1693.908,700.406a10.538,10.538,0,1,1-10.538-10.539A10.539,10.539,0,0,1,1693.908,700.406Z" fill="none" stroke="#595454" stroke-miterlimit="10" stroke-width="1.675"/>
-                <path id="Path_4296" data-name="Path 4296" d="M1540,668.313l-95.134-54.925,15.877-27.5a30.451,30.451,0,0,1,41.6-11.146l42.392,24.475a30.452,30.452,0,0,1,11.146,41.6Z" fill="#be2bbb"/>
+                <path id="Path_4296" data-name="Path 4296" d="M1540,668.313l-95.134-54.925,15.877-27.5a30.451,30.451,0,0,1,41.6-11.146l42.392,24.475a30.452,30.452,0,0,1,11.146,41.6Z" fill={accentColor}/>
                 <path id="Path_4297" data-name="Path 4297" d="M1540,668.313l-95.134-54.925,15.877-27.5a30.451,30.451,0,0,1,41.6-11.146l42.392,24.475a30.452,30.452,0,0,1,11.146,41.6Z" fill="none" stroke="#595454" stroke-miterlimit="10" stroke-width="1.675"/>
                 <path id="Path_4298" data-name="Path 4298" d="M778.665,878.035V869.77a6.417,6.417,0,0,0-6.417-6.417H721.919a6.417,6.417,0,0,0-6.417,6.417v14.646l10.059,89.54h43.046l10.058-89.54Z" fill="#fff"/>
                 <path id="Path_4299" data-name="Path 4299" d="M778.665,878.035V869.77a6.417,6.417,0,0,0-6.417-6.417H721.919a6.417,6.417,0,0,0-6.417,6.417v14.646l10.059,89.54h43.046l10.058-89.54Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.462"/>
-                <path id="Path_4300" data-name="Path 4300" d="M771.316,949.838H722.855l-5.7-50.821H777Z" fill="#be2bbb"/>
+                <path id="Path_4300" data-name="Path 4300" d="M771.316,949.838H722.855l-5.7-50.821H777Z" fill={accentColor}/>
                 <path id="Path_4301" data-name="Path 4301" d="M771.316,949.838H722.855l-5.7-50.821H777Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.462"/>
                 <rect id="Rectangle_1356" data-name="Rectangle 1356" width="74.567" height="6.381" transform="translate(709.8 878.035)" fill="#fff"/>
                 <rect id="Rectangle_1357" data-name="Rectangle 1357" width="74.567" height="6.381" transform="translate(709.8 878.035)" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.462"/>
@@ -128,7 +132,7 @@ export default function Screen6({
                 <path id="Path_4310" data-name="Path 4310" d="M712.63,971.069l-33.971-13.006c-10.47-4.01-22.326-15.185-26.6-25.548L608.232,951.4c9.355,14.565,22.35,23.672,42.709,23.672l60.78.751a2.457,2.457,0,0,0,.909-4.752" fill="#ede7e7"/>
                 <path id="Path_4311" data-name="Path 4311" d="M712.63,971.069l-33.971-13.006c-10.47-4.01-22.326-15.185-26.6-25.548L608.232,951.4c9.355,14.565,22.35,23.672,42.709,23.672l60.78.751A2.457,2.457,0,0,0,712.63,971.069Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.593"/>
                 <path id="Path_4312" data-name="Path 4312" d="M662.145,962.734l31.384,6.934a6.133,6.133,0,0,1,4.81,5.988" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.593"/>
-                <rect id="Rectangle_1358" data-name="Rectangle 1358" width="182.914" height="138.678" transform="matrix(0.324, -0.946, 0.946, 0.324, 254.019, 899.597)" fill="#be2bbb"/>
+                <rect id="Rectangle_1358" data-name="Rectangle 1358" width="182.914" height="138.678" transform="matrix(0.324, -0.946, 0.946, 0.324, 254.019, 899.597)" fill={accentColor}/>
                 <path id="Path_4313" data-name="Path 4313" d="M333.92,880.315l43.165,12.624a22.757,22.757,0,0,0,12.369.116L404.344,889a21.7,21.7,0,0,0,14.64-13.38l4.957-13.337a3.194,3.194,0,0,0-3.3-4.291l-14.6,1.394a78.761,78.761,0,0,1-12.693.184l-13.433-.891,14.875-12.857a4.863,4.863,0,0,0-5.317-8.046c-10.441,5.11-39.062,19.162-39.062,19.162l-14.437-4.161Z" fill="#ede7e7"/>
                 <path id="Path_4314" data-name="Path 4314" d="M333.92,880.315l43.165,12.624a22.757,22.757,0,0,0,12.369.116L404.344,889a21.7,21.7,0,0,0,14.64-13.38l4.957-13.337a3.194,3.194,0,0,0-3.3-4.291l-14.6,1.394a78.761,78.761,0,0,1-12.693.184l-13.433-.891,14.875-12.857a4.863,4.863,0,0,0-5.317-8.046c-10.441,5.11-39.062,19.162-39.062,19.162l-14.437-4.161Z" fill="none" stroke="#595454" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.593"/>
                 <path id="Path_4315" data-name="Path 4315" d="M393.467,867.683a270.547,270.547,0,0,0,29.252-2.117" fill="none" stroke="#595454" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.593"/>
