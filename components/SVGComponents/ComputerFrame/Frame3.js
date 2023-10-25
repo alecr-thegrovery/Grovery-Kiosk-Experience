@@ -6,6 +6,8 @@ import ChevronDown from '@components/SVGComponents/ChevronDown'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+import data from "@data/data.json"
 
 export default function Frame3({ 
   //Props
@@ -13,6 +15,7 @@ export default function Frame3({
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.Frame3}>

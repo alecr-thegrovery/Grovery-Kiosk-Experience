@@ -45,7 +45,7 @@
 			  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 			}
 			&::-webkit-scrollbar-thumb {
-			  background: $purple;
+			  background: $darkBlue;
 			}
 
 			&[data-overflow-detect="overflow"]+.scrollNotice{
@@ -98,7 +98,7 @@
 	transition: $transitionMedium;
 
 	background-color: $white;
-	border: 2px solid $purple;
+	border: 2px solid $darkBlue;
 	border-radius: 0.5em;
 	padding:0.5em 1em;
 }

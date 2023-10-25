@@ -6,6 +6,8 @@ import ChevronDown from '@components/SVGComponents/ChevronDown'
 /*===== Styles =====*/
 import componentStyles from './styles.module.scss'
 
+/*===== Site Data =====*/
+import data from "@data/data.json"
 
 export default function Frame2({ 
   //Props
@@ -13,6 +15,7 @@ export default function Frame2({
 }) {
 
   //console.log(author);
+  let accentColor = data.accentColor1;
 
   return (
     <div className={componentStyles.Frame2}>
@@ -34,7 +37,7 @@ export default function Frame2({
           </g>
           <rect id="computer_bottombar" width="1393.008" height="56.268" transform="translate(4558.752 2058.381)" fill="#eee7e7"/>
           <rect id="computer_topbar" width="1395" height="51.067" transform="translate(4557.752 1399.172)" fill="#eee7e7"/>
-          <ellipse id="camera" cx="12.86" cy="13.149" rx="12.86" ry="13.149" transform="translate(5246.067 1412.125)" fill="#be2bbb"/>
+          <ellipse id="camera" cx="12.86" cy="13.149" rx="12.86" ry="13.149" transform="translate(5246.067 1412.125)" fill={accentColor}/>
         </g>
         
         {/*<foreignObject className={componentStyles.content} x="0" y="0" width="100%" height="100%">
